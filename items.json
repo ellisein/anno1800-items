@@ -5939,7 +5939,10 @@
     "targets": [
       "모든 수리용 기중기"
     ],
-    "effects": {}
+    "effects": {
+      "healing_radius": "+25%",
+      "heal_per_minute": "-10%"
+    }
   },
   {
     "guid": 191884,
@@ -5951,7 +5954,9 @@
     "targets": [
       "모든 수리용 기중기"
     ],
-    "effects": {}
+    "effects": {
+      "healing_radius": "+30%"
+    }
   },
   {
     "guid": 191885,
@@ -5963,7 +5968,10 @@
     "targets": [
       "모든 수리용 기중기"
     ],
-    "effects": {}
+    "effects": {
+      "healing_radius": "+35%",
+      "heal_per_minute": "+20%"
+    }
   },
   {
     "guid": 191886,
@@ -5975,7 +5983,10 @@
     "targets": [
       "모든 수리용 기중기"
     ],
-    "effects": {}
+    "effects": {
+      "healing_radius": "+40%",
+      "heal_per_minute": "+40%"
+    }
   },
   {
     "guid": 191888,

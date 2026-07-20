@@ -71,7 +71,7 @@ def extract_items_data(assets_path, texts_dict):
                                 dlc_dependency = f"{texts_dict[locked_guid]}"
 
                         effects = {}
-                        for upgrade_type in ['FactoryUpgrade', 'BuildingUpgrade', 'ModuleOwnerUpgrade', 'IncidentInfectableUpgrade', 'CultureUpgrade', 'IndustrializableUpgrade', 'VisitorHarborUpgrade', 'PassiveTradeGoodGenUpgrade', 'PierUpgrade', 'KontorUpgrade', 'ShipyardUpgrade']:
+                        for upgrade_type in ['FactoryUpgrade', 'BuildingUpgrade', 'ModuleOwnerUpgrade', 'IncidentInfectableUpgrade', 'CultureUpgrade', 'IndustrializableUpgrade', 'VisitorHarborUpgrade', 'PassiveTradeGoodGenUpgrade', 'PierUpgrade', 'KontorUpgrade', 'ShipyardUpgrade', 'RepairCraneUpgrade']:
                             upgrade_node = elem.find(f'./Values/{upgrade_type}')
                             if upgrade_node is not None:
                                 for child in upgrade_node:
@@ -148,6 +148,16 @@ def extract_items_data(assets_path, texts_dict):
                                         if val and val.strip():
                                             num = int(val.strip())
                                             effects["module_limit"] = f"+{num}%" if num > 0 else f"{num}%"
+
+                                    elif child.tag == 'HealRadiusUpgrade':
+                                        val = child.findtext('Value')
+                                        if val:
+                                            effects["healing_radius"] = f"+{val}%" if int(val) > 0 else f"{val}%";
+                                    
+                                    elif child.tag == 'HealPerMinuteUpgrade':
+                                        val = child.findtext('Value')
+                                        if val:
+                                            effects["heal_per_minute"] = f"+{val}%" if int(val) > 0 else f"{val}%";
 
                                     elif child.tag == 'ProvideIndustrialization':
                                         val = child.text

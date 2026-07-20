@@ -62,6 +62,8 @@ const categories = {
     'negative_attractiveness': '부정적인 매력도',
     'spawn_probability': '방문 증가',
     'module_limit': '모듈 수',
+    'healing_radius': '수리 범위',
+    'heal_per_minute': '수리 속도',
     'industrialization': '전기 제공',
     'replaced_workforce': '대체 노동력',
     'replaced_inputs': '새로운 투입물',
@@ -81,52 +83,56 @@ function renderItems(items) {
     items.forEach(item => {
         let effectsHtml = '';
         if (item.effects) {
-            for (const [key, value] of Object.entries(item.effects)) {
-                if (key === 'industrialization' && value === true) {
-                    effectsHtml += `<li><span class="effect-key">${categories[key]}</span></li>`;
-                } else if (key === 'replaced_workforce') {
-                    effectsHtml += `<li><div class="effect-key">${categories[key]}:</div><div class="indented text-muted">건물에서 기존 노동력 대신 ${value}을(를) 고용합니다.</div></li>`;
-                } else if (key === 'replaced_inputs' && Array.isArray(value) && value.length > 0) {
-                    const oldInputs = value.map(val => val.old).join(', ');
-                    const newInputs = value.map(val => val.new).join(', ');
+            for (const key of Object.keys(categories)) {
+                if (item.effects.hasOwnProperty(key)) {
+                    const value = item.effects[key];
 
-                    effectsHtml += `
-                        <li>
-                            <div class="effect-key">${categories[key]}</div>
-                            <div class="indented text-muted">건물에서 ${oldInputs} 대신 ${newInputs}을(를) 처리합니다.</div>
-                        </li>
-                    `;
-                } else if (key === 'additional_outputs' && Array.isArray(value) && value.length > 0) {
-                    effectsHtml += `<li><div class="effect-key">${categories[key]}</div>`;
-                    value.forEach(val => {
-                        effectsHtml += `<div class=" indented text-muted">${val}</div>`;
-                    });
-                    effectsHtml += `</li>`;
-                } else if (key === 'removed_inputs' && Array.isArray(value) && value.length > 0) {
-                    effectsHtml += `
-                        <li>
-                            <div class="effect-key">${categories[key]}</div>
-                            <div class="indented text-muted">이 건물은 ${value.join(', ')} 없이 물품을 생산합니다.</div>
-                        </li>
-                    `;
-                } else if (key === 'fertility') {
-                    effectsHtml += `<li><span class="effect-key">${value} 제공</span></li>`;
-                } else if (key === 'block_buy_share' && value === true) {
-                    effectsHtml += `<li><span class="effect-key">${categories[key]}</span></li>`;
-                } else if (key === 'assemblies' && Array.isArray(value) && value.length > 0) {
-                    effectsHtml += `
-                        <li>
-                            <div class="effect-key">${categories[key]}</div>
-                            <div class="indented text-muted">${value.join(', ')}을(를) 건조할 수 있습니다.</div>
-                        </li>
-                    `;
-                } else if (Array.isArray(value)) {
-                    value.forEach(val => {
-                        effectsHtml += `<li><span class="effect-key">${categories[key]}</span> ${val}</li>`;
-                    });
-                }
-                else {
-                    effectsHtml += `<li><span class="effect-key">${categories[key]}</span> ${value}</li>`;
+                    if (key === 'industrialization' && value === true) {
+                        effectsHtml += `<li><span class="effect-key">${categories[key]}</span></li>`;
+                    } else if (key === 'replaced_workforce') {
+                        effectsHtml += `<li><div class="effect-key">${categories[key]}:</div><div class="indented text-muted">건물에서 기존 노동력 대신 ${value}을(를) 고용합니다.</div></li>`;
+                    } else if (key === 'replaced_inputs' && Array.isArray(value) && value.length > 0) {
+                        const oldInputs = value.map(val => val.old).join(', ');
+                        const newInputs = value.map(val => val.new).join(', ');
+
+                        effectsHtml += `
+                            <li>
+                                <div class="effect-key">${categories[key]}</div>
+                                <div class="indented text-muted">건물에서 ${oldInputs} 대신 ${newInputs}을(를) 처리합니다.</div>
+                            </li>
+                        `;
+                    } else if (key === 'additional_outputs' && Array.isArray(value) && value.length > 0) {
+                        effectsHtml += `<li><div class="effect-key">${categories[key]}</div>`;
+                        value.forEach(val => {
+                            effectsHtml += `<div class=" indented text-muted">${val}</div>`;
+                        });
+                        effectsHtml += `</li>`;
+                    } else if (key === 'removed_inputs' && Array.isArray(value) && value.length > 0) {
+                        effectsHtml += `
+                            <li>
+                                <div class="effect-key">${categories[key]}</div>
+                                <div class="indented text-muted">이 건물은 ${value.join(', ')} 없이 물품을 생산합니다.</div>
+                            </li>
+                        `;
+                    } else if (key === 'fertility') {
+                        effectsHtml += `<li><span class="effect-key">${value} 제공</span></li>`;
+                    } else if (key === 'block_buy_share' && value === true) {
+                        effectsHtml += `<li><span class="effect-key">${categories[key]}</span></li>`;
+                    } else if (key === 'assemblies' && Array.isArray(value) && value.length > 0) {
+                        effectsHtml += `
+                            <li>
+                                <div class="effect-key">${categories[key]}</div>
+                                <div class="indented text-muted">${value.join(', ')}을(를) 건조할 수 있습니다.</div>
+                            </li>
+                        `;
+                    } else if (Array.isArray(value)) {
+                        value.forEach(val => {
+                            effectsHtml += `<li><span class="effect-key">${categories[key]}</span> ${val}</li>`;
+                        });
+                    }
+                    else {
+                        effectsHtml += `<li><span class="effect-key">${categories[key]}</span> ${value}</li>`;
+                    }
                 }
             }
         }
