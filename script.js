@@ -48,6 +48,32 @@ async function fetchItems() {
     }
 }
 
+const categories = {
+    'productivity': '생산성',
+    'workforce': '필요한 노동력',
+    'maintenance': '유지비',
+    'construction_cost': '건설 비용',
+    'incident_fire': '화재 확률',
+    'incident_illness': '질병 확률',
+    'incident_riot': '폭동 확률',
+    'incident_explosion': '폭발 확률',
+    'area': '산림 밀도',
+    'attractiveness': '매력도',
+    'negative_attractiveness': '부정적인 매력도',
+    'spawn_probability': '방문 증가',
+    'module_limit': '모듈 수',
+    'industrialization': '전기 제공',
+    'replaced_workforce': '대체 노동력',
+    'replaced_inputs': '새로운 투입물',
+    'additional_outputs': '추가 물품',
+    'removed_inputs': '투입 자원 제거',
+    'fertility': '토착 자원',
+    'gen_probability': '항구 활동',
+    'pier_speed': '화물 선적 속도',
+    'block_buy_share': '지분 거래 금지',
+    'assemblies': '배 도면'
+};
+
 function renderItems(items) {
     const grid = document.getElementById('itemGrid');
     grid.innerHTML = '';
@@ -56,36 +82,79 @@ function renderItems(items) {
         let effectsHtml = '';
         if (item.effects) {
             for (const [key, value] of Object.entries(item.effects)) {
-                if (key === '새로운 투입물' && Array.isArray(value)) {
+                if (key === 'industrialization' && value === true) {
+                    effectsHtml += `<li><span class="effect-key">${categories[key]}</span></li>`;
+                } else if (key === 'replaced_workforce') {
+                    effectsHtml += `<li><div class="effect-key">${categories[key]}:</div><div class="indented text-muted">건물에서 기존 노동력 대신 ${value}을(를) 고용합니다.</div></li>`;
+                } else if (key === 'replaced_inputs' && Array.isArray(value) && value.length > 0) {
+                    const oldInputs = value.map(val => val.old).join(', ');
+                    const newInputs = value.map(val => val.new).join(', ');
+
+                    effectsHtml += `
+                        <li>
+                            <div class="effect-key">${categories[key]}</div>
+                            <div class="indented text-muted">건물에서 ${oldInputs} 대신 ${newInputs}을(를) 처리합니다.</div>
+                        </li>
+                    `;
+                } else if (key === 'additional_outputs' && Array.isArray(value) && value.length > 0) {
+                    effectsHtml += `<li><div class="effect-key">${categories[key]}</div>`;
                     value.forEach(val => {
-                        effectsHtml += `<li><span class="effect-key">새로운 투입물:</span> 건물에서 ${val.기존} 대신 ${val.대체}을(를) 처리합니다.</li>`;
+                        effectsHtml += `<div class=" indented text-muted">${val}</div>`;
                     });
-                } else if (key === '대체 노동력') {
-                    effectsHtml += `<li><span class="effect-key">대체 노동력:</span> 건물에서 기존 노동력 대신 ${value}을(를) 고용합니다.</li>`;
-                } else if (key === '전기 제공') {
-                    effectsHtml += `<li><span class="effect-key">전기 제공</span></li>`;
+                    effectsHtml += `</li>`;
+                } else if (key === 'removed_inputs' && Array.isArray(value) && value.length > 0) {
+                    effectsHtml += `
+                        <li>
+                            <div class="effect-key">${categories[key]}</div>
+                            <div class="indented text-muted">이 건물은 ${value.join(', ')} 없이 물품을 생산합니다.</div>
+                        </li>
+                    `;
+                } else if (key === 'fertility') {
+                    effectsHtml += `<li><span class="effect-key">${value} 제공</span></li>`;
+                } else if (key === 'block_buy_share' && value === true) {
+                    effectsHtml += `<li><span class="effect-key">${categories[key]}</span></li>`;
+                } else if (key === 'assemblies' && Array.isArray(value) && value.length > 0) {
+                    effectsHtml += `
+                        <li>
+                            <div class="effect-key">${categories[key]}</div>
+                            <div class="indented text-muted">${value.join(', ')}을(를) 건조할 수 있습니다.</div>
+                        </li>
+                    `;
                 } else if (Array.isArray(value)) {
                     value.forEach(val => {
-                        effectsHtml += `<li><span class="effect-key">${key}:</span> ${val}</li>`;
+                        effectsHtml += `<li><span class="effect-key">${categories[key]}</span> ${val}</li>`;
                     });
-                } 
+                }
                 else {
-                    effectsHtml += `<li><span class="effect-key">${key}:</span> ${value}</li>`;
+                    effectsHtml += `<li><span class="effect-key">${categories[key]}</span> ${value}</li>`;
                 }
             }
         }
 
-        let expHtml = '';
-        if (item.expedition && Object.keys(item.expedition).length > 0) {
-            const expStats = Object.entries(item.expedition)
-                                   .map(([k, v]) => `${k} ${v}`)
-                                   .join(', ');
-            expHtml = `<li><span class="effect-key">탐험:</span> ${expStats}</li>`;
+        let typeText = "";
+        let typeSource = "";
+        if (item.type) {
+            if (item.type === 'GuildhouseItem') {
+                typeText = "무역 연합";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
+            } else if (item.type === 'HarborOfficeItem') {
+                typeText = "항만 관리소장실";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
+            }
         }
+        const typeHtml = typeText ? `<li style="display: flex; align-items: center;"><img src="${typeSource}" alt="icon" class="type-icon" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'16\\' height=\\'16\\'%3E%3Crect width=\\'16\\' height=\\'16\\' fill=\\'%23333\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' fill=\\'%23999\\' dy=\\'.3em\\' text-anchor=\\'middle\\'%3ENo Img%3C/text%3E%3C/svg%3E'"><b>${typeText}</b>에 배치</li>` : '';
 
-        const targetsHtml = item.targets && item.targets.length > 0 
-            ? `<li><span class="effect-key">장착:</span> ${item.targets.join(', ')}</li>` 
-            : '';
+        let targetText = "";
+        if (item.targets && item.targets.length > 0) {
+            if (item.targets.length === 1) {
+                targetText = item.targets[0];
+            } else {
+                const lastItem = item.targets[item.targets.length - 1];
+                const otherItems = item.targets.slice(0, -1).join(', ');
+                targetText = `${otherItems}, 그리고 ${lastItem}`;
+            }
+        }
+        const targetsHtml = targetText ? `<li class="text-muted">${targetText}에 영향</li>` : '';
 
         const iconPath = item.icon ? item.icon : '';
 
@@ -100,9 +169,9 @@ function renderItems(items) {
                 </div>
             </div>
             <ul class="effect-list">
+                ${typeHtml}
                 ${targetsHtml}
                 ${effectsHtml}
-                ${expHtml}
             </ul>
             ${item.description ? `<p class="item-desc">${item.description}</p>` : ''}
         `;

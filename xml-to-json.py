@@ -37,7 +37,7 @@ def extract_items_data(assets_path, texts_dict):
             template = elem.findtext('Template')
 
             # ['GuildhouseItem', 'VehicleItem', 'ActiveItem', 'HarborOfficeItem', 'CultureItem', 'TownhallItem']
-            if template and template in ['GuildhouseItem']:
+            if template and template in ['GuildhouseItem', 'HarborOfficeItem']:
                 standard = elem.find('./Values/Standard')
 
                 if standard is not None:
@@ -71,53 +71,59 @@ def extract_items_data(assets_path, texts_dict):
                                 dlc_dependency = f"{texts_dict[locked_guid]}"
 
                         effects = {}
-                        for upgrade_type in ['FactoryUpgrade', 'BuildingUpgrade', 'ModuleOwnerUpgrade', 'IncidentInfectableUpgrade', 'CultureUpgrade', 'IndustrializableUpgrade']:
+                        for upgrade_type in ['FactoryUpgrade', 'BuildingUpgrade', 'ModuleOwnerUpgrade', 'IncidentInfectableUpgrade', 'CultureUpgrade', 'IndustrializableUpgrade', 'VisitorHarborUpgrade', 'PassiveTradeGoodGenUpgrade', 'PierUpgrade', 'KontorUpgrade', 'ShipyardUpgrade']:
                             upgrade_node = elem.find(f'./Values/{upgrade_type}')
                             if upgrade_node is not None:
                                 for child in upgrade_node:
                                     if child.tag == 'ProductivityUpgrade':
                                         val = child.findtext('Value')
                                         if val:
-                                            effects["생산성"] = f"+{val}%" if int(val) > 0 else f"{val}%"
+                                            effects["productivity"] = f"+{val}%" if int(val) > 0 else f"{val}%"
 
                                     elif child.tag in ('WorkforceModifierInPercent', 'WorkforceAmountUpgrade'):
                                         val = child.findtext('Value')
                                         if val:
-                                            effects["필요한 노동력"] = f"+{val}%" if int(val) > 0 else f"{val}%"
+                                            effects["workforce"] = f"+{val}%" if int(val) > 0 else f"{val}%"
                                             
                                     elif child.tag == 'MaintenanceUpgrade':
                                         val = child.findtext('Value')
                                         if val:
-                                            effects["유지비"] = f"+{val}%" if int(val) > 0 else f"{val}%"
+                                            effects["maintenance"] = f"+{val}%" if int(val) > 0 else f"{val}%"
+
+                                    elif child.tag == 'ConstructionCostInPercent':
+                                        val = child.text
+                                        if val and val.strip():
+                                            num = int(val.strip())
+                                            effects["construction_cost"] = f"+{num}%" if num > 0 else f"{num}%"
 
                                     elif child.tag == 'IncidentFireIncreaseUpgrade':
                                         val = child.findtext('Value')
                                         if val:
                                             val_int = int(val) * 10
-                                            effects["화재 확률"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
+                                            effects["incident_fire"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
 
                                     elif child.tag == 'IncidentIllnessIncreaseUpgrade':
                                         val = child.findtext('Value')
                                         if val:
                                             val_int = int(val) * 10
-                                            effects["질병 확률"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
+                                            effects["incident_illness"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
 
                                     elif child.tag == 'IncidentRiotIncreaseUpgrade':
                                         val = child.findtext('Value')
                                         if val:
-                                            effects["폭동 확률"] = f"+{val}%" if int(val) > 0 else f"{val}%"
+                                            effects["incident_riot"] = f"+{val}%" if int(val) > 0 else f"{val}%"
 
                                     elif child.tag == 'IncidentExplosionIncreaseUpgrade':
                                         val = child.findtext('Value')
                                         if val:
                                             val_int = int(val) * 10
-                                            effects["폭발 확률"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
+                                            effects["incident_explosion"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
 
                                     elif child.tag == 'NeededAreaPercentUpgrade':
                                         val = child.findtext('Value')
                                         if val:
                                             val_int = int(val) * (-1)
-                                            effects["산림 밀도"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
+                                            effects["area"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
                                             
                                     elif child.tag == 'AttractivenessUpgrade':
                                         val = child.findtext('Value')
@@ -125,28 +131,34 @@ def extract_items_data(assets_path, texts_dict):
                                             percental = child.findtext('Percental')
                                             if percental and percental.strip() == '1':
                                                 if int(val) > 0:
-                                                    effects["매력도"] = f"+{val}%"
+                                                    effects["attractiveness"] = f"+{val}%"
                                                 else:
-                                                    effects["부정적인 매력도"] = f"{val}%"
+                                                    effects["negative_attractiveness"] = f"{val}%"
                                             else:
-                                                effects["매력도"] = f"+{val}" if int(val) > 0 else f"{val}"
+                                                effects["attractiveness"] = f"+{val}" if int(val) > 0 else f"{val}"
+
+                                    elif child.tag == 'SpawnProbabilityFactor':
+                                        val = child.findtext('Value')
+                                        if val:
+                                            val_int = int(val) * (-1)
+                                            effects["spawn_probability"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
                                             
                                     elif child.tag == 'ModuleLimitPercent':
                                         val = child.text
                                         if val and val.strip():
                                             num = int(val.strip())
-                                            effects["모듈 수"] = f"+{num}%" if num > 0 else f"{num}%"
+                                            effects["module_limit"] = f"+{num}%" if num > 0 else f"{num}%"
 
                                     elif child.tag == 'ProvideIndustrialization':
                                         val = child.text
                                         if val and val.strip() == '1':
-                                            effects["전기 제공"] = True
+                                            effects["industrialization"] = True
 
                                     elif child.tag == 'ReplacingWorkforce':
                                         val = child.text
                                         if val and val.strip():
                                             workforce_guid = val.strip()
-                                            effects["대체 노동력"] = texts_dict[workforce_guid]
+                                            effects["replaced_workforce"] = texts_dict[workforce_guid]
 
                                     elif child.tag == 'ReplaceInputs':
                                         replacements = []
@@ -159,12 +171,12 @@ def extract_items_data(assets_path, texts_dict):
                                                 new_name = texts_dict[new_guid]
                                                 
                                                 replacements.append({
-                                                    "기존": old_name,
-                                                    "대체": new_name
+                                                    "old": old_name,
+                                                    "new": new_name
                                                 })
                                                 
                                         if replacements:
-                                            effects['새로운 투입물'] = replacements
+                                            effects['replaced_inputs'] = replacements
 
                                     elif child.tag == 'AdditionalOutput':
                                         additional_outputs = []
@@ -181,7 +193,7 @@ def extract_items_data(assets_path, texts_dict):
                                                 additional_outputs.append(f"{prod_name} +{amount}/{cycle}")
                                                 
                                         if additional_outputs:
-                                            effects['추가 물품'] = additional_outputs
+                                            effects['additional_outputs'] = additional_outputs
 
                                     elif child.tag == 'InputAmountUpgrade':
                                         removed_inputs = []
@@ -195,12 +207,39 @@ def extract_items_data(assets_path, texts_dict):
                                                     removed_inputs.append(prod_name)
                                                     
                                         if removed_inputs:
-                                            effects['투입 자원 제거'] = removed_inputs
+                                            effects['removed_inputs'] = removed_inputs
 
                                     elif child.tag == 'AddedFertility':
                                         fertility_guid = child.text
                                         if fertility_guid and fertility_guid in texts_dict:
-                                            effects['토착 자원 제공'] = texts_dict[fertility_guid]
+                                            effects['fertility'] = texts_dict[fertility_guid]
+
+                                    elif child.tag == 'GenProbability':
+                                        val = child.text
+                                        if val and val.strip():
+                                            num = int(val.strip())
+                                            effects["gen_probability"] = f"+{num}%" if num > 0 else f"{num}%"
+
+                                    elif child.tag == 'PierSpeedUpgrade':
+                                        val = child.findtext('Value')
+                                        if val:
+                                            effects["pier_speed"] = f"+{val}%" if int(val) > 0 else f"{val}%"
+
+                                    elif child.tag == 'BlockBuyShare':
+                                        val = child.text
+                                        if val and val.strip() == '1':
+                                            effects["block_buy_share"] = True
+
+                                    elif child.tag == 'AddAssemblyOptions':
+                                        assemblies = []
+                                        for add_item in child.findall('.//Item'):
+                                            guid = add_item.findtext('NewOption')
+                                            assembly_name = texts_dict.get(guid, guid) if guid else ""
+                                            if assembly_name:
+                                                assemblies.append(assembly_name)
+                                                
+                                        if assemblies:
+                                            effects['assemblies'] = assemblies
                         
                         items_list.append({
                             "guid": int(guid),

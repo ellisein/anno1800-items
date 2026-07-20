@@ -10,7 +10,7 @@
       "모든 양어장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -24,7 +24,7 @@
       "진주 양식장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -38,7 +38,7 @@
       "모든 양어장"
     ],
     "effects": {
-      "유지비": "-75%"
+      "maintenance": "-75%"
     }
   },
   {
@@ -52,7 +52,7 @@
       "진주 양식장"
     ],
     "effects": {
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -66,10 +66,10 @@
       "모든 양어장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "수지 +1/5"
       ],
-      "유지비": "-25%"
+      "maintenance": "-25%"
     }
   },
   {
@@ -83,8 +83,8 @@
       "진주 양식장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "추가 물품": [
+      "productivity": "+30%",
+      "additional_outputs": [
         "어유 +1/5"
       ]
     }
@@ -101,8 +101,8 @@
       "진주 양식장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "수지 +1/4"
       ]
     }
@@ -119,8 +119,8 @@
       "진주 양식장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "수지 +1/5",
         "금 +1/7"
       ]
@@ -137,7 +137,7 @@
       "귀금속 세공소"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -151,8 +151,8 @@
       "귀금속 세공소"
     ],
     "effects": {
-      "생산성": "+10%",
-      "유지비": "-5%"
+      "productivity": "+10%",
+      "maintenance": "-5%"
     }
   },
   {
@@ -166,13 +166,13 @@
       "귀금속 세공소"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "금",
-          "대체": "금광석"
+          "old": "금",
+          "new": "금광석"
         }
       ],
-      "매력도": "+3"
+      "attractiveness": "+3"
     }
   },
   {
@@ -186,13 +186,13 @@
       "귀금속 세공소"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "금",
-          "대체": "금광석"
+          "old": "금",
+          "new": "금광석"
         }
       ],
-      "매력도": "+5"
+      "attractiveness": "+5"
     }
   },
   {
@@ -206,11 +206,11 @@
       "귀금속 세공소"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "회중시계 +1/4"
       ],
-      "투입 자원 제거": [
+      "removed_inputs": [
         "진주"
       ]
     }
@@ -226,10 +226,10 @@
       "제빵소"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "밀가루",
-          "대체": "곡물"
+          "old": "밀가루",
+          "new": "곡물"
         }
       ]
     }
@@ -245,7 +245,7 @@
       "제빵소"
     ],
     "effects": {
-      "유지비": "-50%"
+      "maintenance": "-50%"
     }
   },
   {
@@ -259,8 +259,8 @@
       "제빵소"
     ],
     "effects": {
-      "생산성": "+30%",
-      "추가 물품": [
+      "productivity": "+30%",
+      "additional_outputs": [
         "초콜릿 +1/5"
       ]
     }
@@ -276,8 +276,8 @@
       "제빵소"
     ],
     "effects": {
-      "생산성": "+40%",
-      "매력도": "+5"
+      "productivity": "+40%",
+      "attractiveness": "+5"
     }
   },
   {
@@ -291,8 +291,8 @@
       "제빵소"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "포도 +1/6",
         "초콜릿 +1/5"
       ]
@@ -312,7 +312,7 @@
       "담배 농장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -326,7 +326,7 @@
       "시가 공장"
     ],
     "effects": {
-      "유지비": "-30%"
+      "maintenance": "-30%"
     }
   },
   {
@@ -340,8 +340,8 @@
       "시가 공장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "필요한 노동력": "-30%"
+      "productivity": "+30%",
+      "workforce": "-30%"
     }
   },
   {
@@ -355,11 +355,11 @@
       "시가 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "새로운 투입물": [
+      "productivity": "+40%",
+      "replaced_inputs": [
         {
-          "기존": "합판",
-          "대체": "목재"
+          "old": "합판",
+          "new": "목재"
         }
       ]
     }
@@ -375,9 +375,9 @@
       "시가 공장"
     ],
     "effects": {
-      "유지비": "-100%",
-      "대체 노동력": "식민지 노동자",
-      "매력도": "+7"
+      "maintenance": "-100%",
+      "replaced_workforce": "식민지 노동자",
+      "attractiveness": "+7"
     }
   },
   {
@@ -396,7 +396,7 @@
       "대농장 - 럼주 양조장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -410,7 +410,7 @@
       "샴페인 저장고"
     ],
     "effects": {
-      "필요한 노동력": "-25%"
+      "workforce": "-25%"
     }
   },
   {
@@ -426,7 +426,7 @@
       "대농장 - 럼주 양조장"
     ],
     "effects": {
-      "유지비": "-10%"
+      "maintenance": "-10%"
     }
   },
   {
@@ -440,7 +440,7 @@
       "샴페인 저장고"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -457,9 +457,9 @@
       "대농장 - 럼주 양조장"
     ],
     "effects": {
-      "생산성": "+20%",
-      "유지비": "-15%",
-      "매력도": "+3"
+      "productivity": "+20%",
+      "maintenance": "-15%",
+      "attractiveness": "+3"
     }
   },
   {
@@ -476,8 +476,8 @@
       "대농장 - 럼주 양조장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "매력도": "+5"
+      "productivity": "+40%",
+      "attractiveness": "+5"
     }
   },
   {
@@ -494,8 +494,8 @@
       "대농장 - 럼주 양조장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "매력도": "+7"
+      "productivity": "+50%",
+      "attractiveness": "+7"
     }
   },
   {
@@ -509,7 +509,7 @@
       "모든 주거지"
     ],
     "effects": {
-      "화재 확률": "-20%"
+      "incident_fire": "-20%"
     }
   },
   {
@@ -547,7 +547,153 @@
       "모든 학자 주거지를 제외한 구대륙과 신대륙 주거지"
     ],
     "effects": {
-      "화재 확률": "-50%"
+      "incident_fire": "-50%"
+    }
+  },
+  {
+    "guid": 190664,
+    "type": "HarborOfficeItem",
+    "name": "보안요원",
+    "rarity": "",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_custom_officer_101.png",
+    "targets": [
+      "모든 교역소 및 부두"
+    ],
+    "effects": {
+      "gen_probability": "+10%"
+    }
+  },
+  {
+    "guid": 190665,
+    "type": "HarborOfficeItem",
+    "name": "수완가",
+    "rarity": "특별",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_custom_officer_201.png",
+    "targets": [
+      "모든 교역소 및 부두"
+    ],
+    "effects": {
+      "gen_probability": "+10%"
+    }
+  },
+  {
+    "guid": 190666,
+    "type": "HarborOfficeItem",
+    "name": "요령 있는 세관원",
+    "rarity": "희귀",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_custom_officer.png",
+    "targets": [
+      "모든 교역소 및 부두"
+    ],
+    "effects": {
+      "gen_probability": "+15%"
+    }
+  },
+  {
+    "guid": 190667,
+    "type": "HarborOfficeItem",
+    "name": "세무서 직원 티모시",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_custom_officer_103.png",
+    "targets": [
+      "모든 교역소 및 부두"
+    ],
+    "effects": {
+      "gen_probability": "+15%"
+    }
+  },
+  {
+    "guid": 190668,
+    "type": "HarborOfficeItem",
+    "name": "보호주의 지지자, 베인스 부인",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_401_b.png",
+    "targets": [
+      "모든 교역소 및 부두"
+    ],
+    "effects": {
+      "gen_probability": "+17%",
+      "block_buy_share": true
+    }
+  },
+  {
+    "guid": 190680,
+    "type": "HarborOfficeItem",
+    "name": "가이드",
+    "rarity": "",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_normal_dressed_401.png",
+    "targets": [
+      "모든 여객 부두"
+    ],
+    "effects": {
+      "attractiveness": "+15"
+    }
+  },
+  {
+    "guid": 190681,
+    "type": "HarborOfficeItem",
+    "name": "기념품 상인",
+    "rarity": "특별",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_normaldress_303.png",
+    "targets": [
+      "모든 여객 부두"
+    ],
+    "effects": {
+      "maintenance": "-25%",
+      "attractiveness": "+15"
+    }
+  },
+  {
+    "guid": 190682,
+    "type": "HarborOfficeItem",
+    "name": "여행사 직원",
+    "rarity": "희귀",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_travelagent_827.png",
+    "targets": [
+      "모든 여객 부두"
+    ],
+    "effects": {
+      "attractiveness": "+20",
+      "spawn_probability": "-7%"
+    }
+  },
+  {
+    "guid": 190683,
+    "type": "HarborOfficeItem",
+    "name": "크루즈 단장 야판",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_travelagent_712.png",
+    "targets": [
+      "모든 여객 부두"
+    ],
+    "effects": {
+      "maintenance": "-50%",
+      "spawn_probability": "-10%"
+    }
+  },
+  {
+    "guid": 190684,
+    "type": "HarborOfficeItem",
+    "name": "탁월한 기획자, 토마시나 랭톤",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_travelagent_829.png",
+    "targets": [
+      "모든 여객 부두"
+    ],
+    "effects": {
+      "maintenance": "-100%",
+      "attractiveness": "+25",
+      "spawn_probability": "-15%"
     }
   },
   {
@@ -568,7 +714,7 @@
       "대농장 - 커피 농장"
     ],
     "effects": {
-      "생산성": "+7%"
+      "productivity": "+7%"
     }
   },
   {
@@ -586,7 +732,7 @@
       "대농장 - 사탕수수 농장"
     ],
     "effects": {
-      "생산성": "+7%"
+      "productivity": "+7%"
     }
   },
   {
@@ -606,7 +752,7 @@
       "난초 농장"
     ],
     "effects": {
-      "생산성": "+12%"
+      "productivity": "+12%"
     }
   },
   {
@@ -627,7 +773,7 @@
       "대농장 - 커피 농장"
     ],
     "effects": {
-      "생산성": "+12%"
+      "productivity": "+12%"
     }
   },
   {
@@ -645,8 +791,8 @@
       "대농장 - 옥수수 농장"
     ],
     "effects": {
-      "생산성": "+15%",
-      "추가 물품": [
+      "productivity": "+15%",
+      "additional_outputs": [
         "코코아 +1/5"
       ]
     }
@@ -669,11 +815,11 @@
       "대농장 - 커피 농장"
     ],
     "effects": {
-      "생산성": "+15%",
-      "추가 물품": [
+      "productivity": "+15%",
+      "additional_outputs": [
         "담배 +1/5"
       ],
-      "모듈 수": "-10%"
+      "module_limit": "-10%"
     }
   },
   {
@@ -692,8 +838,8 @@
       "난초 농장"
     ],
     "effects": {
-      "생산성": "+20%",
-      "추가 물품": [
+      "productivity": "+20%",
+      "additional_outputs": [
         "코코아 +1/11",
         "생고무 +1/12",
         "목화 +1/13"
@@ -719,13 +865,13 @@
       "약초 정원"
     ],
     "effects": {
-      "생산성": "+20%",
-      "추가 물품": [
+      "productivity": "+20%",
+      "additional_outputs": [
         "피망 +1/12",
         "감자 +1/11",
         "포도 +1/13"
       ],
-      "모듈 수": "-20%"
+      "module_limit": "-20%"
     }
   },
   {
@@ -739,15 +885,233 @@
       "모든 신대륙 곡식 농장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "추가 물품": [
+      "productivity": "+30%",
+      "additional_outputs": [
         "피망 +1/16",
         "감자 +1/13",
         "포도 +1/17",
         "곡물 +1/14",
         "홉 +1/15"
       ],
-      "매력도": "+7"
+      "attractiveness": "+7"
+    }
+  },
+  {
+    "guid": 190694,
+    "type": "HarborOfficeItem",
+    "name": "목수",
+    "rarity": "",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_carpenter_722.png",
+    "targets": [
+      "모든 조선소"
+    ],
+    "effects": {
+      "maintenance": "-25%"
+    }
+  },
+  {
+    "guid": 190695,
+    "type": "HarborOfficeItem",
+    "name": "배 제조가",
+    "rarity": "특별",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_205.png",
+    "targets": [
+      "모든 조선소"
+    ],
+    "effects": {
+      "workforce": "-30%"
+    }
+  },
+  {
+    "guid": 190696,
+    "type": "HarborOfficeItem",
+    "name": "해양 건축가",
+    "rarity": "희귀",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_206.png",
+    "targets": [
+      "모든 조선소"
+    ],
+    "effects": {
+      "maintenance": "-50%",
+      "construction_cost": "-10%"
+    }
+  },
+  {
+    "guid": 190697,
+    "type": "HarborOfficeItem",
+    "name": "수력발전 전문가 스웰",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_normal_dressed_107.png",
+    "targets": [
+      "모든 조선소"
+    ],
+    "effects": {
+      "workforce": "-40%",
+      "construction_cost": "-20%"
+    }
+  },
+  {
+    "guid": 190698,
+    "type": "HarborOfficeItem",
+    "name": "해상 건축가, 로히트 바르가바",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_architect_501.png",
+    "targets": [
+      "모든 조선소"
+    ],
+    "effects": {
+      "maintenance": "-80%",
+      "workforce": "-50%",
+      "construction_cost": "-35%"
+    }
+  },
+  {
+    "guid": 102420,
+    "type": "HarborOfficeItem",
+    "name": "해적 포함의 구루, 기드온 스몰",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/pirates/icon_pirate_gunboat_151.png",
+    "targets": [
+      "모든 범선 조선소"
+    ],
+    "effects": {
+      "assemblies": [
+        "해적 포함"
+      ]
+    }
+  },
+  {
+    "guid": 102421,
+    "type": "HarborOfficeItem",
+    "name": "해적 호위함의 재봉사, 페트라 파이퍼",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/pirates/icon_petra_651.png",
+    "targets": [
+      "모든 범선 조선소"
+    ],
+    "effects": {
+      "assemblies": [
+        "해적 호위함"
+      ]
+    }
+  },
+  {
+    "guid": 102419,
+    "type": "HarborOfficeItem",
+    "name": "해적 전함의 후작, 시양",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/pirates/icon_shih_yang_150.png",
+    "targets": [
+      "모든 범선 조선소"
+    ],
+    "effects": {
+      "assemblies": [
+        "해적 전함"
+      ]
+    }
+  },
+  {
+    "guid": 102422,
+    "type": "HarborOfficeItem",
+    "name": "해적 모니터함의 제작자, 마리아 피자로",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/pirates/icon_maria_351.png",
+    "targets": [
+      "증기선 조선소"
+    ],
+    "effects": {
+      "assemblies": [
+        "해적 모니터함"
+      ]
+    }
+  },
+  {
+    "guid": 102423,
+    "type": "HarborOfficeItem",
+    "name": "열화단 모니터함의 공급자, 스틸톤 스누드",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/pirates/icon_stilton_252.png",
+    "targets": [
+      "증기선 조선소"
+    ],
+    "effects": {
+      "assemblies": [
+        "열화단 모니터함"
+      ]
+    }
+  },
+  {
+    "guid": 102425,
+    "type": "HarborOfficeItem",
+    "name": "열화단 전투 순양함의 창시자, 서스피시아 슬라이후드",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/pirates/icon_suspicia_650.png",
+    "targets": [
+      "증기선 조선소"
+    ],
+    "effects": {
+      "assemblies": [
+        "열화단 전투 순양함"
+      ]
+    }
+  },
+  {
+    "guid": 102428,
+    "type": "HarborOfficeItem",
+    "name": "열화단 전함의 마법사, 슬링키 시니스트라",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/pirates/icon_sinistra_250.png",
+    "targets": [
+      "증기선 조선소"
+    ],
+    "effects": {
+      "assemblies": [
+        "열화단 군함"
+      ]
+    }
+  },
+  {
+    "guid": 102427,
+    "type": "HarborOfficeItem",
+    "name": "제국선 설계자, 밀포이 크레덴자 벨프리 거스코트 경",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/pirates/icon_guscott_251.png",
+    "targets": [
+      "모든 범선 조선소"
+    ],
+    "effects": {
+      "assemblies": [
+        "왕실 전함"
+      ]
+    }
+  },
+  {
+    "guid": 102455,
+    "type": "HarborOfficeItem",
+    "name": "화려한 증기선의 기술자, 아나 유니언",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/pirates/icon_anna_350.png",
+    "targets": [
+      "증기선 조선소"
+    ],
+    "effects": {
+      "assemblies": [
+        "화려한 증기선"
+      ]
     }
   },
   {
@@ -761,7 +1125,7 @@
       "제강소"
     ],
     "effects": {
-      "유지비": "-30%"
+      "maintenance": "-30%"
     }
   },
   {
@@ -777,7 +1141,7 @@
       "모든 무기 복합 생산 시설"
     ],
     "effects": {
-      "유지비": "-30%"
+      "maintenance": "-30%"
     }
   },
   {
@@ -796,7 +1160,7 @@
       "숯가마"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -812,7 +1176,7 @@
       "모든 무기 복합 생산 시설"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -828,9 +1192,9 @@
       "중화기 공장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "유지비": "+50%",
-      "부정적인 매력도": "-50%"
+      "productivity": "+30%",
+      "maintenance": "+50%",
+      "negative_attractiveness": "-50%"
     }
   },
   {
@@ -847,8 +1211,8 @@
       "알루미늄 제련소"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-25%"
+      "productivity": "+40%",
+      "workforce": "-25%"
     }
   },
   {
@@ -864,10 +1228,10 @@
       "중화기 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "유지비": "-75%",
-      "필요한 노동력": "-25%",
-      "부정적인 매력도": "-50%"
+      "productivity": "+50%",
+      "maintenance": "-75%",
+      "workforce": "-25%",
+      "negative_attractiveness": "-50%"
     }
   },
   {
@@ -893,7 +1257,7 @@
       "모든 교회"
     ],
     "effects": {
-      "유지비": "-100%"
+      "maintenance": "-100%"
     }
   },
   {
@@ -907,7 +1271,7 @@
       "모든 교회"
     ],
     "effects": {
-      "매력도": "+7"
+      "attractiveness": "+7"
     }
   },
   {
@@ -933,7 +1297,7 @@
       "모든 주거지"
     ],
     "effects": {
-      "질병 확률": "-20%"
+      "incident_illness": "-20%"
     }
   },
   {
@@ -947,7 +1311,7 @@
       "모든 병원"
     ],
     "effects": {
-      "유지비": "-100%"
+      "maintenance": "-100%"
     }
   },
   {
@@ -973,7 +1337,7 @@
       "모든 벌목꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -987,7 +1351,7 @@
       "모든 숯가마"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -1001,7 +1365,7 @@
       "사냥꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -1015,7 +1379,7 @@
       "모든 벌목꾼의 오두막"
     ],
     "effects": {
-      "매력도": "+3"
+      "attractiveness": "+3"
     }
   },
   {
@@ -1029,7 +1393,7 @@
       "모든 숯가마"
     ],
     "effects": {
-      "부정적인 매력도": "-100%"
+      "negative_attractiveness": "-100%"
     }
   },
   {
@@ -1043,7 +1407,7 @@
       "사냥꾼의 오두막"
     ],
     "effects": {
-      "유지비": "-40%"
+      "maintenance": "-40%"
     }
   },
   {
@@ -1057,8 +1421,8 @@
       "모든 숯가마"
     ],
     "effects": {
-      "생산성": "+30%",
-      "추가 물품": [
+      "productivity": "+30%",
+      "additional_outputs": [
         "생고무 +1/5"
       ]
     }
@@ -1074,8 +1438,8 @@
       "사냥꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+30%",
-      "추가 물품": [
+      "productivity": "+30%",
+      "additional_outputs": [
         "양모 +1/5"
       ]
     }
@@ -1092,8 +1456,8 @@
       "모든 숯가마"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "목화 +1/4"
       ]
     }
@@ -1109,8 +1473,8 @@
       "사냥꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "소고기 +1/4"
       ]
     }
@@ -1129,9 +1493,9 @@
       "산업유 압착기"
     ],
     "effects": {
-      "생산성": "+50%",
-      "산림 밀도": "+10%",
-      "매력도": "+8"
+      "productivity": "+50%",
+      "area": "+10%",
+      "attractiveness": "+8"
     }
   },
   {
@@ -1147,7 +1511,7 @@
       "대농장 - 감자 농장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -1163,7 +1527,7 @@
       "대농장 - 곡물 농장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -1177,7 +1541,7 @@
       "포도원"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -1193,7 +1557,7 @@
       "대농장 - 감자 농장"
     ],
     "effects": {
-      "유지비": "-75%"
+      "maintenance": "-75%"
     }
   },
   {
@@ -1209,7 +1573,7 @@
       "대농장 - 곡물 농장"
     ],
     "effects": {
-      "유지비": "-50%"
+      "maintenance": "-50%"
     }
   },
   {
@@ -1223,7 +1587,7 @@
       "포도원"
     ],
     "effects": {
-      "유지비": "-25%"
+      "maintenance": "-25%"
     }
   },
   {
@@ -1239,8 +1603,8 @@
       "대농장 - 감자 농장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "모듈 수": "+25%"
+      "productivity": "+50%",
+      "module_limit": "+25%"
     }
   },
   {
@@ -1257,8 +1621,8 @@
       "대농장 - 곡물 농장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "모듈 수": "+25%"
+      "productivity": "+50%",
+      "module_limit": "+25%"
     }
   },
   {
@@ -1274,8 +1638,8 @@
       "대농장 - 감자 농장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "슈냅스 +1/4"
       ]
     }
@@ -1294,8 +1658,8 @@
       "대농장 - 곡물 농장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "샴페인 +1/8"
       ]
     }
@@ -1313,9 +1677,9 @@
       "대농장 - 곡물 농장"
     ],
     "effects": {
-      "생산성": "+70%",
-      "필요한 노동력": "-80%",
-      "모듈 수": "+35%"
+      "productivity": "+70%",
+      "workforce": "-80%",
+      "module_limit": "+35%"
     }
   },
   {
@@ -1329,7 +1693,7 @@
       "모든 광산과 채석장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -1343,7 +1707,7 @@
       "모든 유정"
     ],
     "effects": {
-      "유지비": "-50%"
+      "maintenance": "-50%"
     }
   },
   {
@@ -1357,7 +1721,7 @@
       "모든 광산과 채석장"
     ],
     "effects": {
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -1371,7 +1735,7 @@
       "모든 유정"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -1385,8 +1749,8 @@
       "모든 광산과 채석장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "필요한 노동력": "-75%"
+      "productivity": "+50%",
+      "workforce": "-75%"
     }
   },
   {
@@ -1400,8 +1764,8 @@
       "모든 광산과 채석장"
     ],
     "effects": {
-      "유지비": "-100%",
-      "필요한 노동력": "-100%"
+      "maintenance": "-100%",
+      "workforce": "-100%"
     }
   },
   {
@@ -1415,8 +1779,8 @@
       "모든 광산과 채석장"
     ],
     "effects": {
-      "생산성": "+70%",
-      "추가 물품": [
+      "productivity": "+70%",
+      "additional_outputs": [
         "금광석 +1/6",
         "석유 +1/1"
       ]
@@ -1433,7 +1797,7 @@
       "안경 공장"
     ],
     "effects": {
-      "유지비": "-10%"
+      "maintenance": "-10%"
     }
   },
   {
@@ -1447,7 +1811,7 @@
       "안경 공장"
     ],
     "effects": {
-      "필요한 노동력": "-20%"
+      "workforce": "-20%"
     }
   },
   {
@@ -1461,8 +1825,8 @@
       "안경 공장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "매력도": "+3"
+      "productivity": "+30%",
+      "attractiveness": "+3"
     }
   },
   {
@@ -1476,8 +1840,8 @@
       "안경 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "유리 +1/4"
       ]
     }
@@ -1493,14 +1857,14 @@
       "안경 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "회중시계 +1/3"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "황동",
-          "대체": "나무"
+          "old": "황동",
+          "new": "나무"
         }
       ]
     }
@@ -1516,7 +1880,7 @@
       "비누 공장"
     ],
     "effects": {
-      "유지비": "-20%"
+      "maintenance": "-20%"
     }
   },
   {
@@ -1532,7 +1896,7 @@
       "축산 가공장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -1546,8 +1910,8 @@
       "비누 공장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "유지비": "-60%"
+      "productivity": "+30%",
+      "maintenance": "-60%"
     }
   },
   {
@@ -1561,13 +1925,13 @@
       "비누 공장"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "수지",
-          "대체": "나무"
+          "old": "수지",
+          "new": "나무"
         }
       ],
-      "부정적인 매력도": "-100%"
+      "negative_attractiveness": "-100%"
     }
   },
   {
@@ -1581,11 +1945,11 @@
       "비누 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "다이너마이트 +1/3"
       ],
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -1599,7 +1963,7 @@
       "시계 제작소"
     ],
     "effects": {
-      "필요한 노동력": "-10%"
+      "workforce": "-10%"
     }
   },
   {
@@ -1613,7 +1977,7 @@
       "시계 제작소"
     ],
     "effects": {
-      "유지비": "-20%"
+      "maintenance": "-20%"
     }
   },
   {
@@ -1627,8 +1991,8 @@
       "시계 제작소"
     ],
     "effects": {
-      "생산성": "+30%",
-      "유지비": "-30%"
+      "productivity": "+30%",
+      "maintenance": "-30%"
     }
   },
   {
@@ -1642,13 +2006,13 @@
       "시계 제작소"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "금",
-          "대체": "황동"
+          "old": "금",
+          "new": "황동"
         }
       ],
-      "유지비": "-40%"
+      "maintenance": "-40%"
     }
   },
   {
@@ -1662,11 +2026,11 @@
       "시계 제작소"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "보석 +1/3"
       ],
-      "대체 노동력": "노동자"
+      "replaced_workforce": "노동자"
     }
   },
   {
@@ -1683,7 +2047,7 @@
       "자수사"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -1697,7 +2061,7 @@
       "모피상"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -1714,7 +2078,7 @@
       "의상 상점"
     ],
     "effects": {
-      "유지비": "-50%"
+      "maintenance": "-50%"
     }
   },
   {
@@ -1730,7 +2094,7 @@
       "의상 상점"
     ],
     "effects": {
-      "유지비": "-20%"
+      "maintenance": "-20%"
     }
   },
   {
@@ -1744,10 +2108,10 @@
       "편물 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "돛 +1/4"
       ],
-      "필요한 노동력": "-30%"
+      "workforce": "-30%"
     }
   },
   {
@@ -1761,13 +2125,13 @@
       "모피상"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "면직물",
-          "대체": "양모"
+          "old": "면직물",
+          "new": "양모"
         }
       ],
-      "대체 노동력": "노동자"
+      "replaced_workforce": "노동자"
     }
   },
   {
@@ -1783,10 +2147,10 @@
       "재단소"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "판초 +1/4"
       ],
-      "필요한 노동력": "-40%"
+      "workforce": "-40%"
     }
   },
   {
@@ -1800,20 +2164,20 @@
       "모피상"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "판초 +1/12",
         "작업복 +1/12",
         "중산모 +1/12"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "모피",
-          "대체": "철"
+          "old": "모피",
+          "new": "철"
         },
         {
-          "기존": "면직물",
-          "대체": "양모"
+          "old": "면직물",
+          "new": "양모"
         }
       ]
     }
@@ -1831,12 +2195,12 @@
       "의상 상점"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "판초 +1/6",
         "중산모 +1/6"
       ],
-      "매력도": "+8"
+      "attractiveness": "+8"
     }
   },
   {
@@ -1851,7 +2215,7 @@
       "알파카 농장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -1869,7 +2233,7 @@
       "펠트 공장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -1883,7 +2247,7 @@
       "판초 제작소"
     ],
     "effects": {
-      "유지비": "-100%"
+      "maintenance": "-100%"
     }
   },
   {
@@ -1897,7 +2261,7 @@
       "봄빈 직조소"
     ],
     "effects": {
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -1911,10 +2275,10 @@
       "판초 제작소"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "돛 +1/4"
       ],
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -1928,13 +2292,13 @@
       "봄빈 직조소"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "펠트",
-          "대체": "알파카 양모"
+          "old": "펠트",
+          "new": "알파카 양모"
         }
       ],
-      "대체 노동력": "식민지 노동자"
+      "replaced_workforce": "식민지 노동자"
     }
   },
   {
@@ -1951,8 +2315,8 @@
       "의상 상점"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "작업복 +1/3"
       ]
     }
@@ -1970,12 +2334,12 @@
       "의상 상점"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "작업복 +1/2",
         "모피 코트 +1/3"
       ],
-      "매력도": "+8"
+      "attractiveness": "+8"
     }
   },
   {
@@ -1994,7 +2358,7 @@
       "대농장 - 코코아 농장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -2008,7 +2372,7 @@
       "플랜테인 튀김 주방"
     ],
     "effects": {
-      "유지비": "-60%"
+      "maintenance": "-60%"
     }
   },
   {
@@ -2022,7 +2386,7 @@
       "초콜릿 공장"
     ],
     "effects": {
-      "대체 노동력": "식민지 노동자"
+      "replaced_workforce": "식민지 노동자"
     }
   },
   {
@@ -2036,7 +2400,7 @@
       "플랜테인 튀김 주방"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -2050,13 +2414,13 @@
       "초콜릿 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "커피 +1/3"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "설탕",
-          "대체": "커피콩"
+          "old": "설탕",
+          "new": "커피콩"
         }
       ]
     }
@@ -2072,13 +2436,13 @@
       "플랜테인 튀김 주방"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "초콜릿 +1/3"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "어유",
-          "대체": "코코아"
+          "old": "어유",
+          "new": "코코아"
         }
       ]
     }
@@ -2096,8 +2460,8 @@
       "아이스크림 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "설탕 +1/4"
       ]
     }
@@ -2115,12 +2479,12 @@
       "아이스크림 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "설탕 +1/4",
         "럼주 +1/5"
       ],
-      "매력도": "+8"
+      "attractiveness": "+8"
     }
   },
   {
@@ -2135,7 +2499,7 @@
       "케이블 공장"
     ],
     "effects": {
-      "필요한 노동력": "-20%"
+      "workforce": "-20%"
     }
   },
   {
@@ -2151,7 +2515,7 @@
       "전동기 조립 공장"
     ],
     "effects": {
-      "필요한 노동력": "-20%"
+      "workforce": "-20%"
     }
   },
   {
@@ -2166,7 +2530,7 @@
       "발전소"
     ],
     "effects": {
-      "유지비": "-15%"
+      "maintenance": "-15%"
     }
   },
   {
@@ -2181,7 +2545,7 @@
       "전동기 조립 공장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -2195,7 +2559,7 @@
       "축음기 공장"
     ],
     "effects": {
-      "유지비": "-10%"
+      "maintenance": "-10%"
     }
   },
   {
@@ -2210,7 +2574,7 @@
       "발전소"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "석유 +1/5"
       ]
     }
@@ -2227,10 +2591,10 @@
       "축음기 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "필라멘트 +1/5"
       ],
-      "대체 노동력": "노동자"
+      "replaced_workforce": "노동자"
     }
   },
   {
@@ -2245,10 +2609,10 @@
       "발전소"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "석유 +1/3"
       ],
-      "화재 확률": "-90%"
+      "incident_fire": "-90%"
     }
   },
   {
@@ -2262,11 +2626,11 @@
       "축음기 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "새로운 투입물": [
+      "productivity": "+40%",
+      "replaced_inputs": [
         {
-          "기존": "합판",
-          "대체": "목재"
+          "old": "합판",
+          "new": "목재"
         }
       ]
     }
@@ -2283,10 +2647,10 @@
       "발전소"
     ],
     "effects": {
-      "유지비": "-25%",
-      "필요한 노동력": "-80%",
-      "화재 확률": "-100%",
-      "폭발 확률": "-100%"
+      "maintenance": "-25%",
+      "workforce": "-80%",
+      "incident_fire": "-100%",
+      "incident_explosion": "-100%"
     }
   },
   {
@@ -2303,15 +2667,15 @@
       "선풍기 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "회중시계 +1/16",
         "안경 +1/14",
         "자전거 +1/15",
         "증기차 +1/17",
         "재봉틀 +1/13"
       ],
-      "전기 제공": true
+      "industrialization": true
     }
   },
   {
@@ -2325,8 +2689,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "필요한 노동력": "-20%",
-      "전기 제공": true
+      "workforce": "-20%",
+      "industrialization": true
     }
   },
   {
@@ -2341,7 +2705,7 @@
       "고급 커피 제조소"
     ],
     "effects": {
-      "필요한 노동력": "-20%"
+      "workforce": "-20%"
     }
   },
   {
@@ -2356,7 +2720,7 @@
       "고급 커피 제조소"
     ],
     "effects": {
-      "유지비": "-20%"
+      "maintenance": "-20%"
     }
   },
   {
@@ -2370,9 +2734,9 @@
       "커피 제조소"
     ],
     "effects": {
-      "생산성": "+30%",
-      "필요한 노동력": "-50%",
-      "대체 노동력": "식민지 노동자"
+      "productivity": "+30%",
+      "workforce": "-50%",
+      "replaced_workforce": "식민지 노동자"
     }
   },
   {
@@ -2387,8 +2751,8 @@
       "고급 커피 제조소"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "초콜릿 +1/4"
       ]
     }
@@ -2405,11 +2769,11 @@
       "고급 커피 제조소"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "커피콩 +1/2"
       ],
-      "매력도": "+10"
+      "attractiveness": "+10"
     }
   },
   {
@@ -2432,7 +2796,7 @@
       "대농장 - 맥주 양조장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -2451,7 +2815,7 @@
       "메즈칼 술집"
     ],
     "effects": {
-      "유지비": "-20%"
+      "maintenance": "-20%"
     }
   },
   {
@@ -2468,8 +2832,8 @@
       "대농장 - 맥주 양조장"
     ],
     "effects": {
-      "필요한 노동력": "-30%",
-      "매력도": "+3"
+      "workforce": "-30%",
+      "attractiveness": "+3"
     }
   },
   {
@@ -2486,8 +2850,8 @@
       "대농장 - 맥주 양조장"
     ],
     "effects": {
-      "폭동 확률": "-100%",
-      "전기 제공": true
+      "incident_riot": "-100%",
+      "industrialization": true
     }
   },
   {
@@ -2504,11 +2868,11 @@
       "대농장 - 맥주 양조장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "럼주 +1/3"
       ],
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -2524,7 +2888,7 @@
       "옥수수 농장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -2539,7 +2903,7 @@
       "할레아 주방"
     ],
     "effects": {
-      "유지비": "-40%"
+      "maintenance": "-40%"
     }
   },
   {
@@ -2553,11 +2917,11 @@
       "토르티야 가게"
     ],
     "effects": {
-      "생산성": "+30%",
-      "새로운 투입물": [
+      "productivity": "+30%",
+      "replaced_inputs": [
         {
-          "기존": "소고기",
-          "대체": "어유"
+          "old": "소고기",
+          "new": "어유"
         }
       ]
     }
@@ -2574,8 +2938,8 @@
       "할레아 주방"
     ],
     "effects": {
-      "필요한 노동력": "-40%",
-      "대체 노동력": "식민지 노동자"
+      "workforce": "-40%",
+      "replaced_workforce": "식민지 노동자"
     }
   },
   {
@@ -2589,14 +2953,14 @@
       "토르티야 가게"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "플랜테인 튀김 +1/3"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "옥수수",
-          "대체": "플랜테인"
+          "old": "옥수수",
+          "new": "플랜테인"
         }
       ]
     }
@@ -2612,7 +2976,7 @@
       "도축장"
     ],
     "effects": {
-      "필요한 노동력": "-20%"
+      "workforce": "-20%"
     }
   },
   {
@@ -2627,7 +2991,7 @@
       "돼지 농장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -2641,10 +3005,10 @@
       "도축장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "수지 +1/4"
       ],
-      "유지비": "-30%"
+      "maintenance": "-30%"
     }
   },
   {
@@ -2658,8 +3022,8 @@
       "도축장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "수지 +1/3"
       ]
     }
@@ -2675,14 +3039,14 @@
       "도축장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "굴라시 +1/2"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "돼지",
-          "대체": "소고기"
+          "old": "돼지",
+          "new": "소고기"
         }
       ]
     }
@@ -2698,7 +3062,7 @@
       "통조림 공장"
     ],
     "effects": {
-      "필요한 노동력": "-20%"
+      "workforce": "-20%"
     }
   },
   {
@@ -2716,7 +3080,7 @@
       "직공 주방"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -2730,8 +3094,8 @@
       "통조림 공장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "대체 노동력": "노동자"
+      "productivity": "+30%",
+      "replaced_workforce": "노동자"
     }
   },
   {
@@ -2745,13 +3109,13 @@
       "통조림 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "소시지 +1/2"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "굴라시",
-          "대체": "돼지"
+          "old": "굴라시",
+          "new": "돼지"
         }
       ]
     }
@@ -2767,14 +3131,14 @@
       "통조림 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "토르티야 +1/3"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "철",
-          "대체": "밀가루"
+          "old": "철",
+          "new": "밀가루"
         }
       ]
     }
@@ -2790,7 +3154,7 @@
       "직공 주방"
     ],
     "effects": {
-      "유지비": "-20%"
+      "maintenance": "-20%"
     }
   },
   {
@@ -2804,7 +3168,7 @@
       "직공 주방"
     ],
     "effects": {
-      "필요한 노동력": "-40%"
+      "workforce": "-40%"
     }
   },
   {
@@ -2818,11 +3182,11 @@
       "직공 주방"
     ],
     "effects": {
-      "생산성": "+30%",
-      "새로운 투입물": [
+      "productivity": "+30%",
+      "replaced_inputs": [
         {
-          "기존": "소고기",
-          "대체": "돼지"
+          "old": "소고기",
+          "new": "돼지"
         }
       ]
     }
@@ -2838,8 +3202,8 @@
       "직공 주방"
     ],
     "effects": {
-      "생산성": "+40%",
-      "대체 노동력": "노동자"
+      "productivity": "+40%",
+      "replaced_workforce": "노동자"
     }
   },
   {
@@ -2853,14 +3217,14 @@
       "직공 주방"
     ],
     "effects": {
-      "생산성": "+100%",
-      "추가 물품": [
+      "productivity": "+100%",
+      "additional_outputs": [
         "소시지 +1/5"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "소고기",
-          "대체": "돼지"
+          "old": "소고기",
+          "new": "돼지"
         }
       ]
     }
@@ -2876,7 +3240,7 @@
       "자전거 공장"
     ],
     "effects": {
-      "필요한 노동력": "-20%"
+      "workforce": "-20%"
     }
   },
   {
@@ -2890,7 +3254,7 @@
       "자동차 공장"
     ],
     "effects": {
-      "필요한 노동력": "-15%"
+      "workforce": "-15%"
     }
   },
   {
@@ -2904,7 +3268,7 @@
       "재봉틀 공장"
     ],
     "effects": {
-      "필요한 노동력": "-20%"
+      "workforce": "-20%"
     }
   },
   {
@@ -2918,7 +3282,7 @@
       "자전거 공장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -2932,7 +3296,7 @@
       "자동차 공장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -2946,7 +3310,7 @@
       "재봉틀 공장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -2960,10 +3324,10 @@
       "자동차 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "자전거 +1/5"
       ],
-      "유지비": "-20%"
+      "maintenance": "-20%"
     }
   },
   {
@@ -2978,8 +3342,8 @@
       "재봉틀 공장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "대체 노동력": "노동자"
+      "productivity": "+30%",
+      "replaced_workforce": "노동자"
     }
   },
   {
@@ -2993,13 +3357,13 @@
       "자동차 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "전구 +1/4"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "증기 모터",
-          "대체": "필라멘트"
+          "old": "증기 모터",
+          "new": "필라멘트"
         }
       ]
     }
@@ -3016,14 +3380,14 @@
       "재봉틀 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "회중시계 +1/8",
         "축음기 +1/8"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "강철",
-          "대체": "철"
+          "old": "강철",
+          "new": "철"
         }
       ]
     }
@@ -3045,8 +3409,8 @@
       "재봉틀 생산 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "고급 무기 +1/3",
         "증기 모터 +1/3"
       ]
@@ -3063,7 +3427,7 @@
       "모든 목공소"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "나무 +1/3"
       ]
     }
@@ -3079,7 +3443,7 @@
       "창문 공장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -3094,7 +3458,7 @@
       "모든 벌목꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -3109,7 +3473,7 @@
       "모든 벌목꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+50%"
+      "productivity": "+50%"
     }
   },
   {
@@ -3123,10 +3487,10 @@
       "창문 공장"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "유리",
-          "대체": "규사"
+          "old": "유리",
+          "new": "규사"
         }
       ]
     }
@@ -3143,8 +3507,8 @@
       "창문 공장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "필요한 노동력": "-60%"
+      "productivity": "+30%",
+      "workforce": "-60%"
     }
   },
   {
@@ -3159,10 +3523,10 @@
       "창문 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "진주 +1/4"
       ],
-      "유지비": "-80%"
+      "maintenance": "-80%"
     }
   },
   {
@@ -3177,12 +3541,86 @@
       "창문 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "합판 +1/3"
       ],
-      "전기 제공": true
+      "industrialization": true
     }
+  },
+  {
+    "guid": 191432,
+    "type": "HarborOfficeItem",
+    "name": "포수",
+    "rarity": "",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_uniform_707.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191433,
+    "type": "HarborOfficeItem",
+    "name": "여성 포병",
+    "rarity": "특별",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_artillerist_401.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191434,
+    "type": "HarborOfficeItem",
+    "name": "포병",
+    "rarity": "희귀",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_artillerist_201.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191435,
+    "type": "HarborOfficeItem",
+    "name": "바르자글리 대령",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_artillerist_202.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {
+      "maintenance": "-75%"
+    }
+  },
+  {
+    "guid": 191436,
+    "type": "HarborOfficeItem",
+    "name": "군대 지휘자, 마트라베스 육군 원수",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_103.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191442,
+    "type": "HarborOfficeItem",
+    "name": "깃발을 꽂는 자, 유잉 톰슨 장군",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_uniformed_101.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
   },
   {
     "guid": 191459,
@@ -3196,7 +3634,7 @@
       "모든 점토 채취장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -3210,7 +3648,7 @@
       "콘크리트 공장"
     ],
     "effects": {
-      "유지비": "-20%"
+      "maintenance": "-20%"
     }
   },
   {
@@ -3224,7 +3662,7 @@
       "모든 벽돌 공장"
     ],
     "effects": {
-      "유지비": "-100%"
+      "maintenance": "-100%"
     }
   },
   {
@@ -3238,10 +3676,10 @@
       "콘크리트 공장"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "시멘트",
-          "대체": "점토"
+          "old": "시멘트",
+          "new": "점토"
         }
       ]
     }
@@ -3258,10 +3696,10 @@
       "콘크리트 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "철재 +1/5"
       ],
-      "필요한 노동력": "-60%"
+      "workforce": "-60%"
     }
   },
   {
@@ -3276,8 +3714,8 @@
       "콘크리트 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "전기 제공": true
+      "productivity": "+40%",
+      "industrialization": true
     }
   },
   {
@@ -3292,12 +3730,12 @@
       "콘크리트 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "합판 +1/2"
       ],
-      "대체 노동력": "농부",
-      "매력도": "+8"
+      "replaced_workforce": "농부",
+      "attractiveness": "+8"
     }
   },
   {
@@ -3311,7 +3749,7 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -3325,7 +3763,7 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "필요한 노동력": "-40%"
+      "workforce": "-40%"
     }
   },
   {
@@ -3339,8 +3777,8 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "필요한 노동력": "-60%"
+      "productivity": "+30%",
+      "workforce": "-60%"
     }
   },
   {
@@ -3354,10 +3792,10 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "소고기 +1/4"
       ],
-      "유지비": "-80%"
+      "maintenance": "-80%"
     }
   },
   {
@@ -3371,11 +3809,11 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "생산성": "+100%",
-      "추가 물품": [
+      "productivity": "+100%",
+      "additional_outputs": [
         "알파카 양모 +1/3"
       ],
-      "모듈 수": "+100%"
+      "module_limit": "+100%"
     }
   },
   {
@@ -3391,7 +3829,7 @@
       "보크사이트 광산"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -3407,7 +3845,7 @@
       "보크사이트 광산"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
   },
   {
@@ -3423,7 +3861,7 @@
       "점토 채취장"
     ],
     "effects": {
-      "필요한 노동력": "-100%"
+      "workforce": "-100%"
     }
   },
   {
@@ -3439,7 +3877,7 @@
       "보크사이트 광산"
     ],
     "effects": {
-      "필요한 노동력": "-100%"
+      "workforce": "-100%"
     }
   },
   {
@@ -3458,8 +3896,8 @@
       "보크사이트 광산"
     ],
     "effects": {
-      "생산성": "+30%",
-      "유지비": "-50%"
+      "productivity": "+30%",
+      "maintenance": "-50%"
     }
   },
   {
@@ -3477,10 +3915,10 @@
       "보크사이트 광산"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "진주 +1/4"
       ],
-      "전기 제공": true
+      "industrialization": true
     }
   },
   {
@@ -3499,8 +3937,8 @@
       "보크사이트 광산"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "진주 +1/3",
         "금광석 +1/3"
       ]
@@ -3518,8 +3956,8 @@
       "메즈칼 술집"
     ],
     "effects": {
-      "생산성": "+100%",
-      "추가 물품": [
+      "productivity": "+100%",
+      "additional_outputs": [
         "럼주 +1/3"
       ]
     }
@@ -3535,10 +3973,10 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "생산성": "+50%",
-      "유지비": "-10%",
-      "필요한 노동력": "-10%",
-      "폭동 확률": "-20%"
+      "productivity": "+50%",
+      "maintenance": "-10%",
+      "workforce": "-10%",
+      "incident_riot": "-20%"
     }
   },
   {
@@ -3553,11 +3991,11 @@
       "대농장 - 감자 농장"
     ],
     "effects": {
-      "생산성": "+80%",
-      "추가 물품": [
+      "productivity": "+80%",
+      "additional_outputs": [
         "감자 +1/8"
       ],
-      "모듈 수": "+35%"
+      "module_limit": "+35%"
     }
   },
   {
@@ -3571,7 +4009,7 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "화재 확률": "-30%"
+      "incident_fire": "-30%"
     }
   },
   {
@@ -3585,8 +4023,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "화재 확률": "-40%",
-      "매력도": "+2"
+      "incident_fire": "-40%",
+      "attractiveness": "+2"
     }
   },
   {
@@ -3600,8 +4038,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "화재 확률": "-50%",
-      "매력도": "+3"
+      "incident_fire": "-50%",
+      "attractiveness": "+3"
     }
   },
   {
@@ -3615,8 +4053,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "+10%",
-      "필요한 노동력": "-20%"
+      "maintenance": "+10%",
+      "workforce": "-20%"
     }
   },
   {
@@ -3630,7 +4068,7 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "필요한 노동력": "-30%"
+      "workforce": "-30%"
     }
   },
   {
@@ -3644,8 +4082,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "-20%",
-      "필요한 노동력": "-40%"
+      "maintenance": "-20%",
+      "workforce": "-40%"
     }
   },
   {
@@ -3659,8 +4097,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "-25%",
-      "필요한 노동력": "-50%"
+      "maintenance": "-25%",
+      "workforce": "-50%"
     }
   },
   {
@@ -3674,9 +4112,9 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "+100%",
-      "폭발 확률": "+70%",
-      "전기 제공": true
+      "maintenance": "+100%",
+      "incident_explosion": "+70%",
+      "industrialization": true
     }
   },
   {
@@ -3690,9 +4128,9 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "+75%",
-      "폭발 확률": "+50%",
-      "전기 제공": true
+      "maintenance": "+75%",
+      "incident_explosion": "+50%",
+      "industrialization": true
     }
   },
   {
@@ -3706,8 +4144,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "+50%",
-      "전기 제공": true
+      "maintenance": "+50%",
+      "industrialization": true
     }
   },
   {
@@ -3721,9 +4159,9 @@
       "모든 제철소 및 주조 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "화재 확률": "+50%",
-      "매력도": "-3"
+      "productivity": "+40%",
+      "incident_fire": "+50%",
+      "attractiveness": "-3"
     }
   },
   {
@@ -3737,9 +4175,9 @@
       "모든 제철소 및 주조 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "화재 확률": "+30%",
-      "매력도": "-2"
+      "productivity": "+50%",
+      "incident_fire": "+30%",
+      "attractiveness": "-2"
     }
   },
   {
@@ -3753,9 +4191,9 @@
       "모든 제철소 및 주조 공장"
     ],
     "effects": {
-      "생산성": "+60%",
-      "필요한 노동력": "-50%",
-      "매력도": "-1"
+      "productivity": "+60%",
+      "workforce": "-50%",
+      "attractiveness": "-1"
     }
   },
   {
@@ -3775,8 +4213,8 @@
       "연구소: 소화기"
     ],
     "effects": {
-      "생산성": "+30%",
-      "유지비": "+10%"
+      "productivity": "+30%",
+      "maintenance": "+10%"
     }
   },
   {
@@ -3796,7 +4234,7 @@
       "연구소: 소화기"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -3816,8 +4254,8 @@
       "연구소: 소화기"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "workforce": "-50%"
     }
   },
   {
@@ -3834,7 +4272,7 @@
       "제지 공장"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -3851,8 +4289,8 @@
       "제지 공장"
     ],
     "effects": {
-      "생산성": "+35%",
-      "필요한 노동력": "-25%"
+      "productivity": "+35%",
+      "workforce": "-25%"
     }
   },
   {
@@ -3869,8 +4307,8 @@
       "제지 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "workforce": "-50%"
     }
   },
   {
@@ -3889,7 +4327,7 @@
       "화학 공장: 필름 릴"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -3908,7 +4346,7 @@
       "화학 공장: 필름 릴"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -3927,7 +4365,7 @@
       "화학 공장: 필름 릴"
     ],
     "effects": {
-      "생산성": "+50%"
+      "productivity": "+50%"
     }
   },
   {
@@ -3941,7 +4379,7 @@
       "모든 벌목꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -3955,7 +4393,7 @@
       "모든 벌목꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -3969,7 +4407,7 @@
       "모든 벌목꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+50%"
+      "productivity": "+50%"
     }
   },
   {
@@ -3983,7 +4421,7 @@
       "사냥꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -3997,8 +4435,8 @@
       "사냥꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+35%",
-      "필요한 노동력": "-25%"
+      "productivity": "+35%",
+      "workforce": "-25%"
     }
   },
   {
@@ -4012,8 +4450,8 @@
       "사냥꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "workforce": "-50%"
     }
   },
   {
@@ -4031,8 +4469,8 @@
       "산업유 압착기"
     ],
     "effects": {
-      "생산성": "+20%",
-      "산림 밀도": "+10%"
+      "productivity": "+20%",
+      "area": "+10%"
     }
   },
   {
@@ -4050,8 +4488,8 @@
       "산업유 압착기"
     ],
     "effects": {
-      "생산성": "+30%",
-      "산림 밀도": "+20%"
+      "productivity": "+30%",
+      "area": "+20%"
     }
   },
   {
@@ -4069,8 +4507,8 @@
       "산업유 압착기"
     ],
     "effects": {
-      "생산성": "+40%",
-      "산림 밀도": "+30%"
+      "productivity": "+40%",
+      "area": "+30%"
     }
   },
   {
@@ -4084,7 +4522,7 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -4098,7 +4536,7 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -4112,8 +4550,8 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "workforce": "-50%"
     }
   },
   {
@@ -4127,9 +4565,9 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "유지비": "-50%",
-      "필요한 노동력": "-50%"
+      "productivity": "+50%",
+      "maintenance": "-50%",
+      "workforce": "-50%"
     }
   },
   {
@@ -4143,8 +4581,8 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "모듈 수": "+15%"
+      "productivity": "+30%",
+      "module_limit": "+15%"
     }
   },
   {
@@ -4158,8 +4596,8 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "모듈 수": "+25%"
+      "productivity": "+50%",
+      "module_limit": "+25%"
     }
   },
   {
@@ -4173,8 +4611,8 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+70%",
-      "모듈 수": "+35%"
+      "productivity": "+70%",
+      "module_limit": "+35%"
     }
   },
   {
@@ -4189,7 +4627,7 @@
       "모든 동력식 목초지"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -4204,7 +4642,7 @@
       "모든 동력식 목초지"
     ],
     "effects": {
-      "생산성": "+30%"
+      "productivity": "+30%"
     }
   },
   {
@@ -4219,7 +4657,7 @@
       "모든 동력식 목초지"
     ],
     "effects": {
-      "생산성": "+40%"
+      "productivity": "+40%"
     }
   },
   {
@@ -4233,7 +4671,7 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "생산성": "+40%"
+      "productivity": "+40%"
     }
   },
   {
@@ -4247,8 +4685,8 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "생산성": "+70%",
-      "유지비": "+50%"
+      "productivity": "+70%",
+      "maintenance": "+50%"
     }
   },
   {
@@ -4262,8 +4700,8 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "생산성": "+70%",
-      "유지비": "+35%"
+      "productivity": "+70%",
+      "maintenance": "+35%"
     }
   },
   {
@@ -4277,8 +4715,8 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "생산성": "+70%",
-      "유지비": "+20%"
+      "productivity": "+70%",
+      "maintenance": "+20%"
     }
   },
   {
@@ -4296,8 +4734,8 @@
       "대농장 비료 생산소"
     ],
     "effects": {
-      "유지비": "+30%",
-      "부정적인 매력도": "-25%"
+      "maintenance": "+30%",
+      "negative_attractiveness": "-25%"
     }
   },
   {
@@ -4315,8 +4753,8 @@
       "대농장 비료 생산소"
     ],
     "effects": {
-      "유지비": "+20%",
-      "부정적인 매력도": "-50%"
+      "maintenance": "+20%",
+      "negative_attractiveness": "-50%"
     }
   },
   {
@@ -4334,8 +4772,8 @@
       "대농장 비료 생산소"
     ],
     "effects": {
-      "유지비": "+10%",
-      "부정적인 매력도": "-75%"
+      "maintenance": "+10%",
+      "negative_attractiveness": "-75%"
     }
   },
   {
@@ -4349,9 +4787,9 @@
       "모든 광산"
     ],
     "effects": {
-      "생산성": "+25%",
-      "유지비": "-15%",
-      "폭발 확률": "+50%"
+      "productivity": "+25%",
+      "maintenance": "-15%",
+      "incident_explosion": "+50%"
     }
   },
   {
@@ -4365,9 +4803,9 @@
       "모든 광산"
     ],
     "effects": {
-      "생산성": "+35%",
-      "유지비": "-25%",
-      "폭발 확률": "+30%"
+      "productivity": "+35%",
+      "maintenance": "-25%",
+      "incident_explosion": "+30%"
     }
   },
   {
@@ -4381,8 +4819,8 @@
       "모든 광산"
     ],
     "effects": {
-      "생산성": "+40%",
-      "유지비": "-35%"
+      "productivity": "+40%",
+      "maintenance": "-35%"
     }
   },
   {
@@ -4402,8 +4840,8 @@
       "헬륨 추출기"
     ],
     "effects": {
-      "생산성": "+25%",
-      "유지비": "+25%"
+      "productivity": "+25%",
+      "maintenance": "+25%"
     }
   },
   {
@@ -4423,8 +4861,8 @@
       "헬륨 추출기"
     ],
     "effects": {
-      "생산성": "+35%",
-      "유지비": "+15%"
+      "productivity": "+35%",
+      "maintenance": "+15%"
     }
   },
   {
@@ -4444,8 +4882,8 @@
       "헬륨 추출기"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-20%"
+      "productivity": "+40%",
+      "workforce": "-20%"
     }
   },
   {
@@ -4459,7 +4897,7 @@
       "모든 의류 산업"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -4473,7 +4911,7 @@
       "모든 의류 산업"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -4487,8 +4925,8 @@
       "모든 의류 산업"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-25%"
+      "productivity": "+40%",
+      "workforce": "-25%"
     }
   },
   {
@@ -4502,9 +4940,9 @@
       "모든 의류 산업"
     ],
     "effects": {
-      "생산성": "+50%",
-      "유지비": "-20%",
-      "필요한 노동력": "-25%"
+      "productivity": "+50%",
+      "maintenance": "-20%",
+      "workforce": "-25%"
     }
   },
   {
@@ -4519,8 +4957,8 @@
       "스쿠터 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "화재 확률": "+70%"
+      "productivity": "+40%",
+      "incident_fire": "+70%"
     }
   },
   {
@@ -4535,8 +4973,8 @@
       "스쿠터 공장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "화재 확률": "+50%"
+      "productivity": "+50%",
+      "incident_fire": "+50%"
     }
   },
   {
@@ -4551,9 +4989,9 @@
       "스쿠터 공장"
     ],
     "effects": {
-      "생산성": "+60%",
-      "필요한 노동력": "-20%",
-      "화재 확률": "+30%"
+      "productivity": "+60%",
+      "workforce": "-20%",
+      "incident_fire": "+30%"
     }
   },
   {
@@ -4567,9 +5005,9 @@
       "모든 식량 생산 시설"
     ],
     "effects": {
-      "생산성": "+20%",
-      "유지비": "+10%",
-      "화재 확률": "-10%"
+      "productivity": "+20%",
+      "maintenance": "+10%",
+      "incident_fire": "-10%"
     }
   },
   {
@@ -4583,8 +5021,8 @@
       "모든 식량 생산 시설"
     ],
     "effects": {
-      "생산성": "+30%",
-      "화재 확률": "-20%"
+      "productivity": "+30%",
+      "incident_fire": "-20%"
     }
   },
   {
@@ -4598,9 +5036,9 @@
       "모든 식량 생산 시설"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-25%",
-      "화재 확률": "-30%"
+      "productivity": "+40%",
+      "workforce": "-25%",
+      "incident_fire": "-30%"
     }
   },
   {
@@ -4614,8 +5052,8 @@
       "모든 음료 생산 시설"
     ],
     "effects": {
-      "생산성": "+30%",
-      "화재 확률": "+40%"
+      "productivity": "+30%",
+      "incident_fire": "+40%"
     }
   },
   {
@@ -4629,8 +5067,8 @@
       "모든 음료 생산 시설"
     ],
     "effects": {
-      "생산성": "+40%",
-      "화재 확률": "+20%"
+      "productivity": "+40%",
+      "incident_fire": "+20%"
     }
   },
   {
@@ -4644,8 +5082,8 @@
       "모든 음료 생산 시설"
     ],
     "effects": {
-      "생산성": "+50%",
-      "유지비": "-25%"
+      "productivity": "+50%",
+      "maintenance": "-25%"
     }
   },
   {
@@ -4662,7 +5100,7 @@
       "모든 무기 복합 생산 시설"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -4679,7 +5117,7 @@
       "모든 무기 복합 생산 시설"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -4696,8 +5134,8 @@
       "모든 무기 복합 생산 시설"
     ],
     "effects": {
-      "생산성": "+40%",
-      "유지비": "-10%"
+      "productivity": "+40%",
+      "maintenance": "-10%"
     }
   },
   {
@@ -4712,7 +5150,7 @@
       "진주 양식장"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -4727,7 +5165,7 @@
       "진주 양식장"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -4742,8 +5180,8 @@
       "진주 양식장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "workforce": "-50%"
     }
   },
   {
@@ -4759,8 +5197,8 @@
       "등불장이"
     ],
     "effects": {
-      "생산성": "+30%",
-      "화재 확률": "+30%"
+      "productivity": "+30%",
+      "incident_fire": "+30%"
     }
   },
   {
@@ -4776,7 +5214,7 @@
       "등불장이"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -4792,8 +5230,8 @@
       "등불장이"
     ],
     "effects": {
-      "생산성": "+40%",
-      "화재 확률": "-30%"
+      "productivity": "+40%",
+      "incident_fire": "-30%"
     }
   },
   {
@@ -4808,8 +5246,8 @@
       "완자 나무꾼"
     ],
     "effects": {
-      "생산성": "+30%",
-      "화재 확률": "+30%"
+      "productivity": "+30%",
+      "incident_fire": "+30%"
     }
   },
   {
@@ -4824,8 +5262,8 @@
       "완자 나무꾼"
     ],
     "effects": {
-      "생산성": "+40%",
-      "화재 확률": "+20%"
+      "productivity": "+40%",
+      "incident_fire": "+20%"
     }
   },
   {
@@ -4840,8 +5278,8 @@
       "완자 나무꾼"
     ],
     "effects": {
-      "생산성": "+50%",
-      "필요한 노동력": "-25%"
+      "productivity": "+50%",
+      "workforce": "-25%"
     }
   },
   {
@@ -4856,7 +5294,7 @@
       "콘크리트 공장"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -4871,7 +5309,7 @@
       "콘크리트 공장"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -4886,8 +5324,8 @@
       "콘크리트 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-25%"
+      "productivity": "+40%",
+      "workforce": "-25%"
     }
   },
   {
@@ -4902,8 +5340,8 @@
       "대농장 - 곡물 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "곡물 토착 자원"
+      "productivity": "-15%",
+      "fertility": "곡물 토착 자원"
     }
   },
   {
@@ -4918,7 +5356,7 @@
       "대농장 - 곡물 농장"
     ],
     "effects": {
-      "토착 자원 제공": "곡물 토착 자원"
+      "fertility": "곡물 토착 자원"
     }
   },
   {
@@ -4933,8 +5371,8 @@
       "대농장 - 곡물 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "곡물 토착 자원"
+      "productivity": "+25%",
+      "fertility": "곡물 토착 자원"
     }
   },
   {
@@ -4948,8 +5386,8 @@
       "홉 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "홉 토착 자원"
+      "productivity": "-15%",
+      "fertility": "홉 토착 자원"
     }
   },
   {
@@ -4963,7 +5401,7 @@
       "홉 농장"
     ],
     "effects": {
-      "토착 자원 제공": "홉 토착 자원"
+      "fertility": "홉 토착 자원"
     }
   },
   {
@@ -4977,8 +5415,8 @@
       "홉 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "홉 토착 자원"
+      "productivity": "+25%",
+      "fertility": "홉 토착 자원"
     }
   },
   {
@@ -4993,8 +5431,8 @@
       "대농장 - 감자 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "감자 토착 자원"
+      "productivity": "-15%",
+      "fertility": "감자 토착 자원"
     }
   },
   {
@@ -5009,7 +5447,7 @@
       "대농장 - 감자 농장"
     ],
     "effects": {
-      "토착 자원 제공": "감자 토착 자원"
+      "fertility": "감자 토착 자원"
     }
   },
   {
@@ -5024,8 +5462,8 @@
       "대농장 - 감자 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "감자 토착 자원"
+      "productivity": "+25%",
+      "fertility": "감자 토착 자원"
     }
   },
   {
@@ -5039,8 +5477,8 @@
       "포도원"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "포도 토착 자원"
+      "productivity": "-15%",
+      "fertility": "포도 토착 자원"
     }
   },
   {
@@ -5054,7 +5492,7 @@
       "포도원"
     ],
     "effects": {
-      "토착 자원 제공": "포도 토착 자원"
+      "fertility": "포도 토착 자원"
     }
   },
   {
@@ -5068,8 +5506,8 @@
       "포도원"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "포도 토착 자원"
+      "productivity": "+25%",
+      "fertility": "포도 토착 자원"
     }
   },
   {
@@ -5083,8 +5521,8 @@
       "피망 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "피망 토착 자원"
+      "productivity": "-15%",
+      "fertility": "피망 토착 자원"
     }
   },
   {
@@ -5098,7 +5536,7 @@
       "피망 농장"
     ],
     "effects": {
-      "토착 자원 제공": "피망 토착 자원"
+      "fertility": "피망 토착 자원"
     }
   },
   {
@@ -5112,8 +5550,8 @@
       "피망 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "피망 토착 자원"
+      "productivity": "+25%",
+      "fertility": "피망 토착 자원"
     }
   },
   {
@@ -5128,8 +5566,8 @@
       "대농장 - 사탕수수 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "사탕수수 토착 자원"
+      "productivity": "-15%",
+      "fertility": "사탕수수 토착 자원"
     }
   },
   {
@@ -5144,7 +5582,7 @@
       "대농장 - 사탕수수 농장"
     ],
     "effects": {
-      "토착 자원 제공": "사탕수수 토착 자원"
+      "fertility": "사탕수수 토착 자원"
     }
   },
   {
@@ -5159,8 +5597,8 @@
       "대농장 - 사탕수수 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "사탕수수 토착 자원"
+      "productivity": "+25%",
+      "fertility": "사탕수수 토착 자원"
     }
   },
   {
@@ -5174,8 +5612,8 @@
       "담배 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "담배 토착 자원"
+      "productivity": "-15%",
+      "fertility": "담배 토착 자원"
     }
   },
   {
@@ -5189,7 +5627,7 @@
       "담배 농장"
     ],
     "effects": {
-      "토착 자원 제공": "담배 토착 자원"
+      "fertility": "담배 토착 자원"
     }
   },
   {
@@ -5203,8 +5641,8 @@
       "담배 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "담배 토착 자원"
+      "productivity": "+25%",
+      "fertility": "담배 토착 자원"
     }
   },
   {
@@ -5218,8 +5656,8 @@
       "목화 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "목화 토착 자원"
+      "productivity": "-15%",
+      "fertility": "목화 토착 자원"
     }
   },
   {
@@ -5233,7 +5671,7 @@
       "목화 농장"
     ],
     "effects": {
-      "토착 자원 제공": "목화 토착 자원"
+      "fertility": "목화 토착 자원"
     }
   },
   {
@@ -5247,8 +5685,8 @@
       "목화 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "목화 토착 자원"
+      "productivity": "+25%",
+      "fertility": "목화 토착 자원"
     }
   },
   {
@@ -5263,8 +5701,8 @@
       "대농장 - 코코아 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "코코아 토착 자원"
+      "productivity": "-15%",
+      "fertility": "코코아 토착 자원"
     }
   },
   {
@@ -5279,7 +5717,7 @@
       "대농장 - 코코아 농장"
     ],
     "effects": {
-      "토착 자원 제공": "코코아 토착 자원"
+      "fertility": "코코아 토착 자원"
     }
   },
   {
@@ -5294,8 +5732,8 @@
       "대농장 - 코코아 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "코코아 토착 자원"
+      "productivity": "+25%",
+      "fertility": "코코아 토착 자원"
     }
   },
   {
@@ -5310,8 +5748,8 @@
       "대농장 - 생고무 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "생고무 토착 자원"
+      "productivity": "-15%",
+      "fertility": "생고무 토착 자원"
     }
   },
   {
@@ -5326,7 +5764,7 @@
       "대농장 - 생고무 농장"
     ],
     "effects": {
-      "토착 자원 제공": "생고무 토착 자원"
+      "fertility": "생고무 토착 자원"
     }
   },
   {
@@ -5341,8 +5779,8 @@
       "대농장 - 생고무 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "생고무 토착 자원"
+      "productivity": "+25%",
+      "fertility": "생고무 토착 자원"
     }
   },
   {
@@ -5357,8 +5795,8 @@
       "대농장 - 커피 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "커피 토착 자원"
+      "productivity": "-15%",
+      "fertility": "커피 토착 자원"
     }
   },
   {
@@ -5373,7 +5811,7 @@
       "대농장 - 커피 농장"
     ],
     "effects": {
-      "토착 자원 제공": "커피 토착 자원"
+      "fertility": "커피 토착 자원"
     }
   },
   {
@@ -5388,8 +5826,8 @@
       "대농장 - 커피 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "커피 토착 자원"
+      "productivity": "+25%",
+      "fertility": "커피 토착 자원"
     }
   },
   {
@@ -5404,8 +5842,8 @@
       "대농장 - 옥수수 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "옥수수 토착 자원"
+      "productivity": "-15%",
+      "fertility": "옥수수 토착 자원"
     }
   },
   {
@@ -5420,7 +5858,7 @@
       "대농장 - 옥수수 농장"
     ],
     "effects": {
-      "토착 자원 제공": "옥수수 토착 자원"
+      "fertility": "옥수수 토착 자원"
     }
   },
   {
@@ -5435,8 +5873,217 @@
       "대농장 - 옥수수 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "옥수수 토착 자원"
+      "productivity": "+25%",
+      "fertility": "옥수수 토착 자원"
+    }
+  },
+  {
+    "guid": 191879,
+    "type": "HarborOfficeItem",
+    "name": "부둣가 공구통",
+    "rarity": "특별",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/military_items/ico_repair_toolset.png",
+    "targets": [
+      "모든 항구 건물"
+    ],
+    "effects": {
+      "maintenance": "+15%"
+    }
+  },
+  {
+    "guid": 191880,
+    "type": "HarborOfficeItem",
+    "name": "부둣가 공구상자",
+    "rarity": "희귀",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/military_items/ico_repair_toolset.png",
+    "targets": [
+      "모든 항구 건물"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191881,
+    "type": "HarborOfficeItem",
+    "name": "부둣가 공구 종합 세트",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_building_repair_1.png",
+    "targets": [
+      "모든 항구 건물"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191882,
+    "type": "HarborOfficeItem",
+    "name": "데케의 매우 유용한 공구 상자",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_building_repair_2.png",
+    "targets": [
+      "모든 항구 건물"
+    ],
+    "effects": {
+      "maintenance": "-25%"
+    }
+  },
+  {
+    "guid": 191883,
+    "type": "HarborOfficeItem",
+    "name": "나무 수리용 기중기",
+    "rarity": "특별",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_construction_crane_1.png",
+    "targets": [
+      "모든 수리용 기중기"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191884,
+    "type": "HarborOfficeItem",
+    "name": "갠트리 수리용 기중기",
+    "rarity": "희귀",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_construction_crane_2.png",
+    "targets": [
+      "모든 수리용 기중기"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191885,
+    "type": "HarborOfficeItem",
+    "name": "철로 수리용 기중기",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_construction_crane_3.png",
+    "targets": [
+      "모든 수리용 기중기"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191886,
+    "type": "HarborOfficeItem",
+    "name": "유압 수리용 기중기",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_construction_crane_4.png",
+    "targets": [
+      "모든 수리용 기중기"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191888,
+    "type": "HarborOfficeItem",
+    "name": "메가폰",
+    "rarity": "특별",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_loudspeaker_1.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {
+      "maintenance": "+15%"
+    }
+  },
+  {
+    "guid": 191889,
+    "type": "HarborOfficeItem",
+    "name": "옥세토폰",
+    "rarity": "희귀",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_loudspeaker_2.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191890,
+    "type": "HarborOfficeItem",
+    "name": "다이내믹 확성기",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/military_items/icon_loudspeaker.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 192177,
+    "type": "HarborOfficeItem",
+    "name": "고성능 확성기 네트워크",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_loudspeaker_3.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 191894,
+    "type": "HarborOfficeItem",
+    "name": "나무 기중기",
+    "rarity": "특별",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_repair_crane_1.png",
+    "targets": [
+      "모든 조선소"
+    ],
+    "effects": {
+      "incident_fire": "+40%",
+      "construction_cost": "-15%"
+    }
+  },
+  {
+    "guid": 191895,
+    "type": "HarborOfficeItem",
+    "name": "갠트리 기중기",
+    "rarity": "희귀",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_repair_crane_1.png",
+    "targets": [
+      "모든 조선소"
+    ],
+    "effects": {
+      "incident_fire": "+20%",
+      "construction_cost": "-20%"
+    }
+  },
+  {
+    "guid": 191896,
+    "type": "HarborOfficeItem",
+    "name": "철로 기중기",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_repair_crane_2.png",
+    "targets": [
+      "모든 조선소"
+    ],
+    "effects": {
+      "construction_cost": "-25%"
+    }
+  },
+  {
+    "guid": 192036,
+    "type": "HarborOfficeItem",
+    "name": "유압 기중기",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_repair_crane_3.png",
+    "targets": [
+      "모든 조선소"
+    ],
+    "effects": {
+      "workforce": "-50%",
+      "construction_cost": "-30%"
     }
   },
   {
@@ -5450,8 +6097,8 @@
       "플랜테인 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "플랜테인 토착 자원"
+      "productivity": "-15%",
+      "fertility": "플랜테인 토착 자원"
     }
   },
   {
@@ -5465,7 +6112,7 @@
       "플랜테인 농장"
     ],
     "effects": {
-      "토착 자원 제공": "플랜테인 토착 자원"
+      "fertility": "플랜테인 토착 자원"
     }
   },
   {
@@ -5479,8 +6126,8 @@
       "플랜테인 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "플랜테인 토착 자원"
+      "productivity": "+25%",
+      "fertility": "플랜테인 토착 자원"
     }
   },
   {
@@ -5494,8 +6141,8 @@
       "진주 양식장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "토착 자원 제공": "진주 토착 자원"
+      "productivity": "-15%",
+      "fertility": "진주 토착 자원"
     }
   },
   {
@@ -5509,7 +6156,7 @@
       "진주 양식장"
     ],
     "effects": {
-      "토착 자원 제공": "진주 토착 자원"
+      "fertility": "진주 토착 자원"
     }
   },
   {
@@ -5523,8 +6170,8 @@
       "진주 양식장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "진주 토착 자원"
+      "productivity": "+25%",
+      "fertility": "진주 토착 자원"
     }
   },
   {
@@ -5538,8 +6185,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "-10%",
-      "화재 확률": "+20%"
+      "maintenance": "-10%",
+      "incident_fire": "+20%"
     }
   },
   {
@@ -5553,8 +6200,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "-25%",
-      "화재 확률": "+30%"
+      "maintenance": "-25%",
+      "incident_fire": "+30%"
     }
   },
   {
@@ -5568,8 +6215,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "-50%",
-      "화재 확률": "+40%"
+      "maintenance": "-50%",
+      "incident_fire": "+40%"
     }
   },
   {
@@ -5583,8 +6230,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "+5%",
-      "화재 확률": "-30%"
+      "maintenance": "+5%",
+      "incident_fire": "-30%"
     }
   },
   {
@@ -5598,8 +6245,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "+10%",
-      "화재 확률": "-50%"
+      "maintenance": "+10%",
+      "incident_fire": "-50%"
     }
   },
   {
@@ -5613,8 +6260,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "+15%",
-      "화재 확률": "-70%"
+      "maintenance": "+15%",
+      "incident_fire": "-70%"
     }
   },
   {
@@ -5628,8 +6275,8 @@
       "모든 제철소 및 주조 공장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "매력도": "+20%"
+      "productivity": "+25%",
+      "attractiveness": "+20%"
     }
   },
   {
@@ -5643,8 +6290,8 @@
       "모든 제철소 및 주조 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "매력도": "+40%"
+      "productivity": "+40%",
+      "attractiveness": "+40%"
     }
   },
   {
@@ -5658,8 +6305,8 @@
       "모든 제철소 및 주조 공장"
     ],
     "effects": {
-      "생산성": "+55%",
-      "매력도": "+60%"
+      "productivity": "+55%",
+      "attractiveness": "+60%"
     }
   },
   {
@@ -5673,8 +6320,8 @@
       "모든 제철소 및 주조 공장"
     ],
     "effects": {
-      "생산성": "-10%",
-      "부정적인 매력도": "-40%"
+      "productivity": "-10%",
+      "negative_attractiveness": "-40%"
     }
   },
   {
@@ -5688,8 +6335,8 @@
       "모든 제철소 및 주조 공장"
     ],
     "effects": {
-      "생산성": "-20%",
-      "부정적인 매력도": "-60%"
+      "productivity": "-20%",
+      "negative_attractiveness": "-60%"
     }
   },
   {
@@ -5703,8 +6350,56 @@
       "모든 제철소 및 주조 공장"
     ],
     "effects": {
-      "생산성": "-30%",
-      "부정적인 매력도": "-80%"
+      "productivity": "-30%",
+      "negative_attractiveness": "-80%"
+    }
+  },
+  {
+    "guid": 191812,
+    "type": "HarborOfficeItem",
+    "name": "소규모 관광 캠페인",
+    "rarity": "특별",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/museum/icon_book_comon.png",
+    "targets": [
+      "모든 여객 부두"
+    ],
+    "effects": {
+      "maintenance": "+35%",
+      "attractiveness": "+20",
+      "spawn_probability": "-10%"
+    }
+  },
+  {
+    "guid": 191813,
+    "type": "HarborOfficeItem",
+    "name": "대규모 관광 캠페인",
+    "rarity": "희귀",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/museum/icon_book_uncommon.png",
+    "targets": [
+      "모든 여객 부두"
+    ],
+    "effects": {
+      "maintenance": "+70%",
+      "attractiveness": "+35",
+      "spawn_probability": "-15%"
+    }
+  },
+  {
+    "guid": 191814,
+    "type": "HarborOfficeItem",
+    "name": "마담 카히나의 고급 관광업 운동",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/museum/icon_book_rare.png",
+    "targets": [
+      "모든 여객 부두"
+    ],
+    "effects": {
+      "maintenance": "+100%",
+      "attractiveness": "+50",
+      "spawn_probability": "-20%"
     }
   },
   {
@@ -5718,8 +6413,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "+10%",
-      "필요한 노동력": "-20%"
+      "maintenance": "+10%",
+      "workforce": "-20%"
     }
   },
   {
@@ -5733,7 +6428,7 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "필요한 노동력": "-30%"
+      "workforce": "-30%"
     }
   },
   {
@@ -5747,8 +6442,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "생산성": "+25%",
-      "필요한 노동력": "-40%"
+      "productivity": "+25%",
+      "workforce": "-40%"
     }
   },
   {
@@ -5762,8 +6457,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "생산성": "-10%",
-      "유지비": "-15%"
+      "productivity": "-10%",
+      "maintenance": "-15%"
     }
   },
   {
@@ -5777,7 +6472,7 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "-20%"
+      "maintenance": "-20%"
     }
   },
   {
@@ -5791,8 +6486,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "-25%",
-      "필요한 노동력": "-40%"
+      "maintenance": "-25%",
+      "workforce": "-40%"
     }
   },
   {
@@ -5806,9 +6501,9 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "생산성": "+25%",
-      "유지비": "-20%",
-      "필요한 노동력": "-25%"
+      "productivity": "+25%",
+      "maintenance": "-20%",
+      "workforce": "-25%"
     }
   },
   {
@@ -5822,7 +6517,7 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "생산성": "+15%"
+      "productivity": "+15%"
     }
   },
   {
@@ -5836,7 +6531,7 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -5850,7 +6545,7 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -5864,7 +6559,7 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "필요한 노동력": "-15%"
+      "workforce": "-15%"
     }
   },
   {
@@ -5878,7 +6573,7 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "필요한 노동력": "-30%"
+      "workforce": "-30%"
     }
   },
   {
@@ -5892,7 +6587,7 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -5915,9 +6610,9 @@
       "무기고: 경찰 장비"
     ],
     "effects": {
-      "화재 확률": "+150%",
-      "폭발 확률": "+70%",
-      "전기 제공": true
+      "incident_fire": "+150%",
+      "incident_explosion": "+70%",
+      "industrialization": true
     }
   },
   {
@@ -5940,9 +6635,9 @@
       "무기고: 경찰 장비"
     ],
     "effects": {
-      "화재 확률": "+100%",
-      "폭발 확률": "+50%",
-      "전기 제공": true
+      "incident_fire": "+100%",
+      "incident_explosion": "+50%",
+      "industrialization": true
     }
   },
   {
@@ -5965,10 +6660,46 @@
       "무기고: 경찰 장비"
     ],
     "effects": {
-      "화재 확률": "+50%",
-      "폭발 확률": "+30%",
-      "전기 제공": true
+      "incident_fire": "+50%",
+      "incident_explosion": "+30%",
+      "industrialization": true
     }
+  },
+  {
+    "guid": 112386,
+    "type": "HarborOfficeItem",
+    "name": "네이트 천공기",
+    "rarity": "희귀",
+    "dlc_dependency": "가라앉은 보물",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_rotating_rifle_1.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 112387,
+    "type": "HarborOfficeItem",
+    "name": "네이트 암살장치",
+    "rarity": "에픽",
+    "dlc_dependency": "가라앉은 보물",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_rotating_rifle_2.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
+  },
+  {
+    "guid": 112388,
+    "type": "HarborOfficeItem",
+    "name": "네이트 퇴마기",
+    "rarity": "전설",
+    "dlc_dependency": "가라앉은 보물",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_rotating_rifle_3.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
   },
   {
     "guid": 112380,
@@ -5981,7 +6712,7 @@
       "모든 해안 생산 시설"
     ],
     "effects": {
-      "생산성": "+15%"
+      "productivity": "+15%"
     }
   },
   {
@@ -5995,7 +6726,7 @@
       "모든 해안 생산 시설"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -6009,7 +6740,7 @@
       "모든 해안 생산 시설"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -6024,9 +6755,9 @@
       "모든 조선소"
     ],
     "effects": {
-      "화재 확률": "+150%",
-      "폭발 확률": "+70%",
-      "전기 제공": true
+      "incident_fire": "+150%",
+      "incident_explosion": "+70%",
+      "industrialization": true
     }
   },
   {
@@ -6041,9 +6772,9 @@
       "모든 조선소"
     ],
     "effects": {
-      "화재 확률": "+100%",
-      "폭발 확률": "+50%",
-      "전기 제공": true
+      "incident_fire": "+100%",
+      "incident_explosion": "+50%",
+      "industrialization": true
     }
   },
   {
@@ -6058,9 +6789,24 @@
       "모든 조선소"
     ],
     "effects": {
-      "화재 확률": "+50%",
-      "폭발 확률": "+30%",
-      "전기 제공": true
+      "incident_fire": "+50%",
+      "incident_explosion": "+30%",
+      "industrialization": true
+    }
+  },
+  {
+    "guid": 113792,
+    "type": "HarborOfficeItem",
+    "name": "트릴로니의 베테랑 항만 관리소장 호가트",
+    "rarity": "전설",
+    "dlc_dependency": "가라앉은 보물",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/sunken_treasure_rewards/icon_guildhouse_specialist_200.png",
+    "targets": [
+      "모든 항구 건물"
+    ],
+    "effects": {
+      "gen_probability": "+30%",
+      "pier_speed": "+100%"
     }
   },
   {
@@ -6075,10 +6821,10 @@
       "귀금속 세공소"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "금 +1/5"
       ],
-      "매력도": "+8"
+      "attractiveness": "+8"
     }
   },
   {
@@ -6092,8 +6838,8 @@
       "고래 사냥꾼"
     ],
     "effects": {
-      "생산성": "+25%",
-      "유지비": "+25%"
+      "productivity": "+25%",
+      "maintenance": "+25%"
     }
   },
   {
@@ -6107,7 +6853,7 @@
       "고래 사냥꾼"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -6121,8 +6867,8 @@
       "고래 사냥꾼"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "workforce": "-50%"
     }
   },
   {
@@ -6136,7 +6882,7 @@
       "바다표범 사냥꾼"
     ],
     "effects": {
-      "유지비": "-50%"
+      "maintenance": "-50%"
     }
   },
   {
@@ -6150,7 +6896,7 @@
       "바다표범 사냥꾼"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -6164,8 +6910,8 @@
       "바다표범 사냥꾼"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "workforce": "-50%"
     }
   },
   {
@@ -6180,8 +6926,8 @@
       "곰 사냥꾼"
     ],
     "effects": {
-      "생산성": "+25%",
-      "유지비": "+25%"
+      "productivity": "+25%",
+      "maintenance": "+25%"
     }
   },
   {
@@ -6196,7 +6942,7 @@
       "곰 사냥꾼"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -6211,8 +6957,8 @@
       "곰 사냥꾼"
     ],
     "effects": {
-      "산림 밀도": "+15%",
-      "유지비": "-100%"
+      "area": "+15%",
+      "maintenance": "-100%"
     }
   },
   {
@@ -6226,8 +6972,8 @@
       "페미컨 공장"
     ],
     "effects": {
-      "유지비": "+25%",
-      "필요한 노동력": "-30%"
+      "maintenance": "+25%",
+      "workforce": "-30%"
     }
   },
   {
@@ -6241,7 +6987,7 @@
       "페미컨 공장"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -6255,8 +7001,8 @@
       "페미컨 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "유지비": "-35%"
+      "productivity": "+40%",
+      "maintenance": "-35%"
     }
   },
   {
@@ -6271,8 +7017,8 @@
       "침낭 공장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "유지비": "+25%"
+      "productivity": "+25%",
+      "maintenance": "+25%"
     }
   },
   {
@@ -6287,7 +7033,7 @@
       "침낭 공장"
     ],
     "effects": {
-      "필요한 노동력": "-40%"
+      "workforce": "-40%"
     }
   },
   {
@@ -6302,8 +7048,8 @@
       "침낭 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "유지비": "-35%"
+      "productivity": "+40%",
+      "maintenance": "-35%"
     }
   },
   {
@@ -6318,8 +7064,8 @@
       "허스키 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "유지비": "+25%"
+      "productivity": "+25%",
+      "maintenance": "+25%"
     }
   },
   {
@@ -6334,7 +7080,7 @@
       "허스키 농장"
     ],
     "effects": {
-      "유지비": "-25%"
+      "maintenance": "-25%"
     }
   },
   {
@@ -6349,8 +7095,8 @@
       "허스키 농장"
     ],
     "effects": {
-      "생산성": "+60%",
-      "모듈 수": "+35%"
+      "productivity": "+60%",
+      "module_limit": "+35%"
     }
   },
   {
@@ -6367,7 +7113,7 @@
       "허스키 썰매 공장"
     ],
     "effects": {
-      "유지비": "-15%"
+      "maintenance": "-15%"
     }
   },
   {
@@ -6384,7 +7130,7 @@
       "허스키 썰매 공장"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -6401,8 +7147,8 @@
       "허스키 썰매 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "workforce": "-50%"
     }
   },
   {
@@ -6417,8 +7163,8 @@
       "침낭 공장"
     ],
     "effects": {
-      "유지비": "-20%",
-      "필요한 노동력": "-30%"
+      "maintenance": "-20%",
+      "workforce": "-30%"
     }
   },
   {
@@ -6433,8 +7179,8 @@
       "침낭 공장"
     ],
     "effects": {
-      "생산성": "+20%",
-      "추가 물품": [
+      "productivity": "+20%",
+      "additional_outputs": [
         "바다표범 가죽 +1/4"
       ]
     }
@@ -6464,7 +7210,7 @@
       "허스키 농장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -6479,8 +7225,8 @@
       "허스키 농장"
     ],
     "effects": {
-      "유지비": "-15%",
-      "필요한 노동력": "-50%"
+      "maintenance": "-15%",
+      "workforce": "-50%"
     }
   },
   {
@@ -6495,8 +7241,8 @@
       "허스키 농장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "카리부 고기 +1/6"
       ]
     }
@@ -6515,7 +7261,7 @@
       "곰 사냥꾼"
     ],
     "effects": {
-      "필요한 노동력": "-25%"
+      "workforce": "-25%"
     }
   },
   {
@@ -6532,8 +7278,8 @@
       "곰 사냥꾼"
     ],
     "effects": {
-      "생산성": "+30%",
-      "유지비": "-40%"
+      "productivity": "+30%",
+      "maintenance": "-40%"
     }
   },
   {
@@ -6550,8 +7296,8 @@
       "곰 사냥꾼"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "거위 깃털 +1/7"
       ]
     }
@@ -6569,7 +7315,7 @@
       "허스키 썰매 공장"
     ],
     "effects": {
-      "유지비": "-30%"
+      "maintenance": "-30%"
     }
   },
   {
@@ -6585,8 +7331,8 @@
       "허스키 썰매 공장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "필요한 노동력": "-30%"
+      "productivity": "+25%",
+      "workforce": "-30%"
     }
   },
   {
@@ -6602,8 +7348,8 @@
       "허스키 썰매 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "목재 +1/2"
       ]
     }
@@ -6619,7 +7365,7 @@
       "페미컨 공장"
     ],
     "effects": {
-      "필요한 노동력": "-40%"
+      "workforce": "-40%"
     }
   },
   {
@@ -6646,10 +7392,10 @@
       "페미컨 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "기름 램프 +1/7"
       ],
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -6688,7 +7434,7 @@
       "모든 북극 생산 시설"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -6715,11 +7461,11 @@
       "기름 램프 공장"
     ],
     "effects": {
-      "생산성": "+35%",
-      "새로운 투입물": [
+      "productivity": "+35%",
+      "replaced_inputs": [
         {
-          "기존": "황동",
-          "대체": "구리"
+          "old": "황동",
+          "new": "구리"
         }
       ]
     }
@@ -6735,10 +7481,10 @@
       "난방기"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "석탄",
-          "대체": "나무"
+          "old": "석탄",
+          "new": "나무"
         }
       ]
     }
@@ -6755,8 +7501,8 @@
       "숯가마"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "슈냅스 +1/5"
       ]
     }
@@ -6772,10 +7518,10 @@
       "페미컨 공장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "통조림 +1/5"
       ],
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -6801,8 +7547,8 @@
       "극지 가스 추출장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "아연 +1/2",
         "구리 +1/2"
       ]
@@ -6844,8 +7590,8 @@
       "메즈칼 술집"
     ],
     "effects": {
-      "생산성": "+30%",
-      "유지비": "-25%"
+      "productivity": "+30%",
+      "maintenance": "-25%"
     }
   },
   {
@@ -6859,8 +7605,8 @@
       "모든 중공업"
     ],
     "effects": {
-      "화재 확률": "-50%",
-      "폭발 확률": "-50%"
+      "incident_fire": "-50%",
+      "incident_explosion": "-50%"
     }
   },
   {
@@ -6924,8 +7670,8 @@
       "모든 문화 건물"
     ],
     "effects": {
-      "유지비": "-25%",
-      "매력도": "+5%"
+      "maintenance": "-25%",
+      "attractiveness": "+5%"
     }
   },
   {
@@ -6943,8 +7689,8 @@
       "메즈칼 술집"
     ],
     "effects": {
-      "생산성": "+25%",
-      "추가 물품": [
+      "productivity": "+25%",
+      "additional_outputs": [
         "커피 +1/10"
       ]
     }
@@ -6960,8 +7706,8 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "추가 물품": [
+      "productivity": "+25%",
+      "additional_outputs": [
         "시가 +1/25"
       ]
     }
@@ -6977,7 +7723,7 @@
       "모든 광산"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "철 +1/1"
       ]
     }
@@ -6993,8 +7739,8 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "추가 물품": [
+      "productivity": "+25%",
+      "additional_outputs": [
         "금광석 +1/25"
       ]
     }
@@ -7012,18 +7758,18 @@
       "베테랑 사냥꾼의 오두막"
     ],
     "effects": {
-      "생산성": "+25%",
-      "토착 자원 제공": "곰 토착 자원",
-      "추가 물품": [
+      "productivity": "+25%",
+      "fertility": "곰 토착 자원",
+      "additional_outputs": [
         "곰의 모피 +1/3"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "경작지",
-          "대체": "소고기"
+          "old": "경작지",
+          "new": "소고기"
         }
       ],
-      "유지비": "+150%"
+      "maintenance": "+150%"
     }
   },
   {
@@ -7038,8 +7784,8 @@
       "상가 농장"
     ],
     "effects": {
-      "생산성": "+10%",
-      "추가 물품": [
+      "productivity": "+10%",
+      "additional_outputs": [
         "염소 우유 +1/4"
       ]
     }
@@ -7055,8 +7801,8 @@
       "상가 농장"
     ],
     "effects": {
-      "생산성": "+20%",
-      "모듈 수": "-20%"
+      "productivity": "+20%",
+      "module_limit": "-20%"
     }
   },
   {
@@ -7073,7 +7819,7 @@
       "난초 농장"
     ],
     "effects": {
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -7088,8 +7834,8 @@
       "난초 농장"
     ],
     "effects": {
-      "토착 자원 제공": "인디고 토착 자원",
-      "모듈 수": "-10%"
+      "fertility": "인디고 토착 자원",
+      "module_limit": "-10%"
     }
   },
   {
@@ -7103,11 +7849,11 @@
       "차 향사"
     ],
     "effects": {
-      "생산성": "+20%",
-      "새로운 투입물": [
+      "productivity": "+20%",
+      "replaced_inputs": [
         {
-          "기존": "히비스커스 꽃잎",
-          "대체": "아마씨"
+          "old": "히비스커스 꽃잎",
+          "new": "아마씨"
         }
       ]
     }
@@ -7123,16 +7869,16 @@
       "와트 주방"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "말린 고기 +1/5"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "랍스터",
-          "대체": "상가 소"
+          "old": "랍스터",
+          "new": "상가 소"
         }
       ],
-      "유지비": "-50%"
+      "maintenance": "-50%"
     }
   },
   {
@@ -7146,11 +7892,11 @@
       "등불장이"
     ],
     "effects": {
-      "생산성": "+30%",
-      "새로운 투입물": [
+      "productivity": "+30%",
+      "replaced_inputs": [
         {
-          "기존": "화려한 양초",
-          "대체": "전구"
+          "old": "화려한 양초",
+          "new": "전구"
         }
       ]
     }
@@ -7168,7 +7914,7 @@
       "파이프 제작소"
     ],
     "effects": {
-      "화재 확률": "-60%"
+      "incident_fire": "-60%"
     }
   },
   {
@@ -7183,8 +7929,8 @@
       "도자기 공방"
     ],
     "effects": {
-      "생산성": "+40%",
-      "대체 노동력": "양치기 노동력"
+      "productivity": "+40%",
+      "replaced_workforce": "양치기 노동력"
     }
   },
   {
@@ -7198,11 +7944,11 @@
       "제지 공장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "새로운 투입물": [
+      "productivity": "+40%",
+      "replaced_inputs": [
         {
-          "기존": "나무",
-          "대체": "완자 목재"
+          "old": "나무",
+          "new": "완자 목재"
         }
       ]
     }
@@ -7219,8 +7965,8 @@
       "대농장 - 향신료 농장"
     ],
     "effects": {
-      "생산성": "+20%",
-      "토착 자원 제공": "향신료 토착 자원"
+      "productivity": "+20%",
+      "fertility": "향신료 토착 자원"
     }
   },
   {
@@ -7234,8 +7980,8 @@
       "빛공방"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "채색한 필사본 +1/5",
         "등불 +1/10"
       ]
@@ -7253,8 +7999,8 @@
       "랍스터 양어장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "유지비": "-50%"
+      "productivity": "+30%",
+      "maintenance": "-50%"
     }
   },
   {
@@ -7268,8 +8014,8 @@
       "랍스터 양어장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "토착 자원 제공": "랍스터 토착 자원"
+      "productivity": "+40%",
+      "fertility": "랍스터 토착 자원"
     }
   },
   {
@@ -7296,7 +8042,7 @@
       "공 제작소"
     ],
     "effects": {
-      "필요한 노동력": "-50%"
+      "workforce": "-50%"
     }
   },
   {
@@ -7310,8 +8056,8 @@
       "재단소"
     ],
     "effects": {
-      "생산성": "+40%",
-      "추가 물품": [
+      "productivity": "+40%",
+      "additional_outputs": [
         "중산모 +1/10"
       ]
     }
@@ -7327,16 +8073,16 @@
       "제화소"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "맞춤복 +1/8"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "상가 소",
-          "대체": "돼지"
+          "old": "상가 소",
+          "new": "돼지"
         }
       ],
-      "매력도": "+20"
+      "attractiveness": "+20"
     }
   },
   {
@@ -7351,8 +8097,35 @@
       "랍스터 양어장"
     ],
     "effects": {
-      "생산성": "+10%"
+      "productivity": "+10%"
     }
+  },
+  {
+    "guid": 121020,
+    "type": "HarborOfficeItem",
+    "name": "앙게레브의 시장 지배자 카디자 케베데",
+    "rarity": "전설",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_archaeologist_801.png",
+    "targets": [
+      "모든 교역소 및 부두"
+    ],
+    "effects": {
+      "gen_probability": "+30%",
+      "pier_speed": "+30%"
+    }
+  },
+  {
+    "guid": 121022,
+    "type": "HarborOfficeItem",
+    "name": "냉철한 해군 소장 리처드 B. 샤프",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/icon_captain_epic.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
   },
   {
     "guid": 125043,
@@ -7365,8 +8138,8 @@
       "빛공방"
     ],
     "effects": {
-      "생산성": "+25%",
-      "필요한 노동력": "+20%"
+      "productivity": "+25%",
+      "workforce": "+20%"
     }
   },
   {
@@ -7380,7 +8153,7 @@
       "빛공방"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -7394,8 +8167,8 @@
       "빛공방"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-25%"
+      "productivity": "+40%",
+      "workforce": "-25%"
     }
   },
   {
@@ -7409,7 +8182,7 @@
       "양봉장"
     ],
     "effects": {
-      "필요한 노동력": "-35%"
+      "workforce": "-35%"
     }
   },
   {
@@ -7423,8 +8196,8 @@
       "양봉장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "workforce": "-50%"
     }
   },
   {
@@ -7438,8 +8211,8 @@
       "건조장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "유지비": "+20%"
+      "productivity": "+25%",
+      "maintenance": "+20%"
     }
   },
   {
@@ -7453,7 +8226,7 @@
       "건조장"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -7467,8 +8240,8 @@
       "건조장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-35%"
+      "productivity": "+40%",
+      "workforce": "-35%"
     }
   },
   {
@@ -7494,7 +8267,7 @@
       "수중 펌프"
     ],
     "effects": {
-      "유지비": "-30%"
+      "maintenance": "-30%"
     }
   },
   {
@@ -7508,7 +8281,7 @@
       "수중 펌프"
     ],
     "effects": {
-      "유지비": "-50%"
+      "maintenance": "-50%"
     }
   },
   {
@@ -7523,7 +8296,7 @@
       "파이프 제작소"
     ],
     "effects": {
-      "생산성": "+30%"
+      "productivity": "+30%"
     }
   },
   {
@@ -7538,8 +8311,8 @@
       "파이프 제작소"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-35%"
+      "productivity": "+40%",
+      "workforce": "-35%"
     }
   },
   {
@@ -7553,7 +8326,7 @@
       "랍스터 양어장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -7567,9 +8340,9 @@
       "랍스터 양어장"
     ],
     "effects": {
-      "생산성": "+40%",
-      "유지비": "-50%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "maintenance": "-50%",
+      "workforce": "-50%"
     }
   },
   {
@@ -7583,8 +8356,8 @@
       "모든 엔베사 곡식 농장"
     ],
     "effects": {
-      "생산성": "+20%",
-      "유지비": "+20%"
+      "productivity": "+20%",
+      "maintenance": "+20%"
     }
   },
   {
@@ -7598,7 +8371,7 @@
       "모든 엔베사 곡식 농장"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -7612,8 +8385,8 @@
       "모든 엔베사 곡식 농장"
     ],
     "effects": {
-      "생산성": "+35%",
-      "유지비": "-50%"
+      "productivity": "+35%",
+      "maintenance": "-50%"
     }
   },
   {
@@ -7628,8 +8401,8 @@
       "제지 공장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "유지비": "+20%"
+      "productivity": "+30%",
+      "maintenance": "+20%"
     }
   },
   {
@@ -7644,8 +8417,8 @@
       "제지 공장"
     ],
     "effects": {
-      "생산성": "+45%",
-      "유지비": "-50%"
+      "productivity": "+45%",
+      "maintenance": "-50%"
     }
   },
   {
@@ -7685,7 +8458,7 @@
       "수도원"
     ],
     "effects": {
-      "유지비": "-50%"
+      "maintenance": "-50%"
     }
   },
   {
@@ -7699,7 +8472,7 @@
       "재단소"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -7715,9 +8488,9 @@
       "의상 상점"
     ],
     "effects": {
-      "생산성": "+40%",
-      "유지비": "-35%",
-      "필요한 노동력": "-35%"
+      "productivity": "+40%",
+      "maintenance": "-35%",
+      "workforce": "-35%"
     }
   },
   {
@@ -7731,8 +8504,8 @@
       "제화소"
     ],
     "effects": {
-      "생산성": "+25%",
-      "유지비": "+20%"
+      "productivity": "+25%",
+      "maintenance": "+20%"
     }
   },
   {
@@ -7746,7 +8519,7 @@
       "제화소"
     ],
     "effects": {
-      "생산성": "+30%"
+      "productivity": "+30%"
     }
   },
   {
@@ -7760,8 +8533,8 @@
       "제화소"
     ],
     "effects": {
-      "생산성": "+40%",
-      "필요한 노동력": "-50%"
+      "productivity": "+40%",
+      "workforce": "-50%"
     }
   },
   {
@@ -7787,7 +8560,7 @@
       "무선전신탑"
     ],
     "effects": {
-      "유지비": "-50%"
+      "maintenance": "-50%"
     }
   },
   {
@@ -7801,10 +8574,10 @@
       "모든 과수원"
     ],
     "effects": {
-      "생산성": "+15%",
-      "산림 밀도": "+15%",
-      "유지비": "+30%",
-      "필요한 노동력": "+20%"
+      "productivity": "+15%",
+      "area": "+15%",
+      "maintenance": "+30%",
+      "workforce": "+20%"
     }
   },
   {
@@ -7818,12 +8591,12 @@
       "모든 과수원"
     ],
     "effects": {
-      "생산성": "+5%",
-      "추가 물품": [
+      "productivity": "+5%",
+      "additional_outputs": [
         "시트러스 +1/4"
       ],
-      "유지비": "+10%",
-      "필요한 노동력": "+17%"
+      "maintenance": "+10%",
+      "workforce": "+17%"
     }
   },
   {
@@ -7837,10 +8610,10 @@
       "모든 과수원"
     ],
     "effects": {
-      "생산성": "+25%",
-      "산림 밀도": "+25%",
-      "유지비": "+20%",
-      "필요한 노동력": "+30%"
+      "productivity": "+25%",
+      "area": "+25%",
+      "maintenance": "+20%",
+      "workforce": "+30%"
     }
   },
   {
@@ -7857,14 +8630,14 @@
       "연구소: 의약품"
     ],
     "effects": {
-      "생산성": "+20%",
-      "추가 물품": [
+      "productivity": "+20%",
+      "additional_outputs": [
         "초석 +1/7",
         "수지 +1/4",
         "다이너마이트 +1/11"
       ],
-      "유지비": "+15%",
-      "필요한 노동력": "+15%"
+      "maintenance": "+15%",
+      "workforce": "+15%"
     }
   },
   {
@@ -7879,12 +8652,12 @@
       "대농장 비료 생산소"
     ],
     "effects": {
-      "생산성": "+50%",
-      "유지비": "+50%",
-      "필요한 노동력": "+30%",
-      "화재 확률": "-100%",
-      "질병 확률": "-100%",
-      "폭동 확률": "-10%"
+      "productivity": "+50%",
+      "maintenance": "+50%",
+      "workforce": "+30%",
+      "incident_fire": "-100%",
+      "incident_illness": "-100%",
+      "incident_riot": "-10%"
     }
   },
   {
@@ -7898,11 +8671,11 @@
       "모든 식당(기념물 아님)"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "통조림 +1/2"
       ],
-      "필요한 노동력": "+75%",
-      "매력도": "+30"
+      "workforce": "+75%",
+      "attractiveness": "+30"
     }
   },
   {
@@ -7916,9 +8689,9 @@
       "모든 식당(기념물 아님)"
     ],
     "effects": {
-      "유지비": "-30%",
-      "필요한 노동력": "+50%",
-      "매력도": "+25"
+      "maintenance": "-30%",
+      "workforce": "+50%",
+      "attractiveness": "+25"
     }
   },
   {
@@ -7932,10 +8705,10 @@
       "모든 식당(기념물 아님)"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "잼 +1/3"
       ],
-      "필요한 노동력": "+50%"
+      "workforce": "+50%"
     }
   },
   {
@@ -7952,7 +8725,7 @@
       "모든 직공 작업장"
     ],
     "effects": {
-      "생산성": "+75%"
+      "productivity": "+75%"
     }
   },
   {
@@ -7969,7 +8742,7 @@
       "모든 직공 작업장"
     ],
     "effects": {
-      "생산성": "+50%"
+      "productivity": "+50%"
     }
   },
   {
@@ -7986,7 +8759,7 @@
       "모든 직공 작업장"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -8000,11 +8773,11 @@
       "모든 과수원"
     ],
     "effects": {
-      "생산성": "+15%",
-      "산림 밀도": "+20%",
-      "유지비": "+10%",
-      "필요한 노동력": "+8%",
-      "매력도": "+15"
+      "productivity": "+15%",
+      "area": "+20%",
+      "maintenance": "+10%",
+      "workforce": "+8%",
+      "attractiveness": "+15"
     }
   },
   {
@@ -8021,11 +8794,11 @@
       "포도원"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "설탕 +1/3"
       ],
-      "유지비": "+10%",
-      "필요한 노동력": "+10%"
+      "maintenance": "+10%",
+      "workforce": "+10%"
     }
   },
   {
@@ -8040,14 +8813,14 @@
       "산업유 압착기"
     ],
     "effects": {
-      "생산성": "+25%",
-      "추가 물품": [
+      "productivity": "+25%",
+      "additional_outputs": [
         "커피콩 +1/5",
         "담배 +1/4",
         "코코아 +1/3"
       ],
-      "유지비": "+30%",
-      "필요한 노동력": "+23%"
+      "maintenance": "+30%",
+      "workforce": "+23%"
     }
   },
   {
@@ -8068,12 +8841,12 @@
       "연구소: 의약품"
     ],
     "effects": {
-      "생산성": "+20%",
-      "추가 물품": [
+      "productivity": "+20%",
+      "additional_outputs": [
         "에탄올 +1/4"
       ],
-      "유지비": "+30%",
-      "필요한 노동력": "+20%"
+      "maintenance": "+30%",
+      "workforce": "+20%"
     }
   },
   {
@@ -8089,10 +8862,10 @@
       "스쿠터 공장"
     ],
     "effects": {
-      "생산성": "+45%",
-      "화재 확률": "+50%",
-      "질병 확률": "+200%",
-      "매력도": "-15"
+      "productivity": "+45%",
+      "incident_fire": "+50%",
+      "incident_illness": "+200%",
+      "attractiveness": "-15"
     }
   },
   {
@@ -8107,13 +8880,13 @@
       "전동기 조립 공장"
     ],
     "effects": {
-      "생산성": "+120%",
-      "유지비": "+100%",
-      "필요한 노동력": "+100%",
-      "화재 확률": "+250%",
-      "질병 확률": "+350%",
-      "폭동 확률": "+10%",
-      "매력도": "-35"
+      "productivity": "+120%",
+      "maintenance": "+100%",
+      "workforce": "+100%",
+      "incident_fire": "+250%",
+      "incident_illness": "+350%",
+      "incident_riot": "+10%",
+      "attractiveness": "-35"
     }
   },
   {
@@ -8127,10 +8900,10 @@
       "모든 조립 라인"
     ],
     "effects": {
-      "생산성": "+80%",
-      "유지비": "+130%",
-      "필요한 노동력": "-80%",
-      "대체 노동력": "기술자"
+      "productivity": "+80%",
+      "maintenance": "+130%",
+      "workforce": "-80%",
+      "replaced_workforce": "기술자"
     }
   },
   {
@@ -8145,12 +8918,12 @@
       "모든 직공 작업장"
     ],
     "effects": {
-      "생산성": "+75%",
-      "유지비": "+125%",
-      "필요한 노동력": "-10%",
-      "화재 확률": "+100%",
-      "질병 확률": "+350%",
-      "폭동 확률": "+5%"
+      "productivity": "+75%",
+      "maintenance": "+125%",
+      "workforce": "-10%",
+      "incident_fire": "+100%",
+      "incident_illness": "+350%",
+      "incident_riot": "+5%"
     }
   },
   {
@@ -8165,8 +8938,8 @@
       "모든 직공 작업장"
     ],
     "effects": {
-      "생산성": "+55%",
-      "유지비": "-15%"
+      "productivity": "+55%",
+      "maintenance": "-15%"
     }
   },
   {
@@ -8180,8 +8953,8 @@
       "모든 대형 상가"
     ],
     "effects": {
-      "필요한 노동력": "+20%",
-      "매력도": "+50"
+      "workforce": "+20%",
+      "attractiveness": "+50"
     }
   },
   {
@@ -8195,9 +8968,9 @@
       "모든 대형 상가"
     ],
     "effects": {
-      "필요한 노동력": "-10%",
-      "질병 확률": "-200%",
-      "매력도": "+5"
+      "workforce": "-10%",
+      "incident_illness": "-200%",
+      "attractiveness": "+5"
     }
   },
   {
@@ -8211,30 +8984,30 @@
       "모든 대형 상가"
     ],
     "effects": {
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "체리 나무",
-          "대체": "나무"
+          "old": "체리 나무",
+          "new": "나무"
         },
         {
-          "기존": "합판",
-          "대체": "나무"
+          "old": "합판",
+          "new": "나무"
         },
         {
-          "기존": "코코넛 기름",
-          "대체": "수지"
+          "old": "코코넛 기름",
+          "new": "수지"
         },
         {
-          "기존": "강철",
-          "대체": "철"
+          "old": "강철",
+          "new": "철"
         },
         {
-          "기존": "황동",
-          "대체": "철"
+          "old": "황동",
+          "new": "철"
         }
       ],
-      "필요한 노동력": "+10%",
-      "화재 확률": "+100%"
+      "workforce": "+10%",
+      "incident_fire": "+100%"
     }
   },
   {
@@ -8250,14 +9023,14 @@
       "제철소"
     ],
     "effects": {
-      "생산성": "+25%",
-      "추가 물품": [
+      "productivity": "+25%",
+      "additional_outputs": [
         "기존 생산물 +1/2"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "석탄",
-          "대체": "극지 가스"
+          "old": "석탄",
+          "new": "극지 가스"
         }
       ]
     }
@@ -8273,18 +9046,18 @@
       "풍부한 금광"
     ],
     "effects": {
-      "생산성": "-25%",
-      "추가 물품": [
+      "productivity": "-25%",
+      "additional_outputs": [
         "극지 가스 +1/1"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "광물 자원",
-          "대체": "산업 윤활유"
+          "old": "광물 자원",
+          "new": "산업 윤활유"
         }
       ],
-      "유지비": "+75%",
-      "필요한 노동력": "+100%"
+      "maintenance": "+75%",
+      "workforce": "+100%"
     }
   },
   {
@@ -8298,7 +9071,7 @@
       "신대륙의 모든 우체국 및 우체통"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "신대륙 보고서 +1/3"
       ]
     }
@@ -8314,12 +9087,12 @@
       "모든 구대륙 동물 농장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "추가 물품": [
+      "productivity": "-15%",
+      "additional_outputs": [
         "분변 +1/3"
       ],
-      "유지비": "+75%",
-      "필요한 노동력": "+10%"
+      "maintenance": "+75%",
+      "workforce": "+10%"
     }
   },
   {
@@ -8333,7 +9106,7 @@
       "우체국"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "극지 보고서 +1/3"
       ]
     }
@@ -8349,20 +9122,20 @@
       "대농장 비료 생산소"
     ],
     "effects": {
-      "생산성": "-90%",
-      "추가 물품": [
+      "productivity": "-90%",
+      "additional_outputs": [
         "비료 +14/1"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "분변",
-          "대체": "극지 가스"
+          "old": "분변",
+          "new": "극지 가스"
         }
       ],
-      "유지비": "+600%",
-      "필요한 노동력": "+320%",
-      "대체 노동력": "식민지 직공",
-      "매력도": "+10"
+      "maintenance": "+600%",
+      "workforce": "+320%",
+      "replaced_workforce": "식민지 직공",
+      "attractiveness": "+10"
     }
   },
   {
@@ -8377,11 +9150,11 @@
       "염소 농장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "분변 +1/2"
       ],
-      "유지비": "+85%",
-      "필요한 노동력": "+5%"
+      "maintenance": "+85%",
+      "workforce": "+5%"
     }
   },
   {
@@ -8395,18 +9168,18 @@
       "모든 신대륙 과수원"
     ],
     "effects": {
-      "생산성": "+25%",
-      "추가 물품": [
+      "productivity": "+25%",
+      "additional_outputs": [
         "기존 생산물 +3/2"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "경작지",
-          "대체": "분변"
+          "old": "경작지",
+          "new": "분변"
         }
       ],
-      "유지비": "+175%",
-      "필요한 노동력": "+15%"
+      "maintenance": "+175%",
+      "workforce": "+15%"
     }
   },
   {
@@ -8420,18 +9193,18 @@
       "모든 구대륙 과수원"
     ],
     "effects": {
-      "생산성": "+20%",
-      "추가 물품": [
+      "productivity": "+20%",
+      "additional_outputs": [
         "기존 생산물 +5/4"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "경작지",
-          "대체": "분변"
+          "old": "경작지",
+          "new": "분변"
         }
       ],
-      "유지비": "+125%",
-      "필요한 노동력": "+35%"
+      "maintenance": "+125%",
+      "workforce": "+35%"
     }
   },
   {
@@ -8445,20 +9218,20 @@
       "모든 구대륙 광산"
     ],
     "effects": {
-      "생산성": "-35%",
-      "추가 물품": [
+      "productivity": "-35%",
+      "additional_outputs": [
         "기존 생산물 +12/2"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "광물 자원",
-          "대체": "다이너마이트"
+          "old": "광물 자원",
+          "new": "다이너마이트"
         }
       ],
-      "유지비": "+250%",
-      "필요한 노동력": "+50%",
-      "질병 확률": "+50%",
-      "폭발 확률": "+50%"
+      "maintenance": "+250%",
+      "workforce": "+50%",
+      "incident_illness": "+50%",
+      "incident_explosion": "+50%"
     }
   },
   {
@@ -8472,18 +9245,18 @@
       "금광"
     ],
     "effects": {
-      "생산성": "-25%",
-      "추가 물품": [
+      "productivity": "-25%",
+      "additional_outputs": [
         "헬륨 +1/3"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "광물 자원",
-          "대체": "산업 윤활유"
+          "old": "광물 자원",
+          "new": "산업 윤활유"
         }
       ],
-      "유지비": "+100%",
-      "필요한 노동력": "+100%"
+      "maintenance": "+100%",
+      "workforce": "+100%"
     }
   },
   {
@@ -8497,12 +9270,12 @@
       "모든 점토 채취장"
     ],
     "effects": {
-      "생산성": "-15%",
-      "추가 물품": [
+      "productivity": "-15%",
+      "additional_outputs": [
         "보크사이트 +1/3"
       ],
-      "유지비": "+35%",
-      "필요한 노동력": "+25%"
+      "maintenance": "+35%",
+      "workforce": "+25%"
     }
   },
   {
@@ -8516,18 +9289,33 @@
       "무기 공장"
     ],
     "effects": {
-      "생산성": "-50%",
-      "추가 물품": [
+      "productivity": "-50%",
+      "additional_outputs": [
         "알루미늄 프로파일 +1/5"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "강철",
-          "대체": "보크사이트"
+          "old": "강철",
+          "new": "보크사이트"
         }
       ],
-      "유지비": "+100%",
-      "필요한 노동력": "+150%"
+      "maintenance": "+100%",
+      "workforce": "+150%"
+    }
+  },
+  {
+    "guid": 4277,
+    "type": "HarborOfficeItem",
+    "name": "비행선 보급관",
+    "rarity": "에픽",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_uniform_706.png",
+    "targets": [
+      "모든 비행선 승강장"
+    ],
+    "effects": {
+      "maintenance": "+125%",
+      "pier_speed": "+75%"
     }
   },
   {
@@ -8541,17 +9329,17 @@
       "칼라마리 양어장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "통조림 +1/5"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "물",
-          "대체": "철"
+          "old": "물",
+          "new": "철"
         }
       ],
-      "유지비": "+350%",
-      "필요한 노동력": "+100%"
+      "maintenance": "+350%",
+      "workforce": "+100%"
     }
   },
   {
@@ -8565,21 +9353,21 @@
       "럼주 양조장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "샴페인 +1/4"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "사탕수수",
-          "대체": "설탕"
+          "old": "사탕수수",
+          "new": "설탕"
         },
         {
-          "기존": "나무",
-          "대체": "에탄올"
+          "old": "나무",
+          "new": "에탄올"
         }
       ],
-      "유지비": "+250%",
-      "필요한 노동력": "+200%"
+      "maintenance": "+250%",
+      "workforce": "+200%"
     }
   },
   {
@@ -8593,17 +9381,17 @@
       "의상 상점"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "모피 코트 +1/5"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "난두 깃털",
-          "대체": "셀룰로이드"
+          "old": "난두 깃털",
+          "new": "셀룰로이드"
         }
       ],
-      "유지비": "+190%",
-      "필요한 노동력": "+170%"
+      "maintenance": "+190%",
+      "workforce": "+170%"
     }
   },
   {
@@ -8623,26 +9411,26 @@
       "연구소: 안료"
     ],
     "effects": {
-      "생산성": "+35%",
-      "추가 물품": [
+      "productivity": "+35%",
+      "additional_outputs": [
         "기존 생산물 +1/2"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "약초",
-          "대체": "히비스커스 꽃잎"
+          "old": "약초",
+          "new": "히비스커스 꽃잎"
         },
         {
-          "기존": "광물",
-          "대체": "인디고 염료"
+          "old": "광물",
+          "new": "인디고 염료"
         },
         {
-          "기존": "코코넛 기름",
-          "대체": "밀랍"
+          "old": "코코넛 기름",
+          "new": "밀랍"
         }
       ],
-      "유지비": "+35%",
-      "필요한 노동력": "+25%"
+      "maintenance": "+35%",
+      "workforce": "+25%"
     }
   },
   {
@@ -8657,10 +9445,10 @@
       "약초 정원"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "기존 생산물 +1/4"
       ],
-      "필요한 노동력": "-20%"
+      "workforce": "-20%"
     }
   },
   {
@@ -8675,13 +9463,13 @@
       "상가 농장"
     ],
     "effects": {
-      "생산성": "+50%",
-      "추가 물품": [
+      "productivity": "+50%",
+      "additional_outputs": [
         "우유 +1/3",
         "약초 +1/8"
       ],
-      "유지비": "+100%",
-      "필요한 노동력": "+125%"
+      "maintenance": "+100%",
+      "workforce": "+125%"
     }
   },
   {
@@ -8695,19 +9483,19 @@
       "자동차 공장"
     ],
     "effects": {
-      "생산성": "+15%",
-      "추가 물품": [
+      "productivity": "+15%",
+      "additional_outputs": [
         "증기차 +1/3",
         "스쿠터 +1/4"
       ],
-      "새로운 투입물": [
+      "replaced_inputs": [
         {
-          "기존": "증기 모터",
-          "대체": "전동기"
+          "old": "증기 모터",
+          "new": "전동기"
         }
       ],
-      "유지비": "+60%",
-      "필요한 노동력": "+50%"
+      "maintenance": "+60%",
+      "workforce": "+50%"
     }
   },
   {
@@ -8724,13 +9512,13 @@
       "모든 신대륙 화학 공장"
     ],
     "effects": {
-      "생산성": "+100%",
-      "추가 물품": [
+      "productivity": "+100%",
+      "additional_outputs": [
         "기존 생산물 +1/3"
       ],
-      "유지비": "+185%",
-      "필요한 노동력": "+25%",
-      "대체 노동력": "아티스타 노동력"
+      "maintenance": "+185%",
+      "workforce": "+25%",
+      "replaced_workforce": "아티스타 노동력"
     }
   },
   {
@@ -8744,13 +9532,13 @@
       "모든 양어장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "칼라마리 +1/7",
         "생선 +1/5",
         "어유 +1/4"
       ],
-      "유지비": "+75%",
-      "필요한 노동력": "-20%"
+      "maintenance": "+75%",
+      "workforce": "-20%"
     }
   },
   {
@@ -8762,14 +9550,14 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_hunter_401.png",
     "targets": [],
     "effects": {
-      "생산성": "-50%",
-      "새로운 투입물": [
+      "productivity": "-50%",
+      "replaced_inputs": [
         {
-          "기존": "경찰 장비",
-          "대체": "고급 무기"
+          "old": "경찰 장비",
+          "new": "고급 무기"
         }
       ],
-      "유지비": "+50%"
+      "maintenance": "+50%"
     }
   },
   {
@@ -8783,8 +9571,8 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+15%",
-      "필요한 노동력": "+10%"
+      "productivity": "+15%",
+      "workforce": "+10%"
     }
   },
   {
@@ -8798,8 +9586,8 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+30%",
-      "필요한 노동력": "+20%"
+      "productivity": "+30%",
+      "workforce": "+20%"
     }
   },
   {
@@ -8813,7 +9601,7 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "모듈 수": "+25%"
+      "module_limit": "+25%"
     }
   },
   {
@@ -8839,7 +9627,7 @@
       "양어장"
     ],
     "effects": {
-      "생산성": "-20%"
+      "productivity": "-20%"
     }
   },
   {
@@ -8853,7 +9641,7 @@
       "양어장"
     ],
     "effects": {
-      "생산성": "-30%"
+      "productivity": "-30%"
     }
   },
   {
@@ -8867,7 +9655,7 @@
       "모든 중공업"
     ],
     "effects": {
-      "필요한 노동력": "+10%"
+      "workforce": "+10%"
     }
   },
   {
@@ -8881,7 +9669,7 @@
       "모든 중공업"
     ],
     "effects": {
-      "필요한 노동력": "+15%"
+      "workforce": "+15%"
     }
   },
   {
@@ -8895,7 +9683,7 @@
       "모든 중공업"
     ],
     "effects": {
-      "필요한 노동력": "+20%"
+      "workforce": "+20%"
     }
   },
   {
@@ -8957,7 +9745,7 @@
       "양어장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -8971,10 +9759,10 @@
       "양어장"
     ],
     "effects": {
-      "추가 물품": [
+      "additional_outputs": [
         "생선 +1/4"
       ],
-      "필요한 노동력": "+10%"
+      "workforce": "+10%"
     }
   },
   {
@@ -8988,7 +9776,7 @@
       "양어장"
     ],
     "effects": {
-      "필요한 노동력": "+10%"
+      "workforce": "+10%"
     }
   },
   {
@@ -9022,8 +9810,8 @@
       "모든 중공업"
     ],
     "effects": {
-      "생산성": "+25%",
-      "필요한 노동력": "+10%"
+      "productivity": "+25%",
+      "workforce": "+10%"
     }
   },
   {
@@ -9037,8 +9825,8 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "필요한 노동력": "+10%",
-      "모듈 수": "-20%"
+      "workforce": "+10%",
+      "module_limit": "-20%"
     }
   },
   {
@@ -9052,7 +9840,7 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "필요한 노동력": "+10%"
+      "workforce": "+10%"
     }
   },
   {
@@ -9090,8 +9878,8 @@
       "모든 생산 건물"
     ],
     "effects": {
-      "유지비": "-10%",
-      "필요한 노동력": "-10%"
+      "maintenance": "-10%",
+      "workforce": "-10%"
     }
   },
   {
@@ -9105,7 +9893,7 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "모듈 수": "-10%"
+      "module_limit": "-10%"
     }
   },
   {
@@ -9119,7 +9907,7 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "모듈 수": "-20%"
+      "module_limit": "-20%"
     }
   },
   {
@@ -9133,7 +9921,7 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "모듈 수": "-30%"
+      "module_limit": "-30%"
     }
   },
   {
@@ -9147,7 +9935,7 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "생산성": "+20%"
+      "productivity": "+20%"
     }
   },
   {
@@ -9161,7 +9949,7 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "생산성": "+50%"
+      "productivity": "+50%"
     }
   },
   {
@@ -9175,7 +9963,7 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "모듈 수": "+20%"
+      "module_limit": "+20%"
     }
   },
   {
@@ -9189,7 +9977,7 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "모듈 수": "+30%"
+      "module_limit": "+30%"
     }
   },
   {
@@ -9203,7 +9991,7 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "모듈 수": "+40%"
+      "module_limit": "+40%"
     }
   },
   {
@@ -9217,8 +10005,8 @@
       "모든 중공업"
     ],
     "effects": {
-      "생산성": "-25%",
-      "필요한 노동력": "-25%"
+      "productivity": "-25%",
+      "workforce": "-25%"
     }
   },
   {
@@ -9232,8 +10020,8 @@
       "모든 중공업"
     ],
     "effects": {
-      "생산성": "-35%",
-      "필요한 노동력": "-35%"
+      "productivity": "-35%",
+      "workforce": "-35%"
     }
   },
   {
@@ -9247,8 +10035,8 @@
       "모든 중공업"
     ],
     "effects": {
-      "생산성": "-50%",
-      "필요한 노동력": "-50%"
+      "productivity": "-50%",
+      "workforce": "-50%"
     }
   },
   {
@@ -9262,7 +10050,7 @@
       "모든 중공업"
     ],
     "effects": {
-      "생산성": "+50%"
+      "productivity": "+50%"
     }
   },
   {
@@ -9276,7 +10064,7 @@
       "모든 중공업"
     ],
     "effects": {
-      "생산성": "+35%"
+      "productivity": "+35%"
     }
   },
   {
@@ -9290,7 +10078,7 @@
       "모든 중공업"
     ],
     "effects": {
-      "생산성": "+25%"
+      "productivity": "+25%"
     }
   },
   {
@@ -9412,7 +10200,7 @@
       "모든 곡식 농장"
     ],
     "effects": {
-      "생산성": "+15%"
+      "productivity": "+15%"
     }
   },
   {
@@ -9426,8 +10214,8 @@
       "모든 동물 농장"
     ],
     "effects": {
-      "생산성": "+25%",
-      "필요한 노동력": "+20%"
+      "productivity": "+25%",
+      "workforce": "+20%"
     }
   },
   {
@@ -9453,7 +10241,7 @@
       "모든 벌목꾼의 오두막"
     ],
     "effects": {
-      "매력도": "+3"
+      "attractiveness": "+3"
     }
   },
   {
@@ -9467,7 +10255,19 @@
       "사냥꾼의 오두막"
     ],
     "effects": {
-      "유지비": "-40%"
+      "maintenance": "-40%"
     }
+  },
+  {
+    "guid": 13645,
+    "type": "HarborOfficeItem",
+    "name": "바스코의 부관",
+    "rarity": "희귀",
+    "dlc_dependency": "",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_uniform_807.png",
+    "targets": [
+      "모든 방어 포탑"
+    ],
+    "effects": {}
   }
 ]
