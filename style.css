@@ -34,6 +34,7 @@ header {
     border: 1px solid var(--border-gold);
     color: white;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .item-grid {
@@ -55,13 +56,13 @@ header {
 }
 
 .item-card.전설 { border-top-color: var(--color-legendary); }
-.item-card.영웅 { border-top-color: var(--color-epic); }
+.item-card.에픽 { border-top-color: var(--color-epic); }
 .item-card.희귀 { border-top-color: var(--color-rare); }
 .item-card.특별 { border-top-color: var(--color-uncommon); }
 .item-card.일반 { border-top-color: var(--color-common); }
 
 .item-card.전설 img { border-color: var(--color-legendary); }
-.item-card.영웅 img { border-color: var(--color-epic); }
+.item-card.에픽 img { border-color: var(--color-epic); }
 .item-card.희귀 img { border-color: var(--color-rare); }
 .item-card.특별 img { border-color: var(--color-uncommon); }
 .item-card.일반 img { border-color: var(--color-common); }
