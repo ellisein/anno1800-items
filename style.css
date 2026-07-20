@@ -1,0 +1,122 @@
+:root {
+    --color-legendary: #f39c12;
+    --color-epic: #9b59b6;
+    --color-rare: #3498db;
+    --color-uncommon: #2ecc71;
+    --color-common: #95a5a6;
+    
+    --bg-dark: #1b2025;
+    --bg-card: #252b32;
+    --text-main: #ecf0f1;
+    --text-muted: #bdc3c7;
+    --border-gold: #c6a25d;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: Noto Sans KR !important;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-gold);
+    color: white;
+    border-radius: 4px;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item-card {
+    background-color: var(--bg-card);
+    border: 1px solid #3a4149;
+    border-top: 3px solid var(--border-gold);
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.item-card.전설 { border-top-color: var(--color-legendary); }
+.item-card.영웅 { border-top-color: var(--color-epic); }
+.item-card.희귀 { border-top-color: var(--color-rare); }
+.item-card.특별 { border-top-color: var(--color-uncommon); }
+.item-card.일반 { border-top-color: var(--color-common); }
+
+.item-card.전설 img { border-color: var(--color-legendary); }
+.item-card.영웅 img { border-color: var(--color-epic); }
+.item-card.희귀 img { border-color: var(--color-rare); }
+.item-card.특별 img { border-color: var(--color-uncommon); }
+.item-card.일반 img { border-color: var(--color-common); }
+
+.card-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border-bottom: 1px solid #3a4149;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.item-icon {
+    width: 64px;
+    height: 64px;
+    background-color: #111;
+    border: 1px solid;
+}
+
+.item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.item-rarity {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* 효과 목록 */
+.effect-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    flex-grow: 1;
+}
+
+.effect-list li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.effect-key {
+    color: var(--border-gold);
+    font-weight: bold;
+}
+
+.item-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+    border-top: 1px dashed #3a4149;
+    padding-top: 10px;
+    margin: 0;
+}
