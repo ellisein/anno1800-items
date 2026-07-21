@@ -272,6 +272,8 @@ function renderItems(items) {
         `;
         
         grid.appendChild(card);
+
+        item.element = card;
     });
 }
 
@@ -298,22 +300,22 @@ function decomposeKorean(str) {
 
 document.getElementById('searchInput').addEventListener('input', (e) => {
     const keyword = e.target.value.replace(/\s+/g, '').toLowerCase();
-    
-    if (!keyword) {
-        renderItems(allItems);
-        return;
-    }
-
     const decomposedKeyword = decomposeKorean(keyword);
 
-    const filtered = allItems.filter(item => {
-        if (item.searchRaw.includes(keyword)) return true;
-        if (item.searchDecomposed.includes(decomposedKeyword)) return true;
+    allItems.forEach(item => {
+        if (!keyword) {
+            item.element.style.display = ''; 
+            return;
+        }
 
-        return false;
+        const isMatch = item.searchRaw.includes(keyword) || item.searchDecomposed.includes(decomposedKeyword);
+
+        if (isMatch) {
+            item.element.style.display = '';
+        } else {
+            item.element.style.display = 'none';
+        }
     });
-
-    renderItems(filtered);
 });
 
 fetchItems();
