@@ -17,7 +17,7 @@
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
-    font-family: Noto Sans KR !important;
+    font-family: "Nanum Gothic" !important;
     margin: 0;
     padding: 20px;
 }
