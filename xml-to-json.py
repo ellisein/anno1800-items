@@ -228,10 +228,10 @@ def extract_items_data(assets_path, texts_dict):
 
                         repair_crane_upgrade_node = elem.find('./Values/RepairCraneUpgrade')
                         if repair_crane_upgrade_node is not None:
-                            # 수리 반경 (healing_radius)
-                            healing_radius = get_value(repair_crane_upgrade_node.find('HealingRadiusUpgerade'))
-                            if healing_radius:
-                                item_properties['healing_radius'] = healing_radius
+                            # 수리 반경 (heal_radius)
+                            heal_radius = get_value(repair_crane_upgrade_node.find('HealRadiusUpgrade'))
+                            if heal_radius:
+                                item_properties['heal_radius'] = heal_radius
 
                             # 수리 속도 (heal_per_minute)
                             heal_per_minute = get_value(repair_crane_upgrade_node.find('HealPerMinuteUpgrade'))

@@ -5596,6 +5596,7 @@
       "targets": [
         "모든 수리용 기중기"
       ],
+      "heal_radius": "+25%",
       "heal_per_minute": "-10%",
       "heal_buildings_per_minute": "-10%"
     }
@@ -5609,7 +5610,8 @@
       "rarity": "rare",
       "targets": [
         "모든 수리용 기중기"
-      ]
+      ],
+      "heal_radius": "+30%"
     }
   },
   {
@@ -5622,6 +5624,7 @@
       "targets": [
         "모든 수리용 기중기"
       ],
+      "heal_radius": "+35%",
       "heal_per_minute": "+20%",
       "heal_buildings_per_minute": "+20%"
     }
@@ -5636,6 +5639,7 @@
       "targets": [
         "모든 수리용 기중기"
       ],
+      "heal_radius": "+40%",
       "heal_per_minute": "+40%",
       "heal_buildings_per_minute": "+40%"
     }
