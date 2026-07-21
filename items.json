@@ -1409,7 +1409,7 @@
         "산업유 압착기"
       ],
       "productivity": "+50%",
-      "needed_area": "-10",
+      "needed_area": "+10%",
       "attractiveness": "+8"
     }
   },
@@ -3353,7 +3353,8 @@
       "rarity": "common",
       "targets": [
         "모든 방어 포탑"
-      ]
+      ],
+      "max_hitpoints": "+200"
     }
   },
   {
@@ -3377,7 +3378,8 @@
       "rarity": "rare",
       "targets": [
         "모든 방어 포탑"
-      ]
+      ],
+      "max_hitpoints": "+600"
     }
   },
   {
@@ -4216,7 +4218,7 @@
         "산업유 압착기"
       ],
       "productivity": "+20%",
-      "needed_area": "-10"
+      "needed_area": "+10%"
     }
   },
   {
@@ -4234,7 +4236,7 @@
         "산업유 압착기"
       ],
       "productivity": "+30%",
-      "needed_area": "-20"
+      "needed_area": "+20%"
     }
   },
   {
@@ -4252,7 +4254,7 @@
         "산업유 압착기"
       ],
       "productivity": "+40%",
-      "needed_area": "-30"
+      "needed_area": "+30%"
     }
   },
   {
@@ -6436,7 +6438,8 @@
       "targets": [
         "모든 항구 건물"
       ],
-      "gen_probability": "+30%"
+      "gen_probability": "+30%",
+      "pier_speed": "+100%"
     }
   },
   {
@@ -6587,7 +6590,7 @@
         "카리부 사냥꾼",
         "곰 사냥꾼"
       ],
-      "needed_area": "-15",
+      "needed_area": "+15%",
       "maintenance": "-100%"
     }
   },
@@ -7769,7 +7772,8 @@
       "targets": [
         "모든 교역소 및 부두"
       ],
-      "gen_probability": "+30%"
+      "gen_probability": "+30%",
+      "pier_speed": "+30%"
     }
   },
   {
@@ -7781,7 +7785,9 @@
       "rarity": "epic",
       "targets": [
         "모든 방어 포탑"
-      ]
+      ],
+      "accuracy": "+50%",
+      "max_hitpoints": "+800"
     }
   },
   {
@@ -8238,7 +8244,7 @@
         "모든 과수원"
       ],
       "productivity": "+15%",
-      "needed_area": "-15%",
+      "needed_area": "+15%",
       "workforce": "+20%",
       "maintenance": "+30%"
     }
@@ -8272,7 +8278,7 @@
         "모든 과수원"
       ],
       "productivity": "+25%",
-      "needed_area": "-25%",
+      "needed_area": "+25%",
       "workforce": "+30%",
       "maintenance": "+20%"
     }
@@ -8429,7 +8435,7 @@
         "모든 과수원"
       ],
       "productivity": "+15%",
-      "needed_area": "-20%",
+      "needed_area": "+20%",
       "workforce": "+8%",
       "maintenance": "+10%",
       "attractiveness": "+15"
@@ -8957,7 +8963,8 @@
       "targets": [
         "모든 비행선 승강장"
       ],
-      "maintenance": "+125%"
+      "maintenance": "+125%",
+      "pier_speed": "+75%"
     }
   },
   {
@@ -9904,7 +9911,8 @@
       "rarity": "rare",
       "targets": [
         "모든 방어 포탑"
-      ]
+      ],
+      "max_hitpoints": "+600"
     }
   }
 ]

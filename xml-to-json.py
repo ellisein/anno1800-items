@@ -71,7 +71,7 @@ def extract_items_data(assets_path, texts_dict):
                                 item_properties['productivity'] = productivity
 
                             # 산림 밀도 (needed_area)
-                            needed_area = get_value(factory_upgrade_node.find('NeededAreaPercentUpgrade'))
+                            needed_area = get_value(factory_upgrade_node.find('NeededAreaPercentUpgrade'), force_percental=True, reverse_sign=True)
                             if needed_area:
                                 item_properties['needed_area'] = needed_area
 
@@ -277,7 +277,7 @@ def extract_items_data(assets_path, texts_dict):
                         pier_upgrade_node = elem.find('./Values/PierUpgrade')
                         if pier_upgrade_node is not None:
                             # 화물 선적 속도 (pier_speed)
-                            pier_speed = pier_upgrade_node.findtext('PierSpeed')
+                            pier_speed = get_value(pier_upgrade_node.find('PierSpeedUpgrade'))
                             if pier_speed:
                                 item_properties['pier_speed'] = pier_speed
 
@@ -293,8 +293,18 @@ def extract_items_data(assets_path, texts_dict):
                             if line_of_sight:
                                 item_properties['line_of_sight'] = line_of_sight
 
+                            # 명중률 (accuracy)
+                            accuracy = get_value(attacker_upgrade_node.find('AccuracyUpgrade'))
+                            if accuracy:
+                                item_properties['accuracy'] = accuracy
+
                         attackable_upgrade_node = elem.find('./Values/AttackableUpgrade')
                         if attackable_upgrade_node is not None:
+                            # HP (max_hitpoints)
+                            max_hitpoint = get_value(attackable_upgrade_node.find('MaxHitpointsUpgrade'))
+                            if max_hitpoint:
+                                item_properties['max_hitpoints'] = max_hitpoint
+
                             # 받는 피해 (damage_receive_factor)
                             factor = attackable_upgrade_node.find('DamageReceiveFactor')
                             if factor is not None:
@@ -324,7 +334,7 @@ def extract_items_data(assets_path, texts_dict):
     print(f" -> Extracted {len(items_list):,} items.\n")
     return items_list
 
-def get_value(node, force_percental=False):
+def get_value(node, force_percental=False, reverse_sign=False):
     if node is None:
         return None
     
@@ -341,9 +351,11 @@ def get_value(node, force_percental=False):
 
     try:
         val_int = int(val)
+        if reverse_sign:
+            val_int = -val_int
         prefix = "+" if val_int > 0 else ""
         suffix = "%" if is_percental else ""
-        return f"{prefix}{val}{suffix}"
+        return f"{prefix}{val_int}{suffix}"
     except ValueError:
         return val
     

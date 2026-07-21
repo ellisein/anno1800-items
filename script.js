@@ -77,15 +77,17 @@ const categories = {
     'incident_illness': '질병 확률',
     'incident_riot': '폭동 확률',
     'incident_explosion': '폭발 확률',
-    'needed_area': '산림 밀도',
     'attractiveness': '매력도',
+    'needed_area': '산림 밀도',
     'negative_attractiveness': '부정적인 매력도',
     'spawn_probability': '방문 증가',
     'module_limit': '모듈 수',
-    'healing_radius': '수리 범위',
+    'healing_radius': '수리 반경',
     'heal_per_minute': '수리 속도',
+    'max_hitpoints': 'HP',
     'attack_range': '사거리',
     'line_of_sight': '시야 범위',
+    'accuracy': '명중률',
     'damage_receive_factor_normal': '함선에게 받는 피해',
     'damage_receive_factor_torpedo': '어뢰에게 받는 피해',
     'damage_receive_factor_cannon': '해안 포대에게 받는 피해',
@@ -116,7 +118,7 @@ function renderItems(items) {
                 if (item.properties.hasOwnProperty(key)) {
                     const value = item.properties[key];
 
-                     if (key === 'replaced_workforce') {
+                    if (key === 'replaced_workforce') {
                         propertiesHtml += `<li><div class="item-property-key">${categories[key]}:</div><div class="indented text-muted">건물에서 기존 노동력 대신 ${value}을(를) 고용합니다.</div></li>`;
                     } else if (key === 'replaced_inputs' && Array.isArray(value) && value.length > 0) {
                         const oldInputs = value.map(val => val.old).join(', ');
@@ -150,6 +152,14 @@ function renderItems(items) {
                                 <div class="item-property-key">${categories[key]}</div>
                                 <div class="indented text-muted">${value.join(', ')}을(를) 건조할 수 있습니다.</div>
                             </li>
+                        `;
+                    } else if (key === 'needed_area') {
+                        propertiesHtml += `
+                            <li>
+                                <div><span class="item-property-key">${categories[key]}</span> ${value}</div>
+                                <div class="indented text-muted">최적 생산성에 도달하는 데 필요한 나무 수가 감소합니다.</div>
+                            </li>
+                            
                         `;
                     } else if (Array.isArray(value)) {
                         value.forEach(val => {
