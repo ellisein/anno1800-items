@@ -9,7 +9,7 @@
     --bg-card: #252b32;
     --text-main: #ecf0f1;
     --text-muted: #bdc3c7;
-    --text-gold: #e5c08c;
+    --text-gold: #f3e7c5;
     --text-gold-muted: #6c5a47;
     --border-gold: #c6a25d;
 }
@@ -25,6 +25,11 @@ body {
 header {
     text-align: center;
     margin-bottom: 30px;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
 }
 
 #searchInput {
@@ -91,6 +96,12 @@ header {
     margin-right: 8px;
 }
 
+.category-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
 .item-title {
     font-size: 18px;
     font-weight: bold;
@@ -117,12 +128,13 @@ header {
 .item-property-list li {
     font-size: 14px;
     margin-bottom: 8px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .item-property-key {
     color: var(--text-gold);
     font-weight: bold;
+    margin-right: 8px;
 }
 
 .item-desc {
@@ -139,7 +151,7 @@ header {
 }
 
 .indented {
-    margin-left: 5px;
+    margin-left: 16px;
 }
 
 .w-100 {

@@ -107,6 +107,45 @@ const categories = {
     'add_assembly_options': '배 도면'
 };
 
+const category_icons = {
+    'productivity': 'data/ui/2kimages/main/icons/icon_options.png',
+    'workforce': 'data/ui/2kimages/main/icons/icon_build_menu.png',
+    'maintenance': 'data/ui/2kimages/main/icons/icon_resource_money_4.png',
+    'construction_cost': 'data/ui/2kimages/main/icons/icon_sail_shipyard_2d.png',
+    'incident_fire': 'data/ui/2kimages/main/icons/icon_incident_fire_01.png',
+    'incident_illness': 'data/ui/2kimages/main/icons/icon_incident_diseases.png',
+    'incident_riot': 'data/ui/2kimages/main/icons/icon_riot.png',
+    'incident_explosion': 'data/ui/2kimages/main/icons/icon_bomb.png',
+    'attractiveness': 'data/ui/2kimages/main/icons/icon_attractiveness.png',
+    'needed_area': 'data/ui/2kimages/main/icons/icon_tree_progress.png',
+    'negative_attractiveness': 'data/ui/2kimages/main/icons/icon_attractiveness.png',
+    'spawn_probability': 'data/ui/2kimages/main/icons/icon_increase_population_2.png',
+    'module_limit': 'data/ui/2kimages/main/3dicons/icon_general_module_01.png',
+    'healing_radius': 'data/ui/2kimages/main/3dicons/icon_repair_crand_2d.png',
+    'heal_per_minute': 'data/ui/2kimages/main/3dicons/icon_repair_crand_2d.png',
+    'max_hitpoints': 'data/ui/2kimages/main/icons/icon_hitpoints.png',
+    'attack_range': 'data/ui/2kimages/main/icons/icon_ship_in_combat.png',
+    'line_of_sight': 'data/ui/2kimages/main/icons/icon_go_to.png',
+    'accuracy': 'data/ui/2kimages/main/icons/icon_diplomacy_options_support_fleet.png',
+    'damage_receive_factor_normal': 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png',
+    'damage_receive_factor_torpedo': 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png',
+    'damage_receive_factor_cannon': 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png',
+    'damage_receive_factor_bigbertha': 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png',
+    'industrialization': 'data/ui/2kimages/main/icons/icon_electricity.png',
+    'replaced_workforce': 'data/ui/2kimages/main/icons/icon_build_menu.png',
+    'replaced_inputs': 'data/ui/2kimages/main/icons/icon_trade.png',
+    'additional_outputs': 'data/ui/2kimages/main/icons/icon_plus.png',
+    'removed_inputs': 'data/ui/2kimages/main/icons/icon_productivity_buff.png',
+    'good_consumption': 'data/ui/2kimages/main/icons/icon_marketplace_2d.png',
+    'fertility': '',
+    'gen_probability': 'data/ui/2kimages/main/icons/icon_activate_trade.png',
+    'pier_speed': 'data/ui/2kimages/main/icons/icon_load_ships.png',
+    'block_buy_share': 'data/ui/2kimages/main/icons/icon_untic.png',
+    'block_hostile_takeover': 'data/ui/2kimages/main/icons/icon_untic.png',
+    'happiness_ignores_morale': 'data/ui/2kimages/main/icons/icon_happy.png',
+    'add_assembly_options': 'data/ui/2kimages/main/icons/icon_sail_shipyard_2d.png'
+}
+
 function renderItems(items) {
     const grid = document.getElementById('itemGrid');
     grid.innerHTML = '';
@@ -125,12 +164,15 @@ function renderItems(items) {
                         const newInputs = value.map(val => val.new).join(', ');
                         propertiesHtml += `
                             <li>
-                                <div class="item-property-key">${categories[key]}</div>
+                                <div class="inline">
+                                    <img src="${category_icons[key]}" alt="icon" class="category-icon"/>
+                                    <span class="item-property-key">${categories[key]}</span>
+                                </div>
                                 <div class="indented text-muted">건물에서 ${oldInputs} 대신 ${newInputs}을(를) 처리합니다.</div>
                             </li>
                         `;
                     } else if ((key === 'additional_outputs' || key === 'good_consumption') && Array.isArray(value) && value.length > 0) {
-                        propertiesHtml += `<li><div class="item-property-key">${categories[key]}</div>`;
+                        propertiesHtml += `<li><div class="inline"><img src="${category_icons[key]}" alt="icon" class="category-icon"/><div class="item-property-key">${categories[key]}</div></div>`;
                         value.forEach(val => {
                             propertiesHtml += `<div class=" indented text-muted">${val}</div>`;
                         });
@@ -138,28 +180,36 @@ function renderItems(items) {
                     } else if (key === 'removed_inputs' && Array.isArray(value) && value.length > 0) {
                         propertiesHtml += `
                             <li>
-                                <div class="item-property-key">${categories[key]}</div>
+                                <div class="inline">
+                                    <img src="${category_icons[key]}" alt="icon" class="category-icon"/>
+                                    <span class="item-property-key">${categories[key]}</span>
+                                </div>
                                 <div class="indented text-muted">이 건물은 ${value.join(', ')} 없이 물품을 생산합니다.</div>
                             </li>
                         `;
                     } else if (key === 'fertility') {
                         propertiesHtml += `<li><span class="item-property-key">${value} 제공</span></li>`;
                     } else if ((key === 'industrialization' || key === 'block_buy_share' || key === 'block_hostile_takeover' || key === 'happiness_ignores_morale') && value === true) {
-                        propertiesHtml   += `<li><span class="item-property-key">${categories[key]}</span></li>`;
+                        propertiesHtml   += `<li class="inline"><img src="${category_icons[key]}" alt="icon" class="category-icon"/><span class="item-property-key">${categories[key]}</span></li>`;
                     } else if (key === 'add_assembly_options' && Array.isArray(value) && value.length > 0) {
                         propertiesHtml += `
                             <li>
-                                <div class="item-property-key">${categories[key]}</div>
+                                <div class="inline">
+                                    <img src="${category_icons[key]}" alt="icon" class="category-icon"/>
+                                    <span class="item-property-key">${categories[key]}</span>
+                                </div>
                                 <div class="indented text-muted">${value.join(', ')}을(를) 건조할 수 있습니다.</div>
                             </li>
                         `;
                     } else if (key === 'needed_area') {
                         propertiesHtml += `
                             <li>
-                                <div><span class="item-property-key">${categories[key]}</span> ${value}</div>
+                                <div class="inline">
+                                    <img src="${category_icons[key]}" alt="icon" class="category-icon"/>
+                                    <div><span class="item-property-key">${categories[key]}</span> ${value}</div>
+                                </div>
                                 <div class="indented text-muted">최적 생산성에 도달하는 데 필요한 나무 수가 감소합니다.</div>
                             </li>
-                            
                         `;
                     } else if (Array.isArray(value)) {
                         value.forEach(val => {
@@ -167,7 +217,7 @@ function renderItems(items) {
                         });
                     }
                     else {
-                        propertiesHtml += `<li><span class="item-property-key">${categories[key]}</span> ${value}</li>`;
+                        propertiesHtml += `<li class="inline"><img src="${category_icons[key]}" alt="icon" class="category-icon"/><span class="item-property-key">${categories[key]}</span> ${value}</li>`;
                     }
                 }
             }
@@ -184,7 +234,7 @@ function renderItems(items) {
                 typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
             }
         }
-        const typeHtml = typeText ? `<li style="display: flex; align-items: center;"><img src="${typeSource}" alt="icon" class="type-icon" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'16\\' height=\\'16\\'%3E%3Crect width=\\'16\\' height=\\'16\\' fill=\\'%23333\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' fill=\\'%23999\\' dy=\\'.3em\\' text-anchor=\\'middle\\'%3ENo Img%3C/text%3E%3C/svg%3E'"><b>${typeText}</b>에 배치</li>` : '';
+        const typeHtml = typeText ? `<li class="inline"><img src="${typeSource}" alt="icon" class="type-icon"/><b>${typeText}</b>에 배치</li>` : '';
 
         let targetText = "";
         if (item.properties.targets && item.properties.targets.length > 0) {
@@ -204,7 +254,7 @@ function renderItems(items) {
         card.className = `item-card ${item.properties.rarity}`;
         card.innerHTML = `
             <div class="card-header">
-                <img src="${iconPath}" alt="icon" class="item-icon" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'64\\' height=\\'64\\'%3E%3Crect width=\\'64\\' height=\\'64\\' fill=\\'%23333\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' fill=\\'%23999\\' dy=\\'.3em\\' text-anchor=\\'middle\\'%3ENo Img%3C/text%3E%3C/svg%3E'">
+                <img src="${iconPath}" alt="icon" class="item-icon"/>
                 <div class="w-100">
                     <h3 class="item-title">${item.name}</h3>
                     <div class="flex-between">
