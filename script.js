@@ -1,5 +1,220 @@
 let allItems = [];
 
+async function fetchItems() {
+    try {
+        const response = await fetch('items.json');
+        const rawData = await response.json();
+        
+        allItems = rawData.map(item => {
+            const keywords = [];
+            
+            if (item.name) {
+                keywords.push(item.name);
+            }
+
+            if (item.properties) {
+                for (const [key, value] of Object.entries(item.properties)) {
+                    if (key === 'rarity' || key === 'dlc_dependency') {
+                        continue;
+                    }
+
+                    if (categories[key]) {
+                        keywords.push(categories[key]);
+                    }
+                    
+                    let valuesToPush = [];
+                    
+                    if (key === 'replaced_inputs' && Array.isArray(value)) {
+                        value.forEach(val => {
+                            valuesToPush.push(val.old);
+                            valuesToPush.push(val.new);
+                        });
+                    } else if (typeof value === 'string' || typeof value === 'number') {
+                        valuesToPush.push(String(value));
+                    } else if (Array.isArray(value)) {
+                        valuesToPush.push(...value); 
+                    }
+
+                    valuesToPush.forEach(valText => {
+                        const cleaned = valText.replace(/[0-9\+\-\%\/]/g, '').trim();
+                        if (cleaned) {
+                            keywords.push(cleaned);
+                        }
+                    });
+                }
+            }
+
+            const rawText = keywords.join('|').replace(/\s+/g, '').toLowerCase();
+            
+            return {
+                ...item,
+                searchRaw: rawText,
+                searchDecomposed: decomposeKorean(rawText)
+            };
+        });
+
+        renderItems(allItems);
+    } catch (error) {
+        console.error('데이터를 불러오지 못했습니다:', error);
+        document.getElementById('itemGrid').innerHTML = '<p>데이터를 불러오는 중 오류가 발생했습니다.</p>';
+    }
+}
+
+const rarities = {
+    'common': '일반',
+    'uncommon': '특별',
+    'rare': '희귀',
+    'epic': '에픽',
+    'legendary': '전설'
+}
+
+const categories = {
+    'productivity': '생산성',
+    'workforce': '필요한 노동력',
+    'maintenance': '유지비',
+    'construction_cost': '건설 비용',
+    'incident_fire': '화재 확률',
+    'incident_illness': '질병 확률',
+    'incident_riot': '폭동 확률',
+    'incident_explosion': '폭발 확률',
+    'needed_area': '산림 밀도',
+    'attractiveness': '매력도',
+    'negative_attractiveness': '부정적인 매력도',
+    'spawn_probability': '방문 증가',
+    'module_limit': '모듈 수',
+    'healing_radius': '수리 범위',
+    'heal_per_minute': '수리 속도',
+    'attack_range': '사거리',
+    'line_of_sight': '시야 범위',
+    'damage_receive_factor_normal': '함선에게 받는 피해',
+    'damage_receive_factor_torpedo': '어뢰에게 받는 피해',
+    'damage_receive_factor_cannon': '해안 포대에게 받는 피해',
+    'damage_receive_factor_bigbertha': '빅 베티에게 받는 피해',
+    'industrialization': '전기 제공',
+    'replaced_workforce': '대체 노동력',
+    'replaced_inputs': '새로운 투입물',
+    'additional_outputs': '추가 물품',
+    'removed_inputs': '투입 자원 제거',
+    'good_consumption': '물품 소비량',
+    'fertility': '토착 자원',
+    'gen_probability': '항구 활동',
+    'pier_speed': '화물 선적 속도',
+    'block_buy_share': '지분 거래 금지',
+    'block_hostile_takeover': '인수 금지',
+    'happiness_ignores_morale': '강철 의지',
+    'add_assembly_options': '배 도면'
+};
+
+function renderItems(items) {
+    const grid = document.getElementById('itemGrid');
+    grid.innerHTML = '';
+
+    items.forEach(item => {
+        let propertiesHtml = '';
+        if (item.properties) {
+            for (const key of Object.keys(categories)) {
+                if (item.properties.hasOwnProperty(key)) {
+                    const value = item.properties[key];
+
+                     if (key === 'replaced_workforce') {
+                        propertiesHtml += `<li><div class="item-property-key">${categories[key]}:</div><div class="indented text-muted">건물에서 기존 노동력 대신 ${value}을(를) 고용합니다.</div></li>`;
+                    } else if (key === 'replaced_inputs' && Array.isArray(value) && value.length > 0) {
+                        const oldInputs = value.map(val => val.old).join(', ');
+                        const newInputs = value.map(val => val.new).join(', ');
+                        propertiesHtml += `
+                            <li>
+                                <div class="item-property-key">${categories[key]}</div>
+                                <div class="indented text-muted">건물에서 ${oldInputs} 대신 ${newInputs}을(를) 처리합니다.</div>
+                            </li>
+                        `;
+                    } else if ((key === 'additional_outputs' || key === 'good_consumption') && Array.isArray(value) && value.length > 0) {
+                        propertiesHtml += `<li><div class="item-property-key">${categories[key]}</div>`;
+                        value.forEach(val => {
+                            propertiesHtml += `<div class=" indented text-muted">${val}</div>`;
+                        });
+                        propertiesHtml += `</li>`;
+                    } else if (key === 'removed_inputs' && Array.isArray(value) && value.length > 0) {
+                        propertiesHtml += `
+                            <li>
+                                <div class="item-property-key">${categories[key]}</div>
+                                <div class="indented text-muted">이 건물은 ${value.join(', ')} 없이 물품을 생산합니다.</div>
+                            </li>
+                        `;
+                    } else if (key === 'fertility') {
+                        propertiesHtml += `<li><span class="item-property-key">${value} 제공</span></li>`;
+                    } else if ((key === 'industrialization' || key === 'block_buy_share' || key === 'block_hostile_takeover' || key === 'happiness_ignores_morale') && value === true) {
+                        propertiesHtml   += `<li><span class="item-property-key">${categories[key]}</span></li>`;
+                    } else if (key === 'add_assembly_options' && Array.isArray(value) && value.length > 0) {
+                        propertiesHtml += `
+                            <li>
+                                <div class="item-property-key">${categories[key]}</div>
+                                <div class="indented text-muted">${value.join(', ')}을(를) 건조할 수 있습니다.</div>
+                            </li>
+                        `;
+                    } else if (Array.isArray(value)) {
+                        value.forEach(val => {
+                            propertiesHtml += `<li><span class="item-property-key">${categories[key]}</span> ${val}</li>`;
+                        });
+                    }
+                    else {
+                        propertiesHtml += `<li><span class="item-property-key">${categories[key]}</span> ${value}</li>`;
+                    }
+                }
+            }
+        }
+
+        let typeText = "";
+        let typeSource = "";
+        if (item.type) {
+            if (item.type === 'GuildhouseItem') {
+                typeText = "무역 연합";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
+            } else if (item.type === 'HarborOfficeItem') {
+                typeText = "항만 관리소장실";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
+            }
+        }
+        const typeHtml = typeText ? `<li style="display: flex; align-items: center;"><img src="${typeSource}" alt="icon" class="type-icon" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'16\\' height=\\'16\\'%3E%3Crect width=\\'16\\' height=\\'16\\' fill=\\'%23333\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' fill=\\'%23999\\' dy=\\'.3em\\' text-anchor=\\'middle\\'%3ENo Img%3C/text%3E%3C/svg%3E'"><b>${typeText}</b>에 배치</li>` : '';
+
+        let targetText = "";
+        if (item.properties.targets && item.properties.targets.length > 0) {
+            if (item.properties.targets.length === 1) {
+                targetText = item.properties.targets[0];
+            } else {
+                const lastItem = item.properties.targets[item.properties.targets.length - 1];
+                const otherItems = item.properties.targets.slice(0, -1).join(', ');
+                targetText = `${otherItems}, 그리고 ${lastItem}`;
+            }
+        }
+        const targetsHtml = targetText ? `<li class="text-muted">${targetText}에 영향</li>` : '';
+
+        const iconPath = item.icon ? item.icon : '';
+
+        const card = document.createElement('div');
+        card.className = `item-card ${item.properties.rarity}`;
+        card.innerHTML = `
+            <div class="card-header">
+                <img src="${iconPath}" alt="icon" class="item-icon" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'64\\' height=\\'64\\'%3E%3Crect width=\\'64\\' height=\\'64\\' fill=\\'%23333\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' fill=\\'%23999\\' dy=\\'.3em\\' text-anchor=\\'middle\\'%3ENo Img%3C/text%3E%3C/svg%3E'">
+                <div class="w-100">
+                    <h3 class="item-title">${item.name}</h3>
+                    <div class="flex-between">
+                        <span class="item-rarity ${item.properties.rarity}">${rarities[item.properties.rarity]}</span>
+                        ${item.properties.dlc_dependency ? `<span class="item-dlc">${item.properties.dlc_dependency} DLC</span>` : ''}
+                    </div>
+                </div>
+            </div>
+            <ul class="item-property-list">
+                ${typeHtml}
+                ${targetsHtml}
+                ${propertiesHtml}
+            </ul>
+            ${item.description ? `<p class="item-desc">${item.description}</p>` : ''}
+        `;
+        
+        grid.appendChild(card);
+    });
+}
+
 const CHO = ["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
 const JUNG = ["ㅏ","ㅐ","ㅑ","ㅒ","ㅓ","ㅔ","ㅕ","ㅖ","ㅗ","ㅘ","ㅙ","ㅚ","ㅛ","ㅜ","ㅝ","ㅞ","ㅟ","ㅠ","ㅡ","ㅢ","ㅣ"];
 const JONG = ["","ㄱ","ㄲ","ㄳ","ㄴ","ㄵ","ㄶ","ㄷ","ㄹ","ㄺ","ㄻ","ㄼ","ㄽ","ㄾ","ㄿ","ㅀ","ㅁ","ㅂ","ㅄ","ㅅ","ㅆ","ㅇ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
@@ -21,171 +236,6 @@ function decomposeKorean(str) {
     return result;
 }
 
-async function fetchItems() {
-    try {
-        const response = await fetch('items.json');
-        const rawData = await response.json();
-        
-        allItems = rawData.map(item => {
-            const rawText = `
-                ${item.name || ''} 
-                ${item.rarity || ''}
-                ${item.targets ? item.targets.join('') : ''} 
-                ${JSON.stringify(item.effects || {})}
-            `.replace(/\s+/g, '').toLowerCase();
-            
-            return {
-                ...item,
-                searchRaw: rawText,
-                searchJamo: decomposeKorean(rawText)
-            };
-        });
-
-        renderItems(allItems);
-    } catch (error) {
-        console.error('데이터를 불러오지 못했습니다:', error);
-        document.getElementById('itemGrid').innerHTML = '<p>데이터를 불러오는 중 오류가 발생했습니다.</p>';
-    }
-}
-
-const categories = {
-    'productivity': '생산성',
-    'workforce': '필요한 노동력',
-    'maintenance': '유지비',
-    'construction_cost': '건설 비용',
-    'incident_fire': '화재 확률',
-    'incident_illness': '질병 확률',
-    'incident_riot': '폭동 확률',
-    'incident_explosion': '폭발 확률',
-    'area': '산림 밀도',
-    'attractiveness': '매력도',
-    'negative_attractiveness': '부정적인 매력도',
-    'spawn_probability': '방문 증가',
-    'module_limit': '모듈 수',
-    'healing_radius': '수리 범위',
-    'heal_per_minute': '수리 속도',
-    'industrialization': '전기 제공',
-    'replaced_workforce': '대체 노동력',
-    'replaced_inputs': '새로운 투입물',
-    'additional_outputs': '추가 물품',
-    'removed_inputs': '투입 자원 제거',
-    'fertility': '토착 자원',
-    'gen_probability': '항구 활동',
-    'pier_speed': '화물 선적 속도',
-    'block_buy_share': '지분 거래 금지',
-    'assemblies': '배 도면'
-};
-
-function renderItems(items) {
-    const grid = document.getElementById('itemGrid');
-    grid.innerHTML = '';
-
-    items.forEach(item => {
-        let effectsHtml = '';
-        if (item.effects) {
-            for (const key of Object.keys(categories)) {
-                if (item.effects.hasOwnProperty(key)) {
-                    const value = item.effects[key];
-
-                    if (key === 'industrialization' && value === true) {
-                        effectsHtml += `<li><span class="effect-key">${categories[key]}</span></li>`;
-                    } else if (key === 'replaced_workforce') {
-                        effectsHtml += `<li><div class="effect-key">${categories[key]}:</div><div class="indented text-muted">건물에서 기존 노동력 대신 ${value}을(를) 고용합니다.</div></li>`;
-                    } else if (key === 'replaced_inputs' && Array.isArray(value) && value.length > 0) {
-                        const oldInputs = value.map(val => val.old).join(', ');
-                        const newInputs = value.map(val => val.new).join(', ');
-
-                        effectsHtml += `
-                            <li>
-                                <div class="effect-key">${categories[key]}</div>
-                                <div class="indented text-muted">건물에서 ${oldInputs} 대신 ${newInputs}을(를) 처리합니다.</div>
-                            </li>
-                        `;
-                    } else if (key === 'additional_outputs' && Array.isArray(value) && value.length > 0) {
-                        effectsHtml += `<li><div class="effect-key">${categories[key]}</div>`;
-                        value.forEach(val => {
-                            effectsHtml += `<div class=" indented text-muted">${val}</div>`;
-                        });
-                        effectsHtml += `</li>`;
-                    } else if (key === 'removed_inputs' && Array.isArray(value) && value.length > 0) {
-                        effectsHtml += `
-                            <li>
-                                <div class="effect-key">${categories[key]}</div>
-                                <div class="indented text-muted">이 건물은 ${value.join(', ')} 없이 물품을 생산합니다.</div>
-                            </li>
-                        `;
-                    } else if (key === 'fertility') {
-                        effectsHtml += `<li><span class="effect-key">${value} 제공</span></li>`;
-                    } else if (key === 'block_buy_share' && value === true) {
-                        effectsHtml += `<li><span class="effect-key">${categories[key]}</span></li>`;
-                    } else if (key === 'assemblies' && Array.isArray(value) && value.length > 0) {
-                        effectsHtml += `
-                            <li>
-                                <div class="effect-key">${categories[key]}</div>
-                                <div class="indented text-muted">${value.join(', ')}을(를) 건조할 수 있습니다.</div>
-                            </li>
-                        `;
-                    } else if (Array.isArray(value)) {
-                        value.forEach(val => {
-                            effectsHtml += `<li><span class="effect-key">${categories[key]}</span> ${val}</li>`;
-                        });
-                    }
-                    else {
-                        effectsHtml += `<li><span class="effect-key">${categories[key]}</span> ${value}</li>`;
-                    }
-                }
-            }
-        }
-
-        let typeText = "";
-        let typeSource = "";
-        if (item.type) {
-            if (item.type === 'GuildhouseItem') {
-                typeText = "무역 연합";
-                typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
-            } else if (item.type === 'HarborOfficeItem') {
-                typeText = "항만 관리소장실";
-                typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
-            }
-        }
-        const typeHtml = typeText ? `<li style="display: flex; align-items: center;"><img src="${typeSource}" alt="icon" class="type-icon" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'16\\' height=\\'16\\'%3E%3Crect width=\\'16\\' height=\\'16\\' fill=\\'%23333\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' fill=\\'%23999\\' dy=\\'.3em\\' text-anchor=\\'middle\\'%3ENo Img%3C/text%3E%3C/svg%3E'"><b>${typeText}</b>에 배치</li>` : '';
-
-        let targetText = "";
-        if (item.targets && item.targets.length > 0) {
-            if (item.targets.length === 1) {
-                targetText = item.targets[0];
-            } else {
-                const lastItem = item.targets[item.targets.length - 1];
-                const otherItems = item.targets.slice(0, -1).join(', ');
-                targetText = `${otherItems}, 그리고 ${lastItem}`;
-            }
-        }
-        const targetsHtml = targetText ? `<li class="text-muted">${targetText}에 영향</li>` : '';
-
-        const iconPath = item.icon ? item.icon : '';
-
-        const card = document.createElement('div');
-        card.className = `item-card ${item.rarity || '일반'}`;
-        card.innerHTML = `
-            <div class="card-header">
-                <img src="${iconPath}" alt="icon" class="item-icon" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'64\\' height=\\'64\\'%3E%3Crect width=\\'64\\' height=\\'64\\' fill=\\'%23333\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' fill=\\'%23999\\' dy=\\'.3em\\' text-anchor=\\'middle\\'%3ENo Img%3C/text%3E%3C/svg%3E'">
-                <div>
-                    <h3 class="item-title">${item.name}</h3>
-                    <span class="item-rarity">${item.rarity || '일반'}</span>
-                </div>
-            </div>
-            <ul class="effect-list">
-                ${typeHtml}
-                ${targetsHtml}
-                ${effectsHtml}
-            </ul>
-            ${item.description ? `<p class="item-desc">${item.description}</p>` : ''}
-        `;
-        
-        grid.appendChild(card);
-    });
-}
-
 document.getElementById('searchInput').addEventListener('input', (e) => {
     const keyword = e.target.value.replace(/\s+/g, '').toLowerCase();
     
@@ -194,11 +244,11 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
         return;
     }
 
-    const jamoKeyword = decomposeKorean(keyword);
+    const decomposedKeyword = decomposeKorean(keyword);
 
     const filtered = allItems.filter(item => {
         if (item.searchRaw.includes(keyword)) return true;
-        if (item.searchJamo.includes(jamoKeyword)) return true;
+        if (item.searchDecomposed.includes(decomposedKeyword)) return true;
 
         return false;
     });

@@ -1,14 +1,5 @@
 import xml.etree.ElementTree as ET
 import json
-import os
-
-RARITY_MAP = {
-    'Common': '일반',
-    'Uncommon': '특별',
-    'Rare': '희귀',
-    'Epic': '에픽',
-    'Legendary': '전설'
-}
 
 def load_korean_texts(xml_path):
     print("1/3: Loading Korean translations from texts_korean.xml...")
@@ -41,231 +32,334 @@ def extract_items_data(assets_path, texts_dict):
                 standard = elem.find('./Values/Standard')
 
                 if standard is not None:
-                    guid = standard.findtext('GUID')
+                    item_guid = standard.findtext('GUID')
                     icon_path = standard.findtext('IconFilename')
 
-                    if guid and icon_path and guid.strip() in texts_dict:
-                        guid = guid.strip()
-                        item_name = texts_dict[guid]
+                    if item_guid and item_guid in texts_dict and icon_path:
+                        item_name = texts_dict[item_guid]
                         icon_path = icon_path.replace('\\', '/')
 
-                        item_node = elem.find('./Values/Item')
-                        rarity = ""
-                        if item_node is not None:
-                            rarity_en = item_node.findtext('Rarity')
-                            rarity = RARITY_MAP.get(rarity_en, rarity_en) if rarity_en else ""
+                        item_properties = {}
 
-                        effect_targets_node = elem.find('./Values/ItemEffect/EffectTargets')
-                        targets = []
-                        if effect_targets_node is not None:
-                            for target in effect_targets_node.findall('./Item'):
-                                target_guid = target.findtext('GUID')
-                                if target_guid and target_guid in texts_dict:
-                                    targets.append(texts_dict[target_guid])
+                        item_node = elem.find('./Values/Item')
+                        if item_node is not None:
+                            # 아이템 등급 (rarity)
+                            rarity = item_node.findtext('Rarity')
+                            item_properties['rarity'] = rarity.lower() if rarity else 'common'
 
                         locked_node = elem.find('./Values/Locked')
-                        dlc_dependency = ""
                         if locked_node is not None:
-                            locked_guid = locked_node.findtext('DLCDependency')
-                            if locked_guid and locked_guid in texts_dict:
-                                dlc_dependency = f"{texts_dict[locked_guid]}"
+                            # 필요 DLC (dlc_dependency)
+                            dlc_guid = locked_node.findtext('DLCDependency')
+                            if dlc_guid and dlc_guid in texts_dict:
+                                item_properties['dlc_dependency'] = texts_dict[dlc_guid]
 
-                        effects = {}
-                        for upgrade_type in ['FactoryUpgrade', 'BuildingUpgrade', 'ModuleOwnerUpgrade', 'IncidentInfectableUpgrade', 'CultureUpgrade', 'IndustrializableUpgrade', 'VisitorHarborUpgrade', 'PassiveTradeGoodGenUpgrade', 'PierUpgrade', 'KontorUpgrade', 'ShipyardUpgrade', 'RepairCraneUpgrade']:
-                            upgrade_node = elem.find(f'./Values/{upgrade_type}')
-                            if upgrade_node is not None:
-                                for child in upgrade_node:
-                                    if child.tag == 'ProductivityUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            effects["productivity"] = f"+{val}%" if int(val) > 0 else f"{val}%"
+                        item_effect_node = elem.find('./Values/ItemEffect')
+                        if item_effect_node is not None:
+                            # 적용 대상 (targets)
+                            item_properties['targets'] = []
+                            for target in item_effect_node.findall('EffectTargets/Item'):
+                                target_guid = target.findtext('GUID')
+                                if target_guid and target_guid in texts_dict:
+                                    item_properties['targets'].append(texts_dict[target_guid])
 
-                                    elif child.tag in ('WorkforceModifierInPercent', 'WorkforceAmountUpgrade'):
-                                        val = child.findtext('Value')
-                                        if val:
-                                            effects["workforce"] = f"+{val}%" if int(val) > 0 else f"{val}%"
-                                            
-                                    elif child.tag == 'MaintenanceUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            effects["maintenance"] = f"+{val}%" if int(val) > 0 else f"{val}%"
+                        factory_upgrade_node = elem.find('./Values/FactoryUpgrade')
+                        if factory_upgrade_node is not None:
+                            # 생산성 (productivity)
+                            productivity = get_value(factory_upgrade_node.find('ProductivityUpgrade'))
+                            if productivity:
+                                item_properties['productivity'] = productivity
 
-                                    elif child.tag == 'ConstructionCostInPercent':
-                                        val = child.text
-                                        if val and val.strip():
-                                            num = int(val.strip())
-                                            effects["construction_cost"] = f"+{num}%" if num > 0 else f"{num}%"
+                            # 산림 밀도 (needed_area)
+                            needed_area = get_value(factory_upgrade_node.find('NeededAreaPercentUpgrade'))
+                            if needed_area:
+                                item_properties['needed_area'] = needed_area
 
-                                    elif child.tag == 'IncidentFireIncreaseUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            val_int = int(val) * 10
-                                            effects["incident_fire"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
+                            # 새로운 투입물 (replaced_inputs)
+                            replace_inputs_node = factory_upgrade_node.find('ReplaceInputs')
+                            if replace_inputs_node is not None:
+                                replaced_inputs = []
+                                for item in replace_inputs_node.findall('Item'):
+                                    old_guid = item.findtext('OldInput')
+                                    new_guid = item.findtext('NewInput')
+                                    if old_guid and new_guid and old_guid in texts_dict and new_guid in texts_dict:
+                                        old_name = texts_dict[old_guid]
+                                        new_name = texts_dict[new_guid]
+                                        replaced_inputs.append({
+                                            "old": old_name,
+                                            "new": new_name
+                                        })
+                                if len(replaced_inputs) > 0:
+                                    item_properties['replaced_inputs'] = replaced_inputs
 
-                                    elif child.tag == 'IncidentIllnessIncreaseUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            val_int = int(val) * 10
-                                            effects["incident_illness"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
+                            # 추가 물품 (additional_outputs)
+                            additional_output_node = factory_upgrade_node.find('AdditionalOutput')
+                            if additional_output_node is not None:
+                                additional_outputs = []
+                                for item in additional_output_node.findall('Item'):
+                                    same = item.findtext('ForceProductSameAsFactoryOutput')
+                                    prod_guid = item.findtext('Product')
+                                    cycle = item.findtext('AdditionalOutputCycle')
+                                    amount = item.findtext('Amount')
+                                    if same and same.strip() == '1':
+                                        additional_outputs.append(f"+{amount}/{cycle}")
+                                    elif prod_guid and prod_guid in texts_dict:
+                                        prod_name = texts_dict[prod_guid]
+                                        additional_outputs.append(f"{prod_name} +{amount}/{cycle}")
+                                if len(additional_outputs) > 0:
+                                    item_properties['additional_outputs'] = additional_outputs
 
-                                    elif child.tag == 'IncidentRiotIncreaseUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            effects["incident_riot"] = f"+{val}%" if int(val) > 0 else f"{val}%"
+                            # 투입 자원 제거 (removed_inputs)
+                            input_amount_node = factory_upgrade_node.find('InputAmountUpgrade')
+                            if input_amount_node is not None:
+                                removed_inputs = []
+                                for item in input_amount_node.findall('Item'):
+                                    prod_guid = item.findtext('Product')
+                                    amount = item.findtext('Amount')
+                                    if prod_guid and prod_guid in texts_dict:
+                                        if amount and int(amount) < 0:
+                                            prod_name = texts_dict[prod_guid]
+                                            removed_inputs.append(prod_name)
+                                if len(removed_inputs) > 0:
+                                    item_properties['removed_inputs'] = removed_inputs
 
-                                    elif child.tag == 'IncidentExplosionIncreaseUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            val_int = int(val) * 10
-                                            effects["incident_explosion"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
+                            # 토착 자원 제공 (fertility)
+                            added_fertility_node = factory_upgrade_node.find('AddedFertility')
+                            if added_fertility_node is not None:
+                                fertility_guid = added_fertility_node.text
+                                if fertility_guid and fertility_guid in texts_dict:
+                                    item_properties['fertility'] = texts_dict[fertility_guid]
 
-                                    elif child.tag == 'NeededAreaPercentUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            val_int = int(val) * (-1)
-                                            effects["area"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
-                                            
-                                    elif child.tag == 'AttractivenessUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            percental = child.findtext('Percental')
-                                            if percental and percental.strip() == '1':
-                                                if int(val) > 0:
-                                                    effects["attractiveness"] = f"+{val}%"
-                                                else:
-                                                    effects["negative_attractiveness"] = f"{val}%"
-                                            else:
-                                                effects["attractiveness"] = f"+{val}" if int(val) > 0 else f"{val}"
+                        building_upgrade_node = elem.find('./Values/BuildingUpgrade')
+                        if building_upgrade_node is not None:
+                            # 필요한 노동력 (workforce)
+                            workforce = get_value(building_upgrade_node.find('WorkforceAmountUpgrade'))
+                            if workforce:
+                                item_properties['workforce'] = workforce
 
-                                    elif child.tag == 'SpawnProbabilityFactor':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            val_int = int(val) * (-1)
-                                            effects["spawn_probability"] = f"+{val_int}%" if val_int > 0 else f"{val_int}%"
-                                            
-                                    elif child.tag == 'ModuleLimitPercent':
-                                        val = child.text
-                                        if val and val.strip():
-                                            num = int(val.strip())
-                                            effects["module_limit"] = f"+{num}%" if num > 0 else f"{num}%"
+                            # 유지비 (maintenance)
+                            maintenance = get_value(building_upgrade_node.find('MaintenanceUpgrade'))
+                            if maintenance:
+                                item_properties['maintenance'] = maintenance
 
-                                    elif child.tag == 'HealRadiusUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            effects["healing_radius"] = f"+{val}%" if int(val) > 0 else f"{val}%";
-                                    
-                                    elif child.tag == 'HealPerMinuteUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            effects["heal_per_minute"] = f"+{val}%" if int(val) > 0 else f"{val}%";
+                            # 대체 노동력 (replacing_workforce)
+                            replacing_workforce_guid = building_upgrade_node.findtext('ReplacingWorkforce')
+                            if replacing_workforce_guid and replacing_workforce_guid in texts_dict:
+                                item_properties['replacing_workforce'] = texts_dict[replacing_workforce_guid]
 
-                                    elif child.tag == 'ProvideIndustrialization':
-                                        val = child.text
-                                        if val and val.strip() == '1':
-                                            effects["industrialization"] = True
+                        shipyard_upgrade_node = elem.find('./Values/ShipyardUpgrade')
+                        if shipyard_upgrade_node is not None:
+                            # 건설 비용 (construction_cost)
+                            construction_cost = get_value(shipyard_upgrade_node.find('ConstructionCostInPercent'))
+                            if construction_cost:
+                                item_properties['construction_cost'] = construction_cost
 
-                                    elif child.tag == 'ReplacingWorkforce':
-                                        val = child.text
-                                        if val and val.strip():
-                                            workforce_guid = val.strip()
-                                            effects["replaced_workforce"] = texts_dict[workforce_guid]
+                            # 배 도면 (add_assembly_options)
+                            add_assembly_options_node = shipyard_upgrade_node.find('AddAssemblyOptions')
+                            if add_assembly_options_node is not None:
+                                assemblies = []
+                                for item in add_assembly_options_node.findall('Item'):
+                                    guid = item.findtext('NewOption')
+                                    if guid and guid in texts_dict:
+                                        assemblies.append(texts_dict[guid])
+                                if len(assemblies) > 0:
+                                    item_properties['add_assembly_options'] = assemblies
 
-                                    elif child.tag == 'ReplaceInputs':
-                                        replacements = []
-                                        for rep_item in child.findall('.//Item'):
-                                            old_guid = rep_item.findtext('OldInput')
-                                            new_guid = rep_item.findtext('NewInput')
-                                            
-                                            if old_guid and new_guid and old_guid in texts_dict and new_guid in texts_dict:
-                                                old_name = texts_dict[old_guid]
-                                                new_name = texts_dict[new_guid]
-                                                
-                                                replacements.append({
-                                                    "old": old_name,
-                                                    "new": new_name
-                                                })
-                                                
-                                        if replacements:
-                                            effects['replaced_inputs'] = replacements
+                        incident_infectable_upgrade_node = elem.find('./Values/IncidentInfectableUpgrade')
+                        if incident_infectable_upgrade_node is not None:
+                            # 화재 확률 (incident_fire)
+                            incident_fire = get_value(incident_infectable_upgrade_node.find('IncidentFireIncreaseUpgrade'))
+                            if incident_fire:
+                                item_properties['incident_fire'] = incident_fire
 
-                                    elif child.tag == 'AdditionalOutput':
-                                        additional_outputs = []
-                                        for add_item in child.findall('.//Item'):
-                                            same = add_item.findtext('ForceProductSameAsFactoryOutput')
-                                            prod_guid = add_item.findtext('Product')
-                                            cycle = add_item.findtext('AdditionalOutputCycle')
-                                            amount = add_item.findtext('Amount')
-                                            
-                                            if same and same.strip() == '1':
-                                                additional_outputs.append(f"기존 생산물 +{amount}/{cycle}")
-                                            elif prod_guid and prod_guid in texts_dict:
-                                                prod_name = texts_dict[prod_guid]
-                                                additional_outputs.append(f"{prod_name} +{amount}/{cycle}")
-                                                
-                                        if additional_outputs:
-                                            effects['additional_outputs'] = additional_outputs
+                            # 질병 확률 (incident_illness)
+                            incident_illness = get_value(incident_infectable_upgrade_node.find('IncidentIllnessIncreaseUpgrade'))
+                            if incident_illness:
+                                item_properties['incident_illness'] = incident_illness
 
-                                    elif child.tag == 'InputAmountUpgrade':
-                                        removed_inputs = []
-                                        for input_item in child.findall('.//Item'):
-                                            prod_guid = input_item.findtext('Product')
-                                            amount = input_item.findtext('Amount')
-                                            
-                                            if prod_guid and prod_guid in texts_dict:
-                                                if amount and int(amount) < 0:
-                                                    prod_name = texts_dict[prod_guid]
-                                                    removed_inputs.append(prod_name)
-                                                    
-                                        if removed_inputs:
-                                            effects['removed_inputs'] = removed_inputs
+                            # 폭동 확률 (incident_riot)
+                            incident_riot = get_value(incident_infectable_upgrade_node.find('IncidentRiotIncreaseUpgrade'))
+                            if incident_riot:
+                                item_properties['incident_riot'] = incident_riot
 
-                                    elif child.tag == 'AddedFertility':
-                                        fertility_guid = child.text
-                                        if fertility_guid and fertility_guid in texts_dict:
-                                            effects['fertility'] = texts_dict[fertility_guid]
+                            # 폭발 확률 (incident_explosion)
+                            incident_explosion = get_value(incident_infectable_upgrade_node.find('IncidentExplosionIncreaseUpgrade'))
+                            if incident_explosion:
+                                item_properties['incident_explosion'] = incident_explosion
 
-                                    elif child.tag == 'GenProbability':
-                                        val = child.text
-                                        if val and val.strip():
-                                            num = int(val.strip())
-                                            effects["gen_probability"] = f"+{num}%" if num > 0 else f"{num}%"
+                        culture_upgrade_node = elem.find('./Values/CultureUpgrade')
+                        if culture_upgrade_node is not None:
+                            # 매력도 (attractiveness) / 부정적인 매력도 (negative_attractiveness)
+                            attractiveness = get_value(culture_upgrade_node.find('AttractivenessUpgrade'))
+                            if attractiveness:
+                                if attractiveness.startswith('-') and attractiveness.endswith('%'):
+                                    item_properties['negative_attractiveness'] = attractiveness
+                                else:
+                                    item_properties['attractiveness'] = attractiveness
 
-                                    elif child.tag == 'PierSpeedUpgrade':
-                                        val = child.findtext('Value')
-                                        if val:
-                                            effects["pier_speed"] = f"+{val}%" if int(val) > 0 else f"{val}%"
+                        visitor_harbor_upgrade_node = elem.find('./Values/VisitorHarborUpgrade')
+                        if visitor_harbor_upgrade_node is not None:
+                            # 방문 증가 (spawn_probability)
+                            spawn_probability = get_value(visitor_harbor_upgrade_node.find('SpawnProbabilityFactor'))
+                            if spawn_probability:
+                                item_properties['spawn_probability'] = spawn_probability
 
-                                    elif child.tag == 'BlockBuyShare':
-                                        val = child.text
-                                        if val and val.strip() == '1':
-                                            effects["block_buy_share"] = True
+                        module_owner_upgrade_node = elem.find('./Values/ModuleOwnerUpgrade')
+                        if module_owner_upgrade_node is not None:
+                            # 모듈 수 (module_limit)
+                            module_limit = get_value(module_owner_upgrade_node.find('ModuleLimitPercent'))
+                            if module_limit:
+                                item_properties['module_limit'] = module_limit
 
-                                    elif child.tag == 'AddAssemblyOptions':
-                                        assemblies = []
-                                        for add_item in child.findall('.//Item'):
-                                            guid = add_item.findtext('NewOption')
-                                            assembly_name = texts_dict.get(guid, guid) if guid else ""
-                                            if assembly_name:
-                                                assemblies.append(assembly_name)
-                                                
-                                        if assemblies:
-                                            effects['assemblies'] = assemblies
-                        
+                        residence_upgrade_node = elem.find('./Values/ResidenceUpgrade')
+                        if residence_upgrade_node is not None:
+                            # 물품 소비량 (good_consumption)
+                            good_consumption_node = residence_upgrade_node.find('GoodConsumptionUpgrade')
+                            if good_consumption_node is not None:
+                                good_consumption = []
+                                for item in good_consumption_node.findall('Item'):
+                                    guid = item.findtext('ProvidedNeed')
+                                    amount = get_value(item.find('AmountInPercent'))
+                                    if guid and guid in texts_dict and amount:
+                                        name = texts_dict[guid]
+                                        good_consumption.append(f"{name} {amount}")
+                                if len(good_consumption) > 0:
+                                    item_properties['good_consumption'] = good_consumption
+
+                        repair_crane_upgrade_node = elem.find('./Values/RepairCraneUpgrade')
+                        if repair_crane_upgrade_node is not None:
+                            # 수리 반경 (healing_radius)
+                            healing_radius = get_value(repair_crane_upgrade_node.find('HealingRadiusUpgerade'))
+                            if healing_radius:
+                                item_properties['healing_radius'] = healing_radius
+
+                            # 수리 속도 (heal_per_minute)
+                            heal_per_minute = get_value(repair_crane_upgrade_node.find('HealPerMinuteUpgrade'))
+                            if heal_per_minute:
+                                item_properties['heal_per_minute'] = heal_per_minute
+
+                            # 건물 수리 속도 (heal_buildings_per_minute)
+                            heal_buildings_per_minute = get_value(repair_crane_upgrade_node.find('HealBuildingsPerMinuteUpgrade'))
+                            if heal_buildings_per_minute:
+                                item_properties['heal_buildings_per_minute'] = heal_buildings_per_minute
+
+                        industrializable_upgrade_node = elem.find('./Values/IndustrializableUpgrade')
+                        if industrializable_upgrade_node is not None:
+                            # 전기 제공 (industrialization)
+                            provide_industrialization = industrializable_upgrade_node.findtext('ProvideIndustrialization')
+                            if provide_industrialization and provide_industrialization.strip() == '1':
+                                item_properties['industrialization'] = True
+
+                        passive_trade_good_gen_upgrade_node = elem.find('./Values/PassiveTradeGoodGenUpgrade')
+                        if passive_trade_good_gen_upgrade_node is not None:
+                            # 항구 활동 (gen_probability)
+                            gen_probability = get_value(passive_trade_good_gen_upgrade_node.find('GenProbability'), force_percental=True)
+                            if gen_probability:
+                                item_properties['gen_probability'] = gen_probability
+                            
+                        kontor_upgrade_node = elem.find('./Values/KontorUpgrade')
+                        if kontor_upgrade_node is not None:
+                            # 지분 거래 금지 (block_buy_share)
+                            block_buy_share = kontor_upgrade_node.findtext('BlockBuyShare')
+                            if block_buy_share and block_buy_share.strip() == '1':
+                                item_properties['block_buy_share'] = True
+
+                            # 인수 금지 (block_hostile_takeover)
+                            block_hostile_takeover = kontor_upgrade_node.findtext('BlockHostileTakeover')
+                            if block_hostile_takeover and block_hostile_takeover.strip() == '1':
+                                item_properties['block_hostile_takeover'] = True    
+
+                            # 강철 의지 (happiness_ignores_morale)
+                            happiness_ignores_morale = kontor_upgrade_node.findtext('HappinessIgnoresMorale')
+                            if happiness_ignores_morale and happiness_ignores_morale.strip() == '1':
+                                item_properties['happiness_ignores_morale'] = True
+
+                        pier_upgrade_node = elem.find('./Values/PierUpgrade')
+                        if pier_upgrade_node is not None:
+                            # 화물 선적 속도 (pier_speed)
+                            pier_speed = pier_upgrade_node.findtext('PierSpeed')
+                            if pier_speed:
+                                item_properties['pier_speed'] = pier_speed
+
+                        attacker_upgrade_node = elem.find('./Values/AttackerUpgrade')
+                        if attacker_upgrade_node is not None:
+                            # 사거리 (attack_range)
+                            attack_range = get_value(attacker_upgrade_node.find('AttackRangeUpgrade'))
+                            if attack_range:
+                                item_properties['attack_range'] = attack_range
+
+                            # 시야 범위 (line_of_sight)
+                            line_of_sight = get_value(attacker_upgrade_node.find('LineOfSightUpgrade'))
+                            if line_of_sight:
+                                item_properties['line_of_sight'] = line_of_sight
+
+                        attackable_upgrade_node = elem.find('./Values/AttackableUpgrade')
+                        if attackable_upgrade_node is not None:
+                            # 받는 피해 (damage_receive_factor)
+                            factor = attackable_upgrade_node.find('DamageReceiveFactor')
+                            if factor is not None:
+                                normal = factor.find('Normal')
+                                if normal is not None:
+                                    item_properties['damage_receive_factor_normal'] = get_factor(normal)
+                                torpedo = factor.find('Torpedo')
+                                if torpedo is not None:
+                                    item_properties['damage_receive_factor_torpedo'] = get_factor(torpedo)
+                                cannon = factor.find('Cannon')
+                                if cannon is not None:
+                                    item_properties['damage_receive_factor_cannon'] = get_factor(cannon)
+                                bigbertha = factor.find('BigBertha')
+                                if bigbertha is not None:
+                                    item_properties['damage_receive_factor_bigbertha'] = get_factor(bigbertha)
+
                         items_list.append({
-                            "guid": int(guid),
+                            "guid": int(item_guid),
                             "type": template,
                             "name": item_name,
-                            "rarity": rarity,
-                            "dlc_dependency": dlc_dependency,
                             "icon": icon_path,
-                            "targets": targets,
-                            "effects": effects
+                            "properties": item_properties
                         })
                         
             elem.clear()
             
     print(f" -> Extracted {len(items_list):,} items.\n")
     return items_list
+
+def get_value(node, force_percental=False):
+    if node is None:
+        return None
+    
+    val = node.findtext('Value')
+
+    if val is not None:
+        percental = node.findtext('Percental')
+        is_percental = force_percental or (percental and percental.strip() == '1')
+    else:
+        if not node.text or not node.text.strip():
+            return None
+        val = node.text.strip()
+        is_percental = force_percental or node.tag.endswith('Percent')
+
+    try:
+        val_int = int(val)
+        prefix = "+" if val_int > 0 else ""
+        suffix = "%" if is_percental else ""
+        return f"{prefix}{val}{suffix}"
+    except ValueError:
+        return val
+    
+def get_factor(node):
+    if node is None:
+        return None
+    
+    factor = node.findtext('Factor')
+    if factor is None:
+        factor = node.text
+
+    try:
+        factor_float = float(factor)
+        return f"{(int)(factor_float*100)}%"
+    except ValueError:
+        return factor
 
 def save_to_json(data, output_path):
     print(f"3/3: Saving data to {output_path}...")

@@ -57,17 +57,17 @@ header {
     flex-direction: column;
 }
 
-.item-card.전설 { border-top-color: var(--color-legendary); }
-.item-card.에픽 { border-top-color: var(--color-epic); }
-.item-card.희귀 { border-top-color: var(--color-rare); }
-.item-card.특별 { border-top-color: var(--color-uncommon); }
-.item-card.일반 { border-top-color: var(--color-common); }
+.item-card.legendary { border-top-color: var(--color-legendary); }
+.item-card.epic { border-top-color: var(--color-epic); }
+.item-card.rare { border-top-color: var(--color-rare); }
+.item-card.uncommon { border-top-color: var(--color-uncommon); }
+.item-card.common { border-top-color: var(--color-common); }
 
-.item-card.전설 .item-icon { border-color: var(--color-legendary); }
-.item-card.에픽 .item-icon { border-color: var(--color-epic); }
-.item-card.희귀 .item-icon { border-color: var(--color-rare); }
-.item-card.특별 .item-icon { border-color: var(--color-uncommon); }
-.item-card.일반 .item-icon { border-color: var(--color-common); }
+.item-card.legendary .item-icon { border-color: var(--color-legendary); }
+.item-card.epic .item-icon { border-color: var(--color-epic); }
+.item-card.rare .item-icon { border-color: var(--color-rare); }
+.item-card.uncommon .item-icon { border-color: var(--color-uncommon); }
+.item-card.common .item-icon { border-color: var(--color-common); }
 
 .card-header {
     display: flex;
@@ -94,7 +94,7 @@ header {
 .item-title {
     font-size: 18px;
     font-weight: bold;
-    margin: 0;
+    margin: 0 0 5px 0;
 }
 
 .item-rarity {
@@ -102,20 +102,25 @@ header {
     color: var(--text-muted);
 }
 
-.effect-list {
+.item-dlc {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.item-property-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 15px 0;
+    margin: 0 0 5px 0;
     flex-grow: 1;
 }
 
-.effect-list li {
+.item-property-list li {
     font-size: 14px;
     margin-bottom: 8px;
     line-height: 1.4;
 }
 
-.effect-key {
+.item-property-key {
     color: var(--text-gold);
     font-weight: bold;
 }
@@ -135,4 +140,14 @@ header {
 
 .indented {
     margin-left: 5px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
