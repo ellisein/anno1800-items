@@ -791,20 +791,26 @@ function decomposeKorean(str) {
 }
 
 document.getElementById('searchInput').addEventListener('input', (e) => {
-    const keyword = e.target.value.replace(/\s+/g, '').toLowerCase();
-    const decomposedKeyword = decomposeKorean(keyword);
+    const inputValue = e.target.value.trim().toLowerCase();
+
+    if (!inputValue) {
+        allItems.forEach(item => {
+            if (item.element) item.element.style.display = ''; 
+        });
+        return;
+    }
+
+    const keywords = inputValue.split(/\s+/);
+    const decomposedKeywords = keywords.map(kw => decomposeKorean(kw));
 
     allItems.forEach(item => {
         if (!item.element) {
             return;
         }
 
-        if (!keyword) {
-            item.element.style.display = ''; 
-            return;
-        }
-
-        const isMatch = item.searchRaw.includes(keyword) || item.searchDecomposed.includes(decomposedKeyword);
+        const isMatch = keywords.every((kw, index) => {
+            return item.searchRaw.includes(kw) || item.searchDecomposed.includes(decomposedKeywords[index]);
+        });
 
         if (isMatch) {
             item.element.style.display = '';
