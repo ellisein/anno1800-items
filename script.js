@@ -564,7 +564,7 @@ const RARITIES = {
 
 async function fetchItems() {
     try {
-        const response = await fetch('items.json');
+        const response = await fetch('items.json', { cache: 'no-store' });
         const rawData = await response.json();
 
         const rawMap = new Map(rawData.map(i => [i.guid, i]));
