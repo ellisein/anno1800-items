@@ -1,5 +1,239 @@
 let allItems = [];
 
+const renderTemplate = {
+    default: (conf, val) => {
+        if (typeof val === 'boolean') {
+            return val ? `
+                <li class="inline">
+                    <img src="${conf.icon}" alt="icon" class="category-icon"/>
+                    <span class="item-property-key">${conf.label}</span>
+                </li>` : '';
+        } else {
+            return `
+                <li class="inline">
+                    <img src="${conf.icon}" alt="icon" class="category-icon"/>
+                    <span class="item-property-key">${conf.label}</span> ${val}
+                </li>`;
+        }
+    },
+    
+    subtext: (conf, val, text) => {
+        if (typeof val === 'boolean') {
+            return val ? `
+                <li>
+                    <div class="inline">
+                        <img src="${conf.icon}" alt="icon" class="category-icon"/>
+                        <span class="item-property-key">${conf.label}</span>
+                    </div>
+                    <div class="indented text-muted">${text}</div>
+                </li>` : '';
+        } else {
+            return `
+                <li>
+                    <div class="inline">
+                        <img src="${conf.icon}" alt="icon" class="category-icon"/>
+                        <span class="item-property-key">${conf.label}</span> ${val}
+                    </div>
+                    <div class="indented text-muted">${text}</div>
+                </li>`;
+        }
+    },
+        
+    array: (conf, val) => {
+        if (!Array.isArray(val) || val.length === 0) return '';
+        let html = `
+            <li>
+                <div class="inline">
+                    <img src="${conf.icon}" alt="icon" class="category-icon"/>
+                    <div class="item-property-key">${conf.label}</div>
+                </div>`;
+        val.forEach(v => { html += `<div class="indented text-muted">${v}</div>`; });
+        return html + `</li>`;
+    },
+
+    noicon: (conf, val) => {
+        if (typeof val === 'boolean') {
+            return val ? `<li><span class="item-property-key">${conf.label}</span></li>` : '';
+        } else {
+            return `<li><span class="item-property-key">${conf.label}</span> ${val}</li>`;
+        }
+    }
+};
+
+const PROPERTY_CONFIGS = {
+    'productivity': {
+        label: '생산성',
+        icon: 'data/ui/2kimages/main/icons/icon_options.png'
+    },
+    'workforce': {
+        label: '필요한 노동력',
+        icon: 'data/ui/2kimages/main/icons/icon_build_menu.png'
+    },
+    'maintenance': {
+        label: '유지비',
+        icon: 'data/ui/2kimages/main/icons/icon_resource_money_4.png'
+    },
+    'construction_cost': {
+        label: '건설 비용',
+        icon: 'data/ui/2kimages/main/icons/icon_sail_shipyard_2d.png'
+    },
+    'industrialization': {
+        label: '전기 제공',
+        icon: 'data/ui/2kimages/main/icons/icon_electricity.png'
+    },
+    'incident_fire': {
+        label: '화재 확률',
+        icon: 'data/ui/2kimages/main/icons/icon_incident_fire_01.png'
+    },
+    'incident_illness': {
+        label: '질병 확률',
+        icon: 'data/ui/2kimages/main/icons/icon_incident_diseases.png'
+    },
+    'incident_riot': {
+        label: '폭동 확률',
+        icon: 'data/ui/2kimages/main/icons/icon_riot.png'
+    },
+    'incident_explosion': {
+        label: '폭발 확률',
+        icon: 'data/ui/2kimages/main/icons/icon_bomb.png'
+    },
+    'attractiveness': {
+        label: '매력도',
+        icon: 'data/ui/2kimages/main/icons/icon_attractiveness.png'
+    },
+    'needed_area': {
+        label: '산림 밀도',
+        icon: 'data/ui/2kimages/main/icons/icon_tree_progress.png',
+        render: (conf, val) => renderTemplate.subtext(conf, val, `최적 생산성에 도달하는 데 필요한 나무 수가 감소합니다.`)
+    },
+    'negative_attractiveness': {
+        label: '부정적인 매력도',
+        icon: 'data/ui/2kimages/main/icons/icon_attractiveness.png'
+    },
+    'spawn_probability': {
+        label: '방문 증가',
+        icon: 'data/ui/2kimages/main/icons/icon_increase_population_2.png'
+    },
+    'module_limit': {
+        label: '모듈 수',
+        icon: 'data/ui/2kimages/main/3dicons/icon_general_module_01.png'
+    },
+    'heal_radius': {
+        label: '수리 반경',
+        icon: 'data/ui/2kimages/main/icons/icon_repair_crane_2d.png'
+    },
+    'heal_per_minute': {
+        label: '수리 속도',
+        icon: 'data/ui/2kimages/main/icons/icon_repair_crane_2d.png'
+    },
+    'max_hitpoints': {
+        label: 'HP',
+        icon: 'data/ui/2kimages/main/icons/icon_hitpoints.png'
+    },
+    'attack_range': {
+        label: '사거리',
+        icon: 'data/ui/2kimages/main/icons/icon_ship_in_combat.png'
+    },
+    'line_of_sight': {
+        label: '시야 범위',
+        icon: 'data/ui/2kimages/main/icons/icon_go_to.png'
+    },
+    'accuracy': {
+        label: '명중률',
+        icon: 'data/ui/2kimages/main/icons/icon_diplomacy_options_support_fleet.png'
+    },
+    'damage_receive_factor_normal': {
+        label: '함선에게 받는 피해',
+        icon: 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png'
+    },
+    'damage_receive_factor_torpedo': {
+        label: '어뢰에게 받는 피해',
+        icon: 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png'
+    },
+    'damage_receive_factor_cannon': {
+        label: '해안 포대에게 받는 피해',
+        icon: 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png'
+    },
+    'damage_receive_factor_bigbertha': {
+        label: '빅 베티에게 받는 피해',
+        icon: 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png'
+    },
+    'replacing_workforce': {
+        label: '대체 노동력',
+        icon: 'data/ui/2kimages/main/icons/icon_build_menu.png',
+        render: (conf, val) => renderTemplate.subtext(conf, true, `건물에서 기존 노동력 대신 ${val}을(를) 고용합니다.`)
+    },
+    'replaced_inputs': {
+        label: '새로운 투입물',
+        icon: 'data/ui/2kimages/main/icons/icon_trade.png',
+        render: (conf, val) => {
+            if (!Array.isArray(val) || val.length === 0) return '';
+            const oldInputs = new Set(val.map(v => v.old));
+            const newInputs = new Set(val.map(v => v.new));
+            return renderTemplate.subtext(conf, true, `건물에서 ${Array.from(oldInputs).join(', ')} 대신 ${Array.from(newInputs).join(', ')}을(를) 처리합니다.`);
+        }
+    },
+    'additional_outputs': {
+        label: '추가 물품',
+        icon: 'data/ui/2kimages/main/icons/icon_plus.png',
+        render: (conf, val) => renderTemplate.array(conf, val)
+    },
+    'removed_inputs': {
+        label: '투입 자원 제거',
+        icon: 'data/ui/2kimages/main/icons/icon_productivity_buff.png',
+        render: (conf, val) => {
+            if (!Array.isArray(val) || val.length === 0) return '';
+            return renderTemplate.subtext(conf, true, `이 건물은 ${val.join(', ')} 없이 물품을 생산합니다.`);
+        }
+    },
+    'good_consumption': {
+        label: '물품 소비량',
+        icon: 'data/ui/2kimages/main/icons/icon_marketplace_2d.png',
+        render: (conf, val) => renderTemplate.array(conf, val)
+    },
+    'fertility': {
+        label: '토착 자원',
+        icon: '',
+        render: (conf, val) => renderTemplate.noicon(conf, val)
+    },
+    'gen_probability': {
+        label: '항구 활동',
+        icon: 'data/ui/2kimages/main/icons/icon_activate_trade.png'
+    },
+    'pier_speed': {
+        label: '화물 선적 속도',
+        icon: 'data/ui/2kimages/main/icons/icon_load_ships.png'
+    },
+    'block_buy_share': {
+        label: '지분 거래 금지',
+        icon: 'data/ui/2kimages/main/icons/icon_untic.png'
+    },
+    'block_hostile_takeover': {
+        label: '인수 금지',
+        icon: 'data/ui/2kimages/main/icons/icon_untic.png'
+    },
+    'happiness_ignores_morale': {
+        label: '강철 의지',
+        icon: 'data/ui/2kimages/main/icons/icon_happy.png'
+    },
+    'add_assembly_options': {
+        label: '배 도면',
+        icon: 'data/ui/2kimages/main/icons/icon_sail_shipyard_2d.png',
+        render: (conf, val) => {
+            if (!Array.isArray(val) || val.length === 0) return '';
+            return renderTemplate.subtext(conf, true, `${val.join(', ')}을(를) 건조할 수 있습니다.`);
+        }
+    }
+};
+
+const RARITIES = {
+    'common': '일반',
+    'uncommon': '특별',
+    'rare': '희귀',
+    'epic': '에픽',
+    'legendary': '전설'
+}
+
 async function fetchItems() {
     try {
         const response = await fetch('items.json');
@@ -18,8 +252,8 @@ async function fetchItems() {
                         continue;
                     }
 
-                    if (categories[key]) {
-                        keywords.push(categories[key]);
+                    if (PROPERTY_CONFIGS[key]) {
+                        keywords.push(PROPERTY_CONFIGS[key].label);
                     }
                     
                     let valuesToPush = [];
@@ -60,92 +294,6 @@ async function fetchItems() {
     }
 }
 
-const rarities = {
-    'common': '일반',
-    'uncommon': '특별',
-    'rare': '희귀',
-    'epic': '에픽',
-    'legendary': '전설'
-}
-
-const categories = {
-    'productivity': '생산성',
-    'workforce': '필요한 노동력',
-    'maintenance': '유지비',
-    'construction_cost': '건설 비용',
-    'incident_fire': '화재 확률',
-    'incident_illness': '질병 확률',
-    'incident_riot': '폭동 확률',
-    'incident_explosion': '폭발 확률',
-    'attractiveness': '매력도',
-    'needed_area': '산림 밀도',
-    'negative_attractiveness': '부정적인 매력도',
-    'spawn_probability': '방문 증가',
-    'module_limit': '모듈 수',
-    'heal_radius': '수리 반경',
-    'heal_per_minute': '수리 속도',
-    'max_hitpoints': 'HP',
-    'attack_range': '사거리',
-    'line_of_sight': '시야 범위',
-    'accuracy': '명중률',
-    'damage_receive_factor_normal': '함선에게 받는 피해',
-    'damage_receive_factor_torpedo': '어뢰에게 받는 피해',
-    'damage_receive_factor_cannon': '해안 포대에게 받는 피해',
-    'damage_receive_factor_bigbertha': '빅 베티에게 받는 피해',
-    'industrialization': '전기 제공',
-    'replaced_workforce': '대체 노동력',
-    'replaced_inputs': '새로운 투입물',
-    'additional_outputs': '추가 물품',
-    'removed_inputs': '투입 자원 제거',
-    'good_consumption': '물품 소비량',
-    'fertility': '토착 자원',
-    'gen_probability': '항구 활동',
-    'pier_speed': '화물 선적 속도',
-    'block_buy_share': '지분 거래 금지',
-    'block_hostile_takeover': '인수 금지',
-    'happiness_ignores_morale': '강철 의지',
-    'add_assembly_options': '배 도면'
-};
-
-const category_icons = {
-    'productivity': 'data/ui/2kimages/main/icons/icon_options.png',
-    'workforce': 'data/ui/2kimages/main/icons/icon_build_menu.png',
-    'maintenance': 'data/ui/2kimages/main/icons/icon_resource_money_4.png',
-    'construction_cost': 'data/ui/2kimages/main/icons/icon_sail_shipyard_2d.png',
-    'incident_fire': 'data/ui/2kimages/main/icons/icon_incident_fire_01.png',
-    'incident_illness': 'data/ui/2kimages/main/icons/icon_incident_diseases.png',
-    'incident_riot': 'data/ui/2kimages/main/icons/icon_riot.png',
-    'incident_explosion': 'data/ui/2kimages/main/icons/icon_bomb.png',
-    'attractiveness': 'data/ui/2kimages/main/icons/icon_attractiveness.png',
-    'needed_area': 'data/ui/2kimages/main/icons/icon_tree_progress.png',
-    'negative_attractiveness': 'data/ui/2kimages/main/icons/icon_attractiveness.png',
-    'spawn_probability': 'data/ui/2kimages/main/icons/icon_increase_population_2.png',
-    'module_limit': 'data/ui/2kimages/main/3dicons/icon_general_module_01.png',
-    'heal_radius': 'data/ui/2kimages/main/icons/icon_repair_crane_2d.png',
-    'heal_per_minute': 'data/ui/2kimages/main/icons/icon_repair_crane_2d.png',
-    'max_hitpoints': 'data/ui/2kimages/main/icons/icon_hitpoints.png',
-    'attack_range': 'data/ui/2kimages/main/icons/icon_ship_in_combat.png',
-    'line_of_sight': 'data/ui/2kimages/main/icons/icon_go_to.png',
-    'accuracy': 'data/ui/2kimages/main/icons/icon_diplomacy_options_support_fleet.png',
-    'damage_receive_factor_normal': 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png',
-    'damage_receive_factor_torpedo': 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png',
-    'damage_receive_factor_cannon': 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png',
-    'damage_receive_factor_bigbertha': 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png',
-    'industrialization': 'data/ui/2kimages/main/icons/icon_electricity.png',
-    'replaced_workforce': 'data/ui/2kimages/main/icons/icon_build_menu.png',
-    'replaced_inputs': 'data/ui/2kimages/main/icons/icon_trade.png',
-    'additional_outputs': 'data/ui/2kimages/main/icons/icon_plus.png',
-    'removed_inputs': 'data/ui/2kimages/main/icons/icon_productivity_buff.png',
-    'good_consumption': 'data/ui/2kimages/main/icons/icon_marketplace_2d.png',
-    'fertility': '',
-    'gen_probability': 'data/ui/2kimages/main/icons/icon_activate_trade.png',
-    'pier_speed': 'data/ui/2kimages/main/icons/icon_load_ships.png',
-    'block_buy_share': 'data/ui/2kimages/main/icons/icon_untic.png',
-    'block_hostile_takeover': 'data/ui/2kimages/main/icons/icon_untic.png',
-    'happiness_ignores_morale': 'data/ui/2kimages/main/icons/icon_happy.png',
-    'add_assembly_options': 'data/ui/2kimages/main/icons/icon_sail_shipyard_2d.png'
-}
-
 function renderItems(items) {
     const grid = document.getElementById('itemGrid');
     grid.innerHTML = '';
@@ -153,71 +301,19 @@ function renderItems(items) {
     items.forEach(item => {
         let propertiesHtml = '';
         if (item.properties) {
-            for (const key of Object.keys(categories)) {
+            for (const key of Object.keys(PROPERTY_CONFIGS)) {
                 if (item.properties.hasOwnProperty(key)) {
+                    const conf = PROPERTY_CONFIGS[key];
                     const value = item.properties[key];
 
-                    if (key === 'replaced_workforce') {
-                        propertiesHtml += `<li><div class="item-property-key">${categories[key]}:</div><div class="indented text-muted">건물에서 기존 노동력 대신 ${value}을(를) 고용합니다.</div></li>`;
-                    } else if (key === 'replaced_inputs' && Array.isArray(value) && value.length > 0) {
-                        const oldInputs = value.map(val => val.old).join(', ');
-                        const newInputs = value.map(val => val.new).join(', ');
-                        propertiesHtml += `
-                            <li>
-                                <div class="inline">
-                                    <img src="${category_icons[key]}" alt="icon" class="category-icon"/>
-                                    <span class="item-property-key">${categories[key]}</span>
-                                </div>
-                                <div class="indented text-muted">건물에서 ${oldInputs} 대신 ${newInputs}을(를) 처리합니다.</div>
-                            </li>
-                        `;
-                    } else if ((key === 'additional_outputs' || key === 'good_consumption') && Array.isArray(value) && value.length > 0) {
-                        propertiesHtml += `<li><div class="inline"><img src="${category_icons[key]}" alt="icon" class="category-icon"/><div class="item-property-key">${categories[key]}</div></div>`;
-                        value.forEach(val => {
-                            propertiesHtml += `<div class=" indented text-muted">${val}</div>`;
-                        });
-                        propertiesHtml += `</li>`;
-                    } else if (key === 'removed_inputs' && Array.isArray(value) && value.length > 0) {
-                        propertiesHtml += `
-                            <li>
-                                <div class="inline">
-                                    <img src="${category_icons[key]}" alt="icon" class="category-icon"/>
-                                    <span class="item-property-key">${categories[key]}</span>
-                                </div>
-                                <div class="indented text-muted">이 건물은 ${value.join(', ')} 없이 물품을 생산합니다.</div>
-                            </li>
-                        `;
-                    } else if (key === 'fertility') {
-                        propertiesHtml += `<li><span class="item-property-key">${value} 제공</span></li>`;
-                    } else if ((key === 'industrialization' || key === 'block_buy_share' || key === 'block_hostile_takeover' || key === 'happiness_ignores_morale') && value === true) {
-                        propertiesHtml   += `<li class="inline"><img src="${category_icons[key]}" alt="icon" class="category-icon"/><span class="item-property-key">${categories[key]}</span></li>`;
-                    } else if (key === 'add_assembly_options' && Array.isArray(value) && value.length > 0) {
-                        propertiesHtml += `
-                            <li>
-                                <div class="inline">
-                                    <img src="${category_icons[key]}" alt="icon" class="category-icon"/>
-                                    <span class="item-property-key">${categories[key]}</span>
-                                </div>
-                                <div class="indented text-muted">${value.join(', ')}을(를) 건조할 수 있습니다.</div>
-                            </li>
-                        `;
-                    } else if (key === 'needed_area') {
-                        propertiesHtml += `
-                            <li>
-                                <div class="inline">
-                                    <img src="${category_icons[key]}" alt="icon" class="category-icon"/>
-                                    <div><span class="item-property-key">${categories[key]}</span> ${value}</div>
-                                </div>
-                                <div class="indented text-muted">최적 생산성에 도달하는 데 필요한 나무 수가 감소합니다.</div>
-                            </li>
-                        `;
+                    if (conf.render) {
+                        propertiesHtml += conf.render(conf, value);
+                    } else if (conf.type === 'boolean') {
+                        propertiesHtml += renderTemplate.boolean(conf, value);
                     } else if (Array.isArray(value)) {
-                        value.forEach(val => {
-                            propertiesHtml += `<li><span class="item-property-key">${categories[key]}</span> ${val}</li>`;
-                        });
-                    }
-                    else {
-                        propertiesHtml += `<li class="inline"><img src="${category_icons[key]}" alt="icon" class="category-icon"/><span class="item-property-key">${categories[key]}</span> ${value}</li>`;
+                        propertiesHtml += renderTemplate.defaultArray(conf, value);
+                    } else {
+                        propertiesHtml += renderTemplate.default(conf, value);
                     }
                 }
             }
@@ -258,7 +354,7 @@ function renderItems(items) {
                 <div class="w-100">
                     <h3 class="item-title">${item.name}</h3>
                     <div class="flex-between">
-                        <span class="item-rarity ${item.properties.rarity}">${rarities[item.properties.rarity]}</span>
+                        <span class="item-rarity ${item.properties.rarity}">${RARITIES[item.properties.rarity]}</span>
                         ${item.properties.dlc_dependency ? `<span class="item-dlc">${item.properties.dlc_dependency} DLC</span>` : ''}
                     </div>
                 </div>
