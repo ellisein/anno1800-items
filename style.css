@@ -1,14 +1,15 @@
 :root {
-    --color-legendary: #f39c12;
-    --color-epic: #9b59b6;
-    --color-rare: #3498db;
-    --color-uncommon: #2ecc71;
-    --color-common: #95a5a6;
+    --color-legendary: #6a452b;
+    --color-epic: #5d4159;
+    --color-rare: #333c54;
+    --color-uncommon: #455827;
+    --color-common: #455827;
     
     --bg-dark: #1b2025;
-    --bg-card: #252b32;
+    --bg-card: #2a2c27;
     --text-main: #ecf0f1;
     --text-muted: #bdc3c7;
+    --text-highlight: #f8c427;
     --text-gold: #f3e7c5;
     --text-gold-muted: #6c5a47;
     --border-gold: #c6a25d;
@@ -54,31 +55,24 @@ header {
 
 .item-card {
     background-color: var(--bg-card);
-    border: 1px solid #3a4149;
-    border-top: 3px solid var(--border-gold);
+    background-image: linear-gradient(to bottom, var(--rarity-color, transparent) 0px, transparent 60px);
     padding: 3px 15px 15px 15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
 }
 
-.item-card.legendary { border-top-color: var(--color-legendary); }
-.item-card.epic { border-top-color: var(--color-epic); }
-.item-card.rare { border-top-color: var(--color-rare); }
-.item-card.uncommon { border-top-color: var(--color-uncommon); }
-.item-card.common { border-top-color: var(--color-common); }
-
-.item-card.legendary .item-icon { border-color: var(--color-legendary); }
-.item-card.epic .item-icon { border-color: var(--color-epic); }
-.item-card.rare .item-icon { border-color: var(--color-rare); }
-.item-card.uncommon .item-icon { border-color: var(--color-uncommon); }
-.item-card.common .item-icon { border-color: var(--color-common); }
+.item-card.legendary { --rarity-color: var(--color-legendary); }
+.item-card.epic { --rarity-color: var(--color-epic); }
+.item-card.rare { --rarity-color: var(--color-rare); }
+.item-card.uncommon { --rarity-color: var(--color-uncommon); }
+.item-card.common { --rarity-color: var(--color-common); }
 
 .card-header {
     display: flex;
     gap: 15px;
     align-items: center;
-    border-bottom: 1px solid #3a4149;
+    border-bottom: 1px solid #5f5e54;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
@@ -86,8 +80,6 @@ header {
 .item-icon {
     width: 64px;
     height: 64px;
-    background-color: #111;
-    border: 1px solid;
 }
 
 .type-icon {
@@ -121,7 +113,7 @@ header {
 .item-property-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 5px 0;
+    margin: 0;
     flex-grow: 1;
 }
 
@@ -144,6 +136,10 @@ header {
     border-top: 1px dashed #3a4149;
     padding-top: 10px;
     margin: 0;
+}
+
+.text-highlight {
+    color: var(--text-highlight);
 }
 
 .text-muted {
