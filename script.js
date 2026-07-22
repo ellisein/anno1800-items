@@ -16,6 +16,22 @@ const renderTemplate = {
                 </li>`;
         }
     },
+
+    custom: (label, icon, val) => {
+        if (typeof val === 'boolean') {
+            return val ? `
+                <li class="inline">
+                    <img src="${icon}" alt="icon" class="category-icon"/>
+                    <span class="item-property-key">${label}</span>
+                </li>` : '';
+        } else {
+            return `
+                <li class="inline">
+                    <img src="${icon}" alt="icon" class="category-icon"/>
+                    <span class="item-property-key">${label}</span> ${val}
+                </li>`;
+        }
+    },
     
     subtext: (conf, val, text) => {
         if (typeof val === 'boolean') {
@@ -47,7 +63,20 @@ const renderTemplate = {
                     <img src="${conf.icon}" alt="icon" class="category-icon"/>
                     <div class="item-property-key">${conf.label}</div>
                 </div>`;
-        val.forEach(v => { html += `<div class="indented text-muted">${v}</div>`; });
+        val.forEach(v => { html += `<div class="indented">${v}</div>`; });
+        return html + `</li>`;
+    },
+
+    array_with_subtext: (conf, val, text) => {
+        if (!Array.isArray(val) || val.length === 0) return '';
+        let html = `
+            <li>
+                <div class="inline">
+                    <img src="${conf.icon}" alt="icon" class="category-icon"/>
+                    <div class="item-property-key">${conf.label}</div>
+                </div>
+                <div class="indented text-muted">${text}</div>`;
+        val.forEach(v => { html += `<div class="indented">${v}</div>`; });
         return html + `</li>`;
     },
 
@@ -69,7 +98,41 @@ const renderTemplate = {
 const PROPERTY_CONFIGS = {
     'pipe_capacity': {
         label: '관개 시설 수용량',
-        icon: 'data/ui/2kimages/main/icons/icon_water_drop.png'
+        icon: 'data/ui/2kimages/main/3dicons/icon_water_drop.png'
+    },
+    'resolver_unit_count': {
+        label: null,
+        icon: null,
+        render_unit: (conf, unit, val) => {
+            if (unit === '경찰관') {
+                return renderTemplate.custom('경찰관', 'data/ui/2kimages/main/icons/icon_police_2d.png', val);
+            } else if (unit == '소방관') {
+                return renderTemplate.custom('소방관', 'data/ui/2kimages/main/icons/icon_fire_brigade_2d.png', val);
+            } else if (unit == '의사') {
+                return renderTemplate.custom('의사', 'data/ui/2kimages/main/icons/icon_hospital_2d.png', val);
+            } else if (unit == '레인저') {
+                return renderTemplate.custom('레인저', 'data/ui/2kimages/main/icons/icon_ranger_station_2d.png', val);
+            }
+        }
+    },
+    'resolver_unit_decrease': {
+        label: null,
+        icon: null,
+        render_unit: (conf, unit, val) => {
+            if (unit === '경찰관') {
+                return renderTemplate.custom('시행 속도', 'data/ui/2kimages/main/icons/icon_police_2d.png', val);
+            } else if (unit == '소방관') {
+                return renderTemplate.custom('진압 속도', 'data/ui/2kimages/main/icons/icon_fire_brigade_2d.png', val);
+            } else if (unit == '의사') {
+                return renderTemplate.custom('치유 속도', 'data/ui/2kimages/main/icons/icon_hospital_2d.png', val);
+            } else if (unit == '레인저') {
+                return renderTemplate.custom('지원 속도', 'data/ui/2kimages/main/icons/icon_ranger_station_2d.png', val);
+            }
+        }
+    },
+    'resolver_unit_movement_speed': {
+        label: '범위',
+        icon: 'data/ui/2kimages/main/icons/icon_forward.png',
     },
     'construction_cost': {
         label: '건설 비용',
@@ -83,13 +146,50 @@ const PROPERTY_CONFIGS = {
         label: '필요한 노동력',
         icon: 'data/ui/2kimages/main/icons/icon_build_menu.png'
     },
+    'forward_speed': {
+        label: '이동 속도',
+        icon: 'data/ui/2kimages/main/icons/icon_forward.png'
+    },
+    'trade_price': {
+        label: '구매 가격',
+        icon: 'data/ui/2kimages/main/icons/icon_credits_2d.png'
+    },
+    'loading_speed': {
+        label: '화물 선적 속도',
+        icon: 'data/ui/2kimages/main/icons/icon_load_ships.png'
+    },
+    'ignore_weight_factor': {
+        label: '화물에 의한 속도 저하',
+        icon: 'data/ui/2kimages/main/icons/icon_diplomacy_options_support_fleet.png'
+    },
+    'ignore_damage_factor': {
+        label: '피해에 의한 속도 저하',
+        icon: 'data/ui/2kimages/main/icons/icon_diplomacy_options_support_fleet.png'
+    },
     'maintenance': {
         label: '유지비',
         icon: 'data/ui/2kimages/main/icons/icon_resource_money_4.png'
     },
+    'public_service_full_satisfaction_distance': {
+        label: '범위',
+        icon: 'data/ui/2kimages/main/icons/icon_forward.png'
+    },
     'industrialization': {
         label: '전기 제공',
         icon: 'data/ui/2kimages/main/icons/icon_electricity.png'
+    },
+    'special_unit_happiness_threshold': {
+        label: '동원 조건',
+        icon: 'data/ui/2kimages/main/icons/icon_happy.png',
+        render_unit: (conf, unit, val) => renderTemplate.subtext(conf, val, `${unit}을(를) 동원하는 데 필요한 행복도가 감소합니다.`)
+    },
+    'stress': {
+        label: '근로 여건에 미치는 영향',
+        icon: 'data/ui/2kimages/main/icons/icon_happy.png'
+    },
+    'additional_happiness': {
+        label: '행복도',
+        icon: 'data/ui/2kimages/main/icons/icon_happy.png'
     },
     'incident_fire': {
         label: '화재 확률',
@@ -106,6 +206,103 @@ const PROPERTY_CONFIGS = {
     'incident_explosion': {
         label: '폭발 확률',
         icon: 'data/ui/2kimages/main/icons/icon_bomb.png'
+    },
+    'incident_arctic_illness': {
+        label: '유행성 독감 확률',
+        icon: 'data/ui/2kimages/main/icons/icon_snowflakes.png'
+    },
+    'benefit_additional_research': {
+        label: '추가 연구 점수',
+        icon: 'data/ui/2kimages/main/icons/icon_research_01.png',
+        render: (conf, val) => {
+            if (!val || typeof val !== 'object') return '';
+            let html = '';
+            for (const [amount, items] of Object.entries(val)) {
+                let itemsStr = '';
+                if (items.length === 1) {
+                    itemsStr = items[0];
+                } else {
+                    const lastItem = items[items.length - 1];
+                    const otherItems = items.slice(0, -1).join(', ');
+                    itemsStr = `${otherItems}, 그리고 ${lastItem}`;
+                }
+                const text = `주민이 ${itemsStr}(으)로 추가 연구 점수를 제공합니다.`;
+                html += renderTemplate.subtext(conf, amount, text);
+            }
+            return html;
+        }
+    },
+    'benefit_additional_happiness': {
+        label: '보너스 행복도',
+        icon: 'data/ui/2kimages/main/icons/icon_happy.png',
+        render: (conf, val) => {
+            if (!val || typeof val !== 'object') return '';
+            let html = '';
+            for (const [amount, items] of Object.entries(val)) {
+                let itemsStr = '';
+                if (items.length === 1) {
+                    itemsStr = items[0];
+                } else {
+                    const lastItem = items[items.length - 1];
+                    const otherItems = items.slice(0, -1).join(', ');
+                    itemsStr = `${otherItems}, 그리고 ${lastItem}`;
+                }
+                const text = `주민들이 ${itemsStr}에서 보너스 행복도를 얻습니다.`;
+                html += renderTemplate.subtext(conf, amount, text);
+            }
+            return html;
+        }
+    },
+    'benefit_additional_money': {
+        label: '보너스 수입',
+        icon: 'data/ui/2kimages/main/icons/icon_resource_money_4.png',
+        render: (conf, val) => {
+            if (!val || typeof val !== 'object') return '';
+            let html = '';
+            for (const [amount, items] of Object.entries(val)) {
+                let itemsStr = '';
+                if (items.length === 1) {
+                    itemsStr = items[0];
+                } else {
+                    const lastItem = items[items.length - 1];
+                    const otherItems = items.slice(0, -1).join(', ');
+                    itemsStr = `${otherItems}, 그리고 ${lastItem}`;
+                }
+                const text = `주민들이 ${itemsStr}에서 보너스 수입을 얻습니다.`;
+                html += renderTemplate.subtext(conf, amount, text);
+            }
+            return html;
+        }
+    },
+    'benefit_additional_supply': {
+        label: '보너스 주민',
+        icon: 'data/ui/2kimages/main/icons/icon_house.png',
+        render: (conf, val) => {
+            if (!val || typeof val !== 'object') return '';
+            let html = '';
+            for (const [amount, items] of Object.entries(val)) {
+                let itemsStr = '';
+                if (items.length === 1) {
+                    itemsStr = items[0];
+                } else {
+                    const lastItem = items[items.length - 1];
+                    const otherItems = items.slice(0, -1).join(', ');
+                    itemsStr = `${otherItems}, 그리고 ${lastItem}`;
+                }
+                const text = `거주지가 ${itemsStr}에서 보너스 주민을 얻습니다.`;
+                html += renderTemplate.subtext(conf, amount, text);
+            }
+            return html;
+        }
+    },
+    'need_provide_need' : {
+        label: '보너스 제공',
+        icon: 'data/ui/2kimages/main/icons/icon_plus.png',
+        render: (conf, val) => {
+            const provide_needs = new Set(val.provide_needs);
+            const subtitute_needs = new Set(val.subtitute_needs);
+            return renderTemplate.subtext(conf, true, `${Array.from(subtitute_needs).join(', ')}이(가) 행정 건물 범위 내 주민들의 ${Array.from(provide_needs).join(', ')}에 대한 요구사항을 충족시켜줍니다.`);
+        }
     },
     'attractiveness': {
         label: '매력도',
@@ -137,6 +334,16 @@ const PROPERTY_CONFIGS = {
         label: '수리 반경',
         icon: 'data/ui/2kimages/main/icons/icon_build_menu.png'
     },
+    'white_flag': {
+        label: '평화 모드',
+        icon: 'data/ui/2kimages/main/icons/icon_diplomacy_options_peace.png',
+        render: (conf, val) => renderTemplate.subtext(conf, true, `배가 공격하거나 공격받지 않게 합니다.`)
+    },
+    'pirate_flag': {
+        label: '해적 모드',
+        icon: 'data/ui/2kimages/main/icons/icon_diplomacy_options_war.png',
+        render: (conf, val) => renderTemplate.subtext(conf, true, `배가 전쟁 상태가 아니더라도 공격할 수 있습니다.`)
+    },
     'base_damage': {
         label: '포탄당 피해량',
         icon: 'data/ui/2kimages/main/icons/icon_damage.png'
@@ -156,15 +363,6 @@ const PROPERTY_CONFIGS = {
     'max_hitpoints': {
         label: 'HP',
         icon: 'data/ui/2kimages/main/icons/icon_hitpoints.png'
-    },
-    'self_heal': {
-        label: '자가 수리',
-        icon: 'data/ui/2kimages/main/icons/icon_hitpoints.png'
-    },
-    'self_heal_paused_time_if_attacked': {
-        label: '수리 개시',
-        icon: 'data/ui/2kimages/main/icons/icon_morale_01.png',
-        render: (conf, val) => renderTemplate.subtext(conf, true, `구조물과 배가 전투 중에도 자동으로 수리됩니다.`)
     },
     'morale_power': {
         label: '사기',
@@ -189,6 +387,15 @@ const PROPERTY_CONFIGS = {
     'damage_receive_factor_bigbertha': {
         label: '빅 베티에게 받는 피해',
         icon: 'data/ui/2kimages/main/icons/icon_stance_attack.png'
+    },
+    'self_heal': {
+        label: '자가 수리',
+        icon: 'data/ui/2kimages/main/icons/icon_hitpoints.png'
+    },
+    'self_heal_paused_time_if_attacked': {
+        label: '수리 개시',
+        icon: 'data/ui/2kimages/main/icons/icon_morale_01.png',
+        render: (conf, val) => renderTemplate.subtext(conf, true, `구조물과 배가 전투 중에도 자동으로 수리됩니다.`)
     },
     'replacing_workforce': {
         label: '대체 노동력',
@@ -220,8 +427,8 @@ const PROPERTY_CONFIGS = {
     },
     'good_consumption': {
         label: '물품 소비량',
-        icon: 'data/ui/2kimages/main/icons/icon_marketplace_2d.png',
-        render: (conf, val) => renderTemplate.array(conf, val)
+        icon: 'data/ui/2kimages/main/3dicons/icon_resident.png',
+        render: (conf, val) => renderTemplate.array_with_subtext(conf, val, '이 요구 사항은 비교적 적은 물품이나 낮은 근접성으로도 충족할 수 있습니다.')
     },
     'fertility': {
         label: '토착 자원',
@@ -275,6 +482,9 @@ const PROPERTY_CONFIGS = {
             if (!Array.isArray(val) || val.length === 0) return '';
             itemsText = '';
             if (val.length === 1) {
+                if (val[0] === '코인') {
+                    return renderTemplate.nolabel(conf, `교역소에서 소극적인 거래가 발생할 때마다 일정 확률로 500코인의 세금이 발생합니다.`);
+                }
                 itemsText += val[0];
             } else {
                 const lastItem = val[val.length - 1];
@@ -282,6 +492,39 @@ const PROPERTY_CONFIGS = {
                 itemsText += `${otherItems}, 또는 ${lastItem}`;
             }
             return renderTemplate.nolabel(conf, `교역소에서 소극적인 거래가 발생할 때마다 일정 확률로 ${itemsText} 5톤을 얻습니다.`);
+        }
+    },
+    'scrap_amount': {
+        label: '고철 인양량',
+        icon: 'data/ui/2kimages/main/icons/icon_itemsockets_02.png'
+    },
+    'diving_museum': {
+        label: '유물 발견 확률 증가',
+        icon: 'data/ui/2kimages/main/icons/icon_museum_2d.png'
+    },
+    'diving_zoo': {
+        label: '동물 발견 확률 증가',
+        icon: 'data/ui/2kimages/main/icons/icon_zoo_2d.png'
+    },
+    'diving_machine': {
+        label: '기계 발견 확률 증가',
+        icon: 'data/ui/2kimages/main/icons/icon_guildhouse_2d.png'
+    },
+    'diving_rarity': {
+        label: '잠수종 희귀도',
+        icon: 'data/ui/2kimages/main/icons/icon_favourite.png',
+        render: (conf, val) => {
+            if (!Array.isArray(val) || val.length === 0) return '';
+            const translated = val.map(r => RARITIES[r.toLowerCase()] || r);
+            rarityTexts = '';
+            if (translated.length === 1) {
+                rarityTexts += translated[0];
+            } else {
+                const lastItem = translated[translated.length - 1];
+                const otherItems = translated.slice(0, -1).join(', ');
+                rarityTexts += `${otherItems}, 그리고 ${lastItem}`;
+            }
+            return renderTemplate.subtext(conf, true, `잠수 중에 ${rarityTexts} 희귀도 아이템 발견 확률이 증가합니다.`);
         }
     },
     'action_duration': {
@@ -347,6 +590,11 @@ async function fetchItems() {
                             valuesToPush.push(val.old);
                             valuesToPush.push(val.new);
                         });
+                    } else if (key === 'need_provide_need' && Array.isArray(value)) {
+                        value.forEach(val => {
+                            valuesToPush.push(val.provide);
+                            valuesToPush.push(val.substitute);
+                        });
                     } else if (typeof value === 'string' || typeof value === 'number') {
                         valuesToPush.push(String(value));
                     } else if (Array.isArray(value)) {
@@ -383,7 +631,11 @@ function renderItems(items) {
     grid.innerHTML = '';
 
     items.forEach(item => {
-        if (!item.type || !item.type.endsWith('Item')) {
+        if (!item.type || !(item.type.endsWith('Item') || item.type.endsWith('Specialist'))) {
+            return;
+        }
+
+        if (!item.properties.rarity || !RARITIES[item.properties.rarity]) {
             return;
         }
 
@@ -394,7 +646,9 @@ function renderItems(items) {
                     const conf = PROPERTY_CONFIGS[key];
                     const value = item.properties[key];
 
-                    if (conf.render) {
+                    if (conf.render_unit) {
+                        propertiesHtml += conf.render_unit(conf, item.properties.unit, value);
+                    } else if (conf.render) {
                         propertiesHtml += conf.render(conf, value);
                     } else if (conf.type === 'boolean') {
                         propertiesHtml += renderTemplate.boolean(conf, value);
@@ -410,12 +664,59 @@ function renderItems(items) {
         let typeText = "";
         let typeSource = "";
         if (item.type) {
-            if (item.type === 'GuildhouseItem') {
-                typeText = "무역 연합";
-                typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
-            } else if (item.type === 'HarborOfficeItem') {
-                typeText = "항만 관리소장실";
-                typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
+            if (item.properties.allocation) {
+                if (item.properties.allocation === 'GuildHouse') {
+                    typeText = "무역 연합";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
+                } else if (item.properties.allocation === 'Lodge') {
+                    typeText = "북극 산장";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_community_lodge.png";
+                } else if (item.properties.allocation === 'HarborOffice') {
+                    typeText = "항만 관리소장실";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
+                } else if (item.properties.allocation === 'TownHall') {
+                    typeText = "시청";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_townhall.png";
+                } else if (item.properties.allocation === 'Ship') {
+                    typeText = "배";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_commandship.png";
+                } else if (item.properties.allocation === 'SailShip') {
+                    typeText = "범선";
+                    typeSource = "";
+                } else if (item.properties.allocation === 'SteamShip') {
+                    typeText = "증기선";
+                    typeSource = "";
+                } else if (item.properties.allocation === 'Warship') {
+                    typeText = "군함";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_liner.png";
+                } else if (item.properties.allocation === 'AirShip') {
+                    typeText = "비행선";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_airship_artic.png";
+                } else if (item.properties.allocation === 'DivingVessel') {
+                    typeText = "인양선";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_diving_vessel.png";
+                }
+            }
+            else
+            {
+                if (item.type === 'GuildhouseItem') {
+                    if (item.properties.dlc_dependency === '길') {
+                        typeText = "북극 산장";
+                        typeSource = "data/ui/2kimages/main/3dicons/icon_community_lodge.png";
+                    } else {
+                        typeText = "무역 연합";
+                        typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
+                    }
+                } else if (item.type === 'HarborOfficeItem') {
+                    typeText = "항만 관리소장실";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
+                } else if (item.type === 'TownhallItem') {
+                    typeText = "시청";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_townhall.png";
+                } else if (item.type === 'VehicleItem' || item.type === 'ShipSpecialist') {
+                    typeText = "배";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_commandship.png";
+                }
             }
         }
         const typeHtml = typeText ? `<li class="inline"><img src="${typeSource}" alt="icon" class="type-icon"/><b class="text-highlight">${typeText}</b>에 배치</li>` : '';

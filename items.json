@@ -237,6 +237,499 @@
     }
   },
   {
+    "guid": 6000032,
+    "type": "VehicleBuff",
+    "name": "견인 디버프",
+    "icon": "data/ui/2kimages/main/3dicons/icon_tools.png",
+    "properties": {
+      "targets": [],
+      "forward_speed": "-50%"
+    }
+  },
+  {
+    "guid": 191305,
+    "type": "VehicleBuff",
+    "name": "무력화",
+    "icon": "data/ui/2kimages/main/icons/icon_warning_debuff_ship.png",
+    "properties": {
+      "targets": [],
+      "attack_speed": "-30%",
+      "forward_speed": "-50%"
+    }
+  },
+  {
+    "guid": 191595,
+    "type": "VehicleBuff",
+    "name": "이브라힘 선장의 방패",
+    "icon": "data/ui/2kimages/main/3dicons/icon_guild_house_3.png",
+    "properties": {
+      "targets": [],
+      "max_hitpoints": "+20%"
+    }
+  },
+  {
+    "guid": 191614,
+    "type": "VehicleBuff",
+    "name": "강철 공",
+    "icon": "data/ui/2kimages/main/icons/icon_wait_till_empty.png",
+    "properties": {
+      "targets": [],
+      "forward_speed": "-50%"
+    }
+  },
+  {
+    "guid": 191835,
+    "type": "VehicleBuff",
+    "name": "함선 터빈",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_generator_3.png",
+    "properties": {
+      "targets": [],
+      "forward_speed": "+20%",
+      "maintenance": "+30%"
+    }
+  },
+  {
+    "guid": 191836,
+    "type": "VehicleBuff",
+    "name": "함선 피스톤 엔진",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_generator_2.png",
+    "properties": {
+      "targets": [],
+      "forward_speed": "+25%"
+    }
+  },
+  {
+    "guid": 191837,
+    "type": "VehicleBuff",
+    "name": "다중 확장 증기 엔진",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_generator_1.png",
+    "properties": {
+      "targets": [],
+      "forward_speed": "+30%",
+      "ignore_weight_factor": "-100%"
+    }
+  },
+  {
+    "guid": 191859,
+    "type": "VehicleBuff",
+    "name": "선상포",
+    "icon": "data/ui/2kimages/main/3dicons/icon_advanced_weaponry.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 191861,
+    "type": "VehicleBuff",
+    "name": "화염 호스",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_flame_thrower_1.png",
+    "properties": {
+      "targets": [],
+      "base_damage": "-40%",
+      "attack_range": "-50%",
+      "attack_speed": "+100%"
+    }
+  },
+  {
+    "guid": 191870,
+    "type": "VehicleBuff",
+    "name": "화염방사기",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_flame_thrower_2.png",
+    "properties": {
+      "targets": [],
+      "base_damage": "-40%",
+      "attack_range": "-50%",
+      "attack_speed": "+100%"
+    }
+  },
+  {
+    "guid": 191871,
+    "type": "VehicleBuff",
+    "name": "열화단 화염방사기",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_flame_thrower_3.png",
+    "properties": {
+      "targets": [],
+      "base_damage": "-40%",
+      "attack_range": "-50%",
+      "attack_speed": "+100%"
+    }
+  },
+  {
+    "guid": 191943,
+    "type": "VehicleBuff",
+    "name": "단조강 포탄",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_piercing_shell_1.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 191944,
+    "type": "VehicleBuff",
+    "name": "표면 경화강 포탄",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_piercing_shell_2.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 191947,
+    "type": "VehicleBuff",
+    "name": "멜리나이트 포탄",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_explosive_shells_1.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 191948,
+    "type": "VehicleBuff",
+    "name": "고성능 D폭약 포탄",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_explosive_shells_2.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 191949,
+    "type": "VehicleBuff",
+    "name": "산탄",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_big_berta_1.png",
+    "properties": {
+      "targets": [],
+      "base_damage": "-50%",
+      "attack_speed": "+100%"
+    }
+  },
+  {
+    "guid": 191950,
+    "type": "VehicleBuff",
+    "name": "더블 산탄",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_big_berta_2.png",
+    "properties": {
+      "targets": [],
+      "base_damage": "-60%",
+      "attack_speed": "+200%"
+    }
+  },
+  {
+    "guid": 191953,
+    "type": "VehicleBuff",
+    "name": "대포 충돌",
+    "icon": "data/ui/2kimages/main/icons/icon_expedition_hypnotist.png",
+    "properties": {
+      "targets": [],
+      "accuracy": "-20",
+      "attack_speed": "-30%"
+    }
+  },
+  {
+    "guid": 191954,
+    "type": "VehicleBuff",
+    "name": "대포 충돌",
+    "icon": "data/ui/2kimages/main/icons/icon_expedition_hypnotist.png",
+    "properties": {
+      "targets": [],
+      "accuracy": "-50",
+      "attack_speed": "-30%"
+    }
+  },
+  {
+    "guid": 191981,
+    "type": "VehicleBuff",
+    "name": "함선 공구통",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_ship_repair_1.png",
+    "properties": {
+      "targets": [],
+      "self_heal": "+400%",
+      "self_heal_paused_time_if_attacked": "-100%"
+    }
+  },
+  {
+    "guid": 192156,
+    "type": "VehicleBuff",
+    "name": "함선 수리 도구",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_ship_repair_1.png",
+    "properties": {
+      "targets": [],
+      "self_heal": "+600%",
+      "self_heal_paused_time_if_attacked": "-100%"
+    }
+  },
+  {
+    "guid": 191983,
+    "type": "VehicleBuff",
+    "name": "함선 공구 수레",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_ship_repair_2.png",
+    "properties": {
+      "targets": [],
+      "self_heal": "+800%",
+      "self_heal_paused_time_if_attacked": "-100%"
+    }
+  },
+  {
+    "guid": 192157,
+    "type": "VehicleBuff",
+    "name": "신식 함선 수리 도구",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_ship_repair_2.png",
+    "properties": {
+      "targets": [],
+      "self_heal": "+1000%",
+      "self_heal_paused_time_if_attacked": "-100%"
+    }
+  },
+  {
+    "guid": 191988,
+    "type": "VehicleBuff",
+    "name": "흰색 깃발",
+    "icon": "data/ui/2kimages/main/3dicons/icon_white_flag.png",
+    "properties": {
+      "targets": [],
+      "white_flag": true
+    }
+  },
+  {
+    "guid": 191994,
+    "type": "VehicleBuff",
+    "name": "거대한 흰색 깃발",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_white_flag_2.png",
+    "properties": {
+      "targets": [],
+      "white_flag": true,
+      "trade_price": "-15%"
+    }
+  },
+  {
+    "guid": 192003,
+    "type": "VehicleBuff",
+    "name": "무능",
+    "icon": "data/ui/2kimages/main/3dicons/narative_item/icon_chain_shot.png",
+    "properties": {
+      "targets": [],
+      "forward_speed": "-80%"
+    }
+  },
+  {
+    "guid": 192004,
+    "type": "VehicleBuff",
+    "name": "화재",
+    "icon": "data/ui/2kimages/main/icons/notification_icons/icon_incident_fire_outline.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 192009,
+    "type": "VehicleBuff",
+    "name": "무역헌장",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_tax_bill_1.png",
+    "properties": {
+      "targets": [],
+      "trade_price": "-5%"
+    }
+  },
+  {
+    "guid": 192010,
+    "type": "VehicleBuff",
+    "name": "대무역헌장",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_tax_bill_2.png",
+    "properties": {
+      "targets": [],
+      "trade_price": "-10%"
+    }
+  },
+  {
+    "guid": 192011,
+    "type": "VehicleBuff",
+    "name": "왕실 무역헌장",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_tax_bill_3.png",
+    "properties": {
+      "targets": [],
+      "trade_price": "-15%"
+    }
+  },
+  {
+    "guid": 192018,
+    "type": "VehicleBuff",
+    "name": "대형 고성능 포탄",
+    "icon": "data/ui/2kimages/main/3dicons/ship_military/icon_mortar.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 192174,
+    "type": "VehicleBuff",
+    "name": "검은 깃발",
+    "icon": "data/ui/2kimages/main/3dicons/icon_pirate_flag.png",
+    "properties": {
+      "targets": [],
+      "pirate_flag": true
+    }
+  },
+  {
+    "guid": 192175,
+    "type": "VehicleBuff",
+    "name": "해적 선장의 검은 깃발",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_pirate_flag_2.png",
+    "properties": {
+      "targets": [],
+      "attack_speed": "+20%",
+      "pirate_flag": true
+    }
+  },
+  {
+    "guid": 192453,
+    "type": "VehicleBuff",
+    "name": "사슬탄",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_chainshot_1.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 192454,
+    "type": "VehicleBuff",
+    "name": "막대탄",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_chainshot_2.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 192940,
+    "type": "VehicleBuff",
+    "name": "적국 선박 나포 면허장",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_marque_letter_1.png",
+    "properties": {
+      "targets": [],
+      "pirate_flag": true
+    }
+  },
+  {
+    "guid": 192941,
+    "type": "VehicleBuff",
+    "name": "적국 선박 나포 왕실 면허장",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_marque_letter_2.png",
+    "properties": {
+      "targets": [],
+      "attack_speed": "+20%",
+      "pirate_flag": true
+    }
+  },
+  {
+    "guid": 192942,
+    "type": "VehicleBuff",
+    "name": "면책 증서",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_marque_letter_1.png",
+    "properties": {
+      "targets": [],
+      "white_flag": true
+    }
+  },
+  {
+    "guid": 192943,
+    "type": "VehicleBuff",
+    "name": "왕실 면책 증서",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_marque_letter_3.png",
+    "properties": {
+      "targets": [],
+      "white_flag": true,
+      "trade_price": "-15%"
+    }
+  },
+  {
+    "guid": 192986,
+    "type": "VehicleBuff",
+    "name": "감염",
+    "icon": "data/ui/2kimages/main/icons/icon_incident_diseases_2.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 193236,
+    "type": "VehicleBuff",
+    "name": "가미가제",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_suicide_bombs_1.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 193237,
+    "type": "VehicleBuff",
+    "name": "Kamikaze",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_suicide_bombs_3.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 193238,
+    "type": "VehicleBuff",
+    "name": "Kamikaze",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_fire_bomb_1.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 193239,
+    "type": "VehicleBuff",
+    "name": "Kamikaze",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_fire_bomb_2.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 193240,
+    "type": "VehicleBuff",
+    "name": "어뢰",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_torpedo_2.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 193241,
+    "type": "VehicleBuff",
+    "name": "자주포",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_howitzer_2.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 193242,
+    "type": "VehicleBuff",
+    "name": "박격포",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_active_mortar_2.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 193243,
+    "type": "VehicleBuff",
+    "name": "박격포 일제 사격",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_active_mortar_3.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 629,
+    "type": "VehicleBuff",
+    "name": "화재",
+    "icon": "data/ui/2kimages/main/icons/notification_icons/icon_incident_fire_outline.png",
+    "properties": {
+      "targets": [],
+      "attack_speed": "-10%"
+    }
+  },
+  {
     "guid": 192176,
     "type": "HarbourOfficeBuff",
     "name": "메가폰",
@@ -327,6 +820,22 @@
     }
   },
   {
+    "guid": 193402,
+    "type": "VehicleBuff",
+    "name": "심연 공원",
+    "icon": "data/ui/2kimages/main/3dicons/animals/icon_kraken.png",
+    "properties": {
+      "targets": [
+        "인양선"
+      ],
+      "diving_zoo": true,
+      "diving_rarity": [
+        "epic",
+        "legendary"
+      ]
+    }
+  },
+  {
     "guid": 193772,
     "type": "HarbourOfficeBuff",
     "name": "북극 툰드라 공원",
@@ -352,6 +861,20 @@
     }
   },
   {
+    "guid": 191146,
+    "type": "VehicleBuff",
+    "name": "해골과 뼈 전시회",
+    "icon": "data/ui/2kimages/main/3dicons/museum/icon_museum_sword_pirate_epic.png",
+    "properties": {
+      "targets": [
+        "모든 전함"
+      ],
+      "forward_speed": "+3%",
+      "maintenance": "-5%",
+      "ignore_damage_factor": "-10%"
+    }
+  },
+  {
     "guid": 191144,
     "type": "HarbourOfficeBuff",
     "name": "잃어버린 도시 전시회",
@@ -362,6 +885,47 @@
       ],
       "gen_probability": "100%",
       "gen_pool": 191500
+    }
+  },
+  {
+    "guid": 191149,
+    "type": "VehicleBuff",
+    "name": "북부 이야기 전시회",
+    "icon": "data/ui/2kimages/main/3dicons/museum/icon_museum_viking_valkyrie_helmet.png",
+    "properties": {
+      "targets": [
+        "모든 전함"
+      ],
+      "base_damage": "+3%",
+      "max_hitpoints": "+5%"
+    }
+  },
+  {
+    "guid": 193406,
+    "type": "VehicleBuff",
+    "name": "아틀란티스 전시회",
+    "icon": "data/ui/2kimages/main/3dicons/museum/icon_temple_of_posseidon.png",
+    "properties": {
+      "targets": [
+        "인양선"
+      ],
+      "diving_museum": true,
+      "diving_rarity": [
+        "epic",
+        "legendary"
+      ]
+    }
+  },
+  {
+    "guid": 193407,
+    "type": "VehicleBuff",
+    "name": "트릴로니 전투 전시회",
+    "icon": "data/ui/2kimages/main/3dicons/museum/icon_nadaskys_sword.png",
+    "properties": {
+      "targets": [
+        "모든 전함"
+      ],
+      "hitpoint_damage": "+50%"
     }
   },
   {
@@ -391,12 +955,262 @@
     }
   },
   {
+    "guid": 1594,
+    "type": "VehicleBuff",
+    "name": "화염방사기",
+    "icon": "data/ui/2kimages/main/3dicons/narative_item/icon_blueprint_pump.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 1511,
+    "type": "VehicleBuff",
+    "name": "어뢰 충돌!",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_torpedo_2.png",
+    "properties": {
+      "targets": [
+        "all Ships"
+      ],
+      "attack_speed": "-99%",
+      "max_hitpoints": "-100",
+      "forward_speed": "-100%"
+    }
+  },
+  {
+    "guid": 1513,
+    "type": "VehicleBuff",
+    "name": "어뢰 충돌: 충격",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_torpedo_2.png",
+    "properties": {
+      "targets": [
+        "all Ships"
+      ],
+      "attack_speed": "-20%",
+      "forward_speed": "-50%"
+    }
+  },
+  {
+    "guid": 1514,
+    "type": "VehicleBuff",
+    "name": "어뢰 충돌: 회복",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_torpedo_2.png",
+    "properties": {
+      "targets": [
+        "all Ships"
+      ],
+      "forward_speed": "-10%"
+    }
+  },
+  {
+    "guid": 1401,
+    "type": "VehicleBuff",
+    "name": "화마!",
+    "icon": "data/ui/2kimages/main/icons/dlc_11/icon_ship_fire_armed_red.png",
+    "properties": {
+      "targets": [
+        "모든 목재 선체 선박"
+      ],
+      "attack_speed": "-65%",
+      "max_hitpoints": "-500",
+      "forward_speed": "-50%"
+    }
+  },
+  {
+    "guid": 1402,
+    "type": "VehicleBuff",
+    "name": "대규모 화재!",
+    "icon": "data/ui/2kimages/main/icons/dlc_11/icon_ship_fire_armed_red.png",
+    "properties": {
+      "targets": [
+        "모든 목재 선체 선박"
+      ],
+      "attack_speed": "-40%",
+      "max_hitpoints": "-500",
+      "forward_speed": "-30%"
+    }
+  },
+  {
+    "guid": 1403,
+    "type": "VehicleBuff",
+    "name": "소규모 화재",
+    "icon": "data/ui/2kimages/main/icons/dlc_11/icon_ship_fire_armed_red.png",
+    "properties": {
+      "targets": [
+        "모든 목재 선체 선박"
+      ],
+      "attack_speed": "-10%",
+      "max_hitpoints": "-300",
+      "forward_speed": "-10%"
+    }
+  },
+  {
+    "guid": 1407,
+    "type": "VehicleBuff",
+    "name": "화마!",
+    "icon": "data/ui/2kimages/main/icons/dlc_11/icon_ship_fire_armed_red.png",
+    "properties": {
+      "targets": [
+        "모든 금속 선체 선박"
+      ],
+      "attack_speed": "-45%",
+      "forward_speed": "-55%"
+    }
+  },
+  {
+    "guid": 1408,
+    "type": "VehicleBuff",
+    "name": "대규모 화재!",
+    "icon": "data/ui/2kimages/main/icons/dlc_11/icon_ship_fire_armed_red.png",
+    "properties": {
+      "targets": [
+        "모든 금속 선체 선박"
+      ],
+      "attack_speed": "-25%",
+      "forward_speed": "-35%"
+    }
+  },
+  {
+    "guid": 1409,
+    "type": "VehicleBuff",
+    "name": "소규모 화재",
+    "icon": "data/ui/2kimages/main/icons/dlc_11/icon_ship_fire_armed_red.png",
+    "properties": {
+      "targets": [
+        "모든 금속 선체 선박"
+      ],
+      "attack_speed": "-10%",
+      "forward_speed": "-10%"
+    }
+  },
+  {
+    "guid": 1903,
+    "type": "VehicleBuff",
+    "name": "기뢰 충돌!",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_seamine_3.png",
+    "properties": {
+      "targets": [
+        "all Ships"
+      ],
+      "attack_speed": "-80%",
+      "forward_speed": "-100%"
+    }
+  },
+  {
+    "guid": 1905,
+    "type": "VehicleBuff",
+    "name": "기뢰 충돌: 충격",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_seamine_3.png",
+    "properties": {
+      "targets": [
+        "all Ships"
+      ],
+      "attack_speed": "-20%",
+      "forward_speed": "-20%"
+    }
+  },
+  {
+    "guid": 3703,
+    "type": "VehicleBuff",
+    "name": "선체 관통됨!",
+    "icon": "data/ui/2kimages/main/icons/icon_riot_quest.png",
+    "properties": {
+      "targets": [
+        "모든 목재 선체 선박"
+      ],
+      "attack_speed": "-25%",
+      "forward_speed": "-20%"
+    }
+  },
+  {
+    "guid": 3704,
+    "type": "VehicleBuff",
+    "name": "선체 누수 중",
+    "icon": "data/ui/2kimages/main/icons/icon_riot_quest.png",
+    "properties": {
+      "targets": [
+        "모든 목재 선체 선박"
+      ],
+      "attack_speed": "-15%",
+      "forward_speed": "-10%"
+    }
+  },
+  {
+    "guid": 3705,
+    "type": "VehicleBuff",
+    "name": "선체 수리 중",
+    "icon": "data/ui/2kimages/main/icons/icon_riot_quest.png",
+    "properties": {
+      "targets": [
+        "모든 목재 선체 선박"
+      ],
+      "attack_speed": "-10%",
+      "forward_speed": "-5%"
+    }
+  },
+  {
+    "guid": 3711,
+    "type": "VehicleBuff",
+    "name": "선체 관통됨!",
+    "icon": "data/ui/2kimages/main/icons/icon_riot_quest.png",
+    "properties": {
+      "targets": [
+        "모든 금속 선체 선박"
+      ],
+      "attack_speed": "-75%",
+      "max_hitpoints": "-750",
+      "forward_speed": "-75%"
+    }
+  },
+  {
+    "guid": 3712,
+    "type": "VehicleBuff",
+    "name": "선체 누수 중",
+    "icon": "data/ui/2kimages/main/icons/icon_riot_quest.png",
+    "properties": {
+      "targets": [
+        "모든 금속 선체 선박"
+      ],
+      "attack_speed": "-65%",
+      "max_hitpoints": "-600",
+      "forward_speed": "-55%"
+    }
+  },
+  {
+    "guid": 3713,
+    "type": "VehicleBuff",
+    "name": "선체 수리 중",
+    "icon": "data/ui/2kimages/main/icons/icon_riot_quest.png",
+    "properties": {
+      "targets": [
+        "모든 금속 선체 선박"
+      ],
+      "attack_speed": "-40%",
+      "max_hitpoints": "-300",
+      "forward_speed": "-15%"
+    }
+  },
+  {
+    "guid": 4144,
+    "type": "VehicleBuff",
+    "name": "Spottet!",
+    "icon": "data/ui/2kimages/main/3dicons/military_building/icon_spotlight.png",
+    "properties": {
+      "targets": [
+        "모든 비행선"
+      ],
+      "accuracy": "-10%",
+      "damage_receive_factor_cannon": "+2400%"
+    }
+  },
+  {
     "guid": 190615,
     "type": "GuildhouseItem",
     "name": "낚시꾼",
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_fisher_401.png",
     "properties": {
       "rarity": "common",
+      "allocation": "HarborOffice",
       "targets": [
         "모든 양어장"
       ],
@@ -410,6 +1224,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_pearl_diver_102.png",
     "properties": {
       "rarity": "common",
+      "allocation": "HarborOffice",
       "targets": [
         "진주 양식장"
       ],
@@ -423,6 +1238,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_fisherman_101_b.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "HarborOffice",
       "targets": [
         "모든 양어장"
       ],
@@ -436,6 +1252,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_pearl_diver_101.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "HarborOffice",
       "targets": [
         "진주 양식장"
       ],
@@ -449,6 +1266,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_fisherman_102.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "HarborOffice",
       "targets": [
         "모든 양어장"
       ],
@@ -465,6 +1283,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_pearl_diver_201.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "HarborOffice",
       "targets": [
         "진주 양식장"
       ],
@@ -481,6 +1300,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_414.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "HarborOffice",
       "targets": [
         "모든 양어장",
         "진주 양식장"
@@ -498,6 +1318,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_navigator_102.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "HarborOffice",
       "targets": [
         "모든 양어장",
         "진주 양식장"
@@ -866,6 +1687,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_firebrigade_401.png",
     "properties": {
       "rarity": "common",
+      "allocation": "TownHall",
       "targets": [
         "모든 주거지"
       ],
@@ -879,9 +1701,11 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_fireman_101.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "TownHall",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+5"
     }
   },
   {
@@ -893,7 +1717,10 @@
       "rarity": "rare",
       "targets": [
         "모든 소방서"
-      ]
+      ],
+      "unit": "소방관",
+      "resolver_unit_decrease": "+50%",
+      "resolver_unit_movement_speed": "+10%"
     }
   },
   {
@@ -903,9 +1730,13 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_fireman_104.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "targets": [
         "모든 소방서"
-      ]
+      ],
+      "unit": "소방관",
+      "resolver_unit_count": "+1",
+      "special_unit_happiness_threshold": "-10"
     }
   },
   {
@@ -915,10 +1746,25 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_fireman_105.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "TownHall",
       "targets": [
         "모든 학자 주거지를 제외한 구대륙과 신대륙 주거지"
       ],
-      "incident_fire": "-50%"
+      "incident_fire": "-50%",
+      "additional_happiness": "+10",
+      "benefit_additional_supply": {
+        "+1": [
+          "시장",
+          "빵",
+          "재봉틀",
+          "대학",
+          "안경",
+          "전구",
+          "샴페인",
+          "증기차",
+          "초콜릿"
+        ]
+      }
     }
   },
   {
@@ -1003,7 +1849,8 @@
       "rarity": "common",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+3"
     }
   },
   {
@@ -1015,7 +1862,8 @@
       "rarity": "uncommon",
       "targets": [
         "모든 선술집"
-      ]
+      ],
+      "public_service_full_satisfaction_distance": "+12%"
     }
   },
   {
@@ -1027,7 +1875,20 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "교회"
+        ],
+        "subtitute_needs": [
+          "선술집"
+        ]
+      },
+      "benefit_additional_money": {
+        "+2": [
+          "선술집"
+        ]
+      }
     }
   },
   {
@@ -1039,7 +1900,21 @@
       "rarity": "epic",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "소시지",
+          "빵",
+          "맥주",
+          "교회"
+        ],
+        "subtitute_needs": [
+          "선술집",
+          "선술집",
+          "선술집",
+          "선술집"
+        ]
+      }
     }
   },
   {
@@ -1051,7 +1926,25 @@
       "rarity": "legendary",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "맥주"
+        ],
+        "subtitute_needs": [
+          "선술집"
+        ]
+      },
+      "benefit_additional_happiness": {
+        "+5": [
+          "선술집"
+        ]
+      },
+      "benefit_additional_money": {
+        "+5": [
+          "선술집"
+        ]
+      }
     }
   },
   {
@@ -1087,7 +1980,15 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "보드빌 극장"
+        ],
+        "subtitute_needs": [
+          "대학"
+        ]
+      }
     }
   },
   {
@@ -1100,6 +2001,7 @@
       "targets": [
         "대학"
       ],
+      "public_service_full_satisfaction_distance": "+17%",
       "attractiveness": "+15"
     }
   },
@@ -1113,7 +2015,17 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "-50%"
+      "incident_illness": "-50%",
+      "benefit_additional_happiness": {
+        "+5": [
+          "대학"
+        ]
+      },
+      "benefit_additional_money": {
+        "+5": [
+          "대학"
+        ]
+      }
     }
   },
   {
@@ -1701,9 +2613,11 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_priest_201.png",
     "properties": {
       "rarity": "common",
+      "allocation": "TownHall",
       "targets": [
         "모든 교회"
-      ]
+      ],
+      "public_service_full_satisfaction_distance": "+10%"
     }
   },
   {
@@ -1713,6 +2627,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_priest_517.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "TownHall",
       "targets": [
         "모든 교회"
       ],
@@ -1726,9 +2641,11 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_priest_401.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "TownHall",
       "targets": [
         "모든 교회"
       ],
+      "public_service_full_satisfaction_distance": "+15%",
       "attractiveness": "+7"
     }
   },
@@ -1739,9 +2656,23 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_priest_715.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "슈냅스",
+          "선술집",
+          "맥주"
+        ],
+        "subtitute_needs": [
+          "교회",
+          "교회",
+          "교회"
+        ]
+      },
+      "stress": "-35%"
     }
   },
   {
@@ -1753,7 +2684,17 @@
       "rarity": "legendary",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+10",
+      "need_provide_need": {
+        "provide_needs": [
+          "럼주"
+        ],
+        "subtitute_needs": [
+          "교회"
+        ]
+      },
+      "stress": "-50%"
     }
   },
   {
@@ -1767,7 +2708,21 @@
         "모든 학자 주거지를 제외한 구대륙과 신대륙 주거지"
       ],
       "incident_illness": "-50%",
-      "incident_riot": "-50%"
+      "incident_riot": "-50%",
+      "benefit_additional_supply": {
+        "+2": [
+          "생선",
+          "빵",
+          "통조림",
+          "대학",
+          "커피",
+          "전구",
+          "샴페인",
+          "증기차",
+          "초콜릿",
+          "플랜테인 튀김"
+        ]
+      }
     }
   },
   {
@@ -1777,6 +2732,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_doctor_802.png",
     "properties": {
       "rarity": "common",
+      "allocation": "TownHall",
       "targets": [
         "모든 주거지"
       ],
@@ -1790,9 +2746,11 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/icon_doctor_native.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "TownHall",
       "targets": [
         "모든 병원"
       ],
+      "unit": "의사",
       "maintenance": "-100%"
     }
   },
@@ -1805,7 +2763,10 @@
       "rarity": "rare",
       "targets": [
         "모든 병원"
-      ]
+      ],
+      "unit": "의사",
+      "resolver_unit_decrease": "+50%",
+      "resolver_unit_movement_speed": "+10%"
     }
   },
   {
@@ -1815,9 +2776,13 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_doctor_717.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "targets": [
         "모든 병원"
-      ]
+      ],
+      "unit": "의사",
+      "resolver_unit_count": "+1",
+      "resolver_unit_movement_speed": "+15%"
     }
   },
   {
@@ -1829,7 +2794,11 @@
       "rarity": "legendary",
       "targets": [
         "모든 병원"
-      ]
+      ],
+      "unit": "의사",
+      "resolver_unit_count": "+1",
+      "resolver_unit_decrease": "+70%",
+      "special_unit_happiness_threshold": "-10"
     }
   },
   {
@@ -1842,7 +2811,22 @@
       "targets": [
         "모든 학자 주거지를 제외한 구대륙과 신대륙 주거지"
       ],
-      "incident_illness": "-50%"
+      "incident_illness": "-50%",
+      "additional_happiness": "+10",
+      "benefit_additional_supply": {
+        "+1": [
+          "시장",
+          "빵",
+          "재봉틀",
+          "대학",
+          "안경",
+          "전구",
+          "샴페인",
+          "증기차",
+          "초콜릿",
+          "선풍기"
+        ]
+      }
     }
   },
   {
@@ -1882,7 +2866,18 @@
       "rarity": "rare",
       "targets": [
         "모든 구대륙 거주지"
-      ]
+      ],
+      "additional_happiness": "+3",
+      "need_provide_need": {
+        "provide_needs": [
+          "럼주",
+          "통조림"
+        ],
+        "subtitute_needs": [
+          "보드빌 극장",
+          "보드빌 극장"
+        ]
+      }
     }
   },
   {
@@ -1897,7 +2892,8 @@
       ],
       "good_consumption": [
         "보드빌 극장 -100%"
-      ]
+      ],
+      "additional_happiness": "+7"
     }
   },
   {
@@ -1911,6 +2907,7 @@
         "보드빌 극장"
       ],
       "maintenance": "-50%",
+      "public_service_full_satisfaction_distance": "+25%",
       "attractiveness": "+7"
     }
   },
@@ -2368,6 +3365,7 @@
       "targets": [
         "모든 경찰서"
       ],
+      "unit": "경찰관",
       "maintenance": "-100%"
     }
   },
@@ -2380,7 +3378,10 @@
       "rarity": "rare",
       "targets": [
         "모든 경찰서"
-      ]
+      ],
+      "unit": "경찰관",
+      "resolver_unit_decrease": "+50%",
+      "resolver_unit_movement_speed": "+10%"
     }
   },
   {
@@ -2393,7 +3394,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-40%"
+      "incident_riot": "-40%",
+      "additional_happiness": "+8"
     }
   },
   {
@@ -2405,7 +3407,10 @@
       "rarity": "epic",
       "targets": [
         "모든 경찰서"
-      ]
+      ],
+      "unit": "경찰관",
+      "resolver_unit_count": "+1",
+      "resolver_unit_movement_speed": "+15%"
     }
   },
   {
@@ -2417,7 +3422,11 @@
       "rarity": "legendary",
       "targets": [
         "모든 경찰서"
-      ]
+      ],
+      "unit": "경찰관",
+      "resolver_unit_count": "+1",
+      "resolver_unit_decrease": "+70%",
+      "special_unit_happiness_threshold": "-10"
     }
   },
   {
@@ -2430,7 +3439,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-50%"
+      "incident_riot": "-50%",
+      "additional_happiness": "+10"
     }
   },
   {
@@ -4179,6 +5189,133 @@
     }
   },
   {
+    "guid": 191444,
+    "type": "ShipSpecialist",
+    "name": "선원",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_navigator_704.png",
+    "properties": {
+      "rarity": "common",
+      "forward_speed": "+5%"
+    }
+  },
+  {
+    "guid": 191445,
+    "type": "ShipSpecialist",
+    "name": "항해사",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_412.png",
+    "properties": {
+      "rarity": "common",
+      "self_heal": "+100%"
+    }
+  },
+  {
+    "guid": 191446,
+    "type": "ShipSpecialist",
+    "name": "장교 후보생",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_411.png",
+    "properties": {
+      "rarity": "uncommon",
+      "forward_speed": "+10%"
+    }
+  },
+  {
+    "guid": 191447,
+    "type": "ShipSpecialist",
+    "name": "갑판장교",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_413.png",
+    "properties": {
+      "rarity": "uncommon",
+      "ignore_damage_factor": "-40%"
+    }
+  },
+  {
+    "guid": 191448,
+    "type": "ShipSpecialist",
+    "name": "예인선장",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/icon_captain_common.png",
+    "properties": {
+      "rarity": "rare",
+      "max_hitpoints": "+600",
+      "self_heal": "+300%"
+    }
+  },
+  {
+    "guid": 191449,
+    "type": "ShipSpecialist",
+    "name": "수로 안내인",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_101.png",
+    "properties": {
+      "rarity": "rare",
+      "forward_speed": "+15%",
+      "ignore_damage_factor": "-60%"
+    }
+  },
+  {
+    "guid": 190766,
+    "type": "ShipSpecialist",
+    "name": "이브라힘 선장",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_201.png",
+    "properties": {
+      "rarity": "epic",
+      "action_cooldown": "01:00",
+      "action_duration": "00:30",
+      "active_buff": 191595,
+      "self_heal_paused_time_if_attacked": "-100%",
+      "damage_receive_factor_normal": "-20%"
+    }
+  },
+  {
+    "guid": 191450,
+    "type": "ShipSpecialist",
+    "name": "카디야 선장",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_402.png",
+    "properties": {
+      "rarity": "epic",
+      "action_cooldown": "00:15",
+      "action_duration": "00:05",
+      "self_heal": "+400%",
+      "forward_speed": "+20%"
+    }
+  },
+  {
+    "guid": 191451,
+    "type": "ShipSpecialist",
+    "name": "무덤에서 돌아온 자, 펠리시티 피닉스 선장",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_401.png",
+    "properties": {
+      "rarity": "legendary",
+      "action_cooldown": "01:00",
+      "action_duration": "00:15",
+      "max_hitpoints": "+1000",
+      "self_heal_paused_time_if_attacked": "-100%",
+      "ignore_damage_factor": "-100%"
+    }
+  },
+  {
+    "guid": 191452,
+    "type": "ShipSpecialist",
+    "name": "스쿠너를 조종하는 자, 리처드 모제스 선장",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/icon_captain_rare.png",
+    "properties": {
+      "rarity": "legendary",
+      "self_heal": "+500%",
+      "damage_receive_factor_torpedo": "-75%",
+      "forward_speed": "+25%"
+    }
+  },
+  {
+    "guid": 191453,
+    "type": "ShipSpecialist",
+    "name": "대양의 타이탄, 스미스 선장",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/icon_doctor_pirate.png",
+    "properties": {
+      "rarity": "legendary",
+      "max_hitpoints": "+1000",
+      "damage_receive_factor_normal": "-25%",
+      "forward_speed": "+25%"
+    }
+  },
+  {
     "guid": 191459,
     "type": "GuildhouseItem",
     "name": "주형공",
@@ -4311,7 +5448,8 @@
       "rarity": "uncommon",
       "targets": [
         "모든 시장"
-      ]
+      ],
+      "public_service_full_satisfaction_distance": "+20%"
     }
   },
   {
@@ -4324,6 +5462,7 @@
       "targets": [
         "모든 시장"
       ],
+      "public_service_full_satisfaction_distance": "+40%",
       "attractiveness": "+10"
     }
   },
@@ -4339,7 +5478,8 @@
       ],
       "good_consumption": [
         "맥주 -100%"
-      ]
+      ],
+      "additional_happiness": "+5"
     }
   },
   {
@@ -4354,7 +5494,8 @@
       ],
       "good_consumption": [
         "샴페인 -100%"
-      ]
+      ],
+      "additional_happiness": "+10"
     }
   },
   {
@@ -4381,7 +5522,12 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_money": {
+        "+1": [
+          "학교"
+        ]
+      }
     }
   },
   {
@@ -4394,7 +5540,12 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "-20%"
+      "incident_illness": "-20%",
+      "benefit_additional_money": {
+        "+2": [
+          "학교"
+        ]
+      }
     }
   },
   {
@@ -4406,7 +5557,12 @@
       "rarity": "epic",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+5": [
+          "학교"
+        ]
+      }
     }
   },
   {
@@ -4420,6 +5576,7 @@
         "학교"
       ],
       "maintenance": "-100%",
+      "public_service_full_satisfaction_distance": "+25%",
       "attractiveness": "+12"
     }
   },
@@ -4448,7 +5605,12 @@
       "targets": [
         "투자가 주택",
         "모든 투자가 마천루"
-      ]
+      ],
+      "benefit_additional_money": {
+        "+2": [
+          "회원제 클럽"
+        ]
+      }
     }
   },
   {
@@ -4461,6 +5623,7 @@
       "targets": [
         "회원제 클럽"
       ],
+      "public_service_full_satisfaction_distance": "+15%",
       "attractiveness": "+8"
     }
   },
@@ -4474,7 +5637,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-30%"
+      "incident_riot": "-30%",
+      "additional_happiness": "+8"
     }
   },
   {
@@ -4486,7 +5650,20 @@
       "rarity": "legendary",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "시가"
+        ],
+        "subtitute_needs": [
+          "회원제 클럽"
+        ]
+      },
+      "benefit_additional_money": {
+        "+5": [
+          "회원제 클럽"
+        ]
+      }
     }
   },
   {
@@ -4513,7 +5690,17 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+5": [
+          "은행"
+        ]
+      },
+      "benefit_additional_money": {
+        "+5": [
+          "은행"
+        ]
+      }
     }
   },
   {
@@ -4525,7 +5712,17 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+5": [
+          "은행"
+        ]
+      },
+      "benefit_additional_money": {
+        "+5": [
+          "은행"
+        ]
+      }
     }
   },
   {
@@ -4551,7 +5748,21 @@
       "rarity": "legendary",
       "targets": [
         "모든 학자 주거지를 제외한 구대륙과 신대륙 주거지"
-      ]
+      ],
+      "benefit_additional_supply": {
+        "+1": [
+          "시장",
+          "빵",
+          "재봉틀",
+          "대학",
+          "안경",
+          "전구",
+          "샴페인",
+          "증기차",
+          "초콜릿",
+          "선풍기"
+        ]
+      }
     }
   },
   {
@@ -4749,6 +5960,317 @@
     }
   },
   {
+    "guid": 191596,
+    "type": "ShipSpecialist",
+    "name": "소위",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_custom_officer_101.png",
+    "properties": {
+      "rarity": "common",
+      "allocation": "Warship"
+    }
+  },
+  {
+    "guid": 191597,
+    "type": "ShipSpecialist",
+    "name": "총기 제작자",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_custom_officer_102.png",
+    "properties": {
+      "rarity": "common",
+      "allocation": "Warship"
+    }
+  },
+  {
+    "guid": 191598,
+    "type": "ShipSpecialist",
+    "name": "해적 출신 병사",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_navigator_102.png",
+    "properties": {
+      "rarity": "uncommon",
+      "allocation": "Warship",
+      "base_damage": "+10%"
+    }
+  },
+  {
+    "guid": 191599,
+    "type": "ShipSpecialist",
+    "name": "경사",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_custom_officer_104.png",
+    "properties": {
+      "rarity": "uncommon",
+      "allocation": "Warship",
+      "attack_speed": "+10%"
+    }
+  },
+  {
+    "guid": 191600,
+    "type": "ShipSpecialist",
+    "name": "해군 중대장",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_custom_officer_103.png",
+    "properties": {
+      "rarity": "rare",
+      "damage_receive_factor_normal": "-15%"
+    }
+  },
+  {
+    "guid": 191601,
+    "type": "ShipSpecialist",
+    "name": "해적선 출신 병사",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_navigator_102_b.png",
+    "properties": {
+      "rarity": "rare",
+      "damage_receive_factor_normal": "-15%"
+    }
+  },
+  {
+    "guid": 191602,
+    "type": "ShipSpecialist",
+    "name": "함선 사제",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_admiral_708.png",
+    "properties": {
+      "rarity": "rare",
+      "damage_receive_factor_normal": "-15%"
+    }
+  },
+  {
+    "guid": 191603,
+    "type": "ShipSpecialist",
+    "name": "해군 중장 아담스",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_103.png",
+    "properties": {
+      "rarity": "epic",
+      "action_cooldown": "01:00",
+      "action_duration": "00:05",
+      "max_hitpoints": "+800",
+      "self_heal_paused_time_if_attacked": "-100%"
+    }
+  },
+  {
+    "guid": 191604,
+    "type": "ShipSpecialist",
+    "name": "해군 중장 로마노프",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/icon_specialist_captain_legendary_female.png",
+    "properties": {
+      "rarity": "epic",
+      "allocation": "Warship",
+      "base_damage": "+20%",
+      "attack_range": "+10%"
+    }
+  },
+  {
+    "guid": 191605,
+    "type": "ShipSpecialist",
+    "name": "해군 중장 곤사우베스",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_uniform_504.png",
+    "properties": {
+      "rarity": "epic",
+      "action_duration": "00:02",
+      "attack_range": "+10%",
+      "forward_speed": "+15%"
+    }
+  },
+  {
+    "guid": 191606,
+    "type": "ShipSpecialist",
+    "name": "해군 중장 파울리스타",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_admiral_513.png",
+    "properties": {
+      "rarity": "epic",
+      "allocation": "Warship",
+      "attack_range": "+10%",
+      "attack_speed": "+20%"
+    }
+  },
+  {
+    "guid": 191607,
+    "type": "ShipSpecialist",
+    "name": "창꼬치 이빨을 가진 자, 윌마 더 와일드",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/icon_navigator_pirate.png",
+    "properties": {
+      "rarity": "legendary",
+      "allocation": "Warship",
+      "accuracy": "+100%",
+      "attack_speed": "+25%",
+      "hitpoint_damage": "+60%"
+    }
+  },
+  {
+    "guid": 191608,
+    "type": "ShipSpecialist",
+    "name": "기민한 자, 나다스키 해군 사령 장관",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_102.png",
+    "properties": {
+      "rarity": "legendary",
+      "forward_speed": "+20%"
+    }
+  },
+  {
+    "guid": 191609,
+    "type": "ShipSpecialist",
+    "name": "허세 파괴자, 조지나 더피",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/icon_specialist_captain_legendary_pirate.png",
+    "properties": {
+      "rarity": "legendary",
+      "action_cooldown": "00:30",
+      "active_buff": 191859,
+      "self_heal_paused_time_if_attacked": "-100%",
+      "damage_receive_factor_normal": "-25%"
+    }
+  },
+  {
+    "guid": 191610,
+    "type": "ShipSpecialist",
+    "name": "먼 수평선을 응시하는 자, 헤인즈 제독",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_admiral_701.png",
+    "properties": {
+      "rarity": "legendary",
+      "attack_range": "+15%",
+      "max_hitpoints": "+1000"
+    }
+  },
+  {
+    "guid": 191611,
+    "type": "ShipSpecialist",
+    "name": "포위자, 스티븐 드레이크 준장",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/icon_police_officer_rare.png",
+    "properties": {
+      "rarity": "legendary",
+      "damage_receive_factor_torpedo": "-80%",
+      "damage_receive_factor_cannon": "-80%",
+      "damage_receive_factor_bigbertha": "-80%"
+    }
+  },
+  {
+    "guid": 191615,
+    "type": "ShipSpecialist",
+    "name": "짐꾼",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_bartender_813.png",
+    "properties": {
+      "rarity": "common",
+      "loading_speed": "+15%"
+    }
+  },
+  {
+    "guid": 191616,
+    "type": "ShipSpecialist",
+    "name": "화물 취급인",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_normal_dressed_105.png",
+    "properties": {
+      "rarity": "common",
+      "ignore_weight_factor": "-20%"
+    }
+  },
+  {
+    "guid": 191617,
+    "type": "ShipSpecialist",
+    "name": "상인",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_normaldress_308.png",
+    "properties": {
+      "rarity": "uncommon",
+      "maintenance": "-40%"
+    }
+  },
+  {
+    "guid": 191618,
+    "type": "ShipSpecialist",
+    "name": "선적업자",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_normal_dressed_107.png",
+    "properties": {
+      "rarity": "uncommon",
+      "loading_speed": "+30%"
+    }
+  },
+  {
+    "guid": 191619,
+    "type": "ShipSpecialist",
+    "name": "항구 판매상",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_well_dressed_104.png",
+    "properties": {
+      "rarity": "rare",
+      "forward_speed": "+10%",
+      "ignore_weight_factor": "-60%"
+    }
+  },
+  {
+    "guid": 191620,
+    "type": "ShipSpecialist",
+    "name": "물품 수출업자",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_normaldress_303.png",
+    "properties": {
+      "rarity": "rare",
+      "trade_price": "-5%",
+      "loading_speed": "+45%"
+    }
+  },
+  {
+    "guid": 191621,
+    "type": "ShipSpecialist",
+    "name": "국제 수출업자 이츠코",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_well_dressed_404.png",
+    "properties": {
+      "rarity": "epic",
+      "ignore_weight_factor": "-80%",
+      "trade_price": "-10%"
+    }
+  },
+  {
+    "guid": 191622,
+    "type": "ShipSpecialist",
+    "name": "화물 운송인 살리마",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_normaldress_815.png",
+    "properties": {
+      "rarity": "epic",
+      "trade_price": "-10%",
+      "loading_speed": "+60%"
+    }
+  },
+  {
+    "guid": 191623,
+    "type": "ShipSpecialist",
+    "name": "외교관 델로레스",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_welldress_806.png",
+    "properties": {
+      "rarity": "epic",
+      "maintenance": "-80%",
+      "trade_price": "-10%"
+    }
+  },
+  {
+    "guid": 191624,
+    "type": "ShipSpecialist",
+    "name": "대형 범선 공급자, 에르메네길다 디 메르칸테",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_well_dressed_402.png",
+    "properties": {
+      "rarity": "legendary",
+      "forward_speed": "+20%",
+      "ignore_weight_factor": "-100%",
+      "loading_speed": "+75%"
+    }
+  },
+  {
+    "guid": 191625,
+    "type": "ShipSpecialist",
+    "name": "자유 시장 상인, 랄라 마지그",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_entertainer_828.png",
+    "properties": {
+      "rarity": "legendary",
+      "forward_speed": "+20%",
+      "maintenance": "-100%",
+      "trade_price": "-15%"
+    }
+  },
+  {
+    "guid": 191626,
+    "type": "ShipSpecialist",
+    "name": "도매상의 신화, 한스 아이헨도르프",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_well_dressed_111.png",
+    "properties": {
+      "rarity": "legendary",
+      "ignore_weight_factor": "-100%",
+      "trade_price": "-15%",
+      "loading_speed": "+75%"
+    }
+  },
+  {
     "guid": 192438,
     "type": "TownhallItem",
     "name": "1인극 배우 막심 레너드",
@@ -4760,7 +6282,8 @@
       ],
       "good_consumption": [
         "보드빌 극장 -100%"
-      ]
+      ],
+      "additional_happiness": "+7"
     }
   },
   {
@@ -4772,7 +6295,29 @@
       "rarity": "epic",
       "targets": [
         "모든 농부 및 노동자 거주지"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "빵",
+          "소시지",
+          "생선"
+        ],
+        "subtitute_needs": [
+          "선술집",
+          "선술집",
+          "선술집"
+        ]
+      },
+      "benefit_additional_happiness": {
+        "+5": [
+          "선술집"
+        ]
+      },
+      "benefit_additional_money": {
+        "+5": [
+          "선술집"
+        ]
+      }
     }
   },
   {
@@ -4822,6 +6367,29 @@
     }
   },
   {
+    "guid": 192444,
+    "type": "ShipSpecialist",
+    "name": "추론형 역사가 드류 더닐",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/influencer/icon_influencer_drew_durnil_2.png",
+    "properties": {
+      "rarity": "epic",
+      "forward_speed": "+15%",
+      "trade_price": "-15%"
+    }
+  },
+  {
+    "guid": 192449,
+    "type": "ShipSpecialist",
+    "name": "구원받은 해적 레이디 루",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/influencer/icon_influencer_lady_lu.png",
+    "properties": {
+      "rarity": "epic",
+      "max_hitpoints": "+800",
+      "self_heal": "+200%",
+      "self_heal_paused_time_if_attacked": "-100%"
+    }
+  },
+  {
     "guid": 192468,
     "type": "TownhallItem",
     "name": "보안 기술자 엘리엇 \"블리츠\"",
@@ -4833,7 +6401,8 @@
       ],
       "incident_fire": "-20%",
       "incident_illness": "-20%",
-      "incident_riot": "-20%"
+      "incident_riot": "-20%",
+      "additional_happiness": "+10"
     }
   },
   {
@@ -4852,6 +6421,17 @@
         "감자 +1/8"
       ],
       "module_limit": "+35%"
+    }
+  },
+  {
+    "guid": 193188,
+    "type": "ShipSpecialist",
+    "name": "드래 폰 가스트",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/influencer/icon_influencer_draegast.png",
+    "properties": {
+      "rarity": "epic",
+      "allocation": "Warship",
+      "trade_price": "-15%"
     }
   },
   {
@@ -5931,6 +7511,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fishernet_1.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "HarborOffice",
       "targets": [
         "모든 양어장",
         "진주 양식장"
@@ -5945,6 +7526,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fishernet_2.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "HarborOffice",
       "targets": [
         "모든 양어장",
         "진주 양식장"
@@ -5959,6 +7541,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fishernet_3.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "HarborOffice",
       "targets": [
         "모든 양어장",
         "진주 양식장"
@@ -6621,7 +8204,9 @@
     "name": "가로돛",
     "icon": "data/ui/2kimages/main/3dicons/icon_sail.png",
     "properties": {
-      "rarity": "uncommon"
+      "rarity": "uncommon",
+      "allocation": "SailShip",
+      "forward_speed": "+7%"
     }
   },
   {
@@ -6630,7 +8215,10 @@
     "name": "삼각돛",
     "icon": "data/ui/2kimages/main/3dicons/icon_lateen_sails.png",
     "properties": {
-      "rarity": "rare"
+      "rarity": "rare",
+      "allocation": "SailShip",
+      "forward_speed": "+10%",
+      "ignore_weight_factor": "-25%"
     }
   },
   {
@@ -6639,7 +8227,11 @@
     "name": "세로돛",
     "icon": "data/ui/2kimages/main/3dicons/icon_sail.png",
     "properties": {
-      "rarity": "epic"
+      "rarity": "epic",
+      "allocation": "SailShip",
+      "forward_speed": "+15%",
+      "ignore_weight_factor": "-50%",
+      "ignore_damage_factor": "-50%"
     }
   },
   {
@@ -6648,7 +8240,9 @@
     "name": "2회전 스크루 프로펠러",
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_screw_propeller_1.png",
     "properties": {
-      "rarity": "uncommon"
+      "rarity": "uncommon",
+      "allocation": "SteamShip",
+      "forward_speed": "+7%"
     }
   },
   {
@@ -6657,7 +8251,10 @@
     "name": "1회전 스크루 프로펠러",
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_screw_propeller_2.png",
     "properties": {
-      "rarity": "rare"
+      "rarity": "rare",
+      "allocation": "SteamShip",
+      "forward_speed": "+10%",
+      "ignore_weight_factor": "-25%"
     }
   },
   {
@@ -6666,7 +8263,11 @@
     "name": "가변 피치 프로펠러",
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_screw_propeller_3.png",
     "properties": {
-      "rarity": "epic"
+      "rarity": "epic",
+      "allocation": "SteamShip",
+      "forward_speed": "+15%",
+      "ignore_weight_factor": "-50%",
+      "ignore_damage_factor": "-50%"
     }
   },
   {
@@ -6676,6 +8277,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_generator_3.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "SteamShip",
       "action_cooldown": "00:45",
       "action_duration": "00:30",
       "active_buff": 191835
@@ -6688,6 +8290,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_generator_2.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "SteamShip",
       "action_cooldown": "00:45",
       "action_duration": "00:30",
       "active_buff": 191836
@@ -6700,6 +8303,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_generator_1.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "SteamShip",
       "action_cooldown": "00:45",
       "action_duration": "00:30",
       "active_buff": 191837
@@ -6742,6 +8346,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_ship_repair_1.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Ship",
       "action_cooldown": "05:00",
       "action_duration": "00:30",
       "active_buff": 191981
@@ -6754,6 +8359,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_ship_repair_1.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Ship",
       "action_cooldown": "05:00",
       "action_duration": "00:30",
       "active_buff": 192156
@@ -6766,6 +8372,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_ship_repair_2.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Ship",
       "action_cooldown": "05:00",
       "action_duration": "00:30",
       "active_buff": 191983
@@ -6778,6 +8385,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_ship_repair_2.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "Ship",
       "action_cooldown": "05:00",
       "action_duration": "00:30",
       "active_buff": 192157
@@ -6790,7 +8398,8 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_hull_1.png",
     "properties": {
       "rarity": "uncommon",
-      "max_hitpoints": "+20%"
+      "max_hitpoints": "+20%",
+      "forward_speed": "-10%"
     }
   },
   {
@@ -6802,7 +8411,8 @@
       "rarity": "rare",
       "max_hitpoints": "+30%",
       "damage_receive_factor_cannon": "-15%",
-      "damage_receive_factor_bigbertha": "-15%"
+      "damage_receive_factor_bigbertha": "-15%",
+      "forward_speed": "-5%"
     }
   },
   {
@@ -6837,6 +8447,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_cannon_0.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Warship",
       "base_damage": "+10%"
     }
   },
@@ -6847,6 +8458,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_cannon_1.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Warship",
       "base_damage": "+15%",
       "accuracy": "+20%"
     }
@@ -6858,6 +8470,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_cannon_2.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Warship",
       "base_damage": "+25%",
       "accuracy": "+35%"
     }
@@ -6869,6 +8482,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_cannon_4.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "Warship",
       "base_damage": "+35%",
       "accuracy": "+50%"
     }
@@ -6879,7 +8493,9 @@
     "name": "배기 송풍기",
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_heatexchanger_1.png",
     "properties": {
-      "rarity": "uncommon"
+      "rarity": "uncommon",
+      "allocation": "SteamShip",
+      "ignore_damage_factor": "-35%"
     }
   },
   {
@@ -6889,7 +8505,9 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_heatexchanger_2.png",
     "properties": {
       "rarity": "rare",
-      "max_hitpoints": "+15%"
+      "allocation": "SteamShip",
+      "max_hitpoints": "+15%",
+      "ignore_damage_factor": "-50%"
     }
   },
   {
@@ -6899,7 +8517,9 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_heatexchanger_3.png",
     "properties": {
       "rarity": "epic",
-      "max_hitpoints": "+30%"
+      "allocation": "SteamShip",
+      "max_hitpoints": "+30%",
+      "ignore_damage_factor": "-100%"
     }
   },
   {
@@ -6908,7 +8528,8 @@
     "name": "흰색 깃발",
     "icon": "data/ui/2kimages/main/3dicons/icon_white_flag.png",
     "properties": {
-      "rarity": "epic"
+      "rarity": "epic",
+      "white_flag": true
     }
   },
   {
@@ -6917,7 +8538,9 @@
     "name": "거대한 흰색 깃발",
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_white_flag_2.png",
     "properties": {
-      "rarity": "legendary"
+      "rarity": "legendary",
+      "white_flag": true,
+      "trade_price": "-15%"
     }
   },
   {
@@ -6927,6 +8550,7 @@
     "icon": "data/ui/2kimages/main/3dicons/icon_pirate_flag.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Warship",
       "action_cooldown": "20:00",
       "action_duration": "05:00",
       "active_buff": 192174
@@ -6939,6 +8563,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_pirate_flag_2.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "Warship",
       "action_cooldown": "20:00",
       "action_duration": "05:00",
       "active_buff": 192175
@@ -7222,6 +8847,7 @@
     "icon": "data/ui/2kimages/main/3dicons/fertilities/icon_fertility_pearl.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "HarborOffice",
       "targets": [
         "진주 양식장"
       ],
@@ -7236,6 +8862,7 @@
     "icon": "data/ui/2kimages/main/3dicons/fertilities/icon_fertility_pearl.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "HarborOffice",
       "targets": [
         "진주 양식장"
       ],
@@ -7249,6 +8876,7 @@
     "icon": "data/ui/2kimages/main/3dicons/fertilities/icon_fertility_pearl.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "HarborOffice",
       "targets": [
         "진주 양식장"
       ],
@@ -7263,6 +8891,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_ship_repair_1.png",
     "properties": {
       "rarity": "common",
+      "allocation": "Ship",
       "action_duration": "03:30",
       "active_buff": 192156
     }
@@ -7274,6 +8903,7 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/icon_ship_repair_2.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Ship",
       "action_duration": "05:00",
       "active_buff": 192157
     }
@@ -7456,7 +9086,8 @@
       "targets": [
         "모든 공공시설"
       ],
-      "maintenance": "+5%"
+      "maintenance": "+5%",
+      "public_service_full_satisfaction_distance": "+15%"
     }
   },
   {
@@ -7469,7 +9100,8 @@
       "targets": [
         "모든 공공시설"
       ],
-      "maintenance": "+10%"
+      "maintenance": "+10%",
+      "public_service_full_satisfaction_distance": "+25%"
     }
   },
   {
@@ -7482,7 +9114,8 @@
       "targets": [
         "모든 공공시설"
       ],
-      "maintenance": "+15%"
+      "maintenance": "+15%",
+      "public_service_full_satisfaction_distance": "+35%"
     }
   },
   {
@@ -7495,7 +9128,8 @@
       "targets": [
         "모든 공공시설"
       ],
-      "maintenance": "-10%"
+      "maintenance": "-10%",
+      "public_service_full_satisfaction_distance": "-5%"
     }
   },
   {
@@ -7508,7 +9142,8 @@
       "targets": [
         "모든 공공시설"
       ],
-      "maintenance": "-25%"
+      "maintenance": "-25%",
+      "public_service_full_satisfaction_distance": "-10%"
     }
   },
   {
@@ -7521,7 +9156,8 @@
       "targets": [
         "모든 공공시설"
       ],
-      "maintenance": "-50%"
+      "maintenance": "-50%",
+      "public_service_full_satisfaction_distance": "-15%"
     }
   },
   {
@@ -7722,7 +9358,8 @@
         "보드빌 극장",
         "영화관"
       ],
-      "maintenance": "+5%"
+      "maintenance": "+5%",
+      "public_service_full_satisfaction_distance": "+15%"
     }
   },
   {
@@ -7737,7 +9374,8 @@
         "보드빌 극장",
         "영화관"
       ],
-      "maintenance": "+10%"
+      "maintenance": "+10%",
+      "public_service_full_satisfaction_distance": "+25%"
     }
   },
   {
@@ -7752,7 +9390,8 @@
         "보드빌 극장",
         "영화관"
       ],
-      "maintenance": "+15%"
+      "maintenance": "+15%",
+      "public_service_full_satisfaction_distance": "+35%"
     }
   },
   {
@@ -7767,7 +9406,8 @@
         "보드빌 극장",
         "영화관"
       ],
-      "maintenance": "+15%"
+      "maintenance": "+15%",
+      "public_service_full_satisfaction_distance": "+35%"
     }
   },
   {
@@ -7782,7 +9422,8 @@
         "보드빌 극장",
         "영화관"
       ],
-      "maintenance": "-10%"
+      "maintenance": "-10%",
+      "public_service_full_satisfaction_distance": "-5%"
     }
   },
   {
@@ -7797,7 +9438,8 @@
         "보드빌 극장",
         "영화관"
       ],
-      "maintenance": "-25%"
+      "maintenance": "-25%",
+      "public_service_full_satisfaction_distance": "-10%"
     }
   },
   {
@@ -7812,7 +9454,8 @@
         "보드빌 극장",
         "영화관"
       ],
-      "maintenance": "-50%"
+      "maintenance": "-50%",
+      "public_service_full_satisfaction_distance": "-15%"
     }
   },
   {
@@ -7826,7 +9469,8 @@
         "대학",
         "회원제 클럽"
       ],
-      "maintenance": "+5%"
+      "maintenance": "+5%",
+      "public_service_full_satisfaction_distance": "+15%"
     }
   },
   {
@@ -7840,7 +9484,8 @@
         "대학",
         "회원제 클럽"
       ],
-      "maintenance": "+10%"
+      "maintenance": "+10%",
+      "public_service_full_satisfaction_distance": "+25%"
     }
   },
   {
@@ -7854,7 +9499,8 @@
         "대학",
         "회원제 클럽"
       ],
-      "maintenance": "+15%"
+      "maintenance": "+15%",
+      "public_service_full_satisfaction_distance": "+35%"
     }
   },
   {
@@ -7868,7 +9514,8 @@
         "대학",
         "회원제 클럽"
       ],
-      "maintenance": "-10%"
+      "maintenance": "-10%",
+      "public_service_full_satisfaction_distance": "-5%"
     }
   },
   {
@@ -7882,7 +9529,8 @@
         "대학",
         "회원제 클럽"
       ],
-      "maintenance": "-25%"
+      "maintenance": "-25%",
+      "public_service_full_satisfaction_distance": "-10%"
     }
   },
   {
@@ -7896,7 +9544,8 @@
         "대학",
         "회원제 클럽"
       ],
-      "maintenance": "-50%"
+      "maintenance": "-50%",
+      "public_service_full_satisfaction_distance": "-15%"
     }
   },
   {
@@ -7909,6 +9558,7 @@
       "targets": [
         "학교"
       ],
+      "public_service_full_satisfaction_distance": "+15%",
       "attractiveness": "-2"
     }
   },
@@ -7922,6 +9572,7 @@
       "targets": [
         "학교"
       ],
+      "public_service_full_satisfaction_distance": "+25%",
       "attractiveness": "-3"
     }
   },
@@ -7935,6 +9586,7 @@
       "targets": [
         "학교"
       ],
+      "public_service_full_satisfaction_distance": "+35%",
       "attractiveness": "-4"
     }
   },
@@ -7948,6 +9600,7 @@
       "targets": [
         "학교"
       ],
+      "public_service_full_satisfaction_distance": "-5%",
       "attractiveness": "+5"
     }
   },
@@ -7961,6 +9614,7 @@
       "targets": [
         "학교"
       ],
+      "public_service_full_satisfaction_distance": "-10%",
       "attractiveness": "+10"
     }
   },
@@ -7974,6 +9628,7 @@
       "targets": [
         "학교"
       ],
+      "public_service_full_satisfaction_distance": "-15%",
       "attractiveness": "+15"
     }
   },
@@ -7986,7 +9641,23 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "소고기",
+          "펠트"
+        ],
+        "subtitute_needs": [
+          "교회",
+          "예배당"
+        ]
+      },
+      "benefit_additional_happiness": {
+        "-1": [
+          "교회",
+          "예배당"
+        ]
+      }
     }
   },
   {
@@ -7998,7 +9669,25 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "양모",
+          "소고기",
+          "펠트"
+        ],
+        "subtitute_needs": [
+          "교회",
+          "교회",
+          "예배당"
+        ]
+      },
+      "benefit_additional_happiness": {
+        "-2": [
+          "교회",
+          "예배당"
+        ]
+      }
     }
   },
   {
@@ -8010,7 +9699,29 @@
       "rarity": "epic",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "점토",
+          "양모",
+          "소고기",
+          "펠트",
+          "안경"
+        ],
+        "subtitute_needs": [
+          "교회",
+          "교회",
+          "교회",
+          "예배당",
+          "예배당"
+        ]
+      },
+      "benefit_additional_happiness": {
+        "-3": [
+          "교회",
+          "예배당"
+        ]
+      }
     }
   },
   {
@@ -8024,7 +9735,8 @@
         "교회",
         "예배당"
       ],
-      "maintenance": "-30%"
+      "maintenance": "-30%",
+      "public_service_full_satisfaction_distance": "-5%"
     }
   },
   {
@@ -8038,7 +9750,8 @@
         "교회",
         "예배당"
       ],
-      "maintenance": "-60%"
+      "maintenance": "-60%",
+      "public_service_full_satisfaction_distance": "-10%"
     }
   },
   {
@@ -8052,7 +9765,8 @@
         "교회",
         "예배당"
       ],
-      "maintenance": "-100%"
+      "maintenance": "-100%",
+      "public_service_full_satisfaction_distance": "-15%"
     }
   },
   {
@@ -8066,7 +9780,8 @@
         "모든 시장",
         "은행"
       ],
-      "maintenance": "+5%"
+      "maintenance": "+5%",
+      "public_service_full_satisfaction_distance": "+15%"
     }
   },
   {
@@ -8080,7 +9795,8 @@
         "모든 시장",
         "은행"
       ],
-      "maintenance": "+10%"
+      "maintenance": "+10%",
+      "public_service_full_satisfaction_distance": "+25%"
     }
   },
   {
@@ -8094,7 +9810,8 @@
         "모든 시장",
         "은행"
       ],
-      "maintenance": "+15%"
+      "maintenance": "+15%",
+      "public_service_full_satisfaction_distance": "+35%"
     }
   },
   {
@@ -8108,7 +9825,8 @@
         "모든 시장",
         "은행"
       ],
-      "maintenance": "-10%"
+      "maintenance": "-10%",
+      "public_service_full_satisfaction_distance": "-5%"
     }
   },
   {
@@ -8122,7 +9840,8 @@
         "모든 시장",
         "은행"
       ],
-      "maintenance": "-25%"
+      "maintenance": "-25%",
+      "public_service_full_satisfaction_distance": "-10%"
     }
   },
   {
@@ -8136,7 +9855,8 @@
         "모든 시장",
         "은행"
       ],
-      "maintenance": "-50%"
+      "maintenance": "-50%",
+      "public_service_full_satisfaction_distance": "-15%"
     }
   },
   {
@@ -8305,7 +10025,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "+10%"
+      "incident_riot": "+10%",
+      "additional_happiness": "+4"
     }
   },
   {
@@ -8318,7 +10039,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "+20%"
+      "incident_riot": "+20%",
+      "additional_happiness": "+8"
     }
   },
   {
@@ -8331,7 +10053,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "+30%"
+      "incident_riot": "+30%",
+      "additional_happiness": "+12"
     }
   },
   {
@@ -8344,7 +10067,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-20%"
+      "incident_riot": "-20%",
+      "additional_happiness": "-1"
     }
   },
   {
@@ -8357,7 +10081,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-40%"
+      "incident_riot": "-40%",
+      "additional_happiness": "-2"
     }
   },
   {
@@ -8370,7 +10095,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-60%"
+      "incident_riot": "-60%",
+      "additional_happiness": "-3"
     }
   },
   {
@@ -8383,7 +10109,8 @@
       "targets": [
         "노동자 주택",
         "직공 주택"
-      ]
+      ],
+      "additional_happiness": "-2"
     }
   },
   {
@@ -8396,7 +10123,8 @@
       "targets": [
         "노동자 주택",
         "직공 주택"
-      ]
+      ],
+      "additional_happiness": "-3"
     }
   },
   {
@@ -8409,7 +10137,8 @@
       "targets": [
         "노동자 주택",
         "직공 주택"
-      ]
+      ],
+      "additional_happiness": "-4"
     }
   },
   {
@@ -8422,7 +10151,8 @@
       "targets": [
         "노동자 주택",
         "직공 주택"
-      ]
+      ],
+      "additional_happiness": "+4"
     }
   },
   {
@@ -8435,7 +10165,8 @@
       "targets": [
         "노동자 주택",
         "직공 주택"
-      ]
+      ],
+      "additional_happiness": "+8"
     }
   },
   {
@@ -8448,7 +10179,8 @@
       "targets": [
         "노동자 주택",
         "직공 주택"
-      ]
+      ],
+      "additional_happiness": "+12"
     }
   },
   {
@@ -8462,7 +10194,8 @@
         "직공 주택",
         "기술자 주택"
       ],
-      "incident_riot": "+10%"
+      "incident_riot": "+10%",
+      "additional_happiness": "+4"
     }
   },
   {
@@ -8476,7 +10209,8 @@
         "직공 주택",
         "기술자 주택"
       ],
-      "incident_riot": "+20%"
+      "incident_riot": "+20%",
+      "additional_happiness": "+8"
     }
   },
   {
@@ -8490,7 +10224,8 @@
         "직공 주택",
         "기술자 주택"
       ],
-      "incident_riot": "+30%"
+      "incident_riot": "+30%",
+      "additional_happiness": "+12"
     }
   },
   {
@@ -8504,7 +10239,8 @@
         "직공 주택",
         "기술자 주택"
       ],
-      "incident_riot": "-20%"
+      "incident_riot": "-20%",
+      "additional_happiness": "-2"
     }
   },
   {
@@ -8518,7 +10254,8 @@
         "직공 주택",
         "기술자 주택"
       ],
-      "incident_riot": "-40%"
+      "incident_riot": "-40%",
+      "additional_happiness": "-3"
     }
   },
   {
@@ -8532,7 +10269,8 @@
         "직공 주택",
         "기술자 주택"
       ],
-      "incident_riot": "-60%"
+      "incident_riot": "-60%",
+      "additional_happiness": "-4"
     }
   },
   {
@@ -8550,7 +10288,8 @@
         "맥주 -20%",
         "슈냅스 -20%",
         "샴페인 -20%"
-      ]
+      ],
+      "additional_happiness": "-2"
     }
   },
   {
@@ -8568,7 +10307,8 @@
         "맥주 -30%",
         "슈냅스 -30%",
         "샴페인 -30%"
-      ]
+      ],
+      "additional_happiness": "-3"
     }
   },
   {
@@ -8586,7 +10326,8 @@
         "맥주 -40%",
         "슈냅스 -40%",
         "샴페인 -40%"
-      ]
+      ],
+      "additional_happiness": "-4"
     }
   },
   {
@@ -8598,7 +10339,23 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+2": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      },
+      "benefit_additional_money": {
+        "-1": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      }
     }
   },
   {
@@ -8610,7 +10367,23 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+8": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      },
+      "benefit_additional_money": {
+        "-2": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      }
     }
   },
   {
@@ -8622,7 +10395,23 @@
       "rarity": "epic",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+12": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      },
+      "benefit_additional_money": {
+        "-3": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      }
     }
   },
   {
@@ -8634,7 +10423,23 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "-1": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      },
+      "benefit_additional_money": {
+        "+3": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      }
     }
   },
   {
@@ -8646,7 +10451,23 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "-2": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      },
+      "benefit_additional_money": {
+        "+6": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      }
     }
   },
   {
@@ -8658,7 +10479,23 @@
       "rarity": "epic",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "-3": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      },
+      "benefit_additional_money": {
+        "+9": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주"
+        ]
+      }
     }
   },
   {
@@ -8671,7 +10508,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "+10%"
+      "incident_riot": "+10%",
+      "additional_happiness": "+4"
     }
   },
   {
@@ -8684,7 +10522,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "+20%"
+      "incident_riot": "+20%",
+      "additional_happiness": "+8"
     }
   },
   {
@@ -8697,7 +10536,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "+30%"
+      "incident_riot": "+30%",
+      "additional_happiness": "+12"
     }
   },
   {
@@ -8710,7 +10550,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-20%"
+      "incident_riot": "-20%",
+      "additional_happiness": "-2"
     }
   },
   {
@@ -8723,7 +10564,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-40%"
+      "incident_riot": "-40%",
+      "additional_happiness": "-3"
     }
   },
   {
@@ -8736,7 +10578,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-60%"
+      "incident_riot": "-60%",
+      "additional_happiness": "-4"
     }
   },
   {
@@ -8748,7 +10591,8 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "-2"
     }
   },
   {
@@ -8760,7 +10604,8 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "-3"
     }
   },
   {
@@ -8772,7 +10617,8 @@
       "rarity": "epic",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "-4"
     }
   },
   {
@@ -8784,7 +10630,8 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+4"
     }
   },
   {
@@ -8796,7 +10643,8 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+8"
     }
   },
   {
@@ -8808,7 +10656,8 @@
       "rarity": "epic",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+12"
     }
   },
   {
@@ -8820,7 +10669,8 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+4"
     }
   },
   {
@@ -8832,7 +10682,8 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+8"
     }
   },
   {
@@ -8844,7 +10695,8 @@
       "rarity": "epic",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+12"
     }
   },
   {
@@ -8856,7 +10708,8 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "-2"
     }
   },
   {
@@ -8868,7 +10721,8 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "-3"
     }
   },
   {
@@ -8880,7 +10734,8 @@
       "rarity": "epic",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "-4"
     }
   },
   {
@@ -8976,7 +10831,22 @@
       "rarity": "uncommon",
       "targets": [
         "모든 학자 주거지를 제외한 구대륙과 신대륙 주거지"
-      ]
+      ],
+      "additional_happiness": "-2",
+      "benefit_additional_supply": {
+        "+1": [
+          "생선",
+          "빵",
+          "통조림",
+          "대학",
+          "커피",
+          "전구",
+          "샴페인",
+          "증기차",
+          "초콜릿",
+          "플랜테인 튀김"
+        ]
+      }
     }
   },
   {
@@ -8988,7 +10858,23 @@
       "rarity": "rare",
       "targets": [
         "모든 학자 주거지를 제외한 구대륙과 신대륙 주거지"
-      ]
+      ],
+      "additional_happiness": "-3",
+      "benefit_additional_supply": {
+        "+2": [
+          "생선",
+          "빵",
+          "통조림",
+          "대학",
+          "커피",
+          "전구",
+          "샴페인",
+          "증기차",
+          "초콜릿",
+          "플랜테인 튀김",
+          "메즈칼"
+        ]
+      }
     }
   },
   {
@@ -9000,7 +10886,23 @@
       "rarity": "epic",
       "targets": [
         "모든 학자 주거지를 제외한 구대륙과 신대륙 주거지"
-      ]
+      ],
+      "additional_happiness": "-4",
+      "benefit_additional_supply": {
+        "+3": [
+          "생선",
+          "빵",
+          "통조림",
+          "대학",
+          "커피",
+          "전구",
+          "샴페인",
+          "증기차",
+          "초콜릿",
+          "플랜테인 튀김",
+          "메즈칼"
+        ]
+      }
     }
   },
   {
@@ -9013,7 +10915,20 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-10%"
+      "incident_riot": "-10%",
+      "additional_happiness": "+6",
+      "benefit_additional_happiness": {
+        "+5": [
+          "학교",
+          "대학"
+        ]
+      },
+      "benefit_additional_money": {
+        "+5": [
+          "학교",
+          "대학"
+        ]
+      }
     }
   },
   {
@@ -9026,7 +10941,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-20%"
+      "incident_riot": "-20%",
+      "additional_happiness": "+12"
     }
   },
   {
@@ -9039,7 +10955,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-30%"
+      "incident_riot": "-30%",
+      "additional_happiness": "+18"
     }
   },
   {
@@ -9052,7 +10969,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "+10%"
+      "incident_riot": "+10%",
+      "additional_happiness": "+6"
     }
   },
   {
@@ -9065,7 +10983,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "+20%"
+      "incident_riot": "+20%",
+      "additional_happiness": "+12"
     }
   },
   {
@@ -9078,7 +10997,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "+30%"
+      "incident_riot": "+30%",
+      "additional_happiness": "+18"
     }
   },
   {
@@ -20613,6 +22533,7 @@
     "icon": "data/ui/2kimages/main/3dicons/icon_pirate_flag.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Warship",
       "action_cooldown": "00:30",
       "action_duration": "30:00",
       "active_buff": 192174
@@ -20810,7 +22731,8 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+2"
     }
   },
   {
@@ -20931,7 +22853,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-60%"
+      "incident_riot": "-60%",
+      "additional_happiness": "+10"
     }
   },
   {
@@ -20946,7 +22869,8 @@
         "투자가 주택",
         "모든 마천루"
       ],
-      "incident_fire": "+20%"
+      "incident_fire": "+20%",
+      "additional_happiness": "-2"
     }
   },
   {
@@ -20976,7 +22900,8 @@
         "투자가 주택",
         "모든 마천루"
       ],
-      "incident_fire": "+100%"
+      "incident_fire": "+100%",
+      "additional_happiness": "+10"
     }
   },
   {
@@ -20991,7 +22916,8 @@
         "투자가 주택",
         "모든 마천루"
       ],
-      "incident_riot": "+20%"
+      "incident_riot": "+20%",
+      "additional_happiness": "-2"
     }
   },
   {
@@ -21005,7 +22931,8 @@
         "기술자 주택",
         "투자가 주택",
         "모든 마천루"
-      ]
+      ],
+      "additional_happiness": "-4"
     }
   },
   {
@@ -21019,7 +22946,8 @@
         "기술자 주택",
         "투자가 주택",
         "모든 마천루"
-      ]
+      ],
+      "additional_happiness": "-8"
     }
   },
   {
@@ -21127,7 +23055,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-20%"
+      "incident_riot": "-20%",
+      "additional_happiness": "+5"
     }
   },
   {
@@ -21140,7 +23069,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-50%"
+      "incident_riot": "-50%",
+      "additional_happiness": "+7"
     }
   },
   {
@@ -21153,7 +23083,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-100%"
+      "incident_riot": "-100%",
+      "additional_happiness": "+10"
     }
   },
   {
@@ -21165,7 +23096,8 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+5"
     }
   },
   {
@@ -21177,7 +23109,8 @@
       "rarity": "rare",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+10"
     }
   },
   {
@@ -21189,7 +23122,8 @@
       "rarity": "epic",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+15"
     }
   },
   {
@@ -21258,6 +23192,85 @@
     }
   },
   {
+    "guid": 111126,
+    "type": "ShipSpecialist",
+    "name": "선동가",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_206.png",
+    "properties": {
+      "rarity": "common",
+      "allocation": "Warship",
+      "base_damage": "-40%",
+      "attack_range": "-50%",
+      "attack_speed": "+100%"
+    }
+  },
+  {
+    "guid": 111127,
+    "type": "ShipSpecialist",
+    "name": "방화범",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_anarchist_401.png",
+    "properties": {
+      "rarity": "uncommon",
+      "allocation": "Warship",
+      "base_damage": "-35%",
+      "attack_range": "-50%",
+      "attack_speed": "+100%"
+    }
+  },
+  {
+    "guid": 111128,
+    "type": "ShipSpecialist",
+    "name": "초조한 방화광",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_anarchist_402.png",
+    "properties": {
+      "rarity": "rare",
+      "allocation": "Warship",
+      "base_damage": "-30%",
+      "attack_range": "-50%",
+      "attack_speed": "+110%",
+      "trade_price": "-10%"
+    }
+  },
+  {
+    "guid": 111129,
+    "type": "ShipSpecialist",
+    "name": "거친 무정부주의자 바코",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_anarchist_vanzetti_b.png",
+    "properties": {
+      "rarity": "epic",
+      "allocation": "Warship",
+      "max_hitpoints": "+1000",
+      "forward_speed": "+25%",
+      "ignore_damage_factor": "-100%"
+    }
+  },
+  {
+    "guid": 111131,
+    "type": "ShipSpecialist",
+    "name": "거친 무정부주의자 사케티",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_anarchist_sacco_b.png",
+    "properties": {
+      "rarity": "epic",
+      "allocation": "Warship",
+      "base_damage": "+25%",
+      "attack_range": "+15%"
+    }
+  },
+  {
+    "guid": 111130,
+    "type": "ShipSpecialist",
+    "name": "무정부주의 선각자 엘라 골든",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_anarchist_golden_b.png",
+    "properties": {
+      "rarity": "legendary",
+      "allocation": "Warship",
+      "self_heal_paused_time_if_attacked": "-100%",
+      "damage_receive_factor_torpedo": "-50%",
+      "damage_receive_factor_cannon": "-50%",
+      "damage_receive_factor_bigbertha": "-50%"
+    }
+  },
+  {
     "guid": 111161,
     "type": "TownhallItem",
     "name": "전파자",
@@ -21267,7 +23280,15 @@
       "targets": [
         "농부 주택",
         "노동자 주택"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "슈냅스"
+        ],
+        "subtitute_needs": [
+          "선술집"
+        ]
+      }
     }
   },
   {
@@ -21280,7 +23301,12 @@
       "targets": [
         "노동자 주택",
         "직공 주택"
-      ]
+      ],
+      "benefit_additional_money": {
+        "+5": [
+          "교회"
+        ]
+      }
     }
   },
   {
@@ -21294,7 +23320,16 @@
         "직공 주택",
         "기술자 주택",
         "모든 기술자 마천루"
-      ]
+      ],
+      "benefit_additional_money": {
+        "+3": [
+          "보드빌 극장",
+          "맥주",
+          "럼주",
+          "자전거",
+          "회중시계"
+        ]
+      }
     }
   },
   {
@@ -21308,7 +23343,22 @@
         "기술자 주택",
         "투자가 주택",
         "모든 마천루"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "회중시계",
+          "보석"
+        ],
+        "subtitute_needs": [
+          "은행",
+          "은행"
+        ]
+      },
+      "benefit_additional_money": {
+        "+5": [
+          "은행"
+        ]
+      }
     }
   },
   {
@@ -21321,7 +23371,29 @@
       "targets": [
         "모든 구대륙 거주지"
       ],
-      "incident_riot": "-100%"
+      "incident_riot": "-100%",
+      "benefit_additional_happiness": {
+        "+2": [
+          "슈냅스",
+          "맥주",
+          "럼주",
+          "자전거",
+          "회중시계",
+          "보석",
+          "축음기"
+        ]
+      },
+      "benefit_additional_money": {
+        "+3": [
+          "슈냅스",
+          "맥주",
+          "럼주",
+          "자전거",
+          "회중시계",
+          "보석",
+          "축음기"
+        ]
+      }
     }
   },
   {
@@ -21334,7 +23406,8 @@
       "targets": [
         "농부 주택",
         "노동자 주택"
-      ]
+      ],
+      "additional_happiness": "+3"
     }
   },
   {
@@ -21347,7 +23420,17 @@
       "targets": [
         "노동자 주택",
         "직공 주택"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "교회",
+          "교회"
+        ],
+        "subtitute_needs": [
+          "학교",
+          "대학"
+        ]
+      }
     }
   },
   {
@@ -21362,7 +23445,8 @@
         "노동자 주택",
         "직공 주택"
       ],
-      "incident_riot": "-40%"
+      "incident_riot": "-40%",
+      "additional_happiness": "+5"
     }
   },
   {
@@ -21375,7 +23459,23 @@
       "targets": [
         "노동자 주택",
         "직공 주택"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "교회",
+          "교회"
+        ],
+        "subtitute_needs": [
+          "학교",
+          "대학"
+        ]
+      },
+      "benefit_additional_happiness": {
+        "+3": [
+          "학교",
+          "대학"
+        ]
+      }
     }
   },
   {
@@ -21407,7 +23507,93 @@
         "기술자 주택",
         "투자가 주택",
         "모든 마천루"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "은행",
+          "회원제 클럽"
+        ],
+        "subtitute_needs": [
+          "전기",
+          "전기"
+        ]
+      },
+      "benefit_additional_money": {
+        "+1": [
+          "시장",
+          "빵",
+          "재봉틀",
+          "대학",
+          "안경",
+          "전구",
+          "샴페인",
+          "증기차",
+          "초콜릿"
+        ]
+      },
+      "benefit_additional_supply": {
+        "+1": [
+          "시장",
+          "빵",
+          "재봉틀",
+          "대학",
+          "안경",
+          "전구",
+          "샴페인",
+          "증기차",
+          "초콜릿"
+        ]
+      }
+    }
+  },
+  {
+    "guid": 110956,
+    "type": "VehicleBuff",
+    "name": "무정부주의자의 깃발",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_mercier_flag.png",
+    "properties": {
+      "targets": [
+        "모든 배"
+      ],
+      "attack_speed": "+20%"
+    }
+  },
+  {
+    "guid": 110957,
+    "type": "VehicleBuff",
+    "name": "무정부주의자 반란",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_anarchy_flag_2.png",
+    "properties": {
+      "targets": [],
+      "attack_speed": "-60%",
+      "forward_speed": "-200%"
+    }
+  },
+  {
+    "guid": 111140,
+    "type": "VehicleBuff",
+    "name": "무정부주의자 폭탄 팩",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_anarchist_bomb_pack_1.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 111148,
+    "type": "VehicleBuff",
+    "name": "무정부주의자 팸플릿 팩",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_anarchist_newspaper_pack_1.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 112200,
+    "type": "VehicleBuff",
+    "name": "어뢰",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_torpedo_2.png",
+    "properties": {
+      "targets": []
     }
   },
   {
@@ -21417,7 +23603,11 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_diving_bell_3.png",
     "properties": {
       "rarity": "rare",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_rarity": [
+        "rare"
+      ]
     }
   },
   {
@@ -21427,7 +23617,12 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_diving_bell_2.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_rarity": [
+        "rare",
+        "epic"
+      ]
     }
   },
   {
@@ -21437,7 +23632,12 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_diving_bell_1.png",
     "properties": {
       "rarity": "legendary",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_rarity": [
+        "epic",
+        "legendary"
+      ]
     }
   },
   {
@@ -21447,6 +23647,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/item_sonar_01.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "DivingVessel",
       "dlc_dependency": "가라앉은 보물",
       "active_buff": 113412
     }
@@ -21458,7 +23659,9 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/item_cable_01.png",
     "properties": {
       "rarity": "rare",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "scrap_amount": "+10%"
     }
   },
   {
@@ -21468,7 +23671,9 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/item_cable_02.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "scrap_amount": "+20%"
     }
   },
   {
@@ -21478,7 +23683,9 @@
     "icon": "data/ui/2kimages/main/3dicons/consumables/item_cable_03.png",
     "properties": {
       "rarity": "legendary",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "scrap_amount": "+30%"
     }
   },
   {
@@ -21692,6 +23899,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_power_shovel_1.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "HarborOffice",
       "dlc_dependency": "가라앉은 보물",
       "targets": [
         "모든 해안 생산 시설"
@@ -21706,6 +23914,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_power_shovel_2.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "HarborOffice",
       "dlc_dependency": "가라앉은 보물",
       "targets": [
         "모든 해안 생산 시설"
@@ -21720,6 +23929,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_power_shovel_3.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "HarborOffice",
       "dlc_dependency": "가라앉은 보물",
       "targets": [
         "모든 해안 생산 시설"
@@ -21734,6 +23944,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_hydraulic_network_1.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "HarborOffice",
       "dlc_dependency": "가라앉은 보물",
       "targets": [
         "모든 해안 생산 시설",
@@ -21751,6 +23962,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_hydraulic_network_2.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "HarborOffice",
       "dlc_dependency": "가라앉은 보물",
       "targets": [
         "모든 해안 생산 시설",
@@ -21768,6 +23980,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_hydraulic_network_3.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "HarborOffice",
       "dlc_dependency": "가라앉은 보물",
       "targets": [
         "모든 해안 생산 시설",
@@ -21785,6 +23998,7 @@
     "icon": "data/ui/2kimages/main/3dicons/ship_military/icon_double_barreled_cannon_1.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Warship",
       "dlc_dependency": "가라앉은 보물",
       "base_damage": "+10%",
       "attack_speed": "+10%"
@@ -21797,6 +24011,7 @@
     "icon": "data/ui/2kimages/main/3dicons/ship_military/icon_double_barreled_cannon_2.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Warship",
       "dlc_dependency": "가라앉은 보물",
       "base_damage": "+15%",
       "attack_speed": "+20%"
@@ -21809,6 +24024,7 @@
     "icon": "data/ui/2kimages/main/3dicons/ship_military/icon_double_barreled_cannon_3.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "Warship",
       "dlc_dependency": "가라앉은 보물",
       "base_damage": "+20%",
       "attack_speed": "+40%"
@@ -21821,7 +24037,8 @@
     "icon": "data/ui/2kimages/main/3dicons/ship_military/icon_hydrojet_1.png",
     "properties": {
       "rarity": "rare",
-      "dlc_dependency": "가라앉은 보물"
+      "dlc_dependency": "가라앉은 보물",
+      "forward_speed": "+10%"
     }
   },
   {
@@ -21831,7 +24048,9 @@
     "icon": "data/ui/2kimages/main/3dicons/ship_military/icon_hydrojet_2.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "가라앉은 보물"
+      "dlc_dependency": "가라앉은 보물",
+      "forward_speed": "+15%",
+      "ignore_weight_factor": "-50%"
     }
   },
   {
@@ -21841,7 +24060,10 @@
     "icon": "data/ui/2kimages/main/3dicons/ship_military/icon_hydrojet_3.png",
     "properties": {
       "rarity": "legendary",
-      "dlc_dependency": "가라앉은 보물"
+      "dlc_dependency": "가라앉은 보물",
+      "forward_speed": "+25%",
+      "ignore_weight_factor": "-100%",
+      "ignore_damage_factor": "-100%"
     }
   },
   {
@@ -21894,7 +24116,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "attractiveness": "+1"
+      "attractiveness": "+1",
+      "additional_happiness": "+5"
     }
   },
   {
@@ -21908,7 +24131,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "attractiveness": "+1"
+      "attractiveness": "+1",
+      "additional_happiness": "+7"
     }
   },
   {
@@ -21922,7 +24146,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "attractiveness": "+1"
+      "attractiveness": "+1",
+      "additional_happiness": "+10"
     }
   },
   {
@@ -21932,7 +24157,12 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_farmer_102_b.png",
     "properties": {
       "rarity": "rare",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_museum": true,
+      "diving_rarity": [
+        "rare"
+      ]
     }
   },
   {
@@ -21942,7 +24172,13 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_normal_dressed_602.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_museum": true,
+      "diving_rarity": [
+        "rare",
+        "epic"
+      ]
     }
   },
   {
@@ -21952,7 +24188,14 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_archaeologist_100.png",
     "properties": {
       "rarity": "legendary",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_museum": true,
+      "diving_rarity": [
+        "rare",
+        "epic",
+        "legendary"
+      ]
     }
   },
   {
@@ -21962,7 +24205,12 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_zoologist_700.png",
     "properties": {
       "rarity": "rare",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_zoo": true,
+      "diving_rarity": [
+        "rare"
+      ]
     }
   },
   {
@@ -21972,7 +24220,13 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_zoologist_411.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_zoo": true,
+      "diving_rarity": [
+        "rare",
+        "epic"
+      ]
     }
   },
   {
@@ -21982,7 +24236,14 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_archaeologist_801.png",
     "properties": {
       "rarity": "legendary",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_zoo": true,
+      "diving_rarity": [
+        "rare",
+        "epic",
+        "legendary"
+      ]
     }
   },
   {
@@ -21992,7 +24253,12 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_412.png",
     "properties": {
       "rarity": "rare",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_machine": true,
+      "diving_rarity": [
+        "rare"
+      ]
     }
   },
   {
@@ -22002,7 +24268,13 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_adventurer_400.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_machine": true,
+      "diving_rarity": [
+        "rare",
+        "epic"
+      ]
     }
   },
   {
@@ -22012,7 +24284,14 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_treasure_hunter_200.png",
     "properties": {
       "rarity": "legendary",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "diving_machine": true,
+      "diving_rarity": [
+        "rare",
+        "epic",
+        "legendary"
+      ]
     }
   },
   {
@@ -22022,7 +24301,12 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_411.png",
     "properties": {
       "rarity": "rare",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "scrap_amount": "+10%",
+      "diving_rarity": [
+        "rare"
+      ]
     }
   },
   {
@@ -22032,7 +24316,13 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_treasure_hunter_100.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "scrap_amount": "+20%",
+      "diving_rarity": [
+        "rare",
+        "epic"
+      ]
     }
   },
   {
@@ -22042,7 +24332,14 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_zoologist_800.png",
     "properties": {
       "rarity": "legendary",
-      "dlc_dependency": "가라앉은 보물"
+      "allocation": "DivingVessel",
+      "dlc_dependency": "가라앉은 보물",
+      "scrap_amount": "+30%",
+      "diving_rarity": [
+        "rare",
+        "epic",
+        "legendary"
+      ]
     }
   },
   {
@@ -22092,7 +24389,278 @@
       ],
       "good_consumption": [
         "커피 -100%"
+      ],
+      "additional_happiness": "+10"
+    }
+  },
+  {
+    "guid": 112901,
+    "type": "VehicleBuff",
+    "name": "벌레 단지",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/item_fishbait_bocal.png",
+    "properties": {
+      "targets": [],
+      "diving_zoo": true,
+      "diving_rarity": [
+        "rare"
       ]
+    }
+  },
+  {
+    "guid": 112902,
+    "type": "VehicleBuff",
+    "name": "맛있는 서관충 양동이",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/item_fishbait_crate.png",
+    "properties": {
+      "targets": [],
+      "diving_zoo": true,
+      "diving_rarity": [
+        "rare",
+        "epic"
+      ]
+    }
+  },
+  {
+    "guid": 112903,
+    "type": "VehicleBuff",
+    "name": "꿈틀대는 미끼 상자",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/item_fishbait_large_crate.png",
+    "properties": {
+      "targets": [],
+      "diving_zoo": true,
+      "diving_rarity": [
+        "epic",
+        "legendary"
+      ]
+    }
+  },
+  {
+    "guid": 112904,
+    "type": "VehicleBuff",
+    "name": "작은 마그네이트",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_bigmagnet_01.png",
+    "properties": {
+      "targets": [],
+      "scrap_amount": "+10%"
+    }
+  },
+  {
+    "guid": 112907,
+    "type": "VehicleBuff",
+    "name": "큰 마그네이트",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_bigmagnet_02.png",
+    "properties": {
+      "targets": [],
+      "scrap_amount": "+20%"
+    }
+  },
+  {
+    "guid": 112910,
+    "type": "VehicleBuff",
+    "name": "거대 마그네이트",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_bigmagnet_03.png",
+    "properties": {
+      "targets": [],
+      "scrap_amount": "+30%"
+    }
+  },
+  {
+    "guid": 112905,
+    "type": "VehicleBuff",
+    "name": "소형 인양 그물",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/item_filter_02.png",
+    "properties": {
+      "targets": [],
+      "diving_museum": true,
+      "diving_rarity": [
+        "rare"
+      ]
+    }
+  },
+  {
+    "guid": 112908,
+    "type": "VehicleBuff",
+    "name": "중형 인양 그물",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/item_filter_01.png",
+    "properties": {
+      "targets": [],
+      "diving_museum": true,
+      "diving_rarity": [
+        "rare",
+        "epic"
+      ]
+    }
+  },
+  {
+    "guid": 112911,
+    "type": "VehicleBuff",
+    "name": "대형 인양 그물",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/item_filter_3.png",
+    "properties": {
+      "targets": [],
+      "diving_museum": true,
+      "diving_rarity": [
+        "epic",
+        "legendary"
+      ]
+    }
+  },
+  {
+    "guid": 112906,
+    "type": "VehicleBuff",
+    "name": "해안 준설기",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_crane_01.png",
+    "properties": {
+      "targets": [],
+      "diving_machine": true,
+      "diving_rarity": [
+        "rare"
+      ]
+    }
+  },
+  {
+    "guid": 112909,
+    "type": "VehicleBuff",
+    "name": "해상 준설기",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_crane_02.png",
+    "properties": {
+      "targets": [],
+      "diving_machine": true,
+      "diving_rarity": [
+        "rare",
+        "epic"
+      ]
+    }
+  },
+  {
+    "guid": 112912,
+    "type": "VehicleBuff",
+    "name": "거친 심연 준설기",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_crane_03.png",
+    "properties": {
+      "targets": [],
+      "diving_machine": true,
+      "diving_rarity": [
+        "epic",
+        "legendary"
+      ]
+    }
+  },
+  {
+    "guid": 112924,
+    "type": "VehicleBuff",
+    "name": "기뢰",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_torpedo_2.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113412,
+    "type": "VehicleBuff",
+    "name": "에코 음파기",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/item_sonar_01.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113413,
+    "type": "VehicleBuff",
+    "name": "잠수함 진동자",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/item_sonar_02.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113414,
+    "type": "VehicleBuff",
+    "name": "네이다",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/item_sonar_03.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113315,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113386,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113387,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113388,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113389,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113390,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113391,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113392,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 113393,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
     }
   },
   {
@@ -23533,6 +26101,15 @@
     }
   },
   {
+    "guid": 114891,
+    "type": "VehicleBuff",
+    "name": "새 묘판",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
     "guid": 114992,
     "type": "RewardPool",
     "name": null,
@@ -23580,6 +26157,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fishing_boat_1.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "고래 사냥꾼"
@@ -23595,6 +26173,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fishing_boat_2.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "고래 사냥꾼"
@@ -23609,6 +26188,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fishing_boat_3.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "고래 사냥꾼"
@@ -23624,6 +26204,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fishing_tool_1.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "바다표범 사냥꾼"
@@ -23638,6 +26219,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fishing_tool_2.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "바다표범 사냥꾼"
@@ -23652,6 +26234,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fishing_tool_3.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "바다표범 사냥꾼"
@@ -23667,6 +26250,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_bow_1.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "카리부 사냥꾼",
@@ -23683,6 +26267,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_bow_2.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "카리부 사냥꾼",
@@ -23698,6 +26283,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_bow_3.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "카리부 사냥꾼",
@@ -23714,6 +26300,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_cooking_stove_1.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "페미컨 공장"
@@ -23729,6 +26316,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_cooking_stove_2.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "페미컨 공장"
@@ -23743,6 +26331,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_cookng_stove_3.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "페미컨 공장"
@@ -23758,6 +26347,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_leather_tool_1.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "파카 공장",
@@ -23774,6 +26364,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_leather_tool_2.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "파카 공장",
@@ -23789,6 +26380,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_leather_tool_3.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "파카 공장",
@@ -23805,6 +26397,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_snow_goggle_1.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "거위 농장",
@@ -23821,6 +26414,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_snow_goggle_2.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "거위 농장",
@@ -23836,6 +26430,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_snow_goggle_3.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "거위 농장",
@@ -23852,6 +26447,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_axe_1.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "벌목꾼의 오두막",
@@ -23869,6 +26465,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_axe_2.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "벌목꾼의 오두막",
@@ -23886,6 +26483,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_axe_3.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "벌목꾼의 오두막",
@@ -23904,7 +26502,10 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_pulleys.png",
     "properties": {
       "rarity": "legendary",
-      "dlc_dependency": "길"
+      "allocation": "AirShip",
+      "dlc_dependency": "길",
+      "forward_speed": "+20%",
+      "loading_speed": "+100%"
     }
   },
   {
@@ -23914,6 +26515,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_906_a.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "파카 공장",
@@ -23930,6 +26532,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_1000.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "파카 공장",
@@ -23948,11 +26551,13 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_905.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "모험가 주거지",
         "기술자 주거지"
       ],
+      "incident_arctic_illness": "-40%",
       "good_consumption": [
         "침낭 -30%"
       ]
@@ -23965,6 +26570,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_1006_b.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "거위 농장",
@@ -23980,6 +26586,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_1006_c.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "거위 농장",
@@ -23996,6 +26603,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_901b.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "거위 농장",
@@ -24014,6 +26622,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_903.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "고래 사냥꾼",
@@ -24031,6 +26640,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_902b.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "고래 사냥꾼",
@@ -24049,6 +26659,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_1005_b.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "고래 사냥꾼",
@@ -24069,6 +26680,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_1002_a.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "벌목꾼의 오두막",
@@ -24085,6 +26697,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_1001_a.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "벌목꾼의 오두막",
@@ -24102,6 +26715,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_904.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "벌목꾼의 오두막",
@@ -24121,6 +26735,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_1003_b.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "페미컨 공장"
@@ -24135,6 +26750,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_1007.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "모험가 주거지",
@@ -24152,6 +26768,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_1004.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "페미컨 공장"
@@ -24169,11 +26786,13 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_radiator.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "모험가 주거지",
         "기술자 주거지"
-      ]
+      ],
+      "incident_arctic_illness": "-30%"
     }
   },
   {
@@ -24183,10 +26802,14 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_aspirin_machine.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "레인저 본부"
-      ]
+      ],
+      "unit": "레인저",
+      "resolver_unit_count": "+1",
+      "resolver_unit_decrease": "+50%"
     }
   },
   {
@@ -24196,6 +26819,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_music_box.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "모든 북극 생산 시설"
@@ -24210,11 +26834,13 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_grill.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "모험가 주거지",
         "기술자 주거지"
       ],
+      "incident_arctic_illness": "-40%",
       "good_consumption": [
         "페미컨 -30%"
       ]
@@ -24227,6 +26853,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_lamp_maker.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "기름 램프 공장"
@@ -24247,6 +26874,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_electric_battery.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "난방기"
@@ -24266,6 +26894,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_berries_press.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "벌목꾼의 오두막",
@@ -24284,6 +26913,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_canning_machine.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "페미컨 공장"
@@ -24301,13 +26931,20 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_heated_jacket.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "기술자 주거지"
       ],
+      "incident_arctic_illness": "-50%",
       "good_consumption": [
         "파카 -30%"
-      ]
+      ],
+      "benefit_additional_money": {
+        "+8": [
+          "파카"
+        ]
+      }
     }
   },
   {
@@ -24317,6 +26954,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_gas_extractor.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "극지 가스 추출장"
@@ -24335,13 +26973,20 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_kettle.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "기술자 주거지"
       ],
+      "incident_arctic_illness": "-50%",
       "good_consumption": [
         "커피 -30%"
-      ]
+      ],
+      "benefit_additional_money": {
+        "+8": [
+          "커피"
+        ]
+      }
     }
   },
   {
@@ -24351,7 +26996,10 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fjordbuster.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "길"
+      "allocation": "AirShip",
+      "dlc_dependency": "길",
+      "forward_speed": "+15%",
+      "ignore_weight_factor": "-100%"
     }
   },
   {
@@ -24361,7 +27009,10 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_royal_stamp_machine.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "길"
+      "allocation": "AirShip",
+      "dlc_dependency": "길",
+      "maintenance": "-25%",
+      "loading_speed": "+50%"
     }
   },
   {
@@ -24371,7 +27022,10 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_sports_gondola.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "길"
+      "allocation": "AirShip",
+      "dlc_dependency": "길",
+      "forward_speed": "+15%",
+      "maintenance": "-25%"
     }
   },
   {
@@ -24381,7 +27035,10 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_airship_hoist.png",
     "properties": {
       "rarity": "epic",
-      "dlc_dependency": "길"
+      "allocation": "AirShip",
+      "dlc_dependency": "길",
+      "ignore_weight_factor": "-100%",
+      "loading_speed": "+50%"
     }
   },
   {
@@ -24434,10 +27091,43 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_first_fridge.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "TownHall",
       "dlc_dependency": "길",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+2": [
+          "빵",
+          "생선",
+          "맥주",
+          "통조림",
+          "슈냅스",
+          "소시지",
+          "샴페인",
+          "럼주",
+          "초콜릿",
+          "커피",
+          "플랜테인 튀김",
+          "토르티야"
+        ]
+      },
+      "benefit_additional_money": {
+        "+2": [
+          "빵",
+          "생선",
+          "맥주",
+          "통조림",
+          "슈냅스",
+          "소시지",
+          "샴페인",
+          "럼주",
+          "초콜릿",
+          "커피",
+          "플랜테인 튀김",
+          "토르티야"
+        ]
+      }
     }
   },
   {
@@ -24447,10 +27137,25 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_jukebox.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "TownHall",
       "dlc_dependency": "길",
       "targets": [
         "모든 구대륙 거주지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+4": [
+          "선술집",
+          "보드빌 극장",
+          "회원제 클럽"
+        ]
+      },
+      "benefit_additional_money": {
+        "+4": [
+          "선술집",
+          "보드빌 극장",
+          "회원제 클럽"
+        ]
+      }
     }
   },
   {
@@ -24460,10 +27165,29 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_icemaker.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "TownHall",
       "dlc_dependency": "길",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+3": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주",
+          "커피"
+        ]
+      },
+      "benefit_additional_money": {
+        "+3": [
+          "맥주",
+          "슈냅스",
+          "샴페인",
+          "럼주",
+          "커피"
+        ]
+      }
     }
   },
   {
@@ -24480,6 +27204,7 @@
         "회원제 클럽"
       ],
       "maintenance": "-50%",
+      "public_service_full_satisfaction_distance": "+35%",
       "attractiveness": "+5"
     }
   },
@@ -24490,6 +27215,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_craft_beer_takeaway.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "dlc_dependency": "길",
       "targets": [
         "노동자 주택",
@@ -24498,7 +27224,12 @@
       ],
       "good_consumption": [
         "맥주 -30%"
-      ]
+      ],
+      "benefit_additional_money": {
+        "+5": [
+          "맥주"
+        ]
+      }
     }
   },
   {
@@ -24508,6 +27239,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_souvenir_kiosk.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "dlc_dependency": "길",
       "targets": [
         "모든 문화 건물"
@@ -24566,7 +27298,8 @@
       "dlc_dependency": "길",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "additional_happiness": "+10"
     }
   },
   {
@@ -24601,7 +27334,12 @@
       ],
       "good_consumption": [
         "초콜릿 -30%"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+3": [
+          "초콜릿"
+        ]
+      }
     }
   },
   {
@@ -24644,6 +27382,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_1003_a.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "카리부 사냥꾼",
@@ -24662,6 +27401,42 @@
       ],
       "fertility": "곰 토착 자원",
       "maintenance": "+150%"
+    }
+  },
+  {
+    "guid": 115484,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 115485,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 115486,
+    "type": "VehicleBuff",
+    "name": "보물 지도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 1592,
+    "type": "VehicleBuff",
+    "name": "가스 화염방사기",
+    "icon": "data/ui/2kimages/main/3dicons/narative_item/icon_blueprint_pump.png",
+    "properties": {
+      "targets": []
     }
   },
   {
@@ -26002,6 +28777,17 @@
     }
   },
   {
+    "guid": 118103,
+    "type": "ShipSpecialist",
+    "name": "다국어 학자 라힘",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/africa/icon_innkeeper_1a.png",
+    "properties": {
+      "rarity": "epic",
+      "forward_speed": "+10%",
+      "white_flag": true
+    }
+  },
+  {
     "guid": 125112,
     "type": "GuildhouseItem",
     "name": "전문 방목업자",
@@ -26047,7 +28833,17 @@
       ],
       "good_consumption": [
         "히비스커스 차 -30%"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+10": [
+          "히비스커스 차"
+        ]
+      },
+      "benefit_additional_research": {
+        "+4": [
+          "히비스커스 차"
+        ]
+      }
     }
   },
   {
@@ -26093,7 +28889,13 @@
       "dlc_dependency": "사자의 땅",
       "targets": [
         "모든 엔베사 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+2": [
+          "염소 우유",
+          "히비스커스 차"
+        ]
+      }
     }
   },
   {
@@ -26129,7 +28931,12 @@
       ],
       "good_consumption": [
         "염소 우유 -30%"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+8": [
+          "히비스커스 차"
+        ]
+      }
     }
   },
   {
@@ -26142,7 +28949,13 @@
       "dlc_dependency": "사자의 땅",
       "targets": [
         "모든 엔베사 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+2": [
+          "말린 고기",
+          "해산물 스튜"
+        ]
+      }
     }
   },
   {
@@ -26158,7 +28971,12 @@
       ],
       "good_consumption": [
         "말린 고기 -30%"
-      ]
+      ],
+      "benefit_additional_money": {
+        "+10": [
+          "음악가의 호정"
+        ]
+      }
     }
   },
   {
@@ -26195,7 +29013,8 @@
       "targets": [
         "수도원"
       ],
-      "maintenance": "-20%"
+      "maintenance": "-20%",
+      "public_service_full_satisfaction_distance": "+12%"
     }
   },
   {
@@ -26265,7 +29084,12 @@
       ],
       "good_consumption": [
         "태피스트리 -20%"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+6": [
+          "태피스트리"
+        ]
+      }
     }
   },
   {
@@ -26317,7 +29141,8 @@
       ],
       "good_consumption": [
         "말린 고기 -20%"
-      ]
+      ],
+      "additional_happiness": "+7"
     }
   },
   {
@@ -26347,7 +29172,14 @@
       "targets": [
         "모든 엔베사 주거지"
       ],
-      "incident_riot": "-50%"
+      "incident_riot": "-50%",
+      "additional_happiness": "+10",
+      "benefit_additional_supply": {
+        "+2": [
+          "시장",
+          "채색한 필사본"
+        ]
+      }
     }
   },
   {
@@ -26379,7 +29211,14 @@
       "targets": [
         "모든 엔베사 주거지"
       ],
-      "incident_illness": "-50%"
+      "incident_illness": "-50%",
+      "additional_happiness": "+10",
+      "benefit_additional_supply": {
+        "+2": [
+          "음악가의 호정",
+          "점토 파이프"
+        ]
+      }
     }
   },
   {
@@ -26389,6 +29228,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/africa/icon_sea_master_1.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "HarborOffice",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "제염소",
@@ -26405,6 +29245,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/africa/icon_sea_master_2.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "HarborOffice",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "랍스터 양어장"
@@ -26420,9 +29261,12 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_firebrigade_401.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "targets": [
         "모든 소방서"
-      ]
+      ],
+      "unit": "소방관",
+      "resolver_unit_movement_speed": "+20%"
     }
   },
   {
@@ -26491,7 +29335,13 @@
       "targets": [
         "학자 주거지"
       ],
-      "incident_riot": "-40%"
+      "incident_riot": "-40%",
+      "benefit_additional_supply": {
+        "+9": [
+          "맞춤복",
+          "가죽 장화"
+        ]
+      }
     }
   },
   {
@@ -26504,7 +29354,19 @@
       "dlc_dependency": "사자의 땅",
       "targets": [
         "학자 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+4": [
+          "전화기",
+          "무선전신탑"
+        ]
+      },
+      "benefit_additional_supply": {
+        "+9": [
+          "전화기",
+          "무선전신탑"
+        ]
+      }
     }
   },
   {
@@ -26518,6 +29380,7 @@
       "targets": [
         "무선전신탑"
       ],
+      "public_service_full_satisfaction_distance": "+15%",
       "attractiveness": "+6"
     }
   },
@@ -26531,7 +29394,12 @@
       "dlc_dependency": "사자의 땅",
       "targets": [
         "학자 주거지"
-      ]
+      ],
+      "benefit_additional_research": {
+        "+1": [
+          "대학"
+        ]
+      }
     }
   },
   {
@@ -26544,7 +29412,22 @@
       "dlc_dependency": "사자의 땅",
       "targets": [
         "학자 주거지"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+10": [
+          "대학"
+        ]
+      },
+      "benefit_additional_supply": {
+        "+24": [
+          "대학"
+        ]
+      },
+      "benefit_additional_research": {
+        "+2": [
+          "대학"
+        ]
+      }
     }
   },
   {
@@ -26557,7 +29440,15 @@
       "dlc_dependency": "사자의 땅",
       "targets": [
         "학자 주거지"
-      ]
+      ],
+      "benefit_additional_research": {
+        "+1": [
+          "히비스커스 차",
+          "해산물 스튜",
+          "태피스트리",
+          "점토 파이프"
+        ]
+      }
     }
   },
   {
@@ -26571,7 +29462,13 @@
       "targets": [
         "학자 주거지"
       ],
-      "attractiveness": "+5"
+      "attractiveness": "+5",
+      "benefit_additional_happiness": {
+        "+3": [
+          "히비스커스 차",
+          "해산물 스튜"
+        ]
+      }
     }
   },
   {
@@ -26588,7 +29485,13 @@
       "good_consumption": [
         "태피스트리 -20%",
         "점토 파이프 -20%"
-      ]
+      ],
+      "benefit_additional_happiness": {
+        "+4": [
+          "태피스트리",
+          "점토 파이프"
+        ]
+      }
     }
   },
   {
@@ -26598,6 +29501,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/africa/icon_enbesan_cook_3a.png",
     "properties": {
       "rarity": "narrative",
+      "allocation": "HarborOffice",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "제염소",
@@ -26616,7 +29520,14 @@
       "targets": [
         "모든 엔베사 주거지"
       ],
-      "incident_fire": "-50%"
+      "incident_fire": "-50%",
+      "additional_happiness": "+10",
+      "benefit_additional_supply": {
+        "+2": [
+          "장신구류",
+          "채색한 필사본"
+        ]
+      }
     }
   },
   {
@@ -26654,7 +29565,8 @@
     "name": "남반구 해양 위치 기입도",
     "icon": "data/ui/2kimages/main/3dicons/museum/africa/icon_mappamundi.png",
     "properties": {
-      "rarity": "legendary"
+      "rarity": "legendary",
+      "forward_speed": "+35%"
     }
   },
   {
@@ -26856,6 +29768,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_net_lobster_trap.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "HarborOffice",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "랍스터 양어장"
@@ -26870,6 +29783,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_miraculous_lobster_trap.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "HarborOffice",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "랍스터 양어장"
@@ -26962,11 +29876,13 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_kebero_drums.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "TownHall",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "음악가의 호정",
         "수도원"
-      ]
+      ],
+      "public_service_full_satisfaction_distance": "+15%"
     }
   },
   {
@@ -26976,10 +29892,17 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_stringed_krar.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "TownHall",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "모든 엔베사 주거지"
-      ]
+      ],
+      "benefit_additional_money": {
+        "+8": [
+          "음악가의 호정",
+          "수도원"
+        ]
+      }
     }
   },
   {
@@ -26989,12 +29912,14 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_negarit_drum.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "음악가의 호정",
         "수도원"
       ],
-      "maintenance": "-50%"
+      "maintenance": "-50%",
+      "public_service_full_satisfaction_distance": "+17%"
     }
   },
   {
@@ -27080,6 +30005,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_landline_repeater.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "TownHall",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "학자 주거지"
@@ -27096,11 +30022,22 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_signal_amplifier.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "무선전신탑"
       ],
-      "maintenance": "-50%"
+      "maintenance": "-50%",
+      "public_service_full_satisfaction_distance": "+17%"
+    }
+  },
+  {
+    "guid": 120314,
+    "type": "VehicleBuff",
+    "name": "건설권",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
     }
   },
   {
@@ -27126,6 +30063,24 @@
       ],
       "gen_probability": "20%",
       "gen_pool": 129128
+    }
+  },
+  {
+    "guid": 129223,
+    "type": "VehicleBuff",
+    "name": "Treasure Map",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 129513,
+    "type": "VehicleBuff",
+    "name": "Treasure Map",
+    "icon": "data/ui/2kimages/main/3dicons/icon_worldmap_3d.png",
+    "properties": {
+      "targets": []
     }
   },
   {
@@ -28286,7 +31241,19 @@
         "호텔"
       ],
       "incident_fire": "-10%",
-      "incident_illness": "-10%"
+      "incident_illness": "-10%",
+      "benefit_additional_supply": {
+        "+20": [
+          "여행객 정박지",
+          "빵",
+          "보드빌 극장",
+          "식당",
+          "잼",
+          "카페",
+          "샴푸",
+          "술집"
+        ]
+      }
     }
   },
   {
@@ -28306,7 +31273,8 @@
         "잼 -20%",
         "레모네이드 -20%",
         "빵 -20%"
-      ]
+      ],
+      "additional_happiness": "+10"
     }
   },
   {
@@ -28321,7 +31289,8 @@
         "호텔"
       ],
       "incident_fire": "-15%",
-      "incident_illness": "-15%"
+      "incident_illness": "-15%",
+      "additional_happiness": "+15"
     }
   },
   {
@@ -28331,6 +31300,7 @@
     "icon": "data/ui/2kimages/main/3dicons/posters/icon_culture_advertisement_02.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "GuildHouse",
       "targets": [
         "포도원"
       ],
@@ -28346,6 +31316,7 @@
     "icon": "data/ui/2kimages/main/3dicons/posters/icon_culture_advertisement_01.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "GuildHouse",
       "targets": [
         "모든 구대륙 술 생산소",
         "대농장 - 맥주 양조장",
@@ -28363,6 +31334,7 @@
     "icon": "data/ui/2kimages/main/3dicons/posters/icon_cyclideon_agriculture.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "GuildHouse",
       "targets": [
         "모든 곡물, 피망, 감자, 체리, 홉 농장"
       ],
@@ -29038,6 +32010,7 @@
     "icon": "data/ui/2kimages/main/3dicons/narative_item/highlife/icon_dlc_09_poster_2.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "GuildHouse",
       "targets": [
         "모든 대형 상가"
       ],
@@ -29052,6 +32025,7 @@
     "icon": "data/ui/2kimages/main/3dicons/narative_item/highlife/icon_dlc_09_poster_1.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "GuildHouse",
       "targets": [
         "모든 대형 상가"
       ],
@@ -29466,7 +32440,21 @@
       "targets": [
         "모든 마천루"
       ],
-      "maintenance": "+15%"
+      "maintenance": "+15%",
+      "additional_happiness": "+20",
+      "benefit_additional_supply": {
+        "+5": [
+          "비스킷",
+          "타자기",
+          "코냑",
+          "바이올린",
+          "당구대",
+          "장난감",
+          "백화점",
+          "가구점",
+          "약국"
+        ]
+      }
     }
   },
   {
@@ -29480,7 +32468,20 @@
       "targets": [
         "모든 마천루"
       ],
-      "maintenance": "+10%"
+      "maintenance": "+10%",
+      "additional_happiness": "+5",
+      "need_provide_need": {
+        "provide_needs": [
+          "껌",
+          "당구대",
+          "바이올린"
+        ],
+        "subtitute_needs": [
+          "백화점",
+          "가구점",
+          "약국"
+        ]
+      }
     }
   },
   {
@@ -29702,6 +32703,18 @@
     "properties": {}
   },
   {
+    "guid": 143508,
+    "type": "VehicleBuff",
+    "name": "제독의 조언",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_admiral_708.png",
+    "properties": {
+      "targets": [
+        "통치자의 군함"
+      ],
+      "forward_speed": "+66%"
+    }
+  },
+  {
     "guid": 24988,
     "type": "HarbourOfficeBuff",
     "name": "격동의 바다",
@@ -29749,6 +32762,148 @@
     }
   },
   {
+    "guid": 1546,
+    "type": "VehicleBuff",
+    "name": "기뢰 탐지기",
+    "icon": "data/ui/2kimages/main/3dicons/icon_camera.png",
+    "properties": {
+      "targets": [],
+      "attack_speed": "-99%"
+    }
+  },
+  {
+    "guid": 1740,
+    "type": "VehicleBuff",
+    "name": "극지 가스 챔버",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gas_red.png",
+    "properties": {
+      "targets": [],
+      "damage_receive_factor_normal": "+40%",
+      "damage_receive_factor_cannon": "+40%",
+      "forward_speed": "+35%",
+      "maintenance": "-10%",
+      "ignore_weight_factor": "+10%"
+    }
+  },
+  {
+    "guid": 1745,
+    "type": "VehicleBuff",
+    "name": "극지 가스 챔버",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gas_red.png",
+    "properties": {
+      "targets": [],
+      "damage_receive_factor_normal": "+40%",
+      "damage_receive_factor_cannon": "+40%",
+      "forward_speed": "+20%",
+      "maintenance": "-15%",
+      "ignore_weight_factor": "+15%"
+    }
+  },
+  {
+    "guid": 1748,
+    "type": "VehicleBuff",
+    "name": "극지 가스 챔버",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gas_red.png",
+    "properties": {
+      "targets": [],
+      "damage_receive_factor_normal": "+40%",
+      "damage_receive_factor_cannon": "+40%",
+      "forward_speed": "+35%",
+      "maintenance": "-10%",
+      "ignore_weight_factor": "+10%"
+    }
+  },
+  {
+    "guid": 1746,
+    "type": "VehicleBuff",
+    "name": "극지 가스 챔버",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gas_red.png",
+    "properties": {
+      "targets": [],
+      "damage_receive_factor_normal": "+40%",
+      "damage_receive_factor_cannon": "+40%",
+      "forward_speed": "+20%",
+      "maintenance": "-15%",
+      "ignore_weight_factor": "+15%"
+    }
+  },
+  {
+    "guid": 1749,
+    "type": "VehicleBuff",
+    "name": "극지 가스 챔버",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gas_red.png",
+    "properties": {
+      "targets": [],
+      "damage_receive_factor_normal": "+20%",
+      "damage_receive_factor_cannon": "+20%",
+      "forward_speed": "+40%",
+      "maintenance": "-20%",
+      "ignore_weight_factor": "+20%"
+    }
+  },
+  {
+    "guid": 1750,
+    "type": "VehicleBuff",
+    "name": "극지 가스 챔버",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gas_red.png",
+    "properties": {
+      "targets": [],
+      "damage_receive_factor_normal": "+20%",
+      "damage_receive_factor_cannon": "+20%",
+      "forward_speed": "+30%",
+      "maintenance": "-35%",
+      "ignore_weight_factor": "+15%"
+    }
+  },
+  {
+    "guid": 1751,
+    "type": "VehicleBuff",
+    "name": "극지 가스 챔버",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gas_red.png",
+    "properties": {
+      "targets": [],
+      "damage_receive_factor_normal": "+20%",
+      "damage_receive_factor_cannon": "+20%",
+      "forward_speed": "+15%",
+      "maintenance": "-40%",
+      "ignore_weight_factor": "+10%"
+    }
+  },
+  {
+    "guid": 1593,
+    "type": "VehicleBuff",
+    "name": "대공포 대포",
+    "icon": "data/ui/2kimages/main/3dicons/narative_item/icon_blueprint_pump.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 721,
+    "type": "VehicleBuff",
+    "name": "헬륨 가스주머니",
+    "icon": "data/ui/2kimages/main/3dicons/icon_helium.png",
+    "properties": {
+      "targets": [],
+      "max_hitpoints": "+100"
+    }
+  },
+  {
+    "guid": 1764,
+    "type": "VehicleBuff",
+    "name": "헬륨 가스주머니",
+    "icon": "data/ui/2kimages/main/3dicons/icon_helium.png",
+    "properties": {
+      "targets": [],
+      "max_hitpoints": "+100",
+      "damage_receive_factor_normal": "-40%",
+      "damage_receive_factor_cannon": "-40%",
+      "forward_speed": "-20%",
+      "maintenance": "-10%",
+      "ignore_weight_factor": "-30%"
+    }
+  },
+  {
     "guid": 958,
     "type": "GuildhouseItem",
     "name": "연소 화학자",
@@ -29780,6 +32935,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/empireofskies/icon_cold_fracking_expert_a.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "하늘의 제국",
       "targets": [
         "풍부한 금광"
@@ -29805,6 +32961,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_forester_301.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "dlc_dependency": "사자의 땅",
       "targets": [
         "신대륙의 모든 우체국 및 우체통"
@@ -29840,6 +32997,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_inuit_specialist_900.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "Lodge",
       "dlc_dependency": "길",
       "targets": [
         "우체국"
@@ -30045,8 +33203,10 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/empireofskies/icon_pilot_gunner.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "AirShip",
       "attack_range": "+10",
-      "accuracy": "+10"
+      "accuracy": "+10",
+      "maintenance": "+10%"
     }
   },
   {
@@ -30056,9 +33216,11 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/empireofskies/icon_pilot_gunloader_a.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "AirShip",
       "base_damage": "+10",
       "accuracy": "+5",
-      "attack_speed": "+50%"
+      "attack_speed": "+50%",
+      "maintenance": "+5%"
     }
   },
   {
@@ -30068,7 +33230,11 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/empireofskies/icon_engineer_technican.png",
     "properties": {
       "rarity": "epic",
-      "max_hitpoints": "+500"
+      "allocation": "AirShip",
+      "max_hitpoints": "+500",
+      "maintenance": "-35%",
+      "ignore_weight_factor": "+50%",
+      "ignore_damage_factor": "+50%"
     }
   },
   {
@@ -30078,8 +33244,11 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/empireofskies/icon_engineer_mechanic.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "AirShip",
       "max_hitpoints": "+450",
-      "self_heal": "+25%"
+      "self_heal": "+25%",
+      "forward_speed": "+15%",
+      "maintenance": "+20%"
     }
   },
   {
@@ -30088,7 +33257,13 @@
     "name": "비행선 화물 적재자",
     "icon": "data/ui/2kimages/main/3dicons/specialists/empireofskies/icon_goods_loader.png",
     "properties": {
-      "rarity": "rare"
+      "rarity": "rare",
+      "allocation": "AirShip",
+      "forward_speed": "+5%",
+      "maintenance": "+30%",
+      "ignore_weight_factor": "+30%",
+      "ignore_damage_factor": "+30%",
+      "loading_speed": "+55%"
     }
   },
   {
@@ -30098,7 +33273,9 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/empireofskies/icon_copilot.png",
     "properties": {
       "rarity": "epic",
-      "accuracy": "+5"
+      "allocation": "AirShip",
+      "accuracy": "+5",
+      "maintenance": "+25%"
     }
   },
   {
@@ -30108,9 +33285,11 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/empireofskies/icon_pilot_ace.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "AirShip",
       "base_damage": "+20",
       "accuracy": "+10",
-      "attack_speed": "+25%"
+      "attack_speed": "+25%",
+      "maintenance": "+50%"
     }
   },
   {
@@ -30120,6 +33299,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_uniform_706.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "GuildHouse",
       "targets": [
         "모든 비행선 승강장"
       ],
@@ -30255,6 +33435,18 @@
     }
   },
   {
+    "guid": 101364,
+    "type": "VehicleBuff",
+    "name": "유지 관리 업무",
+    "icon": "data/ui/2kimages/main/3dicons/military_items/ico_repair_toolset.png",
+    "properties": {
+      "targets": [
+        "모든 비행선"
+      ],
+      "maintenance": "+1000"
+    }
+  },
+  {
     "guid": 101366,
     "type": "HarbourOfficeBuff",
     "name": "지시 뒤집기",
@@ -30288,6 +33480,19 @@
     }
   },
   {
+    "guid": 101375,
+    "type": "VehicleBuff",
+    "name": "세계의 무게",
+    "icon": "data/ui/2kimages/main/3dicons/consumables/item_fishbait_large_crate.png",
+    "properties": {
+      "targets": [
+        "모든 비행선"
+      ],
+      "forward_speed": "-10%",
+      "ignore_weight_factor": "+100%"
+    }
+  },
+  {
     "guid": 101377,
     "type": "HarbourOfficeBuff",
     "name": "특허 분쟁",
@@ -30298,6 +33503,19 @@
       ],
       "productivity": "-100%",
       "replacing_workforce": "탐험가 노동력"
+    }
+  },
+  {
+    "guid": 101381,
+    "type": "VehicleBuff",
+    "name": "살을 에는 추위",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_thermometer_1.png",
+    "properties": {
+      "targets": [
+        "모든 비행선"
+      ],
+      "forward_speed": "-50%",
+      "maintenance": "+20%"
     }
   },
   {
@@ -30346,7 +33564,10 @@
     "name": "실험적 엔진",
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_turbine_1.png",
     "properties": {
-      "rarity": "epic"
+      "rarity": "epic",
+      "allocation": "AirShip",
+      "forward_speed": "+33%",
+      "ignore_weight_factor": "-100%"
     }
   },
   {
@@ -30359,7 +33580,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "+500%"
+      "incident_riot": "+500%",
+      "additional_happiness": "-25"
     }
   },
   {
@@ -30372,7 +33594,24 @@
       "targets": [
         "식민지 노동자 거주지",
         "식민지 직공 거주지"
-      ]
+      ],
+      "additional_happiness": "+10",
+      "benefit_additional_happiness": {
+        "+1": [
+          "현지 우편"
+        ],
+        "+2": [
+          "지역 우편"
+        ]
+      },
+      "benefit_additional_money": {
+        "+2": [
+          "현지 우편"
+        ],
+        "+4": [
+          "지역 우편"
+        ]
+      }
     }
   },
   {
@@ -30388,6 +33627,18 @@
     }
   },
   {
+    "guid": 102261,
+    "type": "VehicleBuff",
+    "name": "유지 보수 개선",
+    "icon": "data/ui/2kimages/main/3dicons/military_items/ico_repair_toolset.png",
+    "properties": {
+      "targets": [
+        "모든 비행선"
+      ],
+      "maintenance": "-66%"
+    }
+  },
+  {
     "guid": 102263,
     "type": "HarbourOfficeBuff",
     "name": "업무의 미래",
@@ -30398,6 +33649,37 @@
       ],
       "productivity": "+50%",
       "workforce": "-50%"
+    }
+  },
+  {
+    "guid": 102276,
+    "type": "VehicleBuff",
+    "name": "밀수꾼의 지식",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/icon_hunter_pirate.png",
+    "properties": {
+      "targets": [
+        "모든 비행선"
+      ],
+      "forward_speed": "+33%",
+      "ignore_weight_factor": "-50%",
+      "loading_speed": "+50%"
+    }
+  },
+  {
+    "guid": 102313,
+    "type": "VehicleBuff",
+    "name": "전투 조언",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/icon_specialist_captain_legendary_pirate.png",
+    "properties": {
+      "targets": [
+        "모든 비행선"
+      ],
+      "max_hitpoints": "+50%",
+      "self_heal": "+100%",
+      "damage_receive_factor_normal": "-25%",
+      "damage_receive_factor_torpedo": "-25%",
+      "damage_receive_factor_cannon": "-25%",
+      "damage_receive_factor_bigbertha": "-25%"
     }
   },
   {
@@ -30870,9 +34152,30 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_screw_propeller_2.png",
     "properties": {
       "rarity": "quest",
+      "allocation": "AarhantShip",
       "action_cooldown": "00:15",
       "action_duration": "00:10",
       "active_buff": 105865
+    }
+  },
+  {
+    "guid": 105649,
+    "type": "VehicleBuff",
+    "name": "전투 뿔피리 마법",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fog_horn.png",
+    "properties": {
+      "targets": []
+    }
+  },
+  {
+    "guid": 105865,
+    "type": "VehicleBuff",
+    "name": "과동력 프로펠러 부스트",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_screw_propeller_2.png",
+    "properties": {
+      "targets": [],
+      "forward_speed": "+200%",
+      "ignore_weight_factor": "-100%"
     }
   },
   {
@@ -31009,6 +34312,7 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_shepherd_510.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "HarborOffice",
       "dlc_dependency": "떠오르는 신대륙",
       "targets": [
         "모든 양어장"
@@ -31056,8 +34360,12 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_hunter_401.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "TownHall",
       "dlc_dependency": "떠오르는 신대륙",
-      "targets": [],
+      "targets": [
+        "경찰 본부"
+      ],
+      "unit": "경찰관",
       "productivity": "-50%",
       "replaced_inputs": [
         {
@@ -31065,7 +34373,8 @@
           "new": "고급 무기"
         }
       ],
-      "maintenance": "+50%"
+      "maintenance": "+50%",
+      "resolver_unit_count": "+4"
     }
   },
   {
@@ -31485,8 +34794,9 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_insect_proof_net.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "targets": [
-        "모든 중공업 건물"
+        "모든 주거지"
       ],
       "good_consumption": [
         "생선 -10%",
@@ -31504,8 +34814,9 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_sturdy_greenhouse.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "TownHall",
       "targets": [
-        "모든 중공업 건물"
+        "모든 주거지"
       ],
       "good_consumption": [
         "생선 -20%",
@@ -31626,8 +34937,9 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_curator_702.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "TownHall",
       "targets": [
-        "모든 중공업 건물"
+        "모든 주거지"
       ],
       "good_consumption": [
         "작업복 -10%",
@@ -31643,8 +34955,9 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_teacher_823.png",
     "properties": {
       "rarity": "legendary",
+      "allocation": "TownHall",
       "targets": [
-        "모든 중공업 건물"
+        "모든 주거지"
       ],
       "good_consumption": [
         "작업복 -20%",
@@ -31821,11 +35134,19 @@
     "properties": {
       "rarity": "uncommon",
       "targets": [
-        "모든 중공업 건물"
+        "모든 주거지"
       ],
       "good_consumption": [
         "생선 +100%"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "플랜테인"
+        ],
+        "subtitute_needs": [
+          "생선"
+        ]
+      }
     }
   },
   {
@@ -31836,11 +35157,19 @@
     "properties": {
       "rarity": "uncommon",
       "targets": [
-        "모든 중공업 건물"
+        "모든 주거지"
       ],
       "good_consumption": [
         "토르티야 +100%"
-      ]
+      ],
+      "need_provide_need": {
+        "provide_needs": [
+          "럼주"
+        ],
+        "subtitute_needs": [
+          "토르티야"
+        ]
+      }
     }
   },
   {
@@ -31961,8 +35290,9 @@
     "icon": "data/ui/2kimages/main/3dicons/plants/icon_vines.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "TownHall",
       "targets": [
-        "모든 중공업 건물"
+        "모든 주거지"
       ]
     }
   },
@@ -31973,8 +35303,9 @@
     "icon": "data/ui/2kimages/main/3dicons/plants/item_bodhi_tree.png",
     "properties": {
       "rarity": "rare",
+      "allocation": "TownHall",
       "targets": [
-        "모든 중공업 건물"
+        "모든 주거지"
       ]
     }
   },
@@ -31985,8 +35316,9 @@
     "icon": "data/ui/2kimages/main/3dicons/plants/icon_tulsi.png",
     "properties": {
       "rarity": "epic",
+      "allocation": "TownHall",
       "targets": [
-        "모든 중공업 건물"
+        "모든 주거지"
       ]
     }
   },
@@ -32207,6 +35539,7 @@
     "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_insect_proof_net.png",
     "properties": {
       "rarity": "uncommon",
+      "allocation": "TownHall",
       "targets": [
         "학자 주거지를 제외한 모든 구대륙 주거지"
       ],
@@ -32269,6 +35602,28 @@
       ],
       "base_damage": "+15%",
       "max_hitpoints": "+600"
+    }
+  },
+  {
+    "guid": 13648,
+    "type": "ShipSpecialist",
+    "name": "명예를 회복한 베테랑",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_artillerist_101.png",
+    "properties": {
+      "rarity": "rare",
+      "forward_speed": "+15%",
+      "ignore_damage_factor": "-60%"
+    }
+  },
+  {
+    "guid": 13302,
+    "type": "ShipSpecialist",
+    "name": "중개인 키르나 박사",
+    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_travelagent_516.png",
+    "properties": {
+      "rarity": "epic",
+      "ignore_weight_factor": "-80%",
+      "trade_price": "-10%"
     }
   },
   {
