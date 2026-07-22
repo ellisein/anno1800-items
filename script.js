@@ -837,4 +837,13 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
     });
 });
 
+window.addEventListener('scroll', () => {
+    const searchContainer = document.querySelector('.search-container');
+    if (window.scrollY > 102) {
+        searchContainer.classList.add('scrolled');
+    } else {
+        searchContainer.classList.remove('scrolled');
+    }
+});
+
 fetchItems();

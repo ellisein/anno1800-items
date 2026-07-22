@@ -25,16 +25,27 @@
 }
 
 body {
+    background-image: url('data/ui/2kimages/main/assets/bgr_attractivenessmenu.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     background-color: var(--bg-dark);
     color: var(--text-main);
     font-family: 'MDChamGothicL_NC', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
 header {
     text-align: center;
-    margin-bottom: 30px;
+    padding: 50px 20px 20px 20px;
+}
+
+h1 {
+    color: #333333;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .inline {
@@ -42,16 +53,51 @@ header {
     align-items: center;
 }
 
+.search-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-container.scrolled {
+    background-color: rgba(27, 32, 37, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(198, 162, 93, 0.3); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px 20px;
+}
+
 #searchInput {
     width: 100%;
     max-width: 600px;
-    padding: 15px;
-    font-size: 16px;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-gold);
-    color: white;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-family: inherit;
+    background-color: rgba(42, 44, 39, 0.85);
+    border: 2px solid var(--border-gold);
+    color: var(--text-gold);
     border-radius: 4px;
     box-sizing: border-box;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+#searchInput::placeholder {
+    color: var(--text-gold-muted);
+}
+
+#searchInput:focus {
+    outline: none;
+    background-color: rgba(42, 44, 39, 1);
+    border-color: var(--text-highlight);
+    box-shadow: 0 0 15px rgba(198, 162, 93, 0.5), 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .item-grid {
@@ -60,6 +106,7 @@ header {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 60px;
 }
 
 .item-card {
@@ -69,6 +116,12 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
 }
 
 .item-card.legendary { --rarity-color: var(--color-legendary); }
@@ -76,8 +129,6 @@ header {
 .item-card.rare { --rarity-color: var(--color-rare); }
 .item-card.uncommon { --rarity-color: var(--color-uncommon); }
 .item-card.common { --rarity-color: var(--color-common); }
-
-.item-card
 
 .card-header {
     display: flex;
