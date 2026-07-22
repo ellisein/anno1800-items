@@ -736,7 +736,7 @@ function renderItems(items) {
                 }
             }
         }
-        const typeHtml = typeText ? `<li class="inline"><img src="${typeSource}" alt="icon" class="type-icon"/><b class="text-highlight">${typeText}</b>에 배치</li>` : '';
+        const typeHtml = typeText ? `<li class="inline"><img src="${typeSource}" alt="icon" class="type-icon"/><span class="text-highlight">${typeText}</span>에 배치</li>` : '';
 
         let targetText = "";
         if (item.properties.targets && item.properties.targets.length > 0) {
