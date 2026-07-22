@@ -92,6 +92,22 @@ const renderTemplate = {
         } else {
             return `<li><span class="item-property-key">${conf.label}</span> ${val}</li>`;
         }
+    },
+
+    nomargin: (conf, val) => {
+        if (typeof val === 'boolean') {
+            return val ? `
+                <li class="inline margin-0">
+                    <img src="${conf.icon}" alt="icon" class="category-icon"/>
+                    <span class="item-property-key">${conf.label}</span>
+                </li>` : '';
+        } else {
+            return `
+                <li class="inline margin-0">
+                    <img src="${conf.icon}" alt="icon" class="category-icon"/>
+                    <span class="item-property-key">${conf.label}</span> ${val}
+                </li>`;
+        }
     }
 };
 
@@ -473,7 +489,8 @@ const PROPERTY_CONFIGS = {
     },
     'gen_probability': {
         label: '항구 활동',
-        icon: 'data/ui/2kimages/main/icons/icon_activate_trade.png'
+        icon: 'data/ui/2kimages/main/icons/icon_activate_trade.png',
+        render: (conf, val) => renderTemplate.nomargin(conf, val)
     },
     'reward_pool': {
         label: null,
