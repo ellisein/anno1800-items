@@ -1,6 +1,19 @@
 import xml.etree.ElementTree as ET
 import json
 
+TEMPLATES = [
+    # Items
+    'GuildhouseItem',
+    'VehicleItem',
+    'ActiveItem',
+    'HarborOfficeItem',
+    'TownhallItem',
+
+    # Additional data
+    'HarbourOfficeBuff',
+    'RewardPool'
+];
+
 def load_korean_texts(xml_path):
     print("1/3: Loading Korean translations from texts_korean.xml...")
     texts_dict = {}
@@ -27,17 +40,21 @@ def extract_items_data(assets_path, texts_dict):
         if elem.tag == 'Asset':
             template = elem.findtext('Template')
 
-            # ['GuildhouseItem', 'VehicleItem', 'ActiveItem', 'HarborOfficeItem', 'CultureItem', 'TownhallItem']
-            if template and template in ['GuildhouseItem', 'HarborOfficeItem']:
+            if template and template in TEMPLATES:
                 standard = elem.find('./Values/Standard')
 
                 if standard is not None:
                     item_guid = standard.findtext('GUID')
                     icon_path = standard.findtext('IconFilename')
 
-                    if item_guid and item_guid in texts_dict and icon_path:
-                        item_name = texts_dict[item_guid]
+                    if icon_path:
                         icon_path = icon_path.replace('\\', '/')
+
+                    if item_guid:
+                        if item_guid in texts_dict:
+                            item_name = texts_dict[item_guid]
+                        else:
+                            item_name = None
 
                         item_properties = {}
 
@@ -62,6 +79,23 @@ def extract_items_data(assets_path, texts_dict):
                                 target_guid = target.findtext('GUID')
                                 if target_guid and target_guid in texts_dict:
                                     item_properties['targets'].append(texts_dict[target_guid])
+
+                        item_action_node = elem.find('./Values/ItemAction')
+                        if item_action_node is not None:
+                            # 재사용 대기시간 (action_cooldown)
+                            action_cooldown = item_action_node.findtext('ActionCooldown')
+                            if action_cooldown:
+                                item_properties['action_cooldown'] = format_time_ms(action_cooldown)
+
+                            # 지속 시간 (action_duration)
+                            action_duration = item_action_node.findtext('ActionDuration')
+                            if action_duration:
+                                item_properties['action_duration'] = format_time_ms(action_duration)
+
+                            # 활성 버프
+                            active_buff = item_action_node.findtext('ActiveBuff')
+                            if active_buff:
+                                item_properties['active_buff'] = int(active_buff)
 
                         factory_upgrade_node = elem.find('./Values/FactoryUpgrade')
                         if factory_upgrade_node is not None:
@@ -170,21 +204,25 @@ def extract_items_data(assets_path, texts_dict):
                             # 화재 확률 (incident_fire)
                             incident_fire = get_value(incident_infectable_upgrade_node.find('IncidentFireIncreaseUpgrade'))
                             if incident_fire:
+                                if not incident_fire.endswith('%'): incident_fire += '0%'
                                 item_properties['incident_fire'] = incident_fire
 
                             # 질병 확률 (incident_illness)
                             incident_illness = get_value(incident_infectable_upgrade_node.find('IncidentIllnessIncreaseUpgrade'))
                             if incident_illness:
+                                if not incident_illness.endswith('%'): incident_illness += '0%'
                                 item_properties['incident_illness'] = incident_illness
 
                             # 폭동 확률 (incident_riot)
                             incident_riot = get_value(incident_infectable_upgrade_node.find('IncidentRiotIncreaseUpgrade'))
                             if incident_riot:
+                                if not incident_riot.endswith('%'): incident_riot += '0%'
                                 item_properties['incident_riot'] = incident_riot
 
                             # 폭발 확률 (incident_explosion)
                             incident_explosion = get_value(incident_infectable_upgrade_node.find('IncidentExplosionIncreaseUpgrade'))
                             if incident_explosion:
+                                if not incident_explosion.endswith('%'): incident_explosion += '0%'
                                 item_properties['incident_explosion'] = incident_explosion
 
                         culture_upgrade_node = elem.find('./Values/CultureUpgrade')
@@ -253,9 +291,12 @@ def extract_items_data(assets_path, texts_dict):
                         passive_trade_good_gen_upgrade_node = elem.find('./Values/PassiveTradeGoodGenUpgrade')
                         if passive_trade_good_gen_upgrade_node is not None:
                             # 항구 활동 (gen_probability)
-                            gen_probability = get_value(passive_trade_good_gen_upgrade_node.find('GenProbability'), force_percental=True)
+                            gen_probability = get_value(passive_trade_good_gen_upgrade_node.find('GenProbability'), force_percental=True, hide_sign=True)
                             if gen_probability:
                                 item_properties['gen_probability'] = gen_probability
+                            gen_pool = passive_trade_good_gen_upgrade_node.findtext('GenPool')
+                            if gen_pool:
+                                item_properties['gen_pool'] = int(gen_pool)
                             
                         kontor_upgrade_node = elem.find('./Values/KontorUpgrade')
                         if kontor_upgrade_node is not None:
@@ -283,6 +324,11 @@ def extract_items_data(assets_path, texts_dict):
 
                         attacker_upgrade_node = elem.find('./Values/AttackerUpgrade')
                         if attacker_upgrade_node is not None:
+                            # 포탄당 피해량 (base_damage)
+                            base_damage = get_value(attacker_upgrade_node.find('BaseDamageUpgrade'))
+                            if base_damage:
+                                item_properties['base_damage'] = base_damage
+
                             # 사거리 (attack_range)
                             attack_range = get_value(attacker_upgrade_node.find('AttackRangeUpgrade'))
                             if attack_range:
@@ -298,6 +344,25 @@ def extract_items_data(assets_path, texts_dict):
                             if accuracy:
                                 item_properties['accuracy'] = accuracy
 
+                            # 공격 속도 (attack_speed)
+                            attack_speed = get_value(attacker_upgrade_node.find('AttackSpeedUpgrade'), force_percental=True)
+                            if attack_speed:
+                                item_properties['attack_speed'] = attack_speed
+
+                            # 기개 (morale_damage)
+                            morale_damage = attacker_upgrade_node.find('MoraleDamage')
+                            if morale_damage is not None:
+                                item = morale_damage.find('Item')
+                                if item is not None:
+                                    item_properties['morale_damage'] = get_factor(item, field_name='MinDamageFactor')
+
+                            # 불굴 (hitpoint_damage)
+                            hitpoint_damage = attacker_upgrade_node.find('HitpointDamage')
+                            if hitpoint_damage is not None:
+                                item = hitpoint_damage.find('Item')
+                                if item is not None:
+                                    item_properties['hitpoint_damage'] = get_factor(item, field_name='MinDamageFactor')
+
                         attackable_upgrade_node = elem.find('./Values/AttackableUpgrade')
                         if attackable_upgrade_node is not None:
                             # HP (max_hitpoints)
@@ -305,21 +370,55 @@ def extract_items_data(assets_path, texts_dict):
                             if max_hitpoint:
                                 item_properties['max_hitpoints'] = max_hitpoint
 
+                            # 자가 수리 (self_heal)
+                            self_heal = get_value(attackable_upgrade_node.find('SelfHealUpgrade'))
+                            if self_heal:
+                                item_properties['self_heal'] = self_heal
+
+                            # 수리 개시 (self_heal_paused_time_if_attacked)
+                            self_heal_paused_time_if_attacked = get_value(attackable_upgrade_node.find('SelfHealPausedTimeIfAttackedUpgrade'))
+                            if self_heal_paused_time_if_attacked:
+                                item_properties['self_heal_paused_time_if_attacked'] = self_heal_paused_time_if_attacked
+
                             # 받는 피해 (damage_receive_factor)
-                            factor = attackable_upgrade_node.find('DamageReceiveFactor')
-                            if factor is not None:
-                                normal = factor.find('Normal')
+                            damage_receive_factor = attackable_upgrade_node.find('DamageReceiveFactor')
+                            if damage_receive_factor is not None:
+                                normal = damage_receive_factor.find('Normal')
                                 if normal is not None:
                                     item_properties['damage_receive_factor_normal'] = get_factor(normal)
-                                torpedo = factor.find('Torpedo')
+                                torpedo = damage_receive_factor.find('Torpedo')
                                 if torpedo is not None:
                                     item_properties['damage_receive_factor_torpedo'] = get_factor(torpedo)
-                                cannon = factor.find('Cannon')
+                                cannon = damage_receive_factor.find('Cannon')
                                 if cannon is not None:
                                     item_properties['damage_receive_factor_cannon'] = get_factor(cannon)
-                                bigbertha = factor.find('BigBertha')
+                                bigbertha = damage_receive_factor.find('BigBertha')
                                 if bigbertha is not None:
                                     item_properties['damage_receive_factor_bigbertha'] = get_factor(bigbertha)
+
+                            # 사기 (morale_power)
+                            morale_power = get_value(attackable_upgrade_node.find('MoralePowerUpgrade'))
+                            if morale_power:
+                                item_properties['morale_power'] = morale_power
+
+                        irrigation_upgrade_node = elem.find('./Values/IrrigationUpgrade')
+                        if irrigation_upgrade_node is not None:
+                            # 관개 시설 수용량 (pipe_capacity)
+                            pipe_capacity = get_value(irrigation_upgrade_node.find('PipeCapacityUpgrade'))
+                            if pipe_capacity:
+                                item_properties['pipe_capacity'] = pipe_capacity
+
+                        reward_pool_node = elem.find('./Values/RewardPool')
+                        if reward_pool_node is not None:
+                            items = []
+                            for item in reward_pool_node.findall('ItemsPool/Item'):
+                                item_link = item.findtext('ItemLink')
+                                if item_link and item_link in texts_dict:
+                                    name = texts_dict[item_link]
+                                    if name:
+                                        items.append(name)
+                            if len(items) > 0:
+                                item_properties['reward_pool'] = items
 
                         items_list.append({
                             "guid": int(item_guid),
@@ -334,7 +433,7 @@ def extract_items_data(assets_path, texts_dict):
     print(f" -> Extracted {len(items_list):,} items.\n")
     return items_list
 
-def get_value(node, force_percental=False, reverse_sign=False):
+def get_value(node, force_percental=False, reverse_sign=False, hide_sign=False):
     if node is None:
         return None
     
@@ -353,25 +452,42 @@ def get_value(node, force_percental=False, reverse_sign=False):
         val_int = int(val)
         if reverse_sign:
             val_int = -val_int
-        prefix = "+" if val_int > 0 else ""
+        prefix = "+" if val_int > 0 and not hide_sign else ""
         suffix = "%" if is_percental else ""
         return f"{prefix}{val_int}{suffix}"
     except ValueError:
         return val
     
-def get_factor(node):
+def get_factor(node, field_name='Factor'):
     if node is None:
         return None
     
-    factor = node.findtext('Factor')
+    factor = node.findtext(field_name)
     if factor is None:
         factor = node.text
 
     try:
         factor_float = float(factor)
-        return f"{(int)(factor_float*100)}%"
+        factor_int = (int)(factor_float * 100) - 100
+        prefix = "+" if factor_int > 0 else ""
+        return f"{prefix}{factor_int}%"
     except ValueError:
         return factor
+    
+def format_time_ms(ms):
+    try:
+        total_seconds = int(ms) // 1000
+    except (ValueError, TypeError):
+        return ms
+
+    hours = total_seconds // 3600
+    minutes = (total_seconds % 3600) // 60
+    seconds = total_seconds % 60
+
+    if hours > 0:
+        return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+    else:
+        return f"{minutes:02d}:{seconds:02d}"
 
 def save_to_json(data, output_path):
     print(f"3/3: Saving data to {output_path}...")

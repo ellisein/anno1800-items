@@ -51,6 +51,12 @@ const renderTemplate = {
         return html + `</li>`;
     },
 
+    nolabel: (conf, text) => {
+        return `<li>
+            <div class="indented text-muted">${text}</div>
+        </li>`;
+    },
+
     noicon: (conf, val) => {
         if (typeof val === 'boolean') {
             return val ? `<li><span class="item-property-key">${conf.label}</span></li>` : '';
@@ -61,6 +67,14 @@ const renderTemplate = {
 };
 
 const PROPERTY_CONFIGS = {
+    'pipe_capacity': {
+        label: '관개 시설 수용량',
+        icon: 'data/ui/2kimages/main/icons/icon_water_drop.png'
+    },
+    'construction_cost': {
+        label: '건설 비용',
+        icon: 'data/ui/2kimages/main/icons/icon_big_shipyard_2d.png'
+    },
     'productivity': {
         label: '생산성',
         icon: 'data/ui/2kimages/main/icons/icon_options.png'
@@ -72,10 +86,6 @@ const PROPERTY_CONFIGS = {
     'maintenance': {
         label: '유지비',
         icon: 'data/ui/2kimages/main/icons/icon_resource_money_4.png'
-    },
-    'construction_cost': {
-        label: '건설 비용',
-        icon: 'data/ui/2kimages/main/icons/icon_sail_shipyard_2d.png'
     },
     'industrialization': {
         label: '전기 제공',
@@ -112,23 +122,24 @@ const PROPERTY_CONFIGS = {
     },
     'spawn_probability': {
         label: '방문 증가',
-        icon: 'data/ui/2kimages/main/icons/icon_increase_population_2.png'
+        icon: 'data/ui/2kimages/main/icons/icon_add_slot_guild.png',
+        render: (conf, val) => renderTemplate.subtext(conf, val, `전문가가 도시를 방문할 확률이 증가합니다.`)
     },
     'module_limit': {
         label: '모듈 수',
         icon: 'data/ui/2kimages/main/3dicons/icon_general_module_01.png'
     },
-    'heal_radius': {
-        label: '수리 반경',
-        icon: 'data/ui/2kimages/main/icons/icon_repair_crane_2d.png'
-    },
     'heal_per_minute': {
         label: '수리 속도',
-        icon: 'data/ui/2kimages/main/icons/icon_repair_crane_2d.png'
+        icon: 'data/ui/2kimages/main/icons/icon_build_menu.png'
     },
-    'max_hitpoints': {
-        label: 'HP',
-        icon: 'data/ui/2kimages/main/icons/icon_hitpoints.png'
+    'heal_radius': {
+        label: '수리 반경',
+        icon: 'data/ui/2kimages/main/icons/icon_build_menu.png'
+    },
+    'base_damage': {
+        label: '포탄당 피해량',
+        icon: 'data/ui/2kimages/main/icons/icon_damage.png'
     },
     'attack_range': {
         label: '사거리',
@@ -138,25 +149,46 @@ const PROPERTY_CONFIGS = {
         label: '시야 범위',
         icon: 'data/ui/2kimages/main/icons/icon_go_to.png'
     },
+    'attack_speed': {
+        label: '공격 속도',
+        icon: 'data/ui/2kimages/main/icons/icon_go_to.png'
+    },
+    'max_hitpoints': {
+        label: 'HP',
+        icon: 'data/ui/2kimages/main/icons/icon_hitpoints.png'
+    },
+    'self_heal': {
+        label: '자가 수리',
+        icon: 'data/ui/2kimages/main/icons/icon_hitpoints.png'
+    },
+    'self_heal_paused_time_if_attacked': {
+        label: '수리 개시',
+        icon: 'data/ui/2kimages/main/icons/icon_morale_01.png',
+        render: (conf, val) => renderTemplate.subtext(conf, true, `구조물과 배가 전투 중에도 자동으로 수리됩니다.`)
+    },
+    'morale_power': {
+        label: '사기',
+        icon: 'data/ui/2kimages/main/icons/icon_morale_01.png'
+    },
     'accuracy': {
         label: '명중률',
         icon: 'data/ui/2kimages/main/icons/icon_diplomacy_options_support_fleet.png'
     },
     'damage_receive_factor_normal': {
         label: '함선에게 받는 피해',
-        icon: 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png'
+        icon: 'data/ui/2kimages/main/icons/icon_stance_attack.png'
     },
     'damage_receive_factor_torpedo': {
         label: '어뢰에게 받는 피해',
-        icon: 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png'
+        icon: 'data/ui/2kimages/main/icons/icon_stance_attack.png'
     },
     'damage_receive_factor_cannon': {
         label: '해안 포대에게 받는 피해',
-        icon: 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png'
+        icon: 'data/ui/2kimages/main/icons/icon_stance_attack.png'
     },
     'damage_receive_factor_bigbertha': {
         label: '빅 베티에게 받는 피해',
-        icon: 'data/ui/2kimages/main/icons/icon_armor_damage_ammunition.png'
+        icon: 'data/ui/2kimages/main/icons/icon_stance_attack.png'
     },
     'replacing_workforce': {
         label: '대체 노동력',
@@ -196,17 +228,14 @@ const PROPERTY_CONFIGS = {
         icon: '',
         render: (conf, val) => renderTemplate.noicon(conf, val)
     },
-    'gen_probability': {
-        label: '항구 활동',
-        icon: 'data/ui/2kimages/main/icons/icon_activate_trade.png'
-    },
     'pier_speed': {
         label: '화물 선적 속도',
         icon: 'data/ui/2kimages/main/icons/icon_load_ships.png'
     },
     'block_buy_share': {
         label: '지분 거래 금지',
-        icon: 'data/ui/2kimages/main/icons/icon_untic.png'
+        icon: 'data/ui/2kimages/main/icons/icon_untic.png',
+        render: (conf, val) => renderTemplate.subtext(conf, true, `해당 효과가 섬의 교역소에 적용되는 동안 섬의 지분 거래를 막아서 다른 세력이 당신의 지분을 구매하지 못하게 만듭니다.`)
     },
     'block_hostile_takeover': {
         label: '인수 금지',
@@ -214,7 +243,18 @@ const PROPERTY_CONFIGS = {
     },
     'happiness_ignores_morale': {
         label: '강철 의지',
-        icon: 'data/ui/2kimages/main/icons/icon_happy.png'
+        icon: 'data/ui/2kimages/main/icons/icon_happy.png',
+        render: (conf, val) => renderTemplate.subtext(conf, true, `전쟁을 치르는 동안에는 사기 저하로 인해 주민 행복도가 감소하지 않습니다.`)
+    },
+    'morale_damage': {
+        label: '기개',
+        icon: 'data/ui/2kimages/main/icons/icon_morale_loss.png',
+        render: (conf, val) => renderTemplate.subtext(conf, true, `섬의 사기가 낮을 때 군사 건물이 입히는 피해량이 증가합니다.`)
+    },
+    'hitpoint_damage': {
+        label: '불굴',
+        icon: 'data/ui/2kimages/main/icons/icon_hitpoints.png',
+        render: (conf, val) => renderTemplate.subtext(conf, true, `군사 건물의 HP가 낮을 때 입히는 피해량이 증가합니다.`)
     },
     'add_assembly_options': {
         label: '배 도면',
@@ -223,6 +263,34 @@ const PROPERTY_CONFIGS = {
             if (!Array.isArray(val) || val.length === 0) return '';
             return renderTemplate.subtext(conf, true, `${val.join(', ')}을(를) 건조할 수 있습니다.`);
         }
+    },
+    'gen_probability': {
+        label: '항구 활동',
+        icon: 'data/ui/2kimages/main/icons/icon_activate_trade.png'
+    },
+    'reward_pool': {
+        label: null,
+        icon: null,
+        render: (conf, val) => {
+            if (!Array.isArray(val) || val.length === 0) return '';
+            itemsText = '';
+            if (val.length === 1) {
+                itemsText += val[0];
+            } else {
+                const lastItem = val[val.length - 1];
+                const otherItems = val.slice(0, -1).join(', ');
+                itemsText += `${otherItems}, 또는 ${lastItem}`;
+            }
+            return renderTemplate.nolabel(conf, `교역소에서 소극적인 거래가 발생할 때마다 일정 확률로 ${itemsText} 5톤을 얻습니다.`);
+        }
+    },
+    'action_duration': {
+        label: '지속 시간',
+        icon: 'data/ui/2kimages/main/icons/icon_timer.png'
+    },
+    'action_cooldown': {
+        label: '재사용 대기시간',
+        icon: 'data/ui/2kimages/main/icons/icon_wait_till_full_light.png'
     }
 };
 
@@ -238,12 +306,28 @@ async function fetchItems() {
     try {
         const response = await fetch('items.json');
         const rawData = await response.json();
+
+        const rawMap = new Map(rawData.map(i => [i.guid, i]));
         
         allItems = rawData.map(item => {
             const keywords = [];
             
             if (item.name) {
                 keywords.push(item.name);
+            }
+
+            if (item.properties && item.properties.active_buff) {
+                const buff = rawMap.get(item.properties.active_buff);
+                if (buff && buff.properties) {
+                    Object.assign(item.properties, buff.properties);
+                }
+            }
+
+            if (item.properties && item.properties.gen_pool) {
+                const pool = rawMap.get(item.properties.gen_pool);
+                if (pool && pool.properties) {
+                    Object.assign(item.properties, pool.properties);
+                }
             }
 
             if (item.properties) {
@@ -299,6 +383,10 @@ function renderItems(items) {
     grid.innerHTML = '';
 
     items.forEach(item => {
+        if (!item.type || !item.type.endsWith('Item')) {
+            return;
+        }
+
         let propertiesHtml = '';
         if (item.properties) {
             for (const key of Object.keys(PROPERTY_CONFIGS)) {
@@ -334,12 +422,16 @@ function renderItems(items) {
 
         let targetText = "";
         if (item.properties.targets && item.properties.targets.length > 0) {
+            if (item.properties.active_buff) {
+                targetText += '활성화 시 ';
+            }
+
             if (item.properties.targets.length === 1) {
-                targetText = item.properties.targets[0];
+                targetText += item.properties.targets[0];
             } else {
                 const lastItem = item.properties.targets[item.properties.targets.length - 1];
                 const otherItems = item.properties.targets.slice(0, -1).join(', ');
-                targetText = `${otherItems}, 그리고 ${lastItem}`;
+                targetText += `${otherItems}, 그리고 ${lastItem}`;
             }
         }
         const targetsHtml = targetText ? `<li class="text-muted">${targetText}에 영향</li>` : '';
@@ -349,6 +441,9 @@ function renderItems(items) {
         const card = document.createElement('div');
         card.className = `item-card ${item.properties.rarity}`;
         card.innerHTML = `
+            <div class="flex-end">
+                <span class="item-id">${item.guid}</span>
+            </div>
             <div class="card-header">
                 <img src="${iconPath}" alt="icon" class="item-icon"/>
                 <div class="w-100">
@@ -399,6 +494,10 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
     const decomposedKeyword = decomposeKorean(keyword);
 
     allItems.forEach(item => {
+        if (!item.element) {
+            return;
+        }
+
         if (!keyword) {
             item.element.style.display = ''; 
             return;
