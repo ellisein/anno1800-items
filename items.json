@@ -5257,9 +5257,9 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_201.png",
     "properties": {
       "rarity": "epic",
+      "active_buff": 191595,
       "action_cooldown": "01:00",
       "action_duration": "00:30",
-      "active_buff": 191595,
       "self_heal_paused_time_if_attacked": "-100%",
       "damage_receive_factor_normal": "-20%"
     }
@@ -5271,8 +5271,6 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_402.png",
     "properties": {
       "rarity": "epic",
-      "action_cooldown": "00:15",
-      "action_duration": "00:05",
       "self_heal": "+400%",
       "forward_speed": "+20%"
     }
@@ -5284,8 +5282,6 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_401.png",
     "properties": {
       "rarity": "legendary",
-      "action_cooldown": "01:00",
-      "action_duration": "00:15",
       "max_hitpoints": "+1000",
       "self_heal_paused_time_if_attacked": "-100%",
       "ignore_damage_factor": "-100%"
@@ -6038,8 +6034,6 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_captain_103.png",
     "properties": {
       "rarity": "epic",
-      "action_cooldown": "01:00",
-      "action_duration": "00:05",
       "max_hitpoints": "+800",
       "self_heal_paused_time_if_attacked": "-100%"
     }
@@ -6063,7 +6057,6 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_uniform_504.png",
     "properties": {
       "rarity": "epic",
-      "action_duration": "00:02",
       "attack_range": "+10%",
       "forward_speed": "+15%"
     }
@@ -6110,8 +6103,8 @@
     "icon": "data/ui/2kimages/main/3dicons/specialists/icon_specialist_captain_legendary_pirate.png",
     "properties": {
       "rarity": "legendary",
-      "action_cooldown": "00:30",
       "active_buff": 191859,
+      "action_cooldown": "00:30",
       "self_heal_paused_time_if_attacked": "-100%",
       "damage_receive_factor_normal": "-25%"
     }
@@ -8278,9 +8271,9 @@
     "properties": {
       "rarity": "uncommon",
       "allocation": "SteamShip",
+      "active_buff": 191835,
       "action_cooldown": "00:45",
-      "action_duration": "00:30",
-      "active_buff": 191835
+      "action_duration": "00:30"
     }
   },
   {
@@ -8291,9 +8284,9 @@
     "properties": {
       "rarity": "rare",
       "allocation": "SteamShip",
+      "active_buff": 191836,
       "action_cooldown": "00:45",
-      "action_duration": "00:30",
-      "active_buff": 191836
+      "action_duration": "00:30"
     }
   },
   {
@@ -8304,9 +8297,9 @@
     "properties": {
       "rarity": "epic",
       "allocation": "SteamShip",
+      "active_buff": 191837,
       "action_cooldown": "00:45",
-      "action_duration": "00:30",
-      "active_buff": 191837
+      "action_duration": "00:30"
     }
   },
   {
@@ -8347,9 +8340,9 @@
     "properties": {
       "rarity": "uncommon",
       "allocation": "Ship",
+      "active_buff": 191981,
       "action_cooldown": "05:00",
-      "action_duration": "00:30",
-      "active_buff": 191981
+      "action_duration": "00:30"
     }
   },
   {
@@ -8360,9 +8353,9 @@
     "properties": {
       "rarity": "rare",
       "allocation": "Ship",
+      "active_buff": 192156,
       "action_cooldown": "05:00",
-      "action_duration": "00:30",
-      "active_buff": 192156
+      "action_duration": "00:30"
     }
   },
   {
@@ -8373,9 +8366,9 @@
     "properties": {
       "rarity": "epic",
       "allocation": "Ship",
+      "active_buff": 191983,
       "action_cooldown": "05:00",
-      "action_duration": "00:30",
-      "active_buff": 191983
+      "action_duration": "00:30"
     }
   },
   {
@@ -8386,9 +8379,9 @@
     "properties": {
       "rarity": "legendary",
       "allocation": "Ship",
+      "active_buff": 192157,
       "action_cooldown": "05:00",
-      "action_duration": "00:30",
-      "active_buff": 192157
+      "action_duration": "00:30"
     }
   },
   {
@@ -8551,9 +8544,9 @@
     "properties": {
       "rarity": "epic",
       "allocation": "Warship",
+      "active_buff": 192174,
       "action_cooldown": "20:00",
-      "action_duration": "05:00",
-      "active_buff": 192174
+      "action_duration": "05:00"
     }
   },
   {
@@ -8564,9 +8557,9 @@
     "properties": {
       "rarity": "legendary",
       "allocation": "Warship",
+      "active_buff": 192175,
       "action_cooldown": "20:00",
-      "action_duration": "05:00",
-      "active_buff": 192175
+      "action_duration": "05:00"
     }
   },
   {
@@ -8693,9 +8686,9 @@
       "targets": [
         "모든 방어 포탑"
       ],
+      "active_buff": 192176,
       "action_cooldown": "20:00",
       "action_duration": "03:00",
-      "active_buff": 192176,
       "maintenance": "+15%"
     }
   },
@@ -8709,9 +8702,9 @@
       "targets": [
         "모든 방어 포탑"
       ],
+      "active_buff": 191891,
       "action_cooldown": "20:00",
-      "action_duration": "03:00",
-      "active_buff": 191891
+      "action_duration": "03:00"
     }
   },
   {
@@ -8724,9 +8717,9 @@
       "targets": [
         "모든 방어 포탑"
       ],
+      "active_buff": 191892,
       "action_cooldown": "20:00",
-      "action_duration": "03:00",
-      "active_buff": 191892
+      "action_duration": "03:00"
     }
   },
   {
@@ -8739,9 +8732,9 @@
       "targets": [
         "모든 방어 포탑"
       ],
+      "active_buff": 191893,
       "action_cooldown": "20:00",
-      "action_duration": "03:00",
-      "active_buff": 191893
+      "action_duration": "03:00"
     }
   },
   {
@@ -8892,8 +8885,8 @@
     "properties": {
       "rarity": "common",
       "allocation": "Ship",
-      "action_duration": "03:30",
-      "active_buff": 192156
+      "active_buff": 192156,
+      "action_duration": "03:30"
     }
   },
   {
@@ -8904,8 +8897,8 @@
     "properties": {
       "rarity": "uncommon",
       "allocation": "Ship",
-      "action_duration": "05:00",
-      "active_buff": 192157
+      "active_buff": 192157,
+      "action_duration": "05:00"
     }
   },
   {
@@ -22534,9 +22527,9 @@
     "properties": {
       "rarity": "epic",
       "allocation": "Warship",
+      "active_buff": 192174,
       "action_cooldown": "00:30",
-      "action_duration": "30:00",
-      "active_buff": 192174
+      "action_duration": "30:00"
     }
   },
   {
@@ -34153,9 +34146,9 @@
     "properties": {
       "rarity": "quest",
       "allocation": "AarhantShip",
+      "active_buff": 105865,
       "action_cooldown": "00:15",
-      "action_duration": "00:10",
-      "active_buff": 105865
+      "action_duration": "00:10"
     }
   },
   {

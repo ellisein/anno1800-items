@@ -80,6 +80,13 @@ const renderTemplate = {
         return html + `</li>`;
     },
 
+    onlylabel: (label) => {
+        return `
+            <li class="inline">
+                <span class="item-property-key">${label}</span>
+            </li>`;
+    },
+
     nolabel: (conf, text) => {
         return `<li>
             <div class="indented text-muted">${text}</div>
@@ -417,7 +424,7 @@ const PROPERTY_CONFIGS = {
     'fertility': {
         label: '토착 자원',
         icon: '',
-        render: (conf, val) => renderTemplate.noicon(conf, val)
+        render: (conf, val) => renderTemplate.onlylabel(`${val} 제공`)
     },
     'pier_speed': {
         label: '화물 선적 속도',
@@ -651,10 +658,10 @@ function renderItems(items) {
                     typeSource = "data/ui/2kimages/main/3dicons/icon_ship_commandship.png";
                 } else if (item.properties.allocation === 'SailShip') {
                     typeText = "범선";
-                    typeSource = "";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_commandship.png";
                 } else if (item.properties.allocation === 'SteamShip') {
                     typeText = "증기선";
-                    typeSource = "";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_oil_tanker.png";
                 } else if (item.properties.allocation === 'Warship') {
                     typeText = "군함";
                     typeSource = "data/ui/2kimages/main/3dicons/icon_ship_liner.png";

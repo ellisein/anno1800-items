@@ -111,20 +111,20 @@ def extract_items_data(assets_path, texts_dict):
 
                         item_action_node = elem.find('./Values/ItemAction')
                         if item_action_node is not None:
-                            # 재사용 대기시간 (action_cooldown)
-                            action_cooldown = item_action_node.findtext('ActionCooldown')
-                            if action_cooldown:
-                                item_properties['action_cooldown'] = format_time_ms(action_cooldown)
-
-                            # 지속 시간 (action_duration)
-                            action_duration = item_action_node.findtext('ActionDuration')
-                            if action_duration:
-                                item_properties['action_duration'] = format_time_ms(action_duration)
-
                             # 활성 버프
                             active_buff = item_action_node.findtext('ActiveBuff')
                             if active_buff:
                                 item_properties['active_buff'] = int(active_buff)
+
+                                # 재사용 대기시간 (action_cooldown)
+                                action_cooldown = item_action_node.findtext('ActionCooldown')
+                                if action_cooldown:
+                                    item_properties['action_cooldown'] = format_time_ms(action_cooldown)
+
+                                # 지속 시간 (action_duration)
+                                action_duration = item_action_node.findtext('ActionDuration')
+                                if action_duration:
+                                    item_properties['action_duration'] = format_time_ms(action_duration)
 
                         factory_upgrade_node = elem.find('./Values/FactoryUpgrade')
                         if factory_upgrade_node is not None:
