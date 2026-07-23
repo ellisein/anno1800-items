@@ -234,15 +234,7 @@ const PROPERTY_CONFIGS = {
             if (!val || typeof val !== 'object') return '';
             let html = '';
             for (const [amount, items] of Object.entries(val)) {
-                let itemsStr = '';
-                if (items.length === 1) {
-                    itemsStr = items[0];
-                } else {
-                    const lastItem = items[items.length - 1];
-                    const otherItems = items.slice(0, -1).join(', ');
-                    itemsStr = `${otherItems}, 그리고 ${lastItem}`;
-                }
-                const text = `주민이 ${itemsStr}(으)로 추가 연구 점수를 제공합니다.`;
+                const text = `주민이 ${formatMultipleItems(items)}(으)로 추가 연구 점수를 제공합니다.`;
                 html += renderTemplate.subtext(conf, amount, text);
             }
             return html;
@@ -255,15 +247,7 @@ const PROPERTY_CONFIGS = {
             if (!val || typeof val !== 'object') return '';
             let html = '';
             for (const [amount, items] of Object.entries(val)) {
-                let itemsStr = '';
-                if (items.length === 1) {
-                    itemsStr = items[0];
-                } else {
-                    const lastItem = items[items.length - 1];
-                    const otherItems = items.slice(0, -1).join(', ');
-                    itemsStr = `${otherItems}, 그리고 ${lastItem}`;
-                }
-                const text = `주민들이 ${itemsStr}에서 보너스 행복도를 얻습니다.`;
+                const text = `주민들이 ${formatMultipleItems(items)}에서 보너스 행복도를 얻습니다.`;
                 html += renderTemplate.subtext(conf, amount, text);
             }
             return html;
@@ -276,15 +260,7 @@ const PROPERTY_CONFIGS = {
             if (!val || typeof val !== 'object') return '';
             let html = '';
             for (const [amount, items] of Object.entries(val)) {
-                let itemsStr = '';
-                if (items.length === 1) {
-                    itemsStr = items[0];
-                } else {
-                    const lastItem = items[items.length - 1];
-                    const otherItems = items.slice(0, -1).join(', ');
-                    itemsStr = `${otherItems}, 그리고 ${lastItem}`;
-                }
-                const text = `주민들이 ${itemsStr}에서 보너스 수입을 얻습니다.`;
+                const text = `주민들이 ${formatMultipleItems(items)}에서 보너스 수입을 얻습니다.`;
                 html += renderTemplate.subtext(conf, amount, text);
             }
             return html;
@@ -297,15 +273,7 @@ const PROPERTY_CONFIGS = {
             if (!val || typeof val !== 'object') return '';
             let html = '';
             for (const [amount, items] of Object.entries(val)) {
-                let itemsStr = '';
-                if (items.length === 1) {
-                    itemsStr = items[0];
-                } else {
-                    const lastItem = items[items.length - 1];
-                    const otherItems = items.slice(0, -1).join(', ');
-                    itemsStr = `${otherItems}, 그리고 ${lastItem}`;
-                }
-                const text = `거주지가 ${itemsStr}에서 보너스 주민을 얻습니다.`;
+                const text = `거주지가 ${formatMultipleItems(items)}에서 보너스 주민을 얻습니다.`;
                 html += renderTemplate.subtext(conf, amount, text);
             }
             return html;
@@ -317,7 +285,7 @@ const PROPERTY_CONFIGS = {
         render: (conf, val) => {
             const provide_needs = new Set(val.provide_needs);
             const subtitute_needs = new Set(val.subtitute_needs);
-            return renderTemplate.subtext(conf, true, `${Array.from(subtitute_needs).join(', ')}이(가) 행정 건물 범위 내 주민들의 ${Array.from(provide_needs).join(', ')}에 대한 요구사항을 충족시켜줍니다.`);
+            return renderTemplate.subtext(conf, true, `${formatMultipleItems(Array.from(subtitute_needs))}이(가) 행정 건물 범위 내 주민들의 ${formatMultipleItems(Array.from(provide_needs))}에 대한 요구사항을 충족시켜줍니다.`);
         }
     },
     'attractiveness': {
@@ -425,7 +393,7 @@ const PROPERTY_CONFIGS = {
             if (!Array.isArray(val) || val.length === 0) return '';
             const oldInputs = new Set(val.map(v => v.old));
             const newInputs = new Set(val.map(v => v.new));
-            return renderTemplate.subtext(conf, true, `건물에서 ${Array.from(oldInputs).join(', ')} 대신 ${Array.from(newInputs).join(', ')}을(를) 처리합니다.`);
+            return renderTemplate.subtext(conf, true, `건물에서 ${formatMultipleItems(Array.from(oldInputs))} 대신 ${formatMultipleItems(Array.from(newInputs))}을(를) 처리합니다.`);
         }
     },
     'additional_outputs': {
@@ -438,7 +406,7 @@ const PROPERTY_CONFIGS = {
         icon: 'data/ui/2kimages/main/icons/icon_productivity_buff.png',
         render: (conf, val) => {
             if (!Array.isArray(val) || val.length === 0) return '';
-            return renderTemplate.subtext(conf, true, `이 건물은 ${val.join(', ')} 없이 물품을 생산합니다.`);
+            return renderTemplate.subtext(conf, true, `이 건물은 ${formatMultipleItems(val)} 없이 물품을 생산합니다.`);
         }
     },
     'good_consumption': {
@@ -497,18 +465,10 @@ const PROPERTY_CONFIGS = {
         icon: null,
         render: (conf, val) => {
             if (!Array.isArray(val) || val.length === 0) return '';
-            itemsText = '';
-            if (val.length === 1) {
-                if (val[0] === '코인') {
-                    return renderTemplate.nolabel(conf, `교역소에서 소극적인 거래가 발생할 때마다 일정 확률로 500코인의 세금이 발생합니다.`);
-                }
-                itemsText += val[0];
-            } else {
-                const lastItem = val[val.length - 1];
-                const otherItems = val.slice(0, -1).join(', ');
-                itemsText += `${otherItems}, 또는 ${lastItem}`;
+            if (val.length === 1 && val[0] === '코인') {
+                return renderTemplate.nolabel(conf, `교역소에서 소극적인 거래가 발생할 때마다 일정 확률로 500코인의 세금이 발생합니다.`);
             }
-            return renderTemplate.nolabel(conf, `교역소에서 소극적인 거래가 발생할 때마다 일정 확률로 ${itemsText} 5톤을 얻습니다.`);
+            return renderTemplate.nolabel(conf, `교역소에서 소극적인 거래가 발생할 때마다 일정 확률로 ${formatMultipleItems(val, '또는')} 5톤을 얻습니다.`);
         }
     },
     'scrap_amount': {
@@ -533,15 +493,7 @@ const PROPERTY_CONFIGS = {
         render: (conf, val) => {
             if (!Array.isArray(val) || val.length === 0) return '';
             const translated = val.map(r => RARITIES[r.toLowerCase()] || r);
-            rarityTexts = '';
-            if (translated.length === 1) {
-                rarityTexts += translated[0];
-            } else {
-                const lastItem = translated[translated.length - 1];
-                const otherItems = translated.slice(0, -1).join(', ');
-                rarityTexts += `${otherItems}, 그리고 ${lastItem}`;
-            }
-            return renderTemplate.subtext(conf, true, `잠수 중에 ${rarityTexts} 희귀도 아이템 발견 확률이 증가합니다.`);
+            return renderTemplate.subtext(conf, true, `잠수 중에 ${formatMultipleItems(translated)} 희귀도 아이템 발견 확률이 증가합니다.`);
         }
     },
     'action_duration': {
@@ -744,13 +696,7 @@ function renderItems(items) {
                 targetText += '활성화 시 ';
             }
 
-            if (item.properties.targets.length === 1) {
-                targetText += item.properties.targets[0];
-            } else {
-                const lastItem = item.properties.targets[item.properties.targets.length - 1];
-                const otherItems = item.properties.targets.slice(0, -1).join(', ');
-                targetText += `${otherItems}, 그리고 ${lastItem}`;
-            }
+            targetText += formatMultipleItems(item.properties.targets);
         }
         const targetsHtml = targetText ? `<li class="text-muted">${targetText}에 영향</li>` : '';
 
@@ -805,6 +751,16 @@ function decomposeKorean(str) {
         }
     }
     return result;
+}
+
+function formatMultipleItems(items, conjunction = '그리고') {
+    if (items.length === 1) {
+        return items[0];
+    } else {
+        const lastItem = items[items.length - 1];
+        const otherItems = items.slice(0, -1).join(', ');
+        return `${otherItems}, ${conjunction} ${lastItem}`;
+    }
 }
 
 document.getElementById('searchInput').addEventListener('input', (e) => {
