@@ -12,6 +12,741 @@
     }
   },
   {
+    "guid": 1010017,
+    "type": "Product",
+    "name": "코인",
+    "icon": "data/ui/2kimages/main/icons/icon_resource_money_4.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010190,
+    "type": "Product",
+    "name": "영향력",
+    "icon": "data/ui/2kimages/main/icons/icon_influence.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010052,
+    "type": "Product",
+    "name": "농부",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_farmer.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010115,
+    "type": "Product",
+    "name": "노동자",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_worker.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010116,
+    "type": "Product",
+    "name": "직공",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_artisan.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010117,
+    "type": "Product",
+    "name": "기술자",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_engineer.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010128,
+    "type": "Product",
+    "name": "투자가",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_investor.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010366,
+    "type": "Product",
+    "name": "식민지 노동자",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_jornalero.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010367,
+    "type": "Product",
+    "name": "식민지 직공",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_obrero.png",
+    "properties": {}
+  },
+  {
+    "guid": 120020,
+    "type": "Product",
+    "name": "시장",
+    "icon": "data/ui/2kimages/main/3dicons/icon_marketplace.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010349,
+    "type": "Product",
+    "name": "선술집",
+    "icon": "data/ui/2kimages/main/3dicons/icon_pub.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010350,
+    "type": "Product",
+    "name": "교회",
+    "icon": "data/ui/2kimages/main/3dicons/icon_church.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010351,
+    "type": "Product",
+    "name": "학교",
+    "icon": "data/ui/2kimages/main/3dicons/icon_school.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010352,
+    "type": "Product",
+    "name": "보드빌 극장",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cabaret.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010353,
+    "type": "Product",
+    "name": "대학",
+    "icon": "data/ui/2kimages/main/3dicons/icon_university.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010354,
+    "type": "Product",
+    "name": "전기",
+    "icon": "data/ui/2kimages/main/3dicons/icon_electric_works_oil.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010355,
+    "type": "Product",
+    "name": "회원제 클럽",
+    "icon": "data/ui/2kimages/main/3dicons/icon_club_house.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010356,
+    "type": "Product",
+    "name": "은행",
+    "icon": "data/ui/2kimages/main/3dicons/icon_bank.png",
+    "properties": {}
+  },
+  {
+    "guid": 120050,
+    "type": "Product",
+    "name": "예배당",
+    "icon": "data/ui/2kimages/main/3dicons/icon_church.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010348,
+    "type": "Product",
+    "name": "권투 경기장",
+    "icon": "data/ui/2kimages/main/3dicons/icon_box_arena.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010192,
+    "type": "Product",
+    "name": "곡물",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cereals_2.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010193,
+    "type": "Product",
+    "name": "소고기",
+    "icon": "data/ui/2kimages/main/3dicons/icon_meat_raw.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010194,
+    "type": "Product",
+    "name": "홉",
+    "icon": "data/ui/2kimages/main/3dicons/icon_hops.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010195,
+    "type": "Product",
+    "name": "감자",
+    "icon": "data/ui/2kimages/main/3dicons/icon_potatoes.png",
+    "properties": {}
+  },
+  {
+    "guid": 120008,
+    "type": "Product",
+    "name": "나무",
+    "icon": "data/ui/2kimages/main/3dicons/icon_wood_log.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010197,
+    "type": "Product",
+    "name": "양모",
+    "icon": "data/ui/2kimages/main/3dicons/icon_wool.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010199,
+    "type": "Product",
+    "name": "돼지",
+    "icon": "data/ui/2kimages/main/3dicons/icon_pigs.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010209,
+    "type": "Product",
+    "name": "모피",
+    "icon": "data/ui/2kimages/main/3dicons/icon_fur.png",
+    "properties": {}
+  },
+  {
+    "guid": 120014,
+    "type": "Product",
+    "name": "포도",
+    "icon": "data/ui/2kimages/main/3dicons/icon_grapes.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010198,
+    "type": "Product",
+    "name": "피망",
+    "icon": "data/ui/2kimages/main/3dicons/icon_pepper.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010200,
+    "type": "Product",
+    "name": "생선",
+    "icon": "data/ui/2kimages/main/3dicons/icon_fish.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010232,
+    "type": "Product",
+    "name": "초석",
+    "icon": "data/ui/2kimages/main/3dicons/icon_niter.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010228,
+    "type": "Product",
+    "name": "규사",
+    "icon": "data/ui/2kimages/main/3dicons/icon_quartz_sand.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010202,
+    "type": "Product",
+    "name": "강화 콘크리트",
+    "icon": "data/ui/2kimages/main/3dicons/icon_reinforced_concrete.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010203,
+    "type": "Product",
+    "name": "비누",
+    "icon": "data/ui/2kimages/main/3dicons/icon_soap_2.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010196,
+    "type": "Product",
+    "name": "목재",
+    "icon": "data/ui/2kimages/main/3dicons/icon_wooden_planks.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010205,
+    "type": "Product",
+    "name": "벽돌",
+    "icon": "data/ui/2kimages/main/3dicons/icon_bricks.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010247,
+    "type": "Product",
+    "name": "모피 코트",
+    "icon": "data/ui/2kimages/main/3dicons/icon_fur_coats.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010207,
+    "type": "Product",
+    "name": "창문",
+    "icon": "data/ui/2kimages/main/3dicons/icon_glass_window_3.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010208,
+    "type": "Product",
+    "name": "전구",
+    "icon": "data/ui/2kimages/main/3dicons/icon_light_bulb.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010210,
+    "type": "Product",
+    "name": "돛",
+    "icon": "data/ui/2kimages/main/3dicons/icon_sail.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010211,
+    "type": "Product",
+    "name": "차체",
+    "icon": "data/ui/2kimages/main/3dicons/icon_chassis.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010201,
+    "type": "Product",
+    "name": "점토",
+    "icon": "data/ui/2kimages/main/3dicons/icon_clay.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010206,
+    "type": "Product",
+    "name": "재봉틀",
+    "icon": "data/ui/2kimages/main/3dicons/icon_sewing_machine.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010213,
+    "type": "Product",
+    "name": "빵",
+    "icon": "data/ui/2kimages/main/3dicons/icon_bread.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010214,
+    "type": "Product",
+    "name": "맥주",
+    "icon": "data/ui/2kimages/main/3dicons/icon_beer.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010215,
+    "type": "Product",
+    "name": "굴라시",
+    "icon": "data/ui/2kimages/main/3dicons/icon_goulash_01.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010217,
+    "type": "Product",
+    "name": "통조림",
+    "icon": "data/ui/2kimages/main/3dicons/icon_canned_goulash.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010216,
+    "type": "Product",
+    "name": "슈냅스",
+    "icon": "data/ui/2kimages/main/3dicons/icon_schnapps_4.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010238,
+    "type": "Product",
+    "name": "소시지",
+    "icon": "data/ui/2kimages/main/3dicons/icon_meat_sausage.png",
+    "properties": {}
+  },
+  {
+    "guid": 120016,
+    "type": "Product",
+    "name": "샴페인",
+    "icon": "data/ui/2kimages/main/3dicons/icon_champagne.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010218,
+    "type": "Product",
+    "name": "철재",
+    "icon": "data/ui/2kimages/main/3dicons/icon_beams.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010219,
+    "type": "Product",
+    "name": "강철",
+    "icon": "data/ui/2kimages/main/3dicons/icon_steel.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010221,
+    "type": "Product",
+    "name": "무기",
+    "icon": "data/ui/2kimages/main/3dicons/icon_weapons.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010222,
+    "type": "Product",
+    "name": "다이너마이트",
+    "icon": "data/ui/2kimages/main/3dicons/icon_dynamite.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010223,
+    "type": "Product",
+    "name": "고급 무기",
+    "icon": "data/ui/2kimages/main/3dicons/icon_advanced_weaponry.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010224,
+    "type": "Product",
+    "name": "증기 모터",
+    "icon": "data/ui/2kimages/main/3dicons/icon_steam_machine.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010225,
+    "type": "Product",
+    "name": "증기차",
+    "icon": "data/ui/2kimages/main/3dicons/icon_steam_carriage.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010204,
+    "type": "Product",
+    "name": "황동",
+    "icon": "data/ui/2kimages/main/3dicons/icon_brass.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010226,
+    "type": "Product",
+    "name": "석탄",
+    "icon": "data/ui/2kimages/main/3dicons/icon_coal.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010227,
+    "type": "Product",
+    "name": "철",
+    "icon": "data/ui/2kimages/main/3dicons/icon_iron.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010229,
+    "type": "Product",
+    "name": "아연",
+    "icon": "data/ui/2kimages/main/3dicons/icon_tin_ore.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010230,
+    "type": "Product",
+    "name": "구리",
+    "icon": "data/ui/2kimages/main/3dicons/icon_copper.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010231,
+    "type": "Product",
+    "name": "시멘트",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cement.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010233,
+    "type": "Product",
+    "name": "금광석",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gold_ore.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010234,
+    "type": "Product",
+    "name": "수지",
+    "icon": "data/ui/2kimages/main/3dicons/icon_tallow.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010235,
+    "type": "Product",
+    "name": "밀가루",
+    "icon": "data/ui/2kimages/main/3dicons/icon_flour.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010236,
+    "type": "Product",
+    "name": "맥아",
+    "icon": "data/ui/2kimages/main/3dicons/icon_malt.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010237,
+    "type": "Product",
+    "name": "작업복",
+    "icon": "data/ui/2kimages/main/3dicons/icon_working_cloth.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010241,
+    "type": "Product",
+    "name": "유리",
+    "icon": "data/ui/2kimages/main/3dicons/icon_glass.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010242,
+    "type": "Product",
+    "name": "합판",
+    "icon": "data/ui/2kimages/main/3dicons/icon_inlay.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010243,
+    "type": "Product",
+    "name": "필라멘트",
+    "icon": "data/ui/2kimages/main/3dicons/icon_carbon_filament.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010245,
+    "type": "Product",
+    "name": "자전거",
+    "icon": "data/ui/2kimages/main/3dicons/icon_high_wheeler.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010246,
+    "type": "Product",
+    "name": "회중시계",
+    "icon": "data/ui/2kimages/main/3dicons/icon_pocket_watch.png",
+    "properties": {}
+  },
+  {
+    "guid": 120030,
+    "type": "Product",
+    "name": "안경",
+    "icon": "data/ui/2kimages/main/3dicons/icon_glasses.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010248,
+    "type": "Product",
+    "name": "축음기",
+    "icon": "data/ui/2kimages/main/3dicons/icon_phonographs.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010249,
+    "type": "Product",
+    "name": "금",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gold.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010250,
+    "type": "Product",
+    "name": "보석",
+    "icon": "data/ui/2kimages/main/3dicons/icon_jewelry.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010251,
+    "type": "Product",
+    "name": "사탕수수",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cane_sugar_1.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010252,
+    "type": "Product",
+    "name": "담배",
+    "icon": "data/ui/2kimages/main/3dicons/icon_tobacco.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010253,
+    "type": "Product",
+    "name": "목화",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cotton.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010254,
+    "type": "Product",
+    "name": "코코아",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cocoa.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010255,
+    "type": "Product",
+    "name": "생고무",
+    "icon": "data/ui/2kimages/main/3dicons/icon_caoutchouc.png",
+    "properties": {}
+  },
+  {
+    "guid": 120031,
+    "type": "Product",
+    "name": "커피콩",
+    "icon": "data/ui/2kimages/main/3dicons/icon_coffee_beans.png",
+    "properties": {}
+  },
+  {
+    "guid": 120034,
+    "type": "Product",
+    "name": "옥수수",
+    "icon": "data/ui/2kimages/main/3dicons/icon_corn.png",
+    "properties": {}
+  },
+  {
+    "guid": 120036,
+    "type": "Product",
+    "name": "알파카 양모",
+    "icon": "data/ui/2kimages/main/3dicons/icon_alpaca_wool.png",
+    "properties": {}
+  },
+  {
+    "guid": 120041,
+    "type": "Product",
+    "name": "플랜테인",
+    "icon": "data/ui/2kimages/main/3dicons/icon_banana.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010256,
+    "type": "Product",
+    "name": "진주",
+    "icon": "data/ui/2kimages/main/3dicons/icon_pearls.png",
+    "properties": {}
+  },
+  {
+    "guid": 120042,
+    "type": "Product",
+    "name": "어유",
+    "icon": "data/ui/2kimages/main/3dicons/icon_fishoil.png",
+    "properties": {}
+  },
+  {
+    "guid": 120043,
+    "type": "Product",
+    "name": "판초",
+    "icon": "data/ui/2kimages/main/3dicons/icon_poncho.png",
+    "properties": {}
+  },
+  {
+    "guid": 120044,
+    "type": "Product",
+    "name": "펠트",
+    "icon": "data/ui/2kimages/main/3dicons/icon_felt.png",
+    "properties": {}
+  },
+  {
+    "guid": 120037,
+    "type": "Product",
+    "name": "중산모",
+    "icon": "data/ui/2kimages/main/3dicons/icon_bowler_hat.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010257,
+    "type": "Product",
+    "name": "럼주",
+    "icon": "data/ui/2kimages/main/3dicons/icon_rum_barrel.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010258,
+    "type": "Product",
+    "name": "초콜릿",
+    "icon": "data/ui/2kimages/main/3dicons/icon_chocolate.png",
+    "properties": {}
+  },
+  {
+    "guid": 120032,
+    "type": "Product",
+    "name": "커피",
+    "icon": "data/ui/2kimages/main/3dicons/icon_coffe_cup.png",
+    "properties": {}
+  },
+  {
+    "guid": 120033,
+    "type": "Product",
+    "name": "플랜테인 튀김",
+    "icon": "data/ui/2kimages/main/3dicons/icon_fried_bananas.png",
+    "properties": {}
+  },
+  {
+    "guid": 120035,
+    "type": "Product",
+    "name": "토르티야",
+    "icon": "data/ui/2kimages/main/3dicons/icon_burrito.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010239,
+    "type": "Product",
+    "name": "설탕",
+    "icon": "data/ui/2kimages/main/3dicons/icon_salt.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010240,
+    "type": "Product",
+    "name": "면직물",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cotton_fur.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010259,
+    "type": "Product",
+    "name": "시가",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cigars.png",
+    "properties": {}
+  },
+  {
+    "guid": 120021,
+    "type": "Product",
+    "name": "석탄",
+    "icon": "data/ui/2kimages/main/3dicons/icon_coal.png",
+    "properties": {}
+  },
+  {
+    "guid": 1010566,
+    "type": "Product",
+    "name": "석유",
+    "icon": "data/ui/2kimages/main/3dicons/icon_oil.png",
+    "properties": {}
+  },
+  {
+    "guid": 1591,
+    "type": "Product",
+    "name": "광물 자원",
+    "icon": "data/ui/2kimages/main/3dicons/icon_mineral_desposits.png",
+    "properties": {}
+  },
+  {
+    "guid": 1955,
+    "type": "Product",
+    "name": "경작지",
+    "icon": "data/ui/2kimages/main/3dicons/icon_fertile_lands.png",
+    "properties": {}
+  },
+  {
+    "guid": 120022,
+    "type": "Product",
+    "name": "전기",
+    "icon": "data/ui/2kimages/main/3dicons/icon_electricity.png",
+    "properties": {}
+  },
+  {
     "guid": 151049,
     "type": "RewardPool",
     "name": null,
@@ -1271,7 +2006,10 @@
         "모든 양어장"
       ],
       "additional_outputs": [
-        "수지 +1/5"
+        {
+          "guid": 1010234,
+          "value": "+1/5"
+        }
       ],
       "maintenance": "-25%"
     }
@@ -1289,7 +2027,10 @@
       ],
       "productivity": "+30%",
       "additional_outputs": [
-        "어유 +1/5"
+        {
+          "guid": 120042,
+          "value": "+1/5"
+        }
       ]
     }
   },
@@ -1307,7 +2048,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "수지 +1/4"
+        {
+          "guid": 1010234,
+          "value": "+1/4"
+        }
       ]
     }
   },
@@ -1325,8 +2069,14 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "수지 +1/5",
-        "금 +1/7"
+        {
+          "guid": 1010234,
+          "value": "+1/5"
+        },
+        {
+          "guid": 1010249,
+          "value": "+1/7"
+        }
       ]
     }
   },
@@ -1407,7 +2157,10 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "회중시계 +1/4"
+        {
+          "guid": 1010246,
+          "value": "+1/4"
+        }
       ],
       "removed_inputs": [
         "진주"
@@ -1457,7 +2210,10 @@
       ],
       "productivity": "+30%",
       "additional_outputs": [
-        "초콜릿 +1/5"
+        {
+          "guid": 1010258,
+          "value": "+1/5"
+        }
       ]
     }
   },
@@ -1487,8 +2243,14 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "포도 +1/6",
-        "초콜릿 +1/5"
+        {
+          "guid": 120014,
+          "value": "+1/6"
+        },
+        {
+          "guid": 1010258,
+          "value": "+1/5"
+        }
       ]
     }
   },
@@ -1956,7 +2718,8 @@
       "rarity": "common",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "tax_modifier": "+5%"
     }
   },
   {
@@ -1969,8 +2732,7 @@
       "targets": [
         "모든 주거지"
       ],
-      "workforce_modifier": "+10%",
-      "tax_modifier": null
+      "workforce_modifier": "+10%"
     }
   },
   {
@@ -1991,8 +2753,7 @@
           "대학"
         ]
       },
-      "workforce_modifier": "+15%",
-      "tax_modifier": null
+      "workforce_modifier": "+15%"
     }
   },
   {
@@ -2194,7 +2955,10 @@
       ],
       "productivity": "+15%",
       "additional_outputs": [
-        "코코아 +1/5"
+        {
+          "guid": 1010254,
+          "value": "+1/5"
+        }
       ]
     }
   },
@@ -2217,7 +2981,10 @@
       ],
       "productivity": "+15%",
       "additional_outputs": [
-        "담배 +1/5"
+        {
+          "guid": 1010252,
+          "value": "+1/5"
+        }
       ],
       "module_limit": "-10%"
     }
@@ -2239,9 +3006,18 @@
       ],
       "productivity": "+20%",
       "additional_outputs": [
-        "코코아 +1/11",
-        "생고무 +1/12",
-        "목화 +1/13"
+        {
+          "guid": 1010254,
+          "value": "+1/11"
+        },
+        {
+          "guid": 1010255,
+          "value": "+1/12"
+        },
+        {
+          "guid": 1010253,
+          "value": "+1/13"
+        }
       ]
     }
   },
@@ -2265,9 +3041,18 @@
       ],
       "productivity": "+20%",
       "additional_outputs": [
-        "피망 +1/12",
-        "감자 +1/11",
-        "포도 +1/13"
+        {
+          "guid": 1010198,
+          "value": "+1/12"
+        },
+        {
+          "guid": 1010195,
+          "value": "+1/11"
+        },
+        {
+          "guid": 120014,
+          "value": "+1/13"
+        }
       ],
       "module_limit": "-20%"
     }
@@ -2284,11 +3069,26 @@
       ],
       "productivity": "+30%",
       "additional_outputs": [
-        "피망 +1/16",
-        "감자 +1/13",
-        "포도 +1/17",
-        "곡물 +1/14",
-        "홉 +1/15"
+        {
+          "guid": 1010198,
+          "value": "+1/16"
+        },
+        {
+          "guid": 1010195,
+          "value": "+1/13"
+        },
+        {
+          "guid": 120014,
+          "value": "+1/17"
+        },
+        {
+          "guid": 1010192,
+          "value": "+1/14"
+        },
+        {
+          "guid": 1010194,
+          "value": "+1/15"
+        }
       ],
       "attractiveness": "+7"
     }
@@ -3005,7 +3805,10 @@
       ],
       "productivity": "+30%",
       "additional_outputs": [
-        "생고무 +1/5"
+        {
+          "guid": 1010255,
+          "value": "+1/5"
+        }
       ]
     }
   },
@@ -3021,7 +3824,10 @@
       ],
       "productivity": "+30%",
       "additional_outputs": [
-        "양모 +1/5"
+        {
+          "guid": 1010197,
+          "value": "+1/5"
+        }
       ]
     }
   },
@@ -3038,7 +3844,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "목화 +1/4"
+        {
+          "guid": 1010253,
+          "value": "+1/4"
+        }
       ]
     }
   },
@@ -3054,7 +3863,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "소고기 +1/4"
+        {
+          "guid": 1010193,
+          "value": "+1/4"
+        }
       ]
     }
   },
@@ -3209,7 +4021,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "슈냅스 +1/4"
+        {
+          "guid": 1010216,
+          "value": "+1/4"
+        }
       ]
     }
   },
@@ -3228,7 +4043,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "샴페인 +1/8"
+        {
+          "guid": 120016,
+          "value": "+1/8"
+        }
       ]
     }
   },
@@ -3341,8 +4159,14 @@
       ],
       "productivity": "+70%",
       "additional_outputs": [
-        "금광석 +1/6",
-        "석유 +1/1"
+        {
+          "guid": 1010233,
+          "value": "+1/6"
+        },
+        {
+          "guid": 1010566,
+          "value": "+1/1"
+        }
       ]
     }
   },
@@ -3444,7 +4268,8 @@
         "모든 주거지"
       ],
       "incident_riot": "-50%",
-      "additional_happiness": "+10"
+      "additional_happiness": "+10",
+      "tax_modifier": "+10%"
     }
   },
   {
@@ -3499,7 +4324,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "유리 +1/4"
+        {
+          "guid": 1010241,
+          "value": "+1/4"
+        }
       ]
     }
   },
@@ -3521,7 +4349,10 @@
         }
       ],
       "additional_outputs": [
-        "회중시계 +1/3"
+        {
+          "guid": 1010246,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -3598,7 +4429,10 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "다이너마이트 +1/3"
+        {
+          "guid": 1010222,
+          "value": "+1/3"
+        }
       ],
       "workforce": "-50%"
     }
@@ -3674,7 +4508,10 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "보석 +1/3"
+        {
+          "guid": 1010250,
+          "value": "+1/3"
+        }
       ],
       "replacing_workforce": "노동자"
     }
@@ -3750,7 +4587,10 @@
         "편물 공장"
       ],
       "additional_outputs": [
-        "돛 +1/4"
+        {
+          "guid": 1010210,
+          "value": "+1/4"
+        }
       ],
       "workforce": "-30%"
     }
@@ -3787,7 +4627,10 @@
         "재단소"
       ],
       "additional_outputs": [
-        "판초 +1/4"
+        {
+          "guid": 120043,
+          "value": "+1/4"
+        }
       ],
       "workforce": "-40%"
     }
@@ -3814,9 +4657,18 @@
         }
       ],
       "additional_outputs": [
-        "판초 +1/12",
-        "작업복 +1/12",
-        "중산모 +1/12"
+        {
+          "guid": 120043,
+          "value": "+1/12"
+        },
+        {
+          "guid": 1010237,
+          "value": "+1/12"
+        },
+        {
+          "guid": 120037,
+          "value": "+1/12"
+        }
       ]
     }
   },
@@ -3834,8 +4686,14 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "판초 +1/6",
-        "중산모 +1/6"
+        {
+          "guid": 120043,
+          "value": "+1/6"
+        },
+        {
+          "guid": 120037,
+          "value": "+1/6"
+        }
       ],
       "attractiveness": "+8"
     }
@@ -3908,7 +4766,10 @@
         "판초 제작소"
       ],
       "additional_outputs": [
-        "돛 +1/4"
+        {
+          "guid": 1010210,
+          "value": "+1/4"
+        }
       ],
       "workforce": "-50%"
     }
@@ -3947,7 +4808,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "작업복 +1/3"
+        {
+          "guid": 1010237,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -3965,8 +4829,14 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "작업복 +1/2",
-        "모피 코트 +1/3"
+        {
+          "guid": 1010237,
+          "value": "+1/2"
+        },
+        {
+          "guid": 1010247,
+          "value": "+1/3"
+        }
       ],
       "attractiveness": "+8"
     }
@@ -4045,7 +4915,10 @@
         }
       ],
       "additional_outputs": [
-        "커피 +1/3"
+        {
+          "guid": 120032,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -4066,7 +4939,10 @@
         }
       ],
       "additional_outputs": [
-        "초콜릿 +1/3"
+        {
+          "guid": 1010258,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -4084,7 +4960,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "설탕 +1/4"
+        {
+          "guid": 1010239,
+          "value": "+1/4"
+        }
       ]
     }
   },
@@ -4102,8 +4981,14 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "설탕 +1/4",
-        "럼주 +1/5"
+        {
+          "guid": 1010239,
+          "value": "+1/4"
+        },
+        {
+          "guid": 1010257,
+          "value": "+1/5"
+        }
       ],
       "attractiveness": "+8"
     }
@@ -4190,7 +5075,10 @@
         "발전소"
       ],
       "additional_outputs": [
-        "석유 +1/5"
+        {
+          "guid": 1010566,
+          "value": "+1/5"
+        }
       ]
     }
   },
@@ -4206,7 +5094,10 @@
         "축음기 공장"
       ],
       "additional_outputs": [
-        "필라멘트 +1/5"
+        {
+          "guid": 1010243,
+          "value": "+1/5"
+        }
       ],
       "replacing_workforce": "노동자"
     }
@@ -4223,7 +5114,10 @@
         "발전소"
       ],
       "additional_outputs": [
-        "석유 +1/3"
+        {
+          "guid": 1010566,
+          "value": "+1/3"
+        }
       ],
       "incident_fire": "-90%"
     }
@@ -4279,11 +5173,26 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "회중시계 +1/16",
-        "안경 +1/14",
-        "자전거 +1/15",
-        "증기차 +1/17",
-        "재봉틀 +1/13"
+        {
+          "guid": 1010246,
+          "value": "+1/16"
+        },
+        {
+          "guid": 120030,
+          "value": "+1/14"
+        },
+        {
+          "guid": 1010245,
+          "value": "+1/15"
+        },
+        {
+          "guid": 1010225,
+          "value": "+1/17"
+        },
+        {
+          "guid": 1010206,
+          "value": "+1/13"
+        }
       ],
       "industrialization": true
     }
@@ -4358,7 +5267,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "초콜릿 +1/4"
+        {
+          "guid": 1010258,
+          "value": "+1/4"
+        }
       ]
     }
   },
@@ -4375,7 +5287,10 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "커피콩 +1/2"
+        {
+          "guid": 120031,
+          "value": "+1/2"
+        }
       ],
       "attractiveness": "+10"
     }
@@ -4469,7 +5384,10 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "럼주 +1/3"
+        {
+          "guid": 1010257,
+          "value": "+1/3"
+        }
       ],
       "workforce": "-50%"
     }
@@ -4555,7 +5473,10 @@
         }
       ],
       "additional_outputs": [
-        "플랜테인 튀김 +1/3"
+        {
+          "guid": 120033,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -4597,7 +5518,10 @@
         "도축장"
       ],
       "additional_outputs": [
-        "수지 +1/4"
+        {
+          "guid": 1010234,
+          "value": "+1/4"
+        }
       ],
       "maintenance": "-30%"
     }
@@ -4614,7 +5538,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "수지 +1/3"
+        {
+          "guid": 1010234,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -4636,7 +5563,10 @@
         }
       ],
       "additional_outputs": [
-        "굴라시 +1/2"
+        {
+          "guid": 1010215,
+          "value": "+1/2"
+        }
       ]
     }
   },
@@ -4701,7 +5631,10 @@
         }
       ],
       "additional_outputs": [
-        "소시지 +1/2"
+        {
+          "guid": 1010238,
+          "value": "+1/2"
+        }
       ]
     }
   },
@@ -4723,7 +5656,10 @@
         }
       ],
       "additional_outputs": [
-        "토르티야 +1/3"
+        {
+          "guid": 120035,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -4804,7 +5740,10 @@
         }
       ],
       "additional_outputs": [
-        "소시지 +1/5"
+        {
+          "guid": 1010238,
+          "value": "+1/5"
+        }
       ]
     }
   },
@@ -4897,7 +5836,10 @@
         "자동차 공장"
       ],
       "additional_outputs": [
-        "자전거 +1/5"
+        {
+          "guid": 1010245,
+          "value": "+1/5"
+        }
       ],
       "maintenance": "-20%"
     }
@@ -4934,7 +5876,10 @@
         }
       ],
       "additional_outputs": [
-        "전구 +1/4"
+        {
+          "guid": 1010208,
+          "value": "+1/4"
+        }
       ]
     }
   },
@@ -4956,8 +5901,14 @@
         }
       ],
       "additional_outputs": [
-        "회중시계 +1/8",
-        "축음기 +1/8"
+        {
+          "guid": 1010246,
+          "value": "+1/8"
+        },
+        {
+          "guid": 1010248,
+          "value": "+1/8"
+        }
       ]
     }
   },
@@ -4979,8 +5930,14 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "고급 무기 +1/3",
-        "증기 모터 +1/3"
+        {
+          "guid": 1010223,
+          "value": "+1/3"
+        },
+        {
+          "guid": 1010224,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -4995,7 +5952,10 @@
         "모든 목공소"
       ],
       "additional_outputs": [
-        "나무 +1/3"
+        {
+          "guid": 120008,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -5085,7 +6045,10 @@
         "창문 공장"
       ],
       "additional_outputs": [
-        "진주 +1/4"
+        {
+          "guid": 1010256,
+          "value": "+1/4"
+        }
       ],
       "maintenance": "-80%"
     }
@@ -5103,7 +6066,10 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "합판 +1/3"
+        {
+          "guid": 1010242,
+          "value": "+1/3"
+        }
       ],
       "industrialization": true
     }
@@ -5385,7 +6351,10 @@
         "콘크리트 공장"
       ],
       "additional_outputs": [
-        "철재 +1/5"
+        {
+          "guid": 1010218,
+          "value": "+1/5"
+        }
       ],
       "workforce": "-60%"
     }
@@ -5418,7 +6387,10 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "합판 +1/2"
+        {
+          "guid": 1010242,
+          "value": "+1/2"
+        }
       ],
       "replacing_workforce": "농부",
       "attractiveness": "+8"
@@ -5559,7 +6531,6 @@
         "모든 주거지"
       ],
       "workforce_modifier": "+10%",
-      "tax_modifier": null,
       "benefit_additional_happiness": {
         "+5": [
           "학교"
@@ -5751,6 +6722,7 @@
       "targets": [
         "모든 학자 주거지를 제외한 구대륙과 신대륙 주거지"
       ],
+      "tax_modifier": "+2%",
       "benefit_additional_supply": {
         "+1": [
           "시장",
@@ -5818,7 +6790,10 @@
         "모든 동물 농장"
       ],
       "additional_outputs": [
-        "소고기 +1/4"
+        {
+          "guid": 1010193,
+          "value": "+1/4"
+        }
       ],
       "maintenance": "-80%"
     }
@@ -5835,7 +6810,10 @@
       ],
       "productivity": "+100%",
       "additional_outputs": [
-        "알파카 양모 +1/3"
+        {
+          "guid": 120036,
+          "value": "+1/3"
+        }
       ],
       "module_limit": "+100%"
     }
@@ -5934,7 +6912,10 @@
         "보크사이트 광산"
       ],
       "additional_outputs": [
-        "진주 +1/4"
+        {
+          "guid": 1010256,
+          "value": "+1/4"
+        }
       ],
       "industrialization": true
     }
@@ -5956,8 +6937,14 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "진주 +1/3",
-        "금광석 +1/3"
+        {
+          "guid": 1010256,
+          "value": "+1/3"
+        },
+        {
+          "guid": 1010233,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -6329,7 +7316,8 @@
       "targets": [
         "모든 투자가 및 식민지 직공 거주지"
       ],
-      "attractiveness": "+2"
+      "attractiveness": "+2",
+      "tax_modifier": "+10%"
     }
   },
   {
@@ -6345,7 +7333,10 @@
       ],
       "productivity": "+100%",
       "additional_outputs": [
-        "럼주 +1/3"
+        {
+          "guid": 1010257,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -6417,7 +7408,10 @@
       ],
       "productivity": "+80%",
       "additional_outputs": [
-        "감자 +1/8"
+        {
+          "guid": 1010195,
+          "value": "+1/8"
+        }
       ],
       "module_limit": "+35%"
     }
@@ -9868,7 +10862,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "-20%"
+      "incident_illness": "-20%",
+      "tax_modifier": "-5%"
     }
   },
   {
@@ -9881,7 +10876,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "-40%"
+      "incident_illness": "-40%",
+      "tax_modifier": "-10%"
     }
   },
   {
@@ -9894,7 +10890,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "-60%"
+      "incident_illness": "-60%",
+      "tax_modifier": "-15%"
     }
   },
   {
@@ -9907,7 +10904,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "+10%"
+      "incident_illness": "+10%",
+      "tax_modifier": "+10%"
     }
   },
   {
@@ -9920,7 +10918,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "+20%"
+      "incident_illness": "+20%",
+      "tax_modifier": "+25%"
     }
   },
   {
@@ -9933,7 +10932,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "+30%"
+      "incident_illness": "+30%",
+      "tax_modifier": "+40%"
     }
   },
   {
@@ -9946,7 +10946,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_fire": "-20%"
+      "incident_fire": "-20%",
+      "tax_modifier": "-5%"
     }
   },
   {
@@ -9959,7 +10960,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_fire": "-40%"
+      "incident_fire": "-40%",
+      "tax_modifier": "-10%"
     }
   },
   {
@@ -9972,7 +10974,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_fire": "-60%"
+      "incident_fire": "-60%",
+      "tax_modifier": "-15%"
     }
   },
   {
@@ -9985,7 +10988,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_fire": "+10%"
+      "incident_fire": "+10%",
+      "tax_modifier": "+10%"
     }
   },
   {
@@ -9998,7 +11002,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_fire": "+20%"
+      "incident_fire": "+20%",
+      "tax_modifier": "+25%"
     }
   },
   {
@@ -10011,7 +11016,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_fire": "+30%"
+      "incident_fire": "+30%",
+      "tax_modifier": "+40%"
     }
   },
   {
@@ -10110,8 +11116,7 @@
         "직공 주택"
       ],
       "additional_happiness": "-2",
-      "workforce_modifier": "+15%",
-      "tax_modifier": null
+      "workforce_modifier": "+15%"
     }
   },
   {
@@ -10126,8 +11131,7 @@
         "직공 주택"
       ],
       "additional_happiness": "-3",
-      "workforce_modifier": "+30%",
-      "tax_modifier": null
+      "workforce_modifier": "+30%"
     }
   },
   {
@@ -10142,8 +11146,7 @@
         "직공 주택"
       ],
       "additional_happiness": "-4",
-      "workforce_modifier": "+50%",
-      "tax_modifier": null
+      "workforce_modifier": "+50%"
     }
   },
   {
@@ -10158,8 +11161,7 @@
         "직공 주택"
       ],
       "additional_happiness": "+4",
-      "workforce_modifier": "-5%",
-      "tax_modifier": null
+      "workforce_modifier": "-5%"
     }
   },
   {
@@ -10174,8 +11176,7 @@
         "직공 주택"
       ],
       "additional_happiness": "+8",
-      "workforce_modifier": "-10%",
-      "tax_modifier": null
+      "workforce_modifier": "-10%"
     }
   },
   {
@@ -10190,8 +11191,7 @@
         "직공 주택"
       ],
       "additional_happiness": "+12",
-      "workforce_modifier": "-15%",
-      "tax_modifier": null
+      "workforce_modifier": "-15%"
     }
   },
   {
@@ -10603,7 +11603,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "-2"
+      "additional_happiness": "-2",
+      "tax_modifier": "+10%"
     }
   },
   {
@@ -10616,7 +11617,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "-3"
+      "additional_happiness": "-3",
+      "tax_modifier": "+25%"
     }
   },
   {
@@ -10629,7 +11631,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "-4"
+      "additional_happiness": "-4",
+      "tax_modifier": "+40%"
     }
   },
   {
@@ -10642,7 +11645,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+4"
+      "additional_happiness": "+4",
+      "tax_modifier": "-5%"
     }
   },
   {
@@ -10655,7 +11659,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+8"
+      "additional_happiness": "+8",
+      "tax_modifier": "-10%"
     }
   },
   {
@@ -10668,7 +11673,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+12"
+      "additional_happiness": "+12",
+      "tax_modifier": "-15%"
     }
   },
   {
@@ -10682,8 +11688,7 @@
         "모든 주거지"
       ],
       "additional_happiness": "+4",
-      "workforce_modifier": "-5%",
-      "tax_modifier": null
+      "workforce_modifier": "-5%"
     }
   },
   {
@@ -10697,8 +11702,7 @@
         "모든 주거지"
       ],
       "additional_happiness": "+8",
-      "workforce_modifier": "-10%",
-      "tax_modifier": null
+      "workforce_modifier": "-10%"
     }
   },
   {
@@ -10712,8 +11716,7 @@
         "모든 주거지"
       ],
       "additional_happiness": "+12",
-      "workforce_modifier": "-15%",
-      "tax_modifier": null
+      "workforce_modifier": "-15%"
     }
   },
   {
@@ -10727,8 +11730,7 @@
         "모든 주거지"
       ],
       "additional_happiness": "-2",
-      "workforce_modifier": "+15%",
-      "tax_modifier": null
+      "workforce_modifier": "+15%"
     }
   },
   {
@@ -10742,8 +11744,7 @@
         "모든 주거지"
       ],
       "additional_happiness": "-3",
-      "workforce_modifier": "+30%",
-      "tax_modifier": null
+      "workforce_modifier": "+30%"
     }
   },
   {
@@ -10757,8 +11758,7 @@
         "모든 주거지"
       ],
       "additional_happiness": "-4",
-      "workforce_modifier": "+50%",
-      "tax_modifier": null
+      "workforce_modifier": "+50%"
     }
   },
   {
@@ -10771,7 +11771,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-20%"
+      "incident_riot": "-20%",
+      "tax_modifier": "-5%"
     }
   },
   {
@@ -10784,7 +11785,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-40%"
+      "incident_riot": "-40%",
+      "tax_modifier": "-10%"
     }
   },
   {
@@ -10797,7 +11799,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-60%"
+      "incident_riot": "-60%",
+      "tax_modifier": "-15%"
     }
   },
   {
@@ -10941,7 +11944,6 @@
       "incident_riot": "-10%",
       "additional_happiness": "+6",
       "workforce_modifier": "+5%",
-      "tax_modifier": null,
       "benefit_additional_happiness": {
         "+5": [
           "학교",
@@ -10968,8 +11970,7 @@
       ],
       "incident_riot": "-20%",
       "additional_happiness": "+12",
-      "workforce_modifier": "+10%",
-      "tax_modifier": null
+      "workforce_modifier": "+10%"
     }
   },
   {
@@ -10984,8 +11985,7 @@
       ],
       "incident_riot": "-30%",
       "additional_happiness": "+18",
-      "workforce_modifier": "+15%",
-      "tax_modifier": null
+      "workforce_modifier": "+15%"
     }
   },
   {
@@ -11000,8 +12000,7 @@
       ],
       "incident_riot": "+10%",
       "additional_happiness": "+6",
-      "workforce_modifier": "-5%",
-      "tax_modifier": null
+      "workforce_modifier": "-5%"
     }
   },
   {
@@ -11016,8 +12015,7 @@
       ],
       "incident_riot": "+20%",
       "additional_happiness": "+12",
-      "workforce_modifier": "-10%",
-      "tax_modifier": null
+      "workforce_modifier": "-10%"
     }
   },
   {
@@ -11032,8 +12030,7 @@
       ],
       "incident_riot": "+30%",
       "additional_happiness": "+18",
-      "workforce_modifier": "-15%",
-      "tax_modifier": null
+      "workforce_modifier": "-15%"
     }
   },
   {
@@ -22865,8 +23862,7 @@
         "모든 주거지"
       ],
       "incident_riot": "-30%",
-      "workforce_modifier": "-10%",
-      "tax_modifier": null
+      "workforce_modifier": "-10%"
     }
   },
   {
@@ -22909,7 +23905,8 @@
         "모든 마천루"
       ],
       "incident_fire": "+20%",
-      "additional_happiness": "-2"
+      "additional_happiness": "-2",
+      "tax_modifier": "+20%"
     }
   },
   {
@@ -22924,7 +23921,8 @@
         "투자가 주택",
         "모든 마천루"
       ],
-      "incident_fire": "+50%"
+      "incident_fire": "+50%",
+      "tax_modifier": "+30%"
     }
   },
   {
@@ -22958,7 +23956,8 @@
         "모든 마천루"
       ],
       "incident_riot": "+20%",
-      "additional_happiness": "-2"
+      "additional_happiness": "-2",
+      "tax_modifier": "+20%"
     }
   },
   {
@@ -22973,7 +23972,8 @@
         "투자가 주택",
         "모든 마천루"
       ],
-      "additional_happiness": "-4"
+      "additional_happiness": "-4",
+      "tax_modifier": "+30%"
     }
   },
   {
@@ -23003,7 +24003,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-20%"
+      "incident_riot": "-20%",
+      "tax_modifier": "-10%"
     }
   },
   {
@@ -23016,7 +24017,8 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-50%"
+      "incident_riot": "-50%",
+      "tax_modifier": "-15%"
     }
   },
   {
@@ -23062,8 +24064,7 @@
         "모든 주거지"
       ],
       "incident_illness": "+20%",
-      "workforce_modifier": "+15%",
-      "tax_modifier": null
+      "workforce_modifier": "+15%"
     }
   },
   {
@@ -23108,8 +24109,7 @@
       ],
       "incident_riot": "-20%",
       "additional_happiness": "+5",
-      "workforce_modifier": "-10%",
-      "tax_modifier": null
+      "workforce_modifier": "-10%"
     }
   },
   {
@@ -23124,8 +24124,7 @@
       ],
       "incident_riot": "-50%",
       "additional_happiness": "+7",
-      "workforce_modifier": "-15%",
-      "tax_modifier": null
+      "workforce_modifier": "-15%"
     }
   },
   {
@@ -23140,8 +24139,7 @@
       ],
       "incident_riot": "-100%",
       "additional_happiness": "+10",
-      "workforce_modifier": "-20%",
-      "tax_modifier": null
+      "workforce_modifier": "-20%"
     }
   },
   {
@@ -23534,7 +24532,6 @@
         ]
       },
       "workforce_modifier": "+40%",
-      "tax_modifier": null,
       "benefit_additional_happiness": {
         "+3": [
           "학교",
@@ -23660,6 +24657,27 @@
     "properties": {
       "targets": []
     }
+  },
+  {
+    "guid": 112518,
+    "type": "Product",
+    "name": "고철",
+    "icon": "data/ui/2kimages/main/3dicons/icon_junk_inferior.png",
+    "properties": {}
+  },
+  {
+    "guid": 112520,
+    "type": "Product",
+    "name": "쓸만한 고철",
+    "icon": "data/ui/2kimages/main/3dicons/icon_junk.png",
+    "properties": {}
+  },
+  {
+    "guid": 112523,
+    "type": "Product",
+    "name": "특별한 고철",
+    "icon": "data/ui/2kimages/main/3dicons/icon_junk_superior.png",
+    "properties": {}
   },
   {
     "guid": 112548,
@@ -24141,7 +25159,8 @@
       "dlc_dependency": "가라앉은 보물",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "tax_modifier": "+15%"
     }
   },
   {
@@ -24154,7 +25173,8 @@
       "dlc_dependency": "가라앉은 보물",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "tax_modifier": "+20%"
     }
   },
   {
@@ -24167,7 +25187,8 @@
       "dlc_dependency": "가라앉은 보물",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "tax_modifier": "+30%"
     }
   },
   {
@@ -24436,7 +25457,10 @@
         "귀금속 세공소"
       ],
       "additional_outputs": [
-        "금 +1/5"
+        {
+          "guid": 1010249,
+          "value": "+1/5"
+        }
       ],
       "attractiveness": "+8"
     }
@@ -26216,6 +27240,167 @@
     }
   },
   {
+    "guid": 112653,
+    "type": "Product",
+    "name": "탐험가 노동력",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_explorer.png",
+    "properties": {}
+  },
+  {
+    "guid": 112654,
+    "type": "Product",
+    "name": "기술자 노동력",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_technician.png",
+    "properties": {}
+  },
+  {
+    "guid": 112708,
+    "type": "Product",
+    "name": "난방",
+    "icon": "data/ui/2kimages/main/3dicons/icon_heating_center.png",
+    "properties": {}
+  },
+  {
+    "guid": 112693,
+    "type": "Product",
+    "name": "우체국",
+    "icon": "data/ui/2kimages/main/3dicons/icon_post_office.png",
+    "properties": {}
+  },
+  {
+    "guid": 114890,
+    "type": "Product",
+    "name": "식당",
+    "icon": "data/ui/2kimages/main/3dicons/icon_canteen.png",
+    "properties": {}
+  },
+  {
+    "guid": 112694,
+    "type": "Product",
+    "name": "카리부 고기",
+    "icon": "data/ui/2kimages/main/3dicons/icon_reindeer_meat.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112697,
+    "type": "Product",
+    "name": "거위 깃털",
+    "icon": "data/ui/2kimages/main/3dicons/icon_goose_feathers.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112695,
+    "type": "Product",
+    "name": "곰의 모피",
+    "icon": "data/ui/2kimages/main/3dicons/icon_bear_fur.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112698,
+    "type": "Product",
+    "name": "허스키",
+    "icon": "data/ui/2kimages/main/3dicons/animals/icon_husky.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112699,
+    "type": "Product",
+    "name": "고래 기름",
+    "icon": "data/ui/2kimages/main/3dicons/icon_whale_oil_2.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112696,
+    "type": "Product",
+    "name": "바다표범 가죽",
+    "icon": "data/ui/2kimages/main/3dicons/icon_seal_skin.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112705,
+    "type": "Product",
+    "name": "페미컨",
+    "icon": "data/ui/2kimages/main/3dicons/icon_pemmican.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112702,
+    "type": "Product",
+    "name": "기름 램프",
+    "icon": "data/ui/2kimages/main/3dicons/icon_oil_lamps.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112701,
+    "type": "Product",
+    "name": "침낭",
+    "icon": "data/ui/2kimages/main/3dicons/icon_sleeping_bags.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112700,
+    "type": "Product",
+    "name": "파카",
+    "icon": "data/ui/2kimages/main/3dicons/icon_fur_parka.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112704,
+    "type": "Product",
+    "name": "썰매",
+    "icon": "data/ui/2kimages/main/3dicons/icon_sled_frame.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112703,
+    "type": "Product",
+    "name": "허스키 썰매",
+    "icon": "data/ui/2kimages/main/3dicons/icon_sled.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 112706,
+    "type": "Product",
+    "name": "극지 가스",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gas_red.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 115980,
+    "type": "Product",
+    "name": "사라진 원정대의 고철",
+    "icon": "data/ui/2kimages/main/3dicons/icon_passage_junk.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
     "guid": 116041,
     "type": "GuildhouseItem",
     "name": "유목 고래수염 배",
@@ -26605,7 +27790,10 @@
       ],
       "productivity": "+20%",
       "additional_outputs": [
-        "바다표범 가죽 +1/4"
+        {
+          "guid": 112696,
+          "value": "+1/4"
+        }
       ]
     }
   },
@@ -26676,7 +27864,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "카리부 고기 +1/6"
+        {
+          "guid": 112694,
+          "value": "+1/6"
+        }
       ]
     }
   },
@@ -26734,7 +27925,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "거위 깃털 +1/7"
+        {
+          "guid": 112697,
+          "value": "+1/7"
+        }
       ]
     }
   },
@@ -26789,7 +27983,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "목재 +1/2"
+        {
+          "guid": 1010196,
+          "value": "+1/2"
+        }
       ]
     }
   },
@@ -26839,7 +28036,10 @@
         "페미컨 공장"
       ],
       "additional_outputs": [
-        "기름 램프 +1/7"
+        {
+          "guid": 112702,
+          "value": "+1/7"
+        }
       ],
       "workforce": "-50%"
     }
@@ -26858,8 +28058,7 @@
         "기술자 주거지"
       ],
       "incident_arctic_illness": "-30%",
-      "workforce_modifier": "+15%",
-      "tax_modifier": null
+      "workforce_modifier": "+15%"
     }
   },
   {
@@ -26969,7 +28168,10 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "슈냅스 +1/5"
+        {
+          "guid": 1010216,
+          "value": "+1/5"
+        }
       ]
     }
   },
@@ -26986,7 +28188,10 @@
         "페미컨 공장"
       ],
       "additional_outputs": [
-        "통조림 +1/5"
+        {
+          "guid": 1010217,
+          "value": "+1/5"
+        }
       ],
       "workforce": "-50%"
     }
@@ -27028,8 +28233,14 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "아연 +1/2",
-        "구리 +1/2"
+        {
+          "guid": 1010229,
+          "value": "+1/2"
+        },
+        {
+          "guid": 1010230,
+          "value": "+1/2"
+        }
       ]
     }
   },
@@ -27351,7 +28562,10 @@
       ],
       "productivity": "+25%",
       "additional_outputs": [
-        "커피 +1/10"
+        {
+          "guid": 120032,
+          "value": "+1/10"
+        }
       ]
     }
   },
@@ -27384,7 +28598,10 @@
       ],
       "productivity": "+25%",
       "additional_outputs": [
-        "시가 +1/25"
+        {
+          "guid": 1010259,
+          "value": "+1/25"
+        }
       ]
     }
   },
@@ -27423,7 +28640,10 @@
         "모든 광산"
       ],
       "additional_outputs": [
-        "철 +1/1"
+        {
+          "guid": 1010227,
+          "value": "+1/1"
+        }
       ]
     }
   },
@@ -27440,7 +28660,10 @@
       ],
       "productivity": "+25%",
       "additional_outputs": [
-        "금광석 +1/25"
+        {
+          "guid": 1010233,
+          "value": "+1/25"
+        }
       ]
     }
   },
@@ -27466,7 +28689,10 @@
         }
       ],
       "additional_outputs": [
-        "곰의 모피 +1/3"
+        {
+          "guid": 112695,
+          "value": "+1/3"
+        }
       ],
       "fertility": "곰 토착 자원",
       "maintenance": "+150%"
@@ -28846,6 +30072,20 @@
     }
   },
   {
+    "guid": 269751,
+    "type": "Product",
+    "name": "연료",
+    "icon": "data/ui/2kimages/main/icons/icon_gasoline_3d_outline.png",
+    "properties": {}
+  },
+  {
+    "guid": 270042,
+    "type": "Product",
+    "name": "연료",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gasoline.png",
+    "properties": {}
+  },
+  {
     "guid": 118103,
     "type": "ShipSpecialist",
     "name": "다국어 학자 라힘",
@@ -28870,7 +30110,10 @@
       ],
       "productivity": "+10%",
       "additional_outputs": [
-        "염소 우유 +1/4"
+        {
+          "guid": 114371,
+          "value": "+1/4"
+        }
       ]
     }
   },
@@ -29066,7 +30309,10 @@
         }
       ],
       "additional_outputs": [
-        "말린 고기 +1/5"
+        {
+          "guid": 114359,
+          "value": "+1/5"
+        }
       ],
       "maintenance": "-50%"
     }
@@ -29264,8 +30510,14 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "채색한 필사본 +1/5",
-        "등불 +1/10"
+        {
+          "guid": 117698,
+          "value": "+1/5"
+        },
+        {
+          "guid": 117699,
+          "value": "+1/10"
+        }
       ]
     }
   },
@@ -29366,7 +30618,10 @@
       ],
       "productivity": "+40%",
       "additional_outputs": [
-        "중산모 +1/10"
+        {
+          "guid": 120037,
+          "value": "+1/10"
+        }
       ]
     }
   },
@@ -29388,7 +30643,10 @@
         }
       ],
       "additional_outputs": [
-        "맞춤복 +1/8"
+        {
+          "guid": 114430,
+          "value": "+1/8"
+        }
       ],
       "attractiveness": "+20"
     }
@@ -31156,6 +32414,515 @@
     }
   },
   {
+    "guid": 114340,
+    "type": "Product",
+    "name": "양치기 노동력",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_shepherd.png",
+    "properties": {}
+  },
+  {
+    "guid": 114341,
+    "type": "Product",
+    "name": "장로 노동력",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_elder.png",
+    "properties": {}
+  },
+  {
+    "guid": 124478,
+    "type": "Product",
+    "name": "학자 노동력",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_scholar.png",
+    "properties": {}
+  },
+  {
+    "guid": 114355,
+    "type": "Product",
+    "name": "시장",
+    "icon": "data/ui/2kimages/main/3dicons/icon_bazaar.png",
+    "properties": {}
+  },
+  {
+    "guid": 114361,
+    "type": "Product",
+    "name": "음악가의 호정",
+    "icon": "data/ui/2kimages/main/3dicons/icon_music_plaza.png",
+    "properties": {}
+  },
+  {
+    "guid": 114362,
+    "type": "Product",
+    "name": "수도원",
+    "icon": "data/ui/2kimages/main/3dicons/icon_monastery.png",
+    "properties": {}
+  },
+  {
+    "guid": 114425,
+    "type": "Product",
+    "name": "무선전신탑",
+    "icon": "data/ui/2kimages/main/3dicons/icon_radio_station.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114356,
+    "type": "Product",
+    "name": "완자 목재",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_wansa_wood.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114364,
+    "type": "Product",
+    "name": "히비스커스 꽃잎",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_hibiscus_farm.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114365,
+    "type": "Product",
+    "name": "아마씨",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_linen_farm.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114367,
+    "type": "Product",
+    "name": "테프",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_teff_grass.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114368,
+    "type": "Product",
+    "name": "인디고 염료",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_indigo.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114369,
+    "type": "Product",
+    "name": "향신료",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_spices.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114370,
+    "type": "Product",
+    "name": "밀랍",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_beeswax.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114357,
+    "type": "Product",
+    "name": "상가 소",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_watusi.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114371,
+    "type": "Product",
+    "name": "염소 우유",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_goat_milk.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114358,
+    "type": "Product",
+    "name": "소금",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_salt.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 117702,
+    "type": "Product",
+    "name": "종이",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_paper.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 118728,
+    "type": "Product",
+    "name": "랍스터",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_seafood.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114391,
+    "type": "Product",
+    "name": "리넨",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_linen_fabric.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114408,
+    "type": "Product",
+    "name": "향 좋은 밀가루",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_teff_flour.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 117701,
+    "type": "Product",
+    "name": "화려한 양초",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_candles.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114429,
+    "type": "Product",
+    "name": "Ammunition",
+    "icon": null,
+    "properties": {}
+  },
+  {
+    "guid": 114433,
+    "type": "Product",
+    "name": "정유",
+    "icon": null,
+    "properties": {}
+  },
+  {
+    "guid": 114427,
+    "type": "Product",
+    "name": "장식된 옷감",
+    "icon": null,
+    "properties": {}
+  },
+  {
+    "guid": 114359,
+    "type": "Product",
+    "name": "말린 고기",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_dried_meat.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114401,
+    "type": "Product",
+    "name": "장신구류",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_traditional_clothing.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114390,
+    "type": "Product",
+    "name": "히비스커스 차",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_hibiscus_tea.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114402,
+    "type": "Product",
+    "name": "진흙 벽돌",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_mud_bricks.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 118724,
+    "type": "Product",
+    "name": "도자기",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_ceramics.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114404,
+    "type": "Product",
+    "name": "태피스트리",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_tapestries.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114410,
+    "type": "Product",
+    "name": "해산물 스튜",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_wat_stew.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114414,
+    "type": "Product",
+    "name": "점토 파이프",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_tobacco_pipes.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 117698,
+    "type": "Product",
+    "name": "채색한 필사본",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_scriptures.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 117699,
+    "type": "Product",
+    "name": "등불",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_lanterns.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114428,
+    "type": "Product",
+    "name": "가죽 장화",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_leather_shoes.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114430,
+    "type": "Product",
+    "name": "맞춤복",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_suits.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 114431,
+    "type": "Product",
+    "name": "전화기",
+    "icon": "data/ui/2kimages/main/3dicons/goods_africa/icon_telephones.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 119392,
+    "type": "Product",
+    "name": "연구 점수",
+    "icon": "data/ui/2kimages/main/icons/icon_research_resource.png",
+    "properties": {}
+  },
+  {
+    "guid": 132723,
+    "type": "Product",
+    "name": "여행객 고객",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_tourist.png",
+    "properties": {}
+  },
+  {
+    "guid": 133891,
+    "type": "Product",
+    "name": "여행객 정박지",
+    "icon": "data/ui/2kimages/main/3dicons/icon_visitor_harbour.png",
+    "properties": {
+      "dlc_dependency": "여행철"
+    }
+  },
+  {
+    "guid": 132751,
+    "type": "Product",
+    "name": "식당",
+    "icon": "data/ui/2kimages/main/3dicons/icon_restaurant.png",
+    "properties": {
+      "dlc_dependency": "여행철"
+    }
+  },
+  {
+    "guid": 132754,
+    "type": "Product",
+    "name": "술집",
+    "icon": "data/ui/2kimages/main/3dicons/icon_bar.png",
+    "properties": {
+      "dlc_dependency": "여행철"
+    }
+  },
+  {
+    "guid": 132755,
+    "type": "Product",
+    "name": "카페",
+    "icon": "data/ui/2kimages/main/3dicons/icon_caffee.png",
+    "properties": {
+      "dlc_dependency": "여행철"
+    }
+  },
+  {
+    "guid": 133573,
+    "type": "Product",
+    "name": "보드빌 극장",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cabaret.png",
+    "properties": {}
+  },
+  {
+    "guid": 601485,
+    "type": "Product",
+    "name": "동물원",
+    "icon": "data/ui/2kimages/main/3dicons/icon_zoo.png",
+    "properties": {}
+  },
+  {
+    "guid": 133535,
+    "type": "Product",
+    "name": "박물관",
+    "icon": "data/ui/2kimages/main/3dicons/icon_museum.png",
+    "properties": {}
+  },
+  {
+    "guid": 355,
+    "type": "Product",
+    "name": "식물원",
+    "icon": "data/ui/2kimages/main/3dicons/icon_botanic_garden.png",
+    "properties": {
+      "dlc_dependency": "식물원"
+    }
+  },
+  {
+    "guid": 134257,
+    "type": "Product",
+    "name": "궁전",
+    "icon": "data/ui/2kimages/main/3dicons/palace/icon_palace.png",
+    "properties": {
+      "dlc_dependency": "권력의 중심지"
+    }
+  },
+  {
+    "guid": 132761,
+    "type": "Product",
+    "name": "철탑",
+    "icon": "data/ui/2kimages/main/3dicons/icon_eiffel_tower.png",
+    "properties": {}
+  },
+  {
+    "guid": 133536,
+    "type": "Product",
+    "name": "만국박람회",
+    "icon": "data/ui/2kimages/main/3dicons/icon_world_fair_2.png",
+    "properties": {}
+  },
+  {
+    "guid": 134781,
+    "type": "Product",
+    "name": "부둣가",
+    "icon": "data/ui/2kimages/main/3dicons/icon_docklands_main.png",
+    "properties": {
+      "dlc_dependency": "부둣가"
+    }
+  },
+  {
+    "guid": 137757,
+    "type": "Product",
+    "name": "스카이라인 타워",
+    "icon": "data/ui/2kimages/main/3dicons/icon_highlife_skyliner_monument.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 133183,
+    "type": "Product",
+    "name": "잼",
+    "icon": "data/ui/2kimages/main/3dicons/icon_jam.png",
+    "properties": {
+      "dlc_dependency": "여행철"
+    }
+  },
+  {
+    "guid": 133181,
+    "type": "Product",
+    "name": "샴푸",
+    "icon": "data/ui/2kimages/main/3dicons/icon_shampoo.png",
+    "properties": {
+      "dlc_dependency": "여행철"
+    }
+  },
+  {
+    "guid": 133185,
+    "type": "Product",
+    "name": "레모네이드",
+    "icon": "data/ui/2kimages/main/3dicons/icon_lemonade.png",
+    "properties": {
+      "dlc_dependency": "여행철"
+    }
+  },
+  {
+    "guid": 133532,
+    "type": "Product",
+    "name": "기념품",
+    "icon": "data/ui/2kimages/main/3dicons/icon_souvenir.png",
+    "properties": {
+      "dlc_dependency": "여행철"
+    }
+  },
+  {
+    "guid": 133093,
+    "type": "Product",
+    "name": "계피",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cinamon.png",
+    "properties": {}
+  },
+  {
+    "guid": 133095,
+    "type": "Product",
+    "name": "코코넛 기름",
+    "icon": "data/ui/2kimages/main/3dicons/icon_coconut.png",
+    "properties": {}
+  },
+  {
+    "guid": 133097,
+    "type": "Product",
+    "name": "시트러스",
+    "icon": "data/ui/2kimages/main/3dicons/icon_citrus.png",
+    "properties": {}
+  },
+  {
+    "guid": 134616,
+    "type": "Product",
+    "name": "장뇌 왁스",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cellulose.png",
+    "properties": {}
+  },
+  {
     "guid": 136741,
     "type": "GuildhouseItem",
     "name": "최적화된 가지치기",
@@ -31183,7 +32950,10 @@
       ],
       "productivity": "+5%",
       "additional_outputs": [
-        "시트러스 +1/4"
+        {
+          "guid": 133097,
+          "value": "+1/4"
+        }
       ],
       "workforce": "+17%",
       "maintenance": "+10%"
@@ -31220,9 +32990,18 @@
       ],
       "productivity": "+20%",
       "additional_outputs": [
-        "초석 +1/7",
-        "수지 +1/4",
-        "다이너마이트 +1/11"
+        {
+          "guid": 1010232,
+          "value": "+1/7"
+        },
+        {
+          "guid": 1010234,
+          "value": "+1/4"
+        },
+        {
+          "guid": 1010222,
+          "value": "+1/11"
+        }
       ],
       "workforce": "+15%",
       "maintenance": "+15%"
@@ -31259,7 +33038,10 @@
         "모든 식당(기념물 아님)"
       ],
       "additional_outputs": [
-        "통조림 +1/2"
+        {
+          "guid": 1010217,
+          "value": "+1/2"
+        }
       ],
       "workforce": "+75%",
       "attractiveness": "+30"
@@ -31293,7 +33075,10 @@
         "모든 식당(기념물 아님)"
       ],
       "additional_outputs": [
-        "잼 +1/3"
+        {
+          "guid": 133183,
+          "value": "+1/3"
+        }
       ],
       "workforce": "+50%"
     }
@@ -32073,6 +33858,261 @@
     "properties": {}
   },
   {
+    "guid": 134623,
+    "type": "Product",
+    "name": "엘리베이터",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_elevator.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135229,
+    "type": "Product",
+    "name": "비스킷",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_cookie.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135230,
+    "type": "Product",
+    "name": "타자기",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_typewriter.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135086,
+    "type": "Product",
+    "name": "수지",
+    "icon": "data/ui/2kimages/main/3dicons/icon_wood_resin.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135087,
+    "type": "Product",
+    "name": "체리 나무",
+    "icon": "data/ui/2kimages/main/3dicons/icon_cherry_wood.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135129,
+    "type": "Product",
+    "name": "래커",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_lacquer.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135234,
+    "type": "Product",
+    "name": "코냑",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_cognac.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135233,
+    "type": "Product",
+    "name": "바이올린",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_violin.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135232,
+    "type": "Product",
+    "name": "당구대",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_billard.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135231,
+    "type": "Product",
+    "name": "장난감",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_toys.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135186,
+    "type": "Product",
+    "name": "껌",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_bubble_gum.png",
+    "properties": {}
+  },
+  {
+    "guid": 135130,
+    "type": "Product",
+    "name": "에탄올",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_ethanol.png",
+    "properties": {}
+  },
+  {
+    "guid": 135150,
+    "type": "Product",
+    "name": "셀룰로이드",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_celluloid.png",
+    "properties": {}
+  },
+  {
+    "guid": 135816,
+    "type": "Product",
+    "name": "토스터 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_toaster.png",
+    "properties": {}
+  },
+  {
+    "guid": 135876,
+    "type": "Product",
+    "name": "자기 그릇 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_dishes.png",
+    "properties": {}
+  },
+  {
+    "guid": 135877,
+    "type": "Product",
+    "name": "진공청소기 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_vacuumcleaner.png",
+    "properties": {}
+  },
+  {
+    "guid": 135878,
+    "type": "Product",
+    "name": "냉장고 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_refrigerator.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 135879,
+    "type": "Product",
+    "name": "서류 가방 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_suitcase.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 135880,
+    "type": "Product",
+    "name": "탁상 램프 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_bankerlamp.png",
+    "properties": {}
+  },
+  {
+    "guid": 135881,
+    "type": "Product",
+    "name": "가림막 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_paravent.png",
+    "properties": {}
+  },
+  {
+    "guid": 135882,
+    "type": "Product",
+    "name": "책상 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_secretary.png",
+    "properties": {}
+  },
+  {
+    "guid": 135883,
+    "type": "Product",
+    "name": "사주식 침대 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_canopy.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 135884,
+    "type": "Product",
+    "name": "소파 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_chesterfield.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 135885,
+    "type": "Product",
+    "name": "치약 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_toothpaste.png",
+    "properties": {}
+  },
+  {
+    "guid": 135886,
+    "type": "Product",
+    "name": "세제 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_detergent.png",
+    "properties": {}
+  },
+  {
+    "guid": 135887,
+    "type": "Product",
+    "name": "립스틱 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_lipstick.png",
+    "properties": {}
+  },
+  {
+    "guid": 135888,
+    "type": "Product",
+    "name": "페이스 크림 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_facecreme.png",
+    "properties": {
+      "dlc_dependency": "길"
+    }
+  },
+  {
+    "guid": 135889,
+    "type": "Product",
+    "name": "포마드 공급",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_pomade.png",
+    "properties": {
+      "dlc_dependency": "사자의 땅"
+    }
+  },
+  {
+    "guid": 135108,
+    "type": "Product",
+    "name": "백화점",
+    "icon": "data/ui/2kimages/main/3dicons/icon_mall.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135107,
+    "type": "Product",
+    "name": "가구점",
+    "icon": "data/ui/2kimages/main/3dicons/icon_furnitures.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
+    "guid": 135109,
+    "type": "Product",
+    "name": "약국",
+    "icon": "data/ui/2kimages/main/3dicons/icon_drugstore.png",
+    "properties": {
+      "dlc_dependency": "상류사회"
+    }
+  },
+  {
     "guid": 136202,
     "type": "TownhallItem",
     "name": "훼손된 가림막 광고",
@@ -32273,7 +34313,10 @@
         "포도원"
       ],
       "additional_outputs": [
-        "설탕 +1/3"
+        {
+          "guid": 1010239,
+          "value": "+1/3"
+        }
       ],
       "workforce": "+10%",
       "maintenance": "+10%"
@@ -32292,9 +34335,18 @@
       ],
       "productivity": "+25%",
       "additional_outputs": [
-        "커피콩 +1/5",
-        "담배 +1/4",
-        "코코아 +1/3"
+        {
+          "guid": 120031,
+          "value": "+1/5"
+        },
+        {
+          "guid": 1010252,
+          "value": "+1/4"
+        },
+        {
+          "guid": 1010254,
+          "value": "+1/3"
+        }
       ],
       "workforce": "+23%",
       "maintenance": "+30%"
@@ -32319,7 +34371,10 @@
       ],
       "productivity": "+20%",
       "additional_outputs": [
-        "에탄올 +1/4"
+        {
+          "guid": 135130,
+          "value": "+1/4"
+        }
       ],
       "workforce": "+20%",
       "maintenance": "+30%"
@@ -32772,6 +34827,69 @@
     "properties": {}
   },
   {
+    "guid": 24821,
+    "type": "Product",
+    "name": "코크스",
+    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fertilizer_1.png",
+    "properties": {}
+  },
+  {
+    "guid": 24824,
+    "type": "Product",
+    "name": "껌",
+    "icon": "data/ui/2kimages/main/3dicons/goods_highlife/icon_bubble_gum.png",
+    "properties": {}
+  },
+  {
+    "guid": 24837,
+    "type": "Product",
+    "name": "연료",
+    "icon": "data/ui/2kimages/main/3dicons/icon_gasoline.png",
+    "properties": {}
+  },
+  {
+    "guid": 24846,
+    "type": "Product",
+    "name": "은 아말감",
+    "icon": "data/ui/2kimages/main/3dicons/scenario/goods/icon_cyanide_leacher.png",
+    "properties": {}
+  },
+  {
+    "guid": 24850,
+    "type": "Product",
+    "name": "은괴",
+    "icon": "data/ui/2kimages/main/3dicons/scenario/goods/icon_silver_smelter.png",
+    "properties": {}
+  },
+  {
+    "guid": 24851,
+    "type": "Product",
+    "name": "은화",
+    "icon": "data/ui/2kimages/main/3dicons/scenario/goods/icon_silver_coin_good.png",
+    "properties": {}
+  },
+  {
+    "guid": 24852,
+    "type": "Product",
+    "name": "사이안화물",
+    "icon": "data/ui/2kimages/main/3dicons/scenario/goods/icon_ammonia.png",
+    "properties": {}
+  },
+  {
+    "guid": 24863,
+    "type": "Product",
+    "name": "Industrial lubricant",
+    "icon": "data/ui/2kimages/main/3dicons/icon_whale_oil_2.png",
+    "properties": {}
+  },
+  {
+    "guid": 25073,
+    "type": "Product",
+    "name": "폐수",
+    "icon": "data/ui/2kimages/main/3dicons/icon_rich_sea_2.png",
+    "properties": {}
+  },
+  {
     "guid": 143508,
     "type": "VehicleBuff",
     "name": "제독의 조언",
@@ -32808,6 +34926,49 @@
     }
   },
   {
+    "guid": 25131,
+    "type": "Product",
+    "name": "아톨레",
+    "icon": "data/ui/2kimages/main/3dicons/scenario/goods/icon_atole.png",
+    "properties": {
+      "dlc_dependency": "변화의 씨앗"
+    }
+  },
+  {
+    "guid": 24807,
+    "type": "Product",
+    "name": "분변",
+    "icon": "data/ui/2kimages/main/3dicons/icon_dung.png",
+    "properties": {
+      "dlc_dependency": "변화의 씨앗"
+    }
+  },
+  {
+    "guid": 24808,
+    "type": "Product",
+    "name": "비료",
+    "icon": "data/ui/2kimages/main/3dicons/scenario/goods/icon_fertilizer_good.png",
+    "properties": {
+      "dlc_dependency": "변화의 씨앗"
+    }
+  },
+  {
+    "guid": 25506,
+    "type": "Product",
+    "name": "핫소스",
+    "icon": "data/ui/2kimages/main/3dicons/icon_tabasco_sauce.png",
+    "properties": {
+      "dlc_dependency": "변화의 씨앗"
+    }
+  },
+  {
+    "guid": 25546,
+    "type": "Product",
+    "name": "대농장",
+    "icon": "data/ui/2kimages/main/3dicons/hacienda/icon_hacienda_main.png",
+    "properties": {}
+  },
+  {
     "guid": 25687,
     "type": "HarbourOfficeBuff",
     "name": "도량형 통일",
@@ -32828,6 +34989,94 @@
         "모든 항구 건물"
       ],
       "pier_speed": "+50%"
+    }
+  },
+  {
+    "guid": 836,
+    "type": "Product",
+    "name": "보크사이트",
+    "icon": "data/ui/2kimages/main/3dicons/icon_bauxit.png",
+    "properties": {
+      "dlc_dependency": "하늘의 제국"
+    }
+  },
+  {
+    "guid": 838,
+    "type": "Product",
+    "name": "알루미늄 프로파일",
+    "icon": "data/ui/2kimages/main/3dicons/icon_aluminium.png",
+    "properties": {
+      "dlc_dependency": "하늘의 제국"
+    }
+  },
+  {
+    "guid": 840,
+    "type": "Product",
+    "name": "헬륨",
+    "icon": "data/ui/2kimages/main/3dicons/icon_helium.png",
+    "properties": {
+      "dlc_dependency": "하늘의 제국"
+    }
+  },
+  {
+    "guid": 1414,
+    "type": "Product",
+    "name": "산업 윤활유",
+    "icon": "data/ui/2kimages/main/3dicons/icon_industrial_lubricant_a.png",
+    "properties": {
+      "dlc_dependency": "하늘의 제국"
+    }
+  },
+  {
+    "guid": 917,
+    "type": "Product",
+    "name": "물",
+    "icon": "data/ui/2kimages/main/3dicons/icon_rich_sea_2.png",
+    "properties": {}
+  },
+  {
+    "guid": 535,
+    "type": "Product",
+    "name": "현지 우편",
+    "icon": "data/ui/2kimages/main/3dicons/mail/icon_letter_normal.png",
+    "properties": {
+      "dlc_dependency": "하늘의 제국"
+    }
+  },
+  {
+    "guid": 536,
+    "type": "Product",
+    "name": "지역 우편",
+    "icon": "data/ui/2kimages/main/3dicons/mail/icon_letter_delivered.png",
+    "properties": {
+      "dlc_dependency": "하늘의 제국"
+    }
+  },
+  {
+    "guid": 2524,
+    "type": "Product",
+    "name": "지역 외 우편",
+    "icon": "data/ui/2kimages/main/3dicons/mail/icon_letter_oversea.png",
+    "properties": {
+      "dlc_dependency": "하늘의 제국"
+    }
+  },
+  {
+    "guid": 4267,
+    "type": "Product",
+    "name": "신대륙 보고서",
+    "icon": "data/ui/2kimages/main/3dicons/scenario/goods/icon_herbarium.png",
+    "properties": {
+      "dlc_dependency": "하늘의 제국"
+    }
+  },
+  {
+    "guid": 4268,
+    "type": "Product",
+    "name": "극지 보고서",
+    "icon": "data/ui/2kimages/main/3dicons/narative_item/empireofskies/icon_valuable_sketches_b.png",
+    "properties": {
+      "dlc_dependency": "하늘의 제국"
     }
   },
   {
@@ -32993,7 +35242,9 @@
         }
       ],
       "additional_outputs": [
-        "+1/2"
+        {
+          "value": "+1/2"
+        }
       ]
     }
   },
@@ -33017,7 +35268,10 @@
         }
       ],
       "additional_outputs": [
-        "극지 가스 +1/1"
+        {
+          "guid": 112706,
+          "value": "+1/1"
+        }
       ],
       "workforce": "+100%",
       "maintenance": "+75%"
@@ -33036,7 +35290,10 @@
         "신대륙의 모든 우체국 및 우체통"
       ],
       "additional_outputs": [
-        "신대륙 보고서 +1/3"
+        {
+          "guid": 4267,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -33053,7 +35310,10 @@
       ],
       "productivity": "-15%",
       "additional_outputs": [
-        "분변 +1/3"
+        {
+          "guid": 24807,
+          "value": "+1/3"
+        }
       ],
       "workforce": "+10%",
       "maintenance": "+75%"
@@ -33072,7 +35332,10 @@
         "우체국"
       ],
       "additional_outputs": [
-        "극지 보고서 +1/3"
+        {
+          "guid": 4268,
+          "value": "+1/3"
+        }
       ]
     }
   },
@@ -33095,7 +35358,10 @@
         }
       ],
       "additional_outputs": [
-        "비료 +14/1"
+        {
+          "guid": 24808,
+          "value": "+14/1"
+        }
       ],
       "workforce": "+320%",
       "maintenance": "+600%",
@@ -33116,7 +35382,10 @@
         "염소 농장"
       ],
       "additional_outputs": [
-        "분변 +1/2"
+        {
+          "guid": 24807,
+          "value": "+1/2"
+        }
       ],
       "workforce": "+5%",
       "maintenance": "+85%"
@@ -33140,7 +35409,9 @@
         }
       ],
       "additional_outputs": [
-        "+3/2"
+        {
+          "value": "+3/2"
+        }
       ],
       "workforce": "+15%",
       "maintenance": "+175%"
@@ -33164,7 +35435,9 @@
         }
       ],
       "additional_outputs": [
-        "+5/4"
+        {
+          "value": "+5/4"
+        }
       ],
       "workforce": "+35%",
       "maintenance": "+125%"
@@ -33188,7 +35461,9 @@
         }
       ],
       "additional_outputs": [
-        "+12/2"
+        {
+          "value": "+12/2"
+        }
       ],
       "workforce": "+50%",
       "maintenance": "+250%",
@@ -33215,7 +35490,10 @@
         }
       ],
       "additional_outputs": [
-        "헬륨 +1/3"
+        {
+          "guid": 840,
+          "value": "+1/3"
+        }
       ],
       "workforce": "+100%",
       "maintenance": "+100%"
@@ -33234,7 +35512,10 @@
       ],
       "productivity": "-15%",
       "additional_outputs": [
-        "보크사이트 +1/3"
+        {
+          "guid": 836,
+          "value": "+1/3"
+        }
       ],
       "workforce": "+25%",
       "maintenance": "+35%"
@@ -33259,7 +35540,10 @@
         }
       ],
       "additional_outputs": [
-        "알루미늄 프로파일 +1/5"
+        {
+          "guid": 838,
+          "value": "+1/5"
+        }
       ],
       "workforce": "+150%",
       "maintenance": "+100%"
@@ -33489,6 +35773,15 @@
         "황동",
         "알루미늄 프로파일"
       ]
+    }
+  },
+  {
+    "guid": 2038,
+    "type": "Product",
+    "name": "섬 정착 허가서",
+    "icon": "data/ui/2kimages/main/3dicons/icon_settlement_rights_1.png",
+    "properties": {
+      "dlc_dependency": "하늘의 제국"
     }
   },
   {
@@ -34076,6 +36369,294 @@
     }
   },
   {
+    "guid": 5383,
+    "type": "Product",
+    "name": "약초",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_herbs_with_flower.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5384,
+    "type": "Product",
+    "name": "난두 가죽",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_nandu_leather.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5401,
+    "type": "Product",
+    "name": "난두 깃털",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_nandu_feathers.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5385,
+    "type": "Product",
+    "name": "우유",
+    "icon": "data/ui/2kimages/main/3dicons/icon_sheep_milk.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5386,
+    "type": "Product",
+    "name": "난초",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_orchid.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5380,
+    "type": "Product",
+    "name": "칼라마리",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_squid.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5387,
+    "type": "Product",
+    "name": "Ice Cube",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_plusgood_bauxit.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5393,
+    "type": "Product",
+    "name": "소화기",
+    "icon": "data/ui/2kimages/main/3dicons/recipes/icon_extinguisher.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5394,
+    "type": "Product",
+    "name": "경찰 장비",
+    "icon": "data/ui/2kimages/main/3dicons/recipes/icon_police_equipment.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5395,
+    "type": "Product",
+    "name": "선풍기",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_ventilator.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5397,
+    "type": "Product",
+    "name": "의약품",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_medicine.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 6280,
+    "type": "Product",
+    "name": "전선",
+    "icon": "data/ui/2kimages/main/3dicons/scenario/goods/icon_electric_cable_3.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5381,
+    "type": "Product",
+    "name": "할레아",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_jalea.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5382,
+    "type": "Product",
+    "name": "아이스크림",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_icecream_cone.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 6600,
+    "type": "Product",
+    "name": "메즈칼",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_mezcal.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5803,
+    "type": "Product",
+    "name": "축구공",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_ballsports.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5389,
+    "type": "Product",
+    "name": "의상",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_costumes.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5388,
+    "type": "Product",
+    "name": "향수",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_perfume.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5400,
+    "type": "Product",
+    "name": "안료",
+    "icon": "data/ui/2kimages/main/3dicons/recipes/icon_pigments.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5390,
+    "type": "Product",
+    "name": "전동기",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_motor.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5391,
+    "type": "Product",
+    "name": "스쿠터",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_scooter.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5392,
+    "type": "Product",
+    "name": "필름 릴",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_film_role.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5399,
+    "type": "Product",
+    "name": "암모니아",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_plusgood_ammonia.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5398,
+    "type": "Product",
+    "name": "광물",
+    "icon": "data/ui/2kimages/main/3dicons/production_goods/icon_minerals.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 6360,
+    "type": "Product",
+    "name": "은 광석",
+    "icon": "data/ui/2kimages/main/3dicons/icon_iron_ore.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5406,
+    "type": "Product",
+    "name": "아티스타 노동력",
+    "icon": "data/ui/2kimages/main/icons/workforce/icon_workforce_2.5d_artista.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5831,
+    "type": "Product",
+    "name": "삼바 학교",
+    "icon": "data/ui/2kimages/main/3dicons/public_building/icon_samba_school.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 5830,
+    "type": "Product",
+    "name": "영화관",
+    "icon": "data/ui/2kimages/main/3dicons/public_building/icon_cinema.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 6261,
+    "type": "Product",
+    "name": "자동 폭동 진압",
+    "icon": "data/ui/2kimages/main/3dicons/city_institution/icon_police_advanced.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 6262,
+    "type": "Product",
+    "name": "자동 화재 진압",
+    "icon": "data/ui/2kimages/main/3dicons/city_institution/icon_fire_brigade_advanced.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 6263,
+    "type": "Product",
+    "name": "자동 보건 관리",
+    "icon": "data/ui/2kimages/main/3dicons/city_institution/icon_hospital_advanced.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
+    "guid": 6265,
+    "type": "Product",
+    "name": "해변",
+    "icon": "data/ui/2kimages/main/3dicons/public_building/icon_beach.png",
+    "properties": {
+      "dlc_dependency": "떠오르는 신대륙"
+    }
+  },
+  {
     "guid": 105864,
     "type": "ActiveItem",
     "name": "아르한트의 과동력 프로펠러",
@@ -34141,7 +36722,9 @@
         }
       ],
       "additional_outputs": [
-        "+1/2"
+        {
+          "value": "+1/2"
+        }
       ],
       "workforce": "+25%",
       "maintenance": "+35%"
@@ -34160,7 +36743,9 @@
         "약초 정원"
       ],
       "additional_outputs": [
-        "+1/4"
+        {
+          "value": "+1/4"
+        }
       ],
       "workforce": "-20%"
     }
@@ -34179,8 +36764,14 @@
       ],
       "productivity": "+50%",
       "additional_outputs": [
-        "우유 +1/3",
-        "약초 +1/8"
+        {
+          "guid": 5385,
+          "value": "+1/3"
+        },
+        {
+          "guid": 5383,
+          "value": "+1/8"
+        }
       ],
       "workforce": "+125%",
       "maintenance": "+100%"
@@ -34205,8 +36796,14 @@
         }
       ],
       "additional_outputs": [
-        "증기차 +1/3",
-        "스쿠터 +1/4"
+        {
+          "guid": 1010225,
+          "value": "+1/3"
+        },
+        {
+          "guid": 5391,
+          "value": "+1/4"
+        }
       ],
       "workforce": "+50%",
       "maintenance": "+60%"
@@ -34228,7 +36825,9 @@
       ],
       "productivity": "+100%",
       "additional_outputs": [
-        "+1/3"
+        {
+          "value": "+1/3"
+        }
       ],
       "workforce": "+25%",
       "maintenance": "+185%",
@@ -34248,9 +36847,18 @@
         "모든 양어장"
       ],
       "additional_outputs": [
-        "칼라마리 +1/7",
-        "생선 +1/5",
-        "어유 +1/4"
+        {
+          "guid": 5380,
+          "value": "+1/7"
+        },
+        {
+          "guid": 1010200,
+          "value": "+1/5"
+        },
+        {
+          "guid": 120042,
+          "value": "+1/4"
+        }
       ],
       "workforce": "-20%",
       "maintenance": "+75%"
@@ -34437,6 +37045,13 @@
     }
   },
   {
+    "guid": 24187,
+    "type": "Product",
+    "name": "나무",
+    "icon": "data/ui/2kimages/main/3dicons/ornaments/regrowing_trees/icon_leaf_fir_trees.png",
+    "properties": {}
+  },
+  {
     "guid": 138670,
     "type": "HarbourOfficeBuff",
     "name": "불법 조업",
@@ -34592,6 +37207,13 @@
         "꽃피는 가로수"
       ]
     }
+  },
+  {
+    "guid": 24320,
+    "type": "Product",
+    "name": "식물 표본집",
+    "icon": "data/ui/2kimages/main/3dicons/scenario/goods/icon_herbarium.png",
+    "properties": {}
   },
   {
     "guid": 10377,
@@ -34828,8 +37450,7 @@
       "targets": [
         "모든 주거지"
       ],
-      "workforce_modifier": "+10%",
-      "tax_modifier": null
+      "workforce_modifier": "+10%"
     }
   },
   {

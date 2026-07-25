@@ -13,11 +13,12 @@ TEMPLATES = [
     # Additional data
     'HarbourOfficeBuff',
     'VehicleBuff',
-    'RewardPool'
+    'RewardPool',
+    'Product'
 ];
 
 def load_korean_texts(xml_path):
-    print("1/3: Loading Korean translations from texts_korean.xml...")
+    print(f"1/3: Loading Korean translations from {xml_path}...")
     texts_dict = {}
     try:
         tree = ET.parse(xml_path)
@@ -33,7 +34,7 @@ def load_korean_texts(xml_path):
         return {}
 
 def extract_items_data(assets_path, texts_dict):
-    print("2/3: Extracting assets...")
+    print(f"2/3: Extracting assets from {assets_path}...")
     text_overrides = {}
     items_list = []
     
@@ -41,11 +42,12 @@ def extract_items_data(assets_path, texts_dict):
     for event, elem in context_1:
         if elem.tag == 'Asset':
             template = elem.findtext('Template')
-            if template and template == 'ItemEffectTargetPool':
-                guid = elem.findtext('./Values/Standard/GUID')
-                text = elem.findtext('./Values/Text/TextOverride')
-                if guid and text:
-                    text_overrides[guid] = text
+            if template :
+                if template == 'ItemEffectTargetPool':
+                    guid = elem.findtext('./Values/Standard/GUID')
+                    text = elem.findtext('./Values/Text/TextOverride')
+                    if guid and text:
+                        text_overrides[guid] = text
             elem.clear()
     
     context_2 = ET.iterparse(assets_path, events=('end',))
@@ -168,10 +170,14 @@ def extract_items_data(assets_path, texts_dict):
                                     cycle = item.findtext('AdditionalOutputCycle')
                                     amount = item.findtext('Amount')
                                     if same and same.strip() == '1':
-                                        additional_outputs.append(f"+{amount}/{cycle}")
-                                    elif prod_guid and prod_guid in texts_dict:
-                                        prod_name = texts_dict[prod_guid]
-                                        additional_outputs.append(f"{prod_name} +{amount}/{cycle}")
+                                        additional_outputs.append({
+                                            "value": f"+{amount}/{cycle}"
+                                        })
+                                    elif prod_guid:
+                                        additional_outputs.append({
+                                            "guid": int(prod_guid),
+                                            "value": f"+{amount}/{cycle}"
+                                        })
                                 if len(additional_outputs) > 0:
                                     item_properties['additional_outputs'] = additional_outputs
 
@@ -358,7 +364,7 @@ def extract_items_data(assets_path, texts_dict):
 
                             # 주택당 수입 (TaxModifier)
                             tax_modifier = get_value(residence_upgrade_node.find('TaxModifierInPercent'))
-                            if workforce_modifier:
+                            if tax_modifier:
                                 item_properties['tax_modifier'] = tax_modifier
 
                         repair_crane_upgrade_node = elem.find('./Values/RepairCraneUpgrade')

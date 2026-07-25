@@ -80,6 +80,23 @@ const renderTemplate = {
         return html + `</li>`;
     },
 
+    array_with_icon: (conf, val) => {
+        if (!Array.isArray(val) || val.length === 0) return '';
+        let html = `
+            <li>
+                <div class="inline">
+                    <img src="${conf.icon}" alt="icon" class="category-icon"/>
+                    <div class="item-property-key">${conf.label}:</div>
+                </div>
+            </li>`;
+        val.forEach(v => { html += `
+            <li class="inline">
+                <img src="${v.icon}" alt="icon" class="category-icon"/>
+                <div class="text-muted" style="margin-left: 8px">${v.name ? v.name : ''} ${v.value}</div>
+            </li>`; });
+        return html + `</li>`;
+    },
+
     onlylabel: (label) => {
         return `
             <li class="inline">
@@ -414,7 +431,7 @@ const PROPERTY_CONFIGS = {
     'additional_outputs': {
         label: '추가 물품',
         icon: 'data/ui/2kimages/main/icons/icon_plus.png',
-        render: (conf, val) => renderTemplate.array(conf, val)
+        render: (conf, val) => renderTemplate.array_with_icon(conf, val)
     },
     'removed_inputs': {
         label: '투입 자원 제거',
@@ -557,6 +574,23 @@ async function fetchItems() {
                 }
             }
 
+            if (item.properties && item.properties.additional_outputs) {
+                item.properties.additional_outputs.forEach(output => {
+                    if (output.guid)
+                    {
+                        const product = rawMap.get(output.guid);
+                        if (product) {
+                            output.name = product.name;
+                            output.icon = product.icon;
+                        }
+                    }
+                    else
+                    {
+                        output.icon = 'data/ui/2kimages/main/3dicons/icon_gifts.png';
+                    }
+                });
+            }
+
             if (item.properties) {
                 for (const [key, value] of Object.entries(item.properties)) {
                     if (key === 'rarity' || key === 'dlc_dependency') {
@@ -578,6 +612,10 @@ async function fetchItems() {
                         value.forEach(val => {
                             valuesToPush.push(val.provide);
                             valuesToPush.push(val.substitute);
+                        });
+                    } else if (key === 'additional_outputs' && Array.isArray(value)) {
+                        value.forEach(val => {
+                            if (val.name) valuesToPush.push(val.name);
                         });
                     } else if (typeof value === 'string' || typeof value === 'number') {
                         valuesToPush.push(String(value));
