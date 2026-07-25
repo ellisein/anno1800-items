@@ -449,7 +449,7 @@ const PROPERTY_CONFIGS = {
     'fertility': {
         label: '토착 자원',
         icon: '',
-        render: (conf, val) => renderTemplate.onlylabel(`${val} 제공`)
+        render: (conf, val) => renderTemplate.custom(`${val.name} 제공`, val.icon, true)
     },
     'pier_speed': {
         label: '화물 선적 속도',
@@ -591,6 +591,14 @@ async function fetchItems() {
                 });
             }
 
+            if (item.properties && item.properties.fertility) {
+                const fertility = rawMap.get(item.properties.fertility)
+                item.properties.fertility = {
+                    name: fertility.name,
+                    icon: fertility.icon
+                };
+            }
+
             if (item.properties) {
                 for (const [key, value] of Object.entries(item.properties)) {
                     if (key === 'rarity' || key === 'dlc_dependency') {
@@ -617,6 +625,8 @@ async function fetchItems() {
                         value.forEach(val => {
                             if (val.name) valuesToPush.push(val.name);
                         });
+                    } else if (key === 'fertility') {
+                        valuesToPush.push(value.name);
                     } else if (typeof value === 'string' || typeof value === 'number') {
                         valuesToPush.push(String(value));
                     } else if (Array.isArray(value)) {

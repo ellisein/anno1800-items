@@ -14,7 +14,8 @@ TEMPLATES = [
     'HarbourOfficeBuff',
     'VehicleBuff',
     'RewardPool',
-    'Product'
+    'Product',
+    'Fertility'
 ];
 
 def load_korean_texts(xml_path):
@@ -199,8 +200,8 @@ def extract_items_data(assets_path, texts_dict):
                             added_fertility_node = factory_upgrade_node.find('AddedFertility')
                             if added_fertility_node is not None:
                                 fertility_guid = added_fertility_node.text
-                                if fertility_guid and fertility_guid in texts_dict:
-                                    item_properties['fertility'] = texts_dict[fertility_guid]
+                                if fertility_guid:
+                                    item_properties['fertility'] = int(fertility_guid)
 
                         building_upgrade_node = elem.find('./Values/BuildingUpgrade')
                         if building_upgrade_node is not None:
