@@ -214,6 +214,14 @@ const PROPERTY_CONFIGS = {
         label: '행복도',
         icon: 'data/ui/2kimages/main/icons/icon_happy.png'
     },
+    'workforce_modifier': {
+        label: '노동력',
+        icon: 'data/ui/2kimages/main/icons/icon_build_menu.png'
+    },
+    'tax_modifier': {
+        label: '주택당 수입',
+        icon: 'data/ui/2kimages/main/icons/icon_resource_money_4.png'
+    },
     'incident_fire': {
         label: '화재 확률',
         icon: 'data/ui/2kimages/main/icons/icon_incident_fire_01.png'

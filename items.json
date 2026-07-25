@@ -1968,7 +1968,9 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "workforce_modifier": "+10%",
+      "tax_modifier": null
     }
   },
   {
@@ -1988,7 +1990,9 @@
         "subtitute_needs": [
           "대학"
         ]
-      }
+      },
+      "workforce_modifier": "+15%",
+      "tax_modifier": null
     }
   },
   {
@@ -5554,6 +5558,8 @@
       "targets": [
         "모든 주거지"
       ],
+      "workforce_modifier": "+10%",
+      "tax_modifier": null,
       "benefit_additional_happiness": {
         "+5": [
           "학교"
@@ -10103,7 +10109,9 @@
         "노동자 주택",
         "직공 주택"
       ],
-      "additional_happiness": "-2"
+      "additional_happiness": "-2",
+      "workforce_modifier": "+15%",
+      "tax_modifier": null
     }
   },
   {
@@ -10117,7 +10125,9 @@
         "노동자 주택",
         "직공 주택"
       ],
-      "additional_happiness": "-3"
+      "additional_happiness": "-3",
+      "workforce_modifier": "+30%",
+      "tax_modifier": null
     }
   },
   {
@@ -10131,7 +10141,9 @@
         "노동자 주택",
         "직공 주택"
       ],
-      "additional_happiness": "-4"
+      "additional_happiness": "-4",
+      "workforce_modifier": "+50%",
+      "tax_modifier": null
     }
   },
   {
@@ -10145,7 +10157,9 @@
         "노동자 주택",
         "직공 주택"
       ],
-      "additional_happiness": "+4"
+      "additional_happiness": "+4",
+      "workforce_modifier": "-5%",
+      "tax_modifier": null
     }
   },
   {
@@ -10159,7 +10173,9 @@
         "노동자 주택",
         "직공 주택"
       ],
-      "additional_happiness": "+8"
+      "additional_happiness": "+8",
+      "workforce_modifier": "-10%",
+      "tax_modifier": null
     }
   },
   {
@@ -10173,7 +10189,9 @@
         "노동자 주택",
         "직공 주택"
       ],
-      "additional_happiness": "+12"
+      "additional_happiness": "+12",
+      "workforce_modifier": "-15%",
+      "tax_modifier": null
     }
   },
   {
@@ -10663,7 +10681,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+4"
+      "additional_happiness": "+4",
+      "workforce_modifier": "-5%",
+      "tax_modifier": null
     }
   },
   {
@@ -10676,7 +10696,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+8"
+      "additional_happiness": "+8",
+      "workforce_modifier": "-10%",
+      "tax_modifier": null
     }
   },
   {
@@ -10689,7 +10711,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+12"
+      "additional_happiness": "+12",
+      "workforce_modifier": "-15%",
+      "tax_modifier": null
     }
   },
   {
@@ -10702,7 +10726,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "-2"
+      "additional_happiness": "-2",
+      "workforce_modifier": "+15%",
+      "tax_modifier": null
     }
   },
   {
@@ -10715,7 +10741,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "-3"
+      "additional_happiness": "-3",
+      "workforce_modifier": "+30%",
+      "tax_modifier": null
     }
   },
   {
@@ -10728,7 +10756,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "-4"
+      "additional_happiness": "-4",
+      "workforce_modifier": "+50%",
+      "tax_modifier": null
     }
   },
   {
@@ -10910,6 +10940,8 @@
       ],
       "incident_riot": "-10%",
       "additional_happiness": "+6",
+      "workforce_modifier": "+5%",
+      "tax_modifier": null,
       "benefit_additional_happiness": {
         "+5": [
           "학교",
@@ -10935,7 +10967,9 @@
         "모든 주거지"
       ],
       "incident_riot": "-20%",
-      "additional_happiness": "+12"
+      "additional_happiness": "+12",
+      "workforce_modifier": "+10%",
+      "tax_modifier": null
     }
   },
   {
@@ -10949,7 +10983,9 @@
         "모든 주거지"
       ],
       "incident_riot": "-30%",
-      "additional_happiness": "+18"
+      "additional_happiness": "+18",
+      "workforce_modifier": "+15%",
+      "tax_modifier": null
     }
   },
   {
@@ -10963,7 +10999,9 @@
         "모든 주거지"
       ],
       "incident_riot": "+10%",
-      "additional_happiness": "+6"
+      "additional_happiness": "+6",
+      "workforce_modifier": "-5%",
+      "tax_modifier": null
     }
   },
   {
@@ -10977,7 +11015,9 @@
         "모든 주거지"
       ],
       "incident_riot": "+20%",
-      "additional_happiness": "+12"
+      "additional_happiness": "+12",
+      "workforce_modifier": "-10%",
+      "tax_modifier": null
     }
   },
   {
@@ -10991,7 +11031,9 @@
         "모든 주거지"
       ],
       "incident_riot": "+30%",
-      "additional_happiness": "+18"
+      "additional_happiness": "+18",
+      "workforce_modifier": "-15%",
+      "tax_modifier": null
     }
   },
   {
@@ -22725,7 +22767,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+2"
+      "additional_happiness": "+2",
+      "workforce_modifier": "+25%",
+      "tax_modifier": "-20%"
     }
   },
   {
@@ -22820,7 +22864,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-30%"
+      "incident_riot": "-30%",
+      "workforce_modifier": "-10%",
+      "tax_modifier": null
     }
   },
   {
@@ -22894,7 +22940,9 @@
         "모든 마천루"
       ],
       "incident_fire": "+100%",
-      "additional_happiness": "+10"
+      "additional_happiness": "+10",
+      "workforce_modifier": "+20%",
+      "tax_modifier": "+40%"
     }
   },
   {
@@ -22940,7 +22988,9 @@
         "투자가 주택",
         "모든 마천루"
       ],
-      "additional_happiness": "-8"
+      "additional_happiness": "-8",
+      "workforce_modifier": "+20%",
+      "tax_modifier": "+40%"
     }
   },
   {
@@ -22979,7 +23029,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_riot": "-100%"
+      "incident_riot": "-100%",
+      "workforce_modifier": "+25%",
+      "tax_modifier": "-20%"
     }
   },
   {
@@ -23009,7 +23061,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "+20%"
+      "incident_illness": "+20%",
+      "workforce_modifier": "+15%",
+      "tax_modifier": null
     }
   },
   {
@@ -23022,7 +23076,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "+40%"
+      "incident_illness": "+40%",
+      "workforce_modifier": "+25%",
+      "tax_modifier": "+20%"
     }
   },
   {
@@ -23035,7 +23091,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "incident_illness": "+60%"
+      "incident_illness": "+60%",
+      "workforce_modifier": "+40%",
+      "tax_modifier": "+40%"
     }
   },
   {
@@ -23049,7 +23107,9 @@
         "모든 주거지"
       ],
       "incident_riot": "-20%",
-      "additional_happiness": "+5"
+      "additional_happiness": "+5",
+      "workforce_modifier": "-10%",
+      "tax_modifier": null
     }
   },
   {
@@ -23063,7 +23123,9 @@
         "모든 주거지"
       ],
       "incident_riot": "-50%",
-      "additional_happiness": "+7"
+      "additional_happiness": "+7",
+      "workforce_modifier": "-15%",
+      "tax_modifier": null
     }
   },
   {
@@ -23077,7 +23139,9 @@
         "모든 주거지"
       ],
       "incident_riot": "-100%",
-      "additional_happiness": "+10"
+      "additional_happiness": "+10",
+      "workforce_modifier": "-20%",
+      "tax_modifier": null
     }
   },
   {
@@ -23090,7 +23154,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+5"
+      "additional_happiness": "+5",
+      "workforce_modifier": "+15%",
+      "tax_modifier": "-5%"
     }
   },
   {
@@ -23103,7 +23169,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+10"
+      "additional_happiness": "+10",
+      "workforce_modifier": "+25%",
+      "tax_modifier": "-10%"
     }
   },
   {
@@ -23116,7 +23184,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+15"
+      "additional_happiness": "+15",
+      "workforce_modifier": "+40%",
+      "tax_modifier": "-15%"
     }
   },
   {
@@ -23463,6 +23533,8 @@
           "대학"
         ]
       },
+      "workforce_modifier": "+40%",
+      "tax_modifier": null,
       "benefit_additional_happiness": {
         "+3": [
           "학교",
@@ -26785,7 +26857,9 @@
         "모험가 주거지",
         "기술자 주거지"
       ],
-      "incident_arctic_illness": "-30%"
+      "incident_arctic_illness": "-30%",
+      "workforce_modifier": "+15%",
+      "tax_modifier": null
     }
   },
   {
@@ -27292,7 +27366,9 @@
       "targets": [
         "모든 주거지"
       ],
-      "additional_happiness": "+10"
+      "additional_happiness": "+10",
+      "workforce_modifier": "+20%",
+      "tax_modifier": "+10%"
     }
   },
   {
@@ -33542,72 +33618,6 @@
     }
   },
   {
-    "guid": 101891,
-    "type": "TownhallItem",
-    "name": "전설의 창",
-    "icon": "data/ui/2kimages/main/3dicons/campaign/africa/icon_spear_of_the_salomonids_02.png",
-    "properties": {
-      "rarity": "legendary",
-      "targets": []
-    }
-  },
-  {
-    "guid": 102177,
-    "type": "VehicleItem",
-    "name": "실험적 엔진",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_turbine_1.png",
-    "properties": {
-      "rarity": "epic",
-      "allocation": "AirShip",
-      "forward_speed": "+33%",
-      "ignore_weight_factor": "-100%"
-    }
-  },
-  {
-    "guid": 102179,
-    "type": "TownhallItem",
-    "name": "반쯤 언 쥐",
-    "icon": "data/ui/2kimages/main/3dicons/animals/icon_rodents.png",
-    "properties": {
-      "rarity": "common",
-      "targets": [
-        "모든 주거지"
-      ],
-      "incident_riot": "+500%",
-      "additional_happiness": "-25"
-    }
-  },
-  {
-    "guid": 103772,
-    "type": "TownhallItem",
-    "name": "올해의 수염 상",
-    "icon": "data/ui/2kimages/main/3dicons/mail/icon_letter_oversea.png",
-    "properties": {
-      "rarity": "legendary",
-      "targets": [
-        "식민지 노동자 거주지",
-        "식민지 직공 거주지"
-      ],
-      "additional_happiness": "+10",
-      "benefit_additional_happiness": {
-        "+1": [
-          "현지 우편"
-        ],
-        "+2": [
-          "지역 우편"
-        ]
-      },
-      "benefit_additional_money": {
-        "+2": [
-          "현지 우편"
-        ],
-        "+4": [
-          "지역 우편"
-        ]
-      }
-    }
-  },
-  {
     "guid": 102260,
     "type": "HarbourOfficeBuff",
     "name": "노련한 손길",
@@ -34039,79 +34049,6 @@
         "암모니아",
         "의약품"
       ]
-    }
-  },
-  {
-    "guid": 8154,
-    "type": "GuildhouseItem",
-    "name": "캔 밀봉기",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_canning_machine.png",
-    "properties": {
-      "rarity": "legendary",
-      "targets": [
-        "칼라마리 양어장"
-      ],
-      "replaced_inputs": [
-        {
-          "old": "물",
-          "new": "철"
-        }
-      ],
-      "additional_outputs": [
-        "통조림 +1/5"
-      ],
-      "workforce": "+100%",
-      "maintenance": "+350%"
-    }
-  },
-  {
-    "guid": 8155,
-    "type": "GuildhouseItem",
-    "name": "혼합 탱크",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_water_dispenser.png",
-    "properties": {
-      "rarity": "legendary",
-      "targets": [
-        "럼주 양조장"
-      ],
-      "replaced_inputs": [
-        {
-          "old": "사탕수수",
-          "new": "설탕"
-        },
-        {
-          "old": "나무",
-          "new": "에탄올"
-        }
-      ],
-      "additional_outputs": [
-        "샴페인 +1/4"
-      ],
-      "workforce": "+200%",
-      "maintenance": "+250%"
-    }
-  },
-  {
-    "guid": 8156,
-    "type": "GuildhouseItem",
-    "name": "가짜 모피 직조기",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_loom_3.png",
-    "properties": {
-      "rarity": "legendary",
-      "targets": [
-        "의상 상점"
-      ],
-      "replaced_inputs": [
-        {
-          "old": "난두 깃털",
-          "new": "셀룰로이드"
-        }
-      ],
-      "additional_outputs": [
-        "모피 코트 +1/5"
-      ],
-      "workforce": "+170%",
-      "maintenance": "+190%"
     }
   },
   {
@@ -34639,683 +34576,6 @@
     }
   },
   {
-    "guid": 24012,
-    "type": "GuildhouseItem",
-    "name": "토양 표본 채취기",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_thermometer_1.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "모든 곡식 농장"
-      ],
-      "productivity": "+15%",
-      "workforce": "+10%"
-    }
-  },
-  {
-    "guid": 24014,
-    "type": "GuildhouseItem",
-    "name": "고급 토양 표본 채취기",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_thermometer_2.png",
-    "properties": {
-      "rarity": "epic",
-      "targets": [
-        "모든 곡식 농장"
-      ],
-      "productivity": "+30%",
-      "workforce": "+20%"
-    }
-  },
-  {
-    "guid": 24016,
-    "type": "GuildhouseItem",
-    "name": "폐기물 처리 탱크",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_waste_management_2.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "모든 동물 농장"
-      ],
-      "module_limit": "+25%"
-    }
-  },
-  {
-    "guid": 24018,
-    "type": "GuildhouseItem",
-    "name": "대용량 폐기물 처리 탱크",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_waste_management_3.png",
-    "properties": {
-      "rarity": "legendary",
-      "targets": [
-        "모든 동물 농장"
-      ]
-    }
-  },
-  {
-    "guid": 24043,
-    "type": "GuildhouseItem",
-    "name": "폐기물 여과기",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/item_filter_02.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "양어장"
-      ],
-      "productivity": "-20%"
-    }
-  },
-  {
-    "guid": 24044,
-    "type": "GuildhouseItem",
-    "name": "고급 폐기물 여과기",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/item_filter_3.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "양어장"
-      ],
-      "productivity": "-30%"
-    }
-  },
-  {
-    "guid": 24019,
-    "type": "GuildhouseItem",
-    "name": "산업 독소 여과기",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_heatexchanger_1.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "모든 중공업"
-      ],
-      "workforce": "+10%"
-    }
-  },
-  {
-    "guid": 24023,
-    "type": "GuildhouseItem",
-    "name": "고급 산업 독소 여과기",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_heatexchanger_2.png",
-    "properties": {
-      "rarity": "epic",
-      "targets": [
-        "모든 중공업"
-      ],
-      "workforce": "+15%"
-    }
-  },
-  {
-    "guid": 24033,
-    "type": "GuildhouseItem",
-    "name": "상급 산업 독소 여과기",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_heatexchanger_3.png",
-    "properties": {
-      "rarity": "legendary",
-      "targets": [
-        "모든 중공업"
-      ],
-      "workforce": "+20%"
-    }
-  },
-  {
-    "guid": 24034,
-    "type": "GuildhouseItem",
-    "name": "물 증류기",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_oil_extractor_3.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "모든 동물 농장"
-      ]
-    }
-  },
-  {
-    "guid": 24036,
-    "type": "GuildhouseItem",
-    "name": "상급 물 증류기",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_oil_extractor_1.png",
-    "properties": {
-      "rarity": "epic",
-      "targets": [
-        "모든 동물 농장"
-      ]
-    }
-  },
-  {
-    "guid": 24054,
-    "type": "GuildhouseItem",
-    "name": "공동 정원",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_insect_proof_net.png",
-    "properties": {
-      "rarity": "epic",
-      "allocation": "TownHall",
-      "targets": [
-        "모든 주거지"
-      ],
-      "good_consumption": [
-        "생선 -10%",
-        "플랜테인 -10%",
-        "커피 -10%",
-        "럼주 -10%",
-        "토르티야 -10%"
-      ]
-    }
-  },
-  {
-    "guid": 24048,
-    "type": "GuildhouseItem",
-    "name": "대형 공동 정원",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/africa/item_sturdy_greenhouse.png",
-    "properties": {
-      "rarity": "legendary",
-      "allocation": "TownHall",
-      "targets": [
-        "모든 주거지"
-      ],
-      "good_consumption": [
-        "생선 -20%",
-        "플랜테인 -20%",
-        "커피 -20%",
-        "럼주 -20%",
-        "토르티야 -20%"
-      ]
-    }
-  },
-  {
-    "guid": 24061,
-    "type": "GuildhouseItem",
-    "name": "낚시꾼",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_404.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "양어장"
-      ],
-      "productivity": "+20%"
-    }
-  },
-  {
-    "guid": 24064,
-    "type": "GuildhouseItem",
-    "name": "해양생물학자",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_zoologist_820.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "양어장"
-      ],
-      "additional_outputs": [
-        "생선 +1/4"
-      ],
-      "workforce": "+10%"
-    }
-  },
-  {
-    "guid": 24065,
-    "type": "GuildhouseItem",
-    "name": "조류학자",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_well_dressed_103.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "양어장"
-      ],
-      "workforce": "+10%"
-    }
-  },
-  {
-    "guid": 24068,
-    "type": "GuildhouseItem",
-    "name": "수목 재배가",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_mason_720.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": []
-    }
-  },
-  {
-    "guid": 24077,
-    "type": "GuildhouseItem",
-    "name": "식물학자",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_worker_407.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": []
-    }
-  },
-  {
-    "guid": 24078,
-    "type": "GuildhouseItem",
-    "name": "산업 화학자",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_well_dressed_408.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "모든 중공업"
-      ],
-      "productivity": "+25",
-      "workforce": "+10%"
-    }
-  },
-  {
-    "guid": 24079,
-    "type": "GuildhouseItem",
-    "name": "조경 계획자",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_torcedor_709.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "모든 곡식 농장"
-      ],
-      "workforce": "+10%",
-      "module_limit": "-20%"
-    }
-  },
-  {
-    "guid": 24081,
-    "type": "GuildhouseItem",
-    "name": "미생물학자",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_travelagent_723.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "모든 동물 농장"
-      ],
-      "workforce": "+10%"
-    }
-  },
-  {
-    "guid": 24082,
-    "type": "GuildhouseItem",
-    "name": "재활용 전문가",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_curator_702.png",
-    "properties": {
-      "rarity": "rare",
-      "allocation": "TownHall",
-      "targets": [
-        "모든 주거지"
-      ],
-      "good_consumption": [
-        "작업복 -10%",
-        "중산모 -10%",
-        "철 -10%"
-      ]
-    }
-  },
-  {
-    "guid": 24086,
-    "type": "GuildhouseItem",
-    "name": "재활용 권위자",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_teacher_823.png",
-    "properties": {
-      "rarity": "legendary",
-      "allocation": "TownHall",
-      "targets": [
-        "모든 주거지"
-      ],
-      "good_consumption": [
-        "작업복 -20%",
-        "중산모 -20%",
-        "철 -20%"
-      ]
-    }
-  },
-  {
-    "guid": 24087,
-    "type": "GuildhouseItem",
-    "name": "수학자",
-    "icon": "data/ui/2kimages/main/3dicons/specialists/systemic/icon_normal_dressed_405.png",
-    "properties": {
-      "rarity": "legendary",
-      "targets": [
-        "모든 생산 건물"
-      ],
-      "workforce": "-10%",
-      "maintenance": "-10%"
-    }
-  },
-  {
-    "guid": 24100,
-    "type": "GuildhouseItem",
-    "name": "기본 비료",
-    "icon": "data/ui/2kimages/main/3dicons/icon_tobacco_1.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "모든 곡식 농장"
-      ],
-      "module_limit": "-10%"
-    }
-  },
-  {
-    "guid": 24107,
-    "type": "GuildhouseItem",
-    "name": "고급 비료",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fertilizer_2.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "모든 곡식 농장"
-      ],
-      "module_limit": "-20%"
-    }
-  },
-  {
-    "guid": 24108,
-    "type": "GuildhouseItem",
-    "name": "상급 비료",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_fertilizer_3.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "모든 곡식 농장"
-      ],
-      "module_limit": "-30%"
-    }
-  },
-  {
-    "guid": 24109,
-    "type": "GuildhouseItem",
-    "name": "사료 보충제",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_medicine_1.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "모든 동물 농장"
-      ],
-      "productivity": "+20"
-    }
-  },
-  {
-    "guid": 24113,
-    "type": "GuildhouseItem",
-    "name": "상급 사료 보충제",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_medicine_3.png",
-    "properties": {
-      "rarity": "epic",
-      "targets": [
-        "모든 동물 농장"
-      ],
-      "productivity": "+50"
-    }
-  },
-  {
-    "guid": 24114,
-    "type": "GuildhouseItem",
-    "name": "기본 농업 교본",
-    "icon": "data/ui/2kimages/main/3dicons/museum/icon_book_comon.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "모든 곡식 농장"
-      ],
-      "module_limit": "+20%"
-    }
-  },
-  {
-    "guid": 24151,
-    "type": "GuildhouseItem",
-    "name": "고급 농업 교본",
-    "icon": "data/ui/2kimages/main/3dicons/museum/icon_book_uncommon.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "모든 곡식 농장"
-      ],
-      "module_limit": "+30%"
-    }
-  },
-  {
-    "guid": 24152,
-    "type": "GuildhouseItem",
-    "name": "전문 농업 교본",
-    "icon": "data/ui/2kimages/main/3dicons/narative_item/icon_kyrias_notebook.png",
-    "properties": {
-      "rarity": "epic",
-      "targets": [
-        "모든 곡식 농장"
-      ],
-      "module_limit": "+40%"
-    }
-  },
-  {
-    "guid": 24153,
-    "type": "GuildhouseItem",
-    "name": "공장 규제",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_tax_bill_1.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "모든 중공업"
-      ],
-      "productivity": "-25%",
-      "workforce": "-25%"
-    }
-  },
-  {
-    "guid": 24154,
-    "type": "GuildhouseItem",
-    "name": "업무 시간 조정",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_tax_bill_2.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "모든 중공업"
-      ],
-      "productivity": "-35%",
-      "workforce": "-35%"
-    }
-  },
-  {
-    "guid": 24155,
-    "type": "GuildhouseItem",
-    "name": "공장 인원 과잉 규제",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/icon_tax_bill_3.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "모든 중공업"
-      ],
-      "productivity": "-50%",
-      "workforce": "-50%"
-    }
-  },
-  {
-    "guid": 24159,
-    "type": "TownhallItem",
-    "name": "공익 캠페인: 단백질을 섭취합시다!",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/item_survey_depth.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "모든 주거지"
-      ],
-      "good_consumption": [
-        "생선 +100%"
-      ],
-      "need_provide_need": {
-        "provide_needs": [
-          "플랜테인"
-        ],
-        "subtitute_needs": [
-          "생선"
-        ]
-      }
-    }
-  },
-  {
-    "guid": 24160,
-    "type": "TownhallItem",
-    "name": "식단 조언",
-    "icon": "data/ui/2kimages/main/3dicons/consumables/item_survey_shipscargo.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "모든 주거지"
-      ],
-      "good_consumption": [
-        "토르티야 +100%"
-      ],
-      "need_provide_need": {
-        "provide_needs": [
-          "럼주"
-        ],
-        "subtitute_needs": [
-          "토르티야"
-        ]
-      }
-    }
-  },
-  {
-    "guid": 24162,
-    "type": "GuildhouseItem",
-    "name": "열화단 하소기",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_calciner_3.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "모든 중공업"
-      ],
-      "productivity": "+50%"
-    }
-  },
-  {
-    "guid": 24163,
-    "type": "GuildhouseItem",
-    "name": "고급 열화단 하소기",
-    "icon": "data/ui/2kimages/main/3dicons/machine_items/icon_calciner_2.png",
-    "properties": {
-      "rarity": "epic",
-      "targets": [
-        "모든 중공업"
-      ],
-      "productivity": "+35%"
-    }
-  },
-  {
-    "guid": 24164,
-    "type": "GuildhouseItem",
-    "name": "열화단 기계 설명서",
-    "icon": "data/ui/2kimages/main/3dicons/books/icon_capitalist_economic_doctrine_01.png",
-    "properties": {
-      "rarity": "legendary",
-      "targets": [
-        "모든 중공업"
-      ],
-      "productivity": "+25%"
-    }
-  },
-  {
-    "guid": 24179,
-    "type": "GuildhouseItem",
-    "name": "일출 산호",
-    "icon": "data/ui/2kimages/main/3dicons/plants/icon_great_star_coral.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "어군"
-      ]
-    }
-  },
-  {
-    "guid": 24191,
-    "type": "GuildhouseItem",
-    "name": "천정 산호",
-    "icon": "data/ui/2kimages/main/3dicons/plants/icon_pillar_coral.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "어군"
-      ]
-    }
-  },
-  {
-    "guid": 24192,
-    "type": "GuildhouseItem",
-    "name": "달빛 산호",
-    "icon": "data/ui/2kimages/main/3dicons/plants/icon_staghorn_coral.png",
-    "properties": {
-      "rarity": "epic",
-      "targets": [
-        "어군"
-      ]
-    }
-  },
-  {
-    "guid": 24195,
-    "type": "GuildhouseItem",
-    "name": "백합",
-    "icon": "data/ui/2kimages/main/3dicons/plants/icon_lilies.png",
-    "properties": {
-      "rarity": "uncommon",
-      "targets": [
-        "돼지 농장"
-      ]
-    }
-  },
-  {
-    "guid": 24196,
-    "type": "GuildhouseItem",
-    "name": "갈대",
-    "icon": "data/ui/2kimages/main/3dicons/plants/icon_reeds.png",
-    "properties": {
-      "rarity": "rare",
-      "targets": [
-        "돼지 농장"
-      ]
-    }
-  },
-  {
-    "guid": 24197,
-    "type": "GuildhouseItem",
-    "name": "큰가시연꽃",
-    "icon": "data/ui/2kimages/main/3dicons/plants/icon_giant_water_lily.png",
-    "properties": {
-      "rarity": "epic",
-      "targets": [
-        "돼지 농장"
-      ]
-    }
-  },
-  {
-    "guid": 24201,
-    "type": "GuildhouseItem",
-    "name": "덩굴",
-    "icon": "data/ui/2kimages/main/3dicons/plants/icon_vines.png",
-    "properties": {
-      "rarity": "uncommon",
-      "allocation": "TownHall",
-      "targets": [
-        "모든 주거지"
-      ]
-    }
-  },
-  {
-    "guid": 24199,
-    "type": "GuildhouseItem",
-    "name": "가로수",
-    "icon": "data/ui/2kimages/main/3dicons/plants/item_bodhi_tree.png",
-    "properties": {
-      "rarity": "rare",
-      "allocation": "TownHall",
-      "targets": [
-        "모든 주거지"
-      ]
-    }
-  },
-  {
-    "guid": 24198,
-    "type": "GuildhouseItem",
-    "name": "꽃피는 가로수",
-    "icon": "data/ui/2kimages/main/3dicons/plants/icon_tulsi.png",
-    "properties": {
-      "rarity": "epic",
-      "allocation": "TownHall",
-      "targets": [
-        "모든 주거지"
-      ]
-    }
-  },
-  {
     "guid": 7445,
     "type": "RewardPool",
     "name": "Ruin",
@@ -35567,7 +34827,9 @@
       "rarity": "uncommon",
       "targets": [
         "모든 주거지"
-      ]
+      ],
+      "workforce_modifier": "+10%",
+      "tax_modifier": null
     }
   },
   {

@@ -191,7 +191,7 @@ h1 {
 }
 
 .text-highlight {
-    color: var(--text-highlight);
+    color: var(--text-highlight) !important;
 }
 
 .text-muted {

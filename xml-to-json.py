@@ -51,6 +51,9 @@ def extract_items_data(assets_path, texts_dict):
     context_2 = ET.iterparse(assets_path, events=('end',))
     for event, elem in context_2:
         if elem.tag == 'Asset':
+            if elem.find('./Values/Item/ScenarioFilter') is not None:
+                continue
+
             template = elem.findtext('Template')
 
             if template and template in TEMPLATES:
@@ -347,6 +350,16 @@ def extract_items_data(assets_path, texts_dict):
                                         'provide_needs': provide_needs,
                                         'subtitute_needs': subtitute_needs
                                     }
+
+                            # 노동력 (workforce_modifier)
+                            workforce_modifier = get_value(residence_upgrade_node.find('WorkforceModifierInPercent'))
+                            if workforce_modifier:
+                                item_properties['workforce_modifier'] = workforce_modifier
+
+                            # 주택당 수입 (TaxModifier)
+                            tax_modifier = get_value(residence_upgrade_node.find('TaxModifierInPercent'))
+                            if workforce_modifier:
+                                item_properties['tax_modifier'] = tax_modifier
 
                         repair_crane_upgrade_node = elem.find('./Values/RepairCraneUpgrade')
                         if repair_crane_upgrade_node is not None:
