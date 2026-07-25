@@ -326,15 +326,17 @@ def extract_items_data(assets_path, texts_dict):
                             # 물품 소비량 (good_consumption)
                             good_consumption_node = residence_upgrade_node.find('GoodConsumptionUpgrade')
                             if good_consumption_node is not None:
-                                good_consumption = []
+                                good_consumptions = []
                                 for item in good_consumption_node.findall('Item'):
                                     guid = item.findtext('ProvidedNeed')
                                     amount = get_value(item.find('AmountInPercent'))
-                                    if guid and guid in texts_dict and amount:
-                                        name = texts_dict[guid]
-                                        good_consumption.append(f"{name} {amount}")
-                                if len(good_consumption) > 0:
-                                    item_properties['good_consumption'] = good_consumption
+                                    if guid and amount:
+                                        good_consumptions.append({
+                                            "guid": int(guid),
+                                            "value": amount
+                                        })
+                                if len(good_consumptions) > 0:
+                                    item_properties['good_consumption'] = good_consumptions
 
                             # 행복도
                             additional_happiness = get_value(residence_upgrade_node.find('AdditionalHappiness'))

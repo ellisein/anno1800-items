@@ -3777,7 +3777,10 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "보드빌 극장 -100%"
+        {
+          "guid": 1010352,
+          "value": "-100%"
+        }
       ]
     }
   },
@@ -3828,7 +3831,10 @@
         "모든 구대륙 거주지"
       ],
       "good_consumption": [
-        "보드빌 극장 -100%"
+        {
+          "guid": 1010352,
+          "value": "-100%"
+        }
       ],
       "additional_happiness": "+7"
     }
@@ -6540,7 +6546,10 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "시장 -100%"
+        {
+          "guid": 120020,
+          "value": "-100%"
+        }
       ]
     }
   },
@@ -6582,7 +6591,10 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "맥주 -100%"
+        {
+          "guid": 1010214,
+          "value": "-100%"
+        }
       ],
       "additional_happiness": "+5"
     }
@@ -6598,7 +6610,10 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "샴페인 -100%"
+        {
+          "guid": 120016,
+          "value": "-100%"
+        }
       ],
       "additional_happiness": "+10"
     }
@@ -6614,7 +6629,10 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "학교 -100%"
+        {
+          "guid": 1010351,
+          "value": "-100%"
+        }
       ]
     }
   },
@@ -6697,7 +6715,10 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "회원제 클럽 -100%"
+        {
+          "guid": 1010355,
+          "value": "-100%"
+        }
       ]
     }
   },
@@ -6783,7 +6804,10 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "은행 -100%"
+        {
+          "guid": 1010356,
+          "value": "-100%"
+        }
       ]
     }
   },
@@ -7400,7 +7424,10 @@
         "모든 구대륙 거주지"
       ],
       "good_consumption": [
-        "보드빌 극장 -100%"
+        {
+          "guid": 1010352,
+          "value": "-100%"
+        }
       ],
       "additional_happiness": "+7"
     }
@@ -11428,10 +11455,22 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "럼주 -20%",
-        "맥주 -20%",
-        "슈냅스 -20%",
-        "샴페인 -20%"
+        {
+          "guid": 1010257,
+          "value": "-20%"
+        },
+        {
+          "guid": 1010214,
+          "value": "-20%"
+        },
+        {
+          "guid": 1010216,
+          "value": "-20%"
+        },
+        {
+          "guid": 120016,
+          "value": "-20%"
+        }
       ],
       "additional_happiness": "-2"
     }
@@ -11447,10 +11486,22 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "럼주 -30%",
-        "맥주 -30%",
-        "슈냅스 -30%",
-        "샴페인 -30%"
+        {
+          "guid": 1010257,
+          "value": "-30%"
+        },
+        {
+          "guid": 1010214,
+          "value": "-30%"
+        },
+        {
+          "guid": 1010216,
+          "value": "-30%"
+        },
+        {
+          "guid": 120016,
+          "value": "-30%"
+        }
       ],
       "additional_happiness": "-3"
     }
@@ -11466,10 +11517,22 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "럼주 -40%",
-        "맥주 -40%",
-        "슈냅스 -40%",
-        "샴페인 -40%"
+        {
+          "guid": 1010257,
+          "value": "-40%"
+        },
+        {
+          "guid": 1010214,
+          "value": "-40%"
+        },
+        {
+          "guid": 1010216,
+          "value": "-40%"
+        },
+        {
+          "guid": 120016,
+          "value": "-40%"
+        }
       ],
       "additional_happiness": "-4"
     }
@@ -25610,7 +25673,10 @@
         "모든 주거지"
       ],
       "good_consumption": [
-        "커피 -100%"
+        {
+          "guid": 120032,
+          "value": "-100%"
+        }
       ],
       "additional_happiness": "+10"
     }
@@ -27980,7 +28046,10 @@
       ],
       "incident_arctic_illness": "-40%",
       "good_consumption": [
-        "침낭 -30%"
+        {
+          "guid": 112701,
+          "value": "-30%"
+        }
       ]
     }
   },
@@ -28187,7 +28256,10 @@
         "기술자 주거지"
       ],
       "good_consumption": [
-        "페미컨 -30%"
+        {
+          "guid": 112705,
+          "value": "-30%"
+        }
       ]
     }
   },
@@ -28276,7 +28348,10 @@
       ],
       "incident_arctic_illness": "-40%",
       "good_consumption": [
-        "페미컨 -30%"
+        {
+          "guid": 112705,
+          "value": "-30%"
+        }
       ]
     }
   },
@@ -28378,7 +28453,10 @@
       ],
       "incident_arctic_illness": "-50%",
       "good_consumption": [
-        "파카 -30%"
+        {
+          "guid": 112700,
+          "value": "-30%"
+        }
       ],
       "benefit_additional_money": {
         "+8": [
@@ -28426,7 +28504,10 @@
       ],
       "incident_arctic_illness": "-50%",
       "good_consumption": [
-        "커피 -30%"
+        {
+          "guid": 120032,
+          "value": "-30%"
+        }
       ],
       "benefit_additional_money": {
         "+8": [
@@ -28669,7 +28750,10 @@
         "식민지 직공 거주지"
       ],
       "good_consumption": [
-        "맥주 -30%"
+        {
+          "guid": 1010214,
+          "value": "-30%"
+        }
       ],
       "benefit_additional_money": {
         "+5": [
@@ -28709,7 +28793,10 @@
         "모든 마천루"
       ],
       "good_consumption": [
-        "커피 -30%"
+        {
+          "guid": 120032,
+          "value": "-30%"
+        }
       ]
     }
   },
@@ -28787,7 +28874,10 @@
         "스카이라인 타워"
       ],
       "good_consumption": [
-        "초콜릿 -30%"
+        {
+          "guid": 1010258,
+          "value": "-30%"
+        }
       ],
       "benefit_additional_happiness": {
         "+3": [
@@ -30312,7 +30402,10 @@
         "학자 주거지"
       ],
       "good_consumption": [
-        "히비스커스 차 -30%"
+        {
+          "guid": 114390,
+          "value": "-30%"
+        }
       ],
       "benefit_additional_happiness": {
         "+10": [
@@ -30410,7 +30503,10 @@
         "모든 엔베사 주거지"
       ],
       "good_consumption": [
-        "염소 우유 -30%"
+        {
+          "guid": 114371,
+          "value": "-30%"
+        }
       ],
       "benefit_additional_happiness": {
         "+8": [
@@ -30450,7 +30546,10 @@
         "모든 엔베사 주거지"
       ],
       "good_consumption": [
-        "말린 고기 -30%"
+        {
+          "guid": 114359,
+          "value": "-30%"
+        }
       ],
       "benefit_additional_money": {
         "+10": [
@@ -30533,8 +30632,14 @@
       ],
       "incident_riot": "-50%",
       "good_consumption": [
-        "채색한 필사본 -30%",
-        "수도원 -100%"
+        {
+          "guid": 117698,
+          "value": "-30%"
+        },
+        {
+          "guid": 114362,
+          "value": "-100%"
+        }
       ]
     }
   },
@@ -30566,7 +30671,10 @@
         "모든 엔베사 주거지"
       ],
       "good_consumption": [
-        "태피스트리 -20%"
+        {
+          "guid": 114404,
+          "value": "-20%"
+        }
       ],
       "benefit_additional_happiness": {
         "+6": [
@@ -30623,7 +30731,10 @@
         "모든 엔베사 주거지"
       ],
       "good_consumption": [
-        "말린 고기 -20%"
+        {
+          "guid": 114359,
+          "value": "-20%"
+        }
       ],
       "additional_happiness": "+7"
     }
@@ -30978,8 +31089,14 @@
         "학자 주거지"
       ],
       "good_consumption": [
-        "태피스트리 -20%",
-        "점토 파이프 -20%"
+        {
+          "guid": 114404,
+          "value": "-20%"
+        },
+        {
+          "guid": 114414,
+          "value": "-20%"
+        }
       ],
       "benefit_additional_happiness": {
         "+4": [
@@ -31506,7 +31623,10 @@
         "학자 주거지"
       ],
       "good_consumption": [
-        "전화기 -25%"
+        {
+          "guid": 114431,
+          "value": "-25%"
+        }
       ]
     }
   },
@@ -33341,9 +33461,18 @@
       "incident_fire": "-5%",
       "incident_illness": "-5%",
       "good_consumption": [
-        "잼 -20%",
-        "레모네이드 -20%",
-        "빵 -20%"
+        {
+          "guid": 133183,
+          "value": "-20%"
+        },
+        {
+          "guid": 133185,
+          "value": "-20%"
+        },
+        {
+          "guid": 1010213,
+          "value": "-20%"
+        }
       ],
       "additional_happiness": "+10"
     }
@@ -37650,11 +37779,26 @@
         "학자 주거지를 제외한 모든 구대륙 주거지"
       ],
       "good_consumption": [
-        "생선 -10%",
-        "플랜테인 -10%",
-        "커피 -10%",
-        "럼주 -10%",
-        "토르티야 -10%"
+        {
+          "guid": 1010200,
+          "value": "-10%"
+        },
+        {
+          "guid": 120041,
+          "value": "-10%"
+        },
+        {
+          "guid": 120032,
+          "value": "-10%"
+        },
+        {
+          "guid": 1010257,
+          "value": "-10%"
+        },
+        {
+          "guid": 120035,
+          "value": "-10%"
+        }
       ]
     }
   },

@@ -12,7 +12,9 @@ const renderTemplate = {
             return `
                 <li class="inline">
                     <img src="${conf.icon}" alt="icon" class="category-icon"/>
-                    <span class="item-property-key">${conf.label}</span> ${val}
+                    <span class="item-property-key">${conf.label}</span>
+                    <div class="spacer"></div>
+                    <span class="item-property-key">${val}</span>
                 </li>`;
         }
     },
@@ -28,7 +30,9 @@ const renderTemplate = {
             return `
                 <li class="inline">
                     <img src="${icon}" alt="icon" class="category-icon"/>
-                    <span class="item-property-key">${label}</span> ${val}
+                    <span class="item-property-key">${label}</span>
+                    <div class="spacer"></div>
+                    <span class="item-property-key">${val}</span>
                 </li>`;
         }
     },
@@ -48,7 +52,9 @@ const renderTemplate = {
                 <li>
                     <div class="inline">
                         <img src="${conf.icon}" alt="icon" class="category-icon"/>
-                        <span class="item-property-key">${conf.label}</span> ${val}
+                        <span class="item-property-key">${conf.label}</span>
+                        <div class="spacer"></div>
+                        <span class="item-property-key">${val}</span>
                     </div>
                     <div class="indented text-muted">${text}</div>
                 </li>`;
@@ -61,7 +67,7 @@ const renderTemplate = {
             <li>
                 <div class="inline">
                     <img src="${conf.icon}" alt="icon" class="category-icon"/>
-                    <div class="item-property-key">${conf.label}</div>
+                    <span class="item-property-key">${conf.label}</span>
                 </div>`;
         val.forEach(v => { html += `<div class="indented">${v}</div>`; });
         return html + `</li>`;
@@ -76,7 +82,13 @@ const renderTemplate = {
                     <div class="item-property-key">${conf.label}</div>
                 </div>
                 <div class="indented text-muted">${text}</div>`;
-        val.forEach(v => { html += `<div class="indented">${v}</div>`; });
+        val.forEach(v => { html += `
+            <li class="inline">
+                <img src="${v.icon}" alt="icon" class="category-icon"/>
+                <span class="item-property-key">${v.name}</span>
+                <div class="spacer"></div>
+                <span class="item-property-key">${v.value}</span>
+            </li>`; });
         return html + `</li>`;
     },
 
@@ -92,7 +104,9 @@ const renderTemplate = {
         val.forEach(v => { html += `
             <li class="inline">
                 <img src="${v.icon}" alt="icon" class="category-icon"/>
-                <div class="text-muted" style="margin-left: 8px">${v.name ? v.name : ''} ${v.value}</div>
+                <span class="text-muted" style="margin-left: 8px">${v.name ? v.name : ''}</span>
+                <div class="spacer"></div>
+                <span class="text-muted">${v.value}</span>
             </li>`; });
         return html + `</li>`;
     },
@@ -114,7 +128,12 @@ const renderTemplate = {
         if (typeof val === 'boolean') {
             return val ? `<li><span class="item-property-key">${conf.label}</span></li>` : '';
         } else {
-            return `<li><span class="item-property-key">${conf.label}</span> ${val}</li>`;
+            return `
+                <li>
+                    <span class="item-property-key">${conf.label}</span>
+                    <div class="spacer"></div>
+                    <span class="item-property-key">${val}</span>
+                </li>`;
         }
     },
 
@@ -129,7 +148,9 @@ const renderTemplate = {
             return `
                 <li class="inline margin-0">
                     <img src="${conf.icon}" alt="icon" class="category-icon"/>
-                    <span class="item-property-key">${conf.label}</span> ${val}
+                    <span class="item-property-key">${conf.label}</span>
+                    <div class="spacer"></div>
+                    <span class="item-property-key">${val}</span>
                 </li>`;
         }
     }
@@ -591,6 +612,19 @@ async function fetchItems() {
                 });
             }
 
+            if (item.properties && item.properties.good_consumption) {
+                item.properties.good_consumption.forEach(consumption => {
+                    if (consumption.guid)
+                    {
+                        const product = rawMap.get(consumption.guid);
+                        if (product) {
+                            consumption.name = product.name;
+                            consumption.icon = product.icon;
+                        }
+                    }
+                });
+            }
+
             if (item.properties && item.properties.fertility) {
                 const fertility = rawMap.get(item.properties.fertility)
                 item.properties.fertility = {
@@ -622,6 +656,10 @@ async function fetchItems() {
                             valuesToPush.push(val.substitute);
                         });
                     } else if (key === 'additional_outputs' && Array.isArray(value)) {
+                        value.forEach(val => {
+                            if (val.name) valuesToPush.push(val.name);
+                        });
+                    } else if (key === 'good_consumption' && Array.isArray(value)) {
                         value.forEach(val => {
                             if (val.name) valuesToPush.push(val.name);
                         });
