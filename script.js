@@ -676,13 +676,8 @@ function renderItems(items) {
             else
             {
                 if (item.type === 'GuildhouseItem') {
-                    if (item.properties.dlc_dependency === '길') {
-                        typeText = "북극 산장";
-                        typeSource = "data/ui/2kimages/main/3dicons/icon_community_lodge.png";
-                    } else {
-                        typeText = "무역 연합";
-                        typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
-                    }
+                    typeText = "무역 연합";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
                 } else if (item.type === 'HarborOfficeItem') {
                     typeText = "항만 관리소장실";
                     typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
