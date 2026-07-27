@@ -3,7 +3,7 @@
     --color-epic: #5d4159;
     --color-rare: #333c54;
     --color-uncommon: #455827;
-    --color-common: #455827;
+    --color-common: #82817c;
     
     --bg-dark: #1b2025;
     --bg-card: #2a2c27;
@@ -51,6 +51,10 @@ h1 {
 .inline {
     display: flex;
     align-items: center;
+}
+
+.spacer {
+    flex-grow: 1 !important;
 }
 
 .search-container {
@@ -157,7 +161,7 @@ h1 {
 }
 
 .item-title {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 500;
     margin: 0 0 5px 0;
 }
@@ -187,11 +191,10 @@ h1 {
 
 .item-property-key {
     color: var(--text-gold);
-    margin-right: 8px;
 }
 
 .text-highlight {
-    color: var(--text-highlight);
+    color: var(--text-highlight) !important;
 }
 
 .text-muted {

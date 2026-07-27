@@ -12,7 +12,9 @@ const renderTemplate = {
             return `
                 <li class="inline">
                     <img src="${conf.icon}" alt="icon" class="category-icon"/>
-                    <span class="item-property-key">${conf.label}</span> ${val}
+                    <span class="item-property-key">${conf.label}</span>
+                    <div class="spacer"></div>
+                    <span class="item-property-key">${val}</span>
                 </li>`;
         }
     },
@@ -28,7 +30,9 @@ const renderTemplate = {
             return `
                 <li class="inline">
                     <img src="${icon}" alt="icon" class="category-icon"/>
-                    <span class="item-property-key">${label}</span> ${val}
+                    <span class="item-property-key">${label}</span>
+                    <div class="spacer"></div>
+                    <span class="item-property-key">${val}</span>
                 </li>`;
         }
     },
@@ -48,7 +52,9 @@ const renderTemplate = {
                 <li>
                     <div class="inline">
                         <img src="${conf.icon}" alt="icon" class="category-icon"/>
-                        <span class="item-property-key">${conf.label}</span> ${val}
+                        <span class="item-property-key">${conf.label}</span>
+                        <div class="spacer"></div>
+                        <span class="item-property-key">${val}</span>
                     </div>
                     <div class="indented text-muted">${text}</div>
                 </li>`;
@@ -61,7 +67,7 @@ const renderTemplate = {
             <li>
                 <div class="inline">
                     <img src="${conf.icon}" alt="icon" class="category-icon"/>
-                    <div class="item-property-key">${conf.label}</div>
+                    <span class="item-property-key">${conf.label}</span>
                 </div>`;
         val.forEach(v => { html += `<div class="indented">${v}</div>`; });
         return html + `</li>`;
@@ -76,7 +82,32 @@ const renderTemplate = {
                     <div class="item-property-key">${conf.label}</div>
                 </div>
                 <div class="indented text-muted">${text}</div>`;
-        val.forEach(v => { html += `<div class="indented">${v}</div>`; });
+        val.forEach(v => { html += `
+            <li class="inline">
+                <img src="${v.icon}" alt="icon" class="category-icon"/>
+                <span class="item-property-key">${v.name}</span>
+                <div class="spacer"></div>
+                <span class="item-property-key">${v.value}</span>
+            </li>`; });
+        return html + `</li>`;
+    },
+
+    array_with_icon: (conf, val) => {
+        if (!Array.isArray(val) || val.length === 0) return '';
+        let html = `
+            <li>
+                <div class="inline">
+                    <img src="${conf.icon}" alt="icon" class="category-icon"/>
+                    <div class="item-property-key">${conf.label}:</div>
+                </div>
+            </li>`;
+        val.forEach(v => { html += `
+            <li class="inline">
+                <img src="${v.icon}" alt="icon" class="category-icon"/>
+                <span class="text-muted" style="margin-left: 8px">${v.name ? v.name : ''}</span>
+                <div class="spacer"></div>
+                <span class="text-muted">${v.value}</span>
+            </li>`; });
         return html + `</li>`;
     },
 
@@ -97,7 +128,12 @@ const renderTemplate = {
         if (typeof val === 'boolean') {
             return val ? `<li><span class="item-property-key">${conf.label}</span></li>` : '';
         } else {
-            return `<li><span class="item-property-key">${conf.label}</span> ${val}</li>`;
+            return `
+                <li>
+                    <span class="item-property-key">${conf.label}</span>
+                    <div class="spacer"></div>
+                    <span class="item-property-key">${val}</span>
+                </li>`;
         }
     },
 
@@ -112,7 +148,9 @@ const renderTemplate = {
             return `
                 <li class="inline margin-0">
                     <img src="${conf.icon}" alt="icon" class="category-icon"/>
-                    <span class="item-property-key">${conf.label}</span> ${val}
+                    <span class="item-property-key">${conf.label}</span>
+                    <div class="spacer"></div>
+                    <span class="item-property-key">${val}</span>
                 </li>`;
         }
     }
@@ -213,6 +251,14 @@ const PROPERTY_CONFIGS = {
     'additional_happiness': {
         label: '행복도',
         icon: 'data/ui/2kimages/main/icons/icon_happy.png'
+    },
+    'workforce_modifier': {
+        label: '노동력',
+        icon: 'data/ui/2kimages/main/icons/icon_build_menu.png'
+    },
+    'tax_modifier': {
+        label: '주택당 수입',
+        icon: 'data/ui/2kimages/main/icons/icon_resource_money_4.png'
     },
     'incident_fire': {
         label: '화재 확률',
@@ -406,7 +452,7 @@ const PROPERTY_CONFIGS = {
     'additional_outputs': {
         label: '추가 물품',
         icon: 'data/ui/2kimages/main/icons/icon_plus.png',
-        render: (conf, val) => renderTemplate.array(conf, val)
+        render: (conf, val) => renderTemplate.array_with_icon(conf, val)
     },
     'removed_inputs': {
         label: '투입 자원 제거',
@@ -424,7 +470,7 @@ const PROPERTY_CONFIGS = {
     'fertility': {
         label: '토착 자원',
         icon: '',
-        render: (conf, val) => renderTemplate.onlylabel(`${val} 제공`)
+        render: (conf, val) => renderTemplate.custom(`${val.name} 제공`, val.icon, true)
     },
     'pier_speed': {
         label: '화물 선적 속도',
@@ -549,6 +595,44 @@ async function fetchItems() {
                 }
             }
 
+            if (item.properties && item.properties.additional_outputs) {
+                item.properties.additional_outputs.forEach(output => {
+                    if (output.guid)
+                    {
+                        const product = rawMap.get(output.guid);
+                        if (product) {
+                            output.name = product.name;
+                            output.icon = product.icon;
+                        }
+                    }
+                    else
+                    {
+                        output.icon = 'data/ui/2kimages/main/3dicons/icon_gifts.png';
+                    }
+                });
+            }
+
+            if (item.properties && item.properties.good_consumption) {
+                item.properties.good_consumption.forEach(consumption => {
+                    if (consumption.guid)
+                    {
+                        const product = rawMap.get(consumption.guid);
+                        if (product) {
+                            consumption.name = product.name;
+                            consumption.icon = product.icon;
+                        }
+                    }
+                });
+            }
+
+            if (item.properties && item.properties.fertility) {
+                const fertility = rawMap.get(item.properties.fertility)
+                item.properties.fertility = {
+                    name: fertility.name,
+                    icon: fertility.icon
+                };
+            }
+
             if (item.properties) {
                 for (const [key, value] of Object.entries(item.properties)) {
                     if (key === 'rarity' || key === 'dlc_dependency') {
@@ -571,6 +655,16 @@ async function fetchItems() {
                             valuesToPush.push(val.provide);
                             valuesToPush.push(val.substitute);
                         });
+                    } else if (key === 'additional_outputs' && Array.isArray(value)) {
+                        value.forEach(val => {
+                            if (val.name) valuesToPush.push(val.name);
+                        });
+                    } else if (key === 'good_consumption' && Array.isArray(value)) {
+                        value.forEach(val => {
+                            if (val.name) valuesToPush.push(val.name);
+                        });
+                    } else if (key === 'fertility') {
+                        valuesToPush.push(value.name);
                     } else if (typeof value === 'string' || typeof value === 'number') {
                         valuesToPush.push(String(value));
                     } else if (Array.isArray(value)) {
@@ -676,13 +770,8 @@ function renderItems(items) {
             else
             {
                 if (item.type === 'GuildhouseItem') {
-                    if (item.properties.dlc_dependency === '길') {
-                        typeText = "북극 산장";
-                        typeSource = "data/ui/2kimages/main/3dicons/icon_community_lodge.png";
-                    } else {
-                        typeText = "무역 연합";
-                        typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
-                    }
+                    typeText = "무역 연합";
+                    typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
                 } else if (item.type === 'HarborOfficeItem') {
                     typeText = "항만 관리소장실";
                     typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";

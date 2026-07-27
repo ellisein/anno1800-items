@@ -13,11 +13,13 @@ TEMPLATES = [
     # Additional data
     'HarbourOfficeBuff',
     'VehicleBuff',
-    'RewardPool'
+    'RewardPool',
+    'Product',
+    'Fertility'
 ];
 
 def load_korean_texts(xml_path):
-    print("1/3: Loading Korean translations from texts_korean.xml...")
+    print(f"1/3: Loading Korean translations from {xml_path}...")
     texts_dict = {}
     try:
         tree = ET.parse(xml_path)
@@ -33,7 +35,7 @@ def load_korean_texts(xml_path):
         return {}
 
 def extract_items_data(assets_path, texts_dict):
-    print("2/3: Extracting assets...")
+    print(f"2/3: Extracting assets from {assets_path}...")
     text_overrides = {}
     items_list = []
     
@@ -41,16 +43,20 @@ def extract_items_data(assets_path, texts_dict):
     for event, elem in context_1:
         if elem.tag == 'Asset':
             template = elem.findtext('Template')
-            if template and template == 'ItemEffectTargetPool':
-                guid = elem.findtext('./Values/Standard/GUID')
-                text = elem.findtext('./Values/Text/TextOverride')
-                if guid and text:
-                    text_overrides[guid] = text
+            if template :
+                if template == 'ItemEffectTargetPool':
+                    guid = elem.findtext('./Values/Standard/GUID')
+                    text = elem.findtext('./Values/Text/TextOverride')
+                    if guid and text:
+                        text_overrides[guid] = text
             elem.clear()
     
     context_2 = ET.iterparse(assets_path, events=('end',))
     for event, elem in context_2:
         if elem.tag == 'Asset':
+            if elem.find('./Values/Item/ScenarioFilter') is not None:
+                continue
+
             template = elem.findtext('Template')
 
             if template and template in TEMPLATES:
@@ -165,10 +171,14 @@ def extract_items_data(assets_path, texts_dict):
                                     cycle = item.findtext('AdditionalOutputCycle')
                                     amount = item.findtext('Amount')
                                     if same and same.strip() == '1':
-                                        additional_outputs.append(f"+{amount}/{cycle}")
-                                    elif prod_guid and prod_guid in texts_dict:
-                                        prod_name = texts_dict[prod_guid]
-                                        additional_outputs.append(f"{prod_name} +{amount}/{cycle}")
+                                        additional_outputs.append({
+                                            "value": f"+{amount}/{cycle}"
+                                        })
+                                    elif prod_guid:
+                                        additional_outputs.append({
+                                            "guid": int(prod_guid),
+                                            "value": f"+{amount}/{cycle}"
+                                        })
                                 if len(additional_outputs) > 0:
                                     item_properties['additional_outputs'] = additional_outputs
 
@@ -190,8 +200,8 @@ def extract_items_data(assets_path, texts_dict):
                             added_fertility_node = factory_upgrade_node.find('AddedFertility')
                             if added_fertility_node is not None:
                                 fertility_guid = added_fertility_node.text
-                                if fertility_guid and fertility_guid in texts_dict:
-                                    item_properties['fertility'] = texts_dict[fertility_guid]
+                                if fertility_guid:
+                                    item_properties['fertility'] = int(fertility_guid)
 
                         building_upgrade_node = elem.find('./Values/BuildingUpgrade')
                         if building_upgrade_node is not None:
@@ -316,15 +326,17 @@ def extract_items_data(assets_path, texts_dict):
                             # 물품 소비량 (good_consumption)
                             good_consumption_node = residence_upgrade_node.find('GoodConsumptionUpgrade')
                             if good_consumption_node is not None:
-                                good_consumption = []
+                                good_consumptions = []
                                 for item in good_consumption_node.findall('Item'):
                                     guid = item.findtext('ProvidedNeed')
                                     amount = get_value(item.find('AmountInPercent'))
-                                    if guid and guid in texts_dict and amount:
-                                        name = texts_dict[guid]
-                                        good_consumption.append(f"{name} {amount}")
-                                if len(good_consumption) > 0:
-                                    item_properties['good_consumption'] = good_consumption
+                                    if guid and amount:
+                                        good_consumptions.append({
+                                            "guid": int(guid),
+                                            "value": amount
+                                        })
+                                if len(good_consumptions) > 0:
+                                    item_properties['good_consumption'] = good_consumptions
 
                             # 행복도
                             additional_happiness = get_value(residence_upgrade_node.find('AdditionalHappiness'))
@@ -347,6 +359,16 @@ def extract_items_data(assets_path, texts_dict):
                                         'provide_needs': provide_needs,
                                         'subtitute_needs': subtitute_needs
                                     }
+
+                            # 노동력 (workforce_modifier)
+                            workforce_modifier = get_value(residence_upgrade_node.find('WorkforceModifierInPercent'))
+                            if workforce_modifier:
+                                item_properties['workforce_modifier'] = workforce_modifier
+
+                            # 주택당 수입 (TaxModifier)
+                            tax_modifier = get_value(residence_upgrade_node.find('TaxModifierInPercent'))
+                            if tax_modifier:
+                                item_properties['tax_modifier'] = tax_modifier
 
                         repair_crane_upgrade_node = elem.find('./Values/RepairCraneUpgrade')
                         if repair_crane_upgrade_node is not None:
