@@ -690,10 +690,121 @@ async function fetchItems() {
         });
 
         renderItems(allItems);
+        loadLoadouts();
     } catch (error) {
         console.error('데이터를 불러오지 못했습니다:', error);
         document.getElementById('itemGrid').innerHTML = '<p>데이터를 불러오는 중 오류가 발생했습니다.</p>';
     }
+}
+function generateCardInnerHtml(item) {
+    let propertiesHtml = '';
+    if (item.properties) {
+        for (const key of Object.keys(PROPERTY_CONFIGS)) {
+            if (item.properties.hasOwnProperty(key)) {
+                const conf = PROPERTY_CONFIGS[key];
+                const value = item.properties[key];
+
+                if (conf.render_unit) {
+                    propertiesHtml += conf.render_unit(conf, item.properties.unit, value);
+                } else if (conf.render) {
+                    propertiesHtml += conf.render(conf, value);
+                } else if (conf.type === 'boolean') {
+                    propertiesHtml += renderTemplate.boolean(conf, value);
+                } else if (Array.isArray(value)) {
+                    propertiesHtml += renderTemplate.defaultArray(conf, value);
+                } else {
+                    propertiesHtml += renderTemplate.default(conf, value);
+                }
+            }
+        }
+    }
+
+    let typeText = "";
+    let typeSource = "";
+    if (item.type) {
+        if (item.properties.allocation) {
+            if (item.properties.allocation === 'GuildHouse') {
+                typeText = "무역 연합";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
+            } else if (item.properties.allocation === 'Lodge') {
+                typeText = "북극 산장";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_community_lodge.png";
+            } else if (item.properties.allocation === 'HarborOffice') {
+                typeText = "항만 관리소장실";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
+            } else if (item.properties.allocation === 'TownHall') {
+                typeText = "시청";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_townhall.png";
+            } else if (item.properties.allocation === 'Ship') {
+                typeText = "배";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_ship_commandship.png";
+            } else if (item.properties.allocation === 'SailShip') {
+                typeText = "범선";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_ship_commandship.png";
+            } else if (item.properties.allocation === 'SteamShip') {
+                typeText = "증기선";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_ship_oil_tanker.png";
+            } else if (item.properties.allocation === 'Warship') {
+                typeText = "군함";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_ship_liner.png";
+            } else if (item.properties.allocation === 'AirShip') {
+                typeText = "비행선";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_airship_artic.png";
+            } else if (item.properties.allocation === 'DivingVessel') {
+                typeText = "인양선";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_ship_diving_vessel.png";
+            }
+        }
+        else
+        {
+            if (item.type === 'GuildhouseItem') {
+                typeText = "무역 연합";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
+            } else if (item.type === 'HarborOfficeItem') {
+                typeText = "항만 관리소장실";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
+            } else if (item.type === 'TownhallItem') {
+                typeText = "시청";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_townhall.png";
+            } else if (item.type === 'VehicleItem' || item.type === 'ShipSpecialist') {
+                typeText = "배";
+                typeSource = "data/ui/2kimages/main/3dicons/icon_ship_commandship.png";
+            }
+        }
+    }
+    const typeHtml = typeText ? `<li class="inline"><img src="${typeSource}" alt="icon" class="type-icon"/><span class="text-highlight">${typeText}</span>에 배치</li>` : '';
+
+    let targetText = "";
+    if (item.properties.targets && item.properties.targets.length > 0) {
+        if (item.properties.active_buff) {
+            targetText += '활성화 시 ';
+        }
+        targetText += formatMultipleItems(item.properties.targets);
+    }
+    const targetsHtml = targetText ? `<li class="text-muted">${targetText}에 영향</li>` : '';
+    const iconPath = item.icon ? item.icon : '';
+
+    return `
+        <div class="flex-end">
+            <span class="item-id">${item.guid}</span>
+        </div>
+        <div class="card-header">
+            <img src="${iconPath}" alt="icon" class="item-icon"/>
+            <div class="w-100">
+                <h3 class="item-title">${item.name}</h3>
+                <div class="flex-between">
+                    <span class="item-rarity ${item.properties.rarity}">${RARITIES[item.properties.rarity]}</span>
+                    ${item.properties.dlc_dependency ? `<span class="item-dlc">${item.properties.dlc_dependency} DLC</span>` : ''}
+                </div>
+            </div>
+        </div>
+        <ul class="item-property-list">
+            ${typeHtml}
+            ${targetsHtml}
+            ${propertiesHtml}
+        </ul>
+        ${item.description ? `<p class="item-desc">${item.description}</p>` : ''}
+    `;
 }
 
 function renderItems(items) {
@@ -701,129 +812,26 @@ function renderItems(items) {
     grid.innerHTML = '';
 
     items.forEach(item => {
-        if (!item.type || !(item.type.endsWith('Item') || item.type.endsWith('Specialist'))) {
-            return;
-        }
-
-        if (!item.properties.rarity || !RARITIES[item.properties.rarity]) {
-            return;
-        }
-
-        let propertiesHtml = '';
-        if (item.properties) {
-            for (const key of Object.keys(PROPERTY_CONFIGS)) {
-                if (item.properties.hasOwnProperty(key)) {
-                    const conf = PROPERTY_CONFIGS[key];
-                    const value = item.properties[key];
-
-                    if (conf.render_unit) {
-                        propertiesHtml += conf.render_unit(conf, item.properties.unit, value);
-                    } else if (conf.render) {
-                        propertiesHtml += conf.render(conf, value);
-                    } else if (conf.type === 'boolean') {
-                        propertiesHtml += renderTemplate.boolean(conf, value);
-                    } else if (Array.isArray(value)) {
-                        propertiesHtml += renderTemplate.defaultArray(conf, value);
-                    } else {
-                        propertiesHtml += renderTemplate.default(conf, value);
-                    }
-                }
-            }
-        }
-
-        let typeText = "";
-        let typeSource = "";
-        if (item.type) {
-            if (item.properties.allocation) {
-                if (item.properties.allocation === 'GuildHouse') {
-                    typeText = "무역 연합";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
-                } else if (item.properties.allocation === 'Lodge') {
-                    typeText = "북극 산장";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_community_lodge.png";
-                } else if (item.properties.allocation === 'HarborOffice') {
-                    typeText = "항만 관리소장실";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
-                } else if (item.properties.allocation === 'TownHall') {
-                    typeText = "시청";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_townhall.png";
-                } else if (item.properties.allocation === 'Ship') {
-                    typeText = "배";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_commandship.png";
-                } else if (item.properties.allocation === 'SailShip') {
-                    typeText = "범선";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_commandship.png";
-                } else if (item.properties.allocation === 'SteamShip') {
-                    typeText = "증기선";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_oil_tanker.png";
-                } else if (item.properties.allocation === 'Warship') {
-                    typeText = "군함";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_liner.png";
-                } else if (item.properties.allocation === 'AirShip') {
-                    typeText = "비행선";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_airship_artic.png";
-                } else if (item.properties.allocation === 'DivingVessel') {
-                    typeText = "인양선";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_diving_vessel.png";
-                }
-            }
-            else
-            {
-                if (item.type === 'GuildhouseItem') {
-                    typeText = "무역 연합";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_guildhouse.png";
-                } else if (item.type === 'HarborOfficeItem') {
-                    typeText = "항만 관리소장실";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_harbour_kontor.png";
-                } else if (item.type === 'TownhallItem') {
-                    typeText = "시청";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_townhall.png";
-                } else if (item.type === 'VehicleItem' || item.type === 'ShipSpecialist') {
-                    typeText = "배";
-                    typeSource = "data/ui/2kimages/main/3dicons/icon_ship_commandship.png";
-                }
-            }
-        }
-        const typeHtml = typeText ? `<li class="inline"><img src="${typeSource}" alt="icon" class="type-icon"/><span class="text-highlight">${typeText}</span>에 배치</li>` : '';
-
-        let targetText = "";
-        if (item.properties.targets && item.properties.targets.length > 0) {
-            if (item.properties.active_buff) {
-                targetText += '활성화 시 ';
-            }
-
-            targetText += formatMultipleItems(item.properties.targets);
-        }
-        const targetsHtml = targetText ? `<li class="text-muted">${targetText}에 영향</li>` : '';
-
-        const iconPath = item.icon ? item.icon : '';
+        if (!item.type || !(item.type.endsWith('Item') || item.type.endsWith('Specialist'))) return;
+        if (!item.properties.rarity || !RARITIES[item.properties.rarity]) return;
 
         const card = document.createElement('div');
         card.className = `item-card ${item.properties.rarity}`;
-        card.innerHTML = `
-            <div class="flex-end">
-                <span class="item-id">${item.guid}</span>
-            </div>
-            <div class="card-header">
-                <img src="${iconPath}" alt="icon" class="item-icon"/>
-                <div class="w-100">
-                    <h3 class="item-title">${item.name}</h3>
-                    <div class="flex-between">
-                        <span class="item-rarity ${item.properties.rarity}">${RARITIES[item.properties.rarity]}</span>
-                        ${item.properties.dlc_dependency ? `<span class="item-dlc">${item.properties.dlc_dependency} DLC</span>` : ''}
-                    </div>
-                </div>
-            </div>
-            <ul class="item-property-list">
-                ${typeHtml}
-                ${targetsHtml}
-                ${propertiesHtml}
-            </ul>
-            ${item.description ? `<p class="item-desc">${item.description}</p>` : ''}
-        `;
         
-        grid.appendChild(card);
+        card.innerHTML = generateCardInnerHtml(item);
+        
+        card.addEventListener('click', () => {
+            if (selectedLoadoutId) {
+                const target = loadouts.find(l => l.id === selectedLoadoutId);
+                if (target && target.items.length < 3) {
+                    target.items.push(item.guid);
+                    saveLoadouts();
+                    renderLoadouts();
+                }
+            }
+        });
 
+        grid.appendChild(card);
         item.element = card;
     });
 }
@@ -889,12 +897,265 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
     });
 });
 
+let loadouts = [];
+let selectedLoadoutId = null;
+
+const loadoutContent = document.getElementById('loadoutContent');
+const tooltip = document.getElementById('itemTooltip');
+
+function saveLoadouts() {
+    localStorage.setItem('anno1800_loadouts', JSON.stringify(loadouts));
+}
+
+function loadLoadouts() {
+    const data = localStorage.getItem('anno1800_loadouts');
+    if (data) {
+        loadouts = JSON.parse(data);
+    }
+    renderLoadouts();
+}
+
+function renderLoadouts() {
+    loadoutContent.innerHTML = '';
+    
+    if (loadouts.length === 0) {
+        loadoutContent.innerHTML = '<p class="text-muted" style="text-align: center; margin-top: 20px;">+ 버튼을 눌러 로드아웃을 만드세요.</p>';
+        return;
+    }
+
+    loadouts.forEach(ld => {
+        const div = document.createElement('div');
+        div.className = `loadout-item ${ld.id === selectedLoadoutId ? 'selected' : ''}`;
+        
+        div.addEventListener('click', (e) => {
+            if(e.target.tagName !== 'INPUT' && !e.target.classList.contains('trash-btn')) {
+                selectedLoadoutId = ld.id;
+                renderLoadouts();
+            }
+        });
+
+        const header = document.createElement('div');
+        header.className = 'loadout-header';
+
+        const nameContainer = document.createElement('div');
+        nameContainer.className = 'loadout-name-container';
+
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'loadout-name';
+        nameSpan.textContent = ld.name;
+        
+        nameSpan.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selectedLoadoutId = ld.id;
+            renderLoadouts();
+
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'loadout-name-input';
+            input.value = ld.name;
+            
+            const finishEdit = () => {
+                if (input.value.trim()) ld.name = input.value.trim();
+                saveLoadouts();
+                renderLoadouts();
+            };
+            
+            input.addEventListener('blur', finishEdit);
+            input.addEventListener('keypress', (ke) => {
+                if (ke.key === 'Enter') {
+                    input.blur();
+                }
+            });
+
+            const currentContainer = document.querySelector(`.loadout-item.selected .loadout-name-container`);
+            if (currentContainer) {
+                currentContainer.innerHTML = '';
+                currentContainer.appendChild(input);
+                input.focus();
+                input.setSelectionRange(input.value.length, input.value.length);
+            }
+        });
+        
+        nameContainer.appendChild(nameSpan);
+
+        const trashBtn = document.createElement('button');
+        trashBtn.className = 'trash-btn';
+        trashBtn.innerHTML = '';
+        trashBtn.title = "로드아웃 삭제";
+        trashBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showConfirmModal(`'${ld.name}' 로드아웃을 삭제하시겠습니까?`, () => {
+                loadouts = loadouts.filter(l => l.id !== ld.id);
+                if(selectedLoadoutId === ld.id) selectedLoadoutId = null;
+                saveLoadouts();
+                renderLoadouts();
+            });
+        });
+
+        header.appendChild(nameContainer);
+        header.appendChild(trashBtn);
+        div.appendChild(header);
+
+        const slotsDiv = document.createElement('div');
+        slotsDiv.className = 'loadout-slots';
+
+        for (let i = 0; i < 3; i++) {
+            const slot = document.createElement('div');
+            slot.className = 'loadout-slot';
+            
+            const itemGuid = ld.items[i];
+            if (itemGuid) {
+                const itemData = allItems.find(item => item.guid === itemGuid);
+                if (itemData && itemData.icon) {
+                    const img = document.createElement('img');
+                    img.src = itemData.icon;
+                    slot.appendChild(img);
+
+                    slot.addEventListener('mouseenter', (e) => {
+                        if (slot.classList.contains('pending-delete')) return;
+                        
+                        tooltip.style.display = 'block';
+                        tooltip.innerHTML = `<div class="item-card ${itemData.properties.rarity}">${generateCardInnerHtml(itemData)}</div>`;
+                    });
+
+                    slot.addEventListener('mousemove', (e) => {
+                        if (slot.classList.contains('pending-delete')) return;
+
+                        let x = e.clientX - 340;
+                        if (x < 10) x = 10;
+                        
+                        const y = e.clientY + 15;
+                        tooltip.style.left = `${x}px`;
+                        
+                        const tooltipRect = tooltip.getBoundingClientRect();
+                        if (y + tooltipRect.height > window.innerHeight) {
+                            tooltip.style.top = `${window.innerHeight - tooltipRect.height - 10}px`;
+                        } else {
+                            tooltip.style.top = `${y}px`;
+                        }
+                    });
+
+                    slot.addEventListener('mouseleave', () => {
+                        tooltip.style.display = 'none';
+                    });
+
+                    slot.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        
+                        const isPending = slot.classList.contains('pending-delete');
+                        
+                        document.querySelectorAll('.loadout-slot.pending-delete').forEach(el => {
+                            if (el !== slot) el.classList.remove('pending-delete');
+                        });
+
+                        if (isPending) {
+                            ld.items.splice(i, 1);
+                            saveLoadouts();
+                            renderLoadouts();
+                            tooltip.style.display = 'none';
+                        } else {
+                            slot.classList.add('pending-delete');
+                            tooltip.style.display = 'none';
+                        }
+                    });
+                }
+            }
+            slotsDiv.appendChild(slot);
+        }
+        
+        div.appendChild(slotsDiv);
+        loadoutContent.appendChild(div);
+    });
+}
+
+document.getElementById('addLoadoutBtn').addEventListener('click', () => {
+    let baseName = "새 로드아웃";
+    let newName = baseName;
+    let count = 1;
+    
+    while(loadouts.some(l => l.name === newName)) {
+        newName = `${baseName}(${count})`;
+        count++;
+    }
+
+    const newLd = {
+        id: Date.now().toString(),
+        name: newName,
+        items: []
+    };
+    
+    loadouts.unshift(newLd);
+    selectedLoadoutId = newLd.id;
+    saveLoadouts();
+    renderLoadouts();
+});
+
+function showConfirmModal(message, onConfirm) {
+    const modal = document.getElementById('customConfirmModal');
+    const messageEl = document.getElementById('confirmMessage');
+    const confirmBtn = document.getElementById('confirmBtn');
+    const cancelBtn = document.getElementById('cancelBtn');
+
+    messageEl.textContent = message;
+    modal.style.display = 'flex';
+
+    const newConfirmBtn = confirmBtn.cloneNode(true);
+    const newCancelBtn = cancelBtn.cloneNode(true);
+    confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
+    cancelBtn.parentNode.replaceChild(newCancelBtn, cancelBtn);
+
+    newConfirmBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        if (onConfirm) onConfirm();
+    });
+
+    newCancelBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+}
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Delete' && selectedLoadoutId && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+        const target = loadouts.find(l => l.id === selectedLoadoutId);
+        showConfirmModal(`'${target.name}' 로드아웃을 삭제하시겠습니까?`, () => {
+            loadouts = loadouts.filter(l => l.id !== selectedLoadoutId);
+            selectedLoadoutId = null;
+            saveLoadouts();
+            renderLoadouts();
+            if(tooltip) tooltip.style.display = 'none';
+        });
+    }
+});
+
 window.addEventListener('scroll', () => {
     const searchContainer = document.querySelector('.search-container');
     if (window.scrollY > 102) {
         searchContainer.classList.add('scrolled');
     } else {
         searchContainer.classList.remove('scrolled');
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.loadout-slot.pending-delete')) {
+        document.querySelectorAll('.loadout-slot.pending-delete').forEach(el => {
+            el.classList.remove('pending-delete');
+        });
+    }
+});
+
+const sidebar = document.getElementById('loadoutSidebar');
+const sidebarToggle = document.getElementById('sidebarToggle');
+
+sidebarToggle.addEventListener('click', () => {
+    const isOpen = sidebar.classList.contains('open');
+    
+    if (isOpen) {
+        sidebar.classList.remove('open');
+        sidebarToggle.classList.remove('open');
+    } else {
+        sidebar.classList.add('open');
+        sidebarToggle.classList.add('open');
     }
 });
 
