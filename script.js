@@ -1007,6 +1007,10 @@ function renderLoadouts() {
             if (itemGuid) {
                 const itemData = allItems.find(item => item.guid === itemGuid);
                 if (itemData && itemData.icon) {
+                    const rarityClass = itemData.properties && itemData.properties.rarity ? itemData.properties.rarity : '';
+                    slot.classList.add('has-item');
+                    if (rarityClass) slot.classList.add(rarityClass);
+                    
                     const img = document.createElement('img');
                     img.src = itemData.icon;
                     slot.appendChild(img);

@@ -491,6 +491,26 @@ h1 {
     z-index: 2;
 }
 
+.loadout-slot.has-item {
+    border-style: solid;
+    border-color: rgba(198, 162, 93, 0.5);
+    background-color: var(--bg-card);
+    background-image: linear-gradient(to bottom, var(--rarity-color, transparent) 0px, transparent 60px);
+}
+
+.loadout-slot.legendary { --rarity-color: var(--color-legendary); }
+.loadout-slot.epic { --rarity-color: var(--color-epic); }
+.loadout-slot.rare { --rarity-color: var(--color-rare); }
+.loadout-slot.uncommon { --rarity-color: var(--color-uncommon); }
+.loadout-slot.common { --rarity-color: var(--color-common); }
+
+.loadout-slot img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    z-index: 1;
+}
+
 .item-tooltip {
     position: fixed;
     z-index: 3000;
