@@ -1046,6 +1046,9 @@ function renderLoadouts() {
                     slot.addEventListener('click', (e) => {
                         e.stopPropagation();
                         
+                        const isLoadoutChanged = (selectedLoadoutId !== ld.id);
+                        selectedLoadoutId = ld.id;
+
                         const isPending = slot.classList.contains('pending-delete');
                         
                         document.querySelectorAll('.loadout-slot.pending-delete').forEach(el => {
@@ -1058,7 +1061,14 @@ function renderLoadouts() {
                             renderLoadouts();
                             tooltip.style.display = 'none';
                         } else {
-                            slot.classList.add('pending-delete');
+                            if (isLoadoutChanged)
+                            {
+                                renderLoadouts();
+                                const currentSlots = document.querySelectorAll('.loadout-item.selected .loadout-slot');
+                                if (currentSlots[i]) currentSlots[i].classList.add('pending-delete');
+                            } else {
+                                slot.classList.add('pending-delete');
+                            }
                             tooltip.style.display = 'none';
                         }
                     });
@@ -1108,14 +1118,29 @@ function showConfirmModal(message, onConfirm) {
     confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
     cancelBtn.parentNode.replaceChild(newCancelBtn, cancelBtn);
 
-    newConfirmBtn.addEventListener('click', () => {
+    const closeModal = () => {
         modal.style.display = 'none';
+        modal.removeEventListener('click', handleOutsideClick);
+    };
+
+    newConfirmBtn.addEventListener('click', () => {
+        closeModal();
         if (onConfirm) onConfirm();
     });
 
     newCancelBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
+        closeModal();
     });
+
+    const handleOutsideClick = (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    };
+
+    setTimeout(() => {
+        modal.addEventListener('click', handleOutsideClick);
+    }, 0);
 }
 
 window.addEventListener('keydown', (e) => {
