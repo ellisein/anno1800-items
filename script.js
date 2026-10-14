@@ -910,7 +910,11 @@ function saveLoadouts() {
 function loadLoadouts() {
     const data = localStorage.getItem('anno1800_loadouts');
     if (data) {
-        loadouts = JSON.parse(data);
+        const parsed = JSON.parse(data);
+        loadouts = parsed.map(item => {
+            if (!item.type) return { ...item, type: 'loadout' };
+            return item;
+        });
     }
     renderLoadouts();
 }
@@ -919,36 +923,134 @@ function renderLoadouts() {
     loadoutContent.innerHTML = '';
     
     if (loadouts.length === 0) {
-        loadoutContent.innerHTML = '<p class="text-muted" style="text-align: center; margin-top: 20px;">+ 버튼을 눌러 로드아웃을 만드세요.</p>';
+        loadoutContent.innerHTML = '<p class="text-muted" style="text-align: center; margin-top: 20px;">상단 버튼을 눌러 로드아웃을 만드세요.</p>';
         return;
     }
 
-    loadouts.forEach(ld => {
-        const div = document.createElement('div');
-        div.className = `loadout-item ${ld.id === selectedLoadoutId ? 'selected' : ''}`;
+    loadouts.forEach(item => {
+        if (item.type === 'group') {
+            loadoutContent.appendChild(createGroupElement(item));
+        } else {
+            loadoutContent.appendChild(createLoadoutElement(item));
+        }
+    });
+
+    setupDragAndDrop();
+}
+
+function createGroupElement(group) {
+    const div = document.createElement('div');
+    div.className = 'loadout-group draggable';
+    div.draggable = true;
+    div.dataset.id = group.id;
+
+    const header = document.createElement('div');
+    header.className = 'group-header';
+
+    const toggle = document.createElement('span');
+    toggle.className = `group-toggle ${group.isCollapsed ? 'collapsed' : ''}`;
+    toggle.textContent = '▼';
+
+    const nameContainer = document.createElement('div');
+    nameContainer.className = 'loadout-name-container';
+    
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'loadout-name';
+    nameSpan.textContent = group.name;
         
-        div.addEventListener('click', (e) => {
-            if(e.target.tagName !== 'INPUT' && !e.target.classList.contains('trash-btn')) {
-                selectedLoadoutId = ld.id;
-                renderLoadouts();
-            }
+    nameSpan.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'loadout-name-input';
+        input.value = group.name;
+        
+        const finishEdit = () => {
+            if (input.value.trim()) group.name = input.value.trim();
+            saveLoadouts();
+            renderLoadouts();
+        };
+        input.addEventListener('blur', finishEdit);
+        input.addEventListener('keypress', (ke) => { if (ke.key === 'Enter') input.blur(); });
+        
+        nameContainer.innerHTML = '';
+        nameContainer.appendChild(input);
+        input.focus();
+        input.setSelectionRange(input.value.length, input.value.length);
+    });
+    nameContainer.appendChild(nameSpan);
+
+    const trashBtn = document.createElement('button');
+    trashBtn.className = 'trash-btn';
+    trashBtn.title = "그룹 삭제";
+    trashBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showConfirmModal(`'${group.name}' 그룹과 내부의 로드아웃을 모두 삭제하시겠습니까?`, () => {
+            loadouts = loadouts.filter(l => l.id !== group.id);
+            if (group.children && group.children.some(c => c.id === selectedLoadoutId)) selectedLoadoutId = null;
+            saveLoadouts();
+            renderLoadouts();
         });
+    });
 
-        const header = document.createElement('div');
-        header.className = 'loadout-header';
+    header.appendChild(toggle);
+    header.appendChild(nameContainer);
+    header.appendChild(trashBtn);
 
-        const nameContainer = document.createElement('div');
-        nameContainer.className = 'loadout-name-container';
+    header.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'INPUT' && !e.target.closest('.trash-btn') && e.target !== nameSpan) {
+            group.isCollapsed = !group.isCollapsed;
+            toggle.classList.toggle('collapsed', group.isCollapsed);
+            content.style.display = group.isCollapsed ? 'none' : 'block';
+            saveLoadouts();
+        }
+    });
 
-        const nameSpan = document.createElement('span');
-        nameSpan.className = 'loadout-name';
-        nameSpan.textContent = ld.name;
-        
-        nameSpan.addEventListener('click', (e) => {
-            e.stopPropagation();
+    const content = document.createElement('div');
+    content.className = 'group-content dropzone';
+    content.style.display = group.isCollapsed ? 'none' : 'block';
+
+    if (group.children) {
+        group.children.forEach(child => {
+            content.appendChild(createLoadoutElement(child));
+        });
+    }
+
+    div.appendChild(header);
+    div.appendChild(content);
+    return div;
+}
+
+function createLoadoutElement(ld) {
+    const div = document.createElement('div');
+    div.className = `loadout-item draggable ${ld.id === selectedLoadoutId ? 'selected' : ''}`;
+    div.draggable = true;
+    div.dataset.id = ld.id;
+
+    div.addEventListener('click', (e) => {
+        if(e.target.tagName !== 'INPUT' && !e.target.closest('.trash-btn')) {
             selectedLoadoutId = ld.id;
             renderLoadouts();
+        }
+    });
 
+    const header = document.createElement('div');
+    header.className = 'loadout-header';
+
+    const nameContainer = document.createElement('div');
+    nameContainer.className = 'loadout-name-container';
+
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'loadout-name';
+    nameSpan.textContent = ld.name;
+    
+    nameSpan.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selectedLoadoutId = ld.id;
+        renderLoadouts(); 
+
+        const currentContainer = document.querySelector(`.loadout-item.selected .loadout-name-container`);
+        if (currentContainer) {
             const input = document.createElement('input');
             input.type = 'text';
             input.className = 'loadout-name-input';
@@ -961,125 +1063,202 @@ function renderLoadouts() {
             };
             
             input.addEventListener('blur', finishEdit);
-            input.addEventListener('keypress', (ke) => {
-                if (ke.key === 'Enter') {
-                    input.blur();
-                }
-            });
-
-            const currentContainer = document.querySelector(`.loadout-item.selected .loadout-name-container`);
-            if (currentContainer) {
-                currentContainer.innerHTML = '';
-                currentContainer.appendChild(input);
-                input.focus();
-                input.setSelectionRange(input.value.length, input.value.length);
-            }
-        });
-        
-        nameContainer.appendChild(nameSpan);
-
-        const trashBtn = document.createElement('button');
-        trashBtn.className = 'trash-btn';
-        trashBtn.innerHTML = '';
-        trashBtn.title = "로드아웃 삭제";
-        trashBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            showConfirmModal(`'${ld.name}' 로드아웃을 삭제하시겠습니까?`, () => {
-                loadouts = loadouts.filter(l => l.id !== ld.id);
-                if(selectedLoadoutId === ld.id) selectedLoadoutId = null;
-                saveLoadouts();
-                renderLoadouts();
-            });
-        });
-
-        header.appendChild(nameContainer);
-        header.appendChild(trashBtn);
-        div.appendChild(header);
-
-        const slotsDiv = document.createElement('div');
-        slotsDiv.className = 'loadout-slots';
-
-        for (let i = 0; i < 3; i++) {
-            const slot = document.createElement('div');
-            slot.className = 'loadout-slot';
+            input.addEventListener('keypress', (ke) => { if (ke.key === 'Enter') input.blur(); });
             
-            const itemGuid = ld.items[i];
-            if (itemGuid) {
-                const itemData = allItems.find(item => item.guid === itemGuid);
-                if (itemData && itemData.icon) {
-                    const rarityClass = itemData.properties && itemData.properties.rarity ? itemData.properties.rarity : '';
-                    slot.classList.add('has-item');
-                    if (rarityClass) slot.classList.add(rarityClass);
-                    
-                    const img = document.createElement('img');
-                    img.src = itemData.icon;
-                    slot.appendChild(img);
-
-                    slot.addEventListener('mouseenter', (e) => {
-                        if (slot.classList.contains('pending-delete')) return;
-                        
-                        tooltip.style.display = 'block';
-                        tooltip.innerHTML = `<div class="item-card ${itemData.properties.rarity}">${generateCardInnerHtml(itemData)}</div>`;
-                    });
-
-                    slot.addEventListener('mousemove', (e) => {
-                        if (slot.classList.contains('pending-delete')) return;
-
-                        let x = e.clientX - 340;
-                        if (x < 10) x = 10;
-                        
-                        const y = e.clientY + 15;
-                        tooltip.style.left = `${x}px`;
-                        
-                        const tooltipRect = tooltip.getBoundingClientRect();
-                        if (y + tooltipRect.height > window.innerHeight) {
-                            tooltip.style.top = `${window.innerHeight - tooltipRect.height - 10}px`;
-                        } else {
-                            tooltip.style.top = `${y}px`;
-                        }
-                    });
-
-                    slot.addEventListener('mouseleave', () => {
-                        tooltip.style.display = 'none';
-                    });
-
-                    slot.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        
-                        const isLoadoutChanged = (selectedLoadoutId !== ld.id);
-                        selectedLoadoutId = ld.id;
-
-                        const isPending = slot.classList.contains('pending-delete');
-                        
-                        document.querySelectorAll('.loadout-slot.pending-delete').forEach(el => {
-                            if (el !== slot) el.classList.remove('pending-delete');
-                        });
-
-                        if (isPending) {
-                            ld.items.splice(i, 1);
-                            saveLoadouts();
-                            renderLoadouts();
-                            tooltip.style.display = 'none';
-                        } else {
-                            if (isLoadoutChanged)
-                            {
-                                renderLoadouts();
-                                const currentSlots = document.querySelectorAll('.loadout-item.selected .loadout-slot');
-                                if (currentSlots[i]) currentSlots[i].classList.add('pending-delete');
-                            } else {
-                                slot.classList.add('pending-delete');
-                            }
-                            tooltip.style.display = 'none';
-                        }
-                    });
-                }
-            }
-            slotsDiv.appendChild(slot);
+            currentContainer.innerHTML = '';
+            currentContainer.appendChild(input);
+            input.focus();
+            input.setSelectionRange(input.value.length, input.value.length);
         }
-        
-        div.appendChild(slotsDiv);
-        loadoutContent.appendChild(div);
     });
+    
+    nameContainer.appendChild(nameSpan);
+
+    const trashBtn = document.createElement('button');
+    trashBtn.className = 'trash-btn';
+    trashBtn.title = "로드아웃 삭제";
+    trashBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showConfirmModal(`'${ld.name}' 로드아웃을 삭제하시겠습니까?`, () => {
+            const removeRecursively = (arr) => {
+                const idx = arr.findIndex(item => item.id === ld.id);
+                if (idx !== -1) arr.splice(idx, 1);
+                else arr.forEach(item => { if(item.children) removeRecursively(item.children); });
+            };
+            removeRecursively(loadouts);
+            
+            if(selectedLoadoutId === ld.id) selectedLoadoutId = null;
+            saveLoadouts();
+            renderLoadouts();
+            if(tooltip) tooltip.style.display = 'none';
+        });
+    });
+
+    header.appendChild(nameContainer);
+    header.appendChild(trashBtn);
+    div.appendChild(header);
+
+    const slotsDiv = document.createElement('div');
+    slotsDiv.className = 'loadout-slots';
+
+    for (let i = 0; i < 3; i++) {
+        const slot = document.createElement('div');
+        slot.className = 'loadout-slot';
+        
+        const itemGuid = ld.items[i];
+        if (itemGuid) {
+            const itemData = allItems.find(item => item.guid === itemGuid);
+            if (itemData && itemData.icon) {
+                const rarityClass = itemData.properties && itemData.properties.rarity ? itemData.properties.rarity : '';
+                slot.classList.add('has-item');
+                if (rarityClass) slot.classList.add(rarityClass);
+
+                const img = document.createElement('img');
+                img.src = itemData.icon;
+                slot.appendChild(img);
+
+                slot.addEventListener('mouseenter', () => {
+                    if (slot.classList.contains('pending-delete')) return;
+                    tooltip.style.display = 'block';
+                    tooltip.innerHTML = `<div class="item-card ${itemData.properties.rarity}">${generateCardInnerHtml(itemData)}</div>`;
+                });
+
+                slot.addEventListener('mousemove', (e) => {
+                    if (slot.classList.contains('pending-delete')) return;
+                    let x = e.clientX - 340;
+                    if (x < 10) x = 10;
+                    const y = e.clientY + 15;
+                    tooltip.style.left = `${x}px`;
+                    const tooltipRect = tooltip.getBoundingClientRect();
+                    if (y + tooltipRect.height > window.innerHeight) {
+                        tooltip.style.top = `${window.innerHeight - tooltipRect.height - 10}px`;
+                    } else {
+                        tooltip.style.top = `${y}px`;
+                    }
+                });
+
+                slot.addEventListener('mouseleave', () => tooltip.style.display = 'none');
+
+                slot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isLoadoutChanged = (selectedLoadoutId !== ld.id);
+                    selectedLoadoutId = ld.id;
+                    const isPending = slot.classList.contains('pending-delete');
+                    
+                    document.querySelectorAll('.loadout-slot.pending-delete').forEach(el => {
+                        if (el !== slot) el.classList.remove('pending-delete');
+                    });
+
+                    if (isPending) {
+                        ld.items.splice(i, 1);
+                        saveLoadouts();
+                        renderLoadouts();
+                        tooltip.style.display = 'none';
+                    } else {
+                        if (isLoadoutChanged) {
+                            renderLoadouts();
+                            const currentSlots = document.querySelectorAll('.loadout-item.selected .loadout-slot');
+                            if (currentSlots[i]) currentSlots[i].classList.add('pending-delete');
+                        } else {
+                            slot.classList.add('pending-delete');
+                        }
+                        tooltip.style.display = 'none';
+                    }
+                });
+            }
+        }
+        slotsDiv.appendChild(slot);
+    }
+    div.appendChild(slotsDiv);
+    return div;
+}
+
+function setupDragAndDrop() {
+    const draggables = document.querySelectorAll('.draggable');
+    const dropzones = document.querySelectorAll('#loadoutContent, .group-content');
+
+    draggables.forEach(draggable => {
+        draggable.addEventListener('dragstart', (e) =>  {
+            e.stopPropagation();
+            draggable.classList.add('dragging');
+        });
+        draggable.addEventListener('dragend', (e) => {
+            e.stopPropagation();
+            draggable.classList.remove('dragging');
+            rebuildDataFromDOM();
+        });
+    });
+
+    dropzones.forEach(zone => {
+        zone.addEventListener('dragover', e => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const draggingItem = document.querySelector('.dragging');
+            if (!draggingItem) return;
+
+            if (draggingItem.classList.contains('loadout-group') && zone.classList.contains('group-content')) {
+                return;
+            }
+
+            const afterElement = getDragAfterElement(zone, e.clientY);
+            if (afterElement == null) {
+                zone.appendChild(draggingItem);
+            } else {
+                zone.insertBefore(draggingItem, afterElement);
+            }
+        });
+    });
+}
+
+function getDragAfterElement(container, y) {
+    const draggableElements = [...container.children].filter(c => c.classList.contains('draggable') && !c.classList.contains('dragging'));
+    
+    return draggableElements.reduce((closest, child) => {
+        const box = child.getBoundingClientRect();
+        const offset = y - box.top - box.height / 2;
+        if (offset < 0 && offset > closest.offset) {
+            return { offset: offset, element: child };
+        } else {
+            return closest;
+        }
+    }, { offset: Number.NEGATIVE_INFINITY }).element;
+}
+
+function rebuildDataFromDOM() {
+    const flatData = {};
+    const flatten = (arr) => {
+        arr.forEach(item => {
+            flatData[item.id] = item;
+            if (item.type === 'group' && item.children) flatten(item.children);
+        });
+    };
+    flatten(loadouts);
+
+    const newLoadouts = [];
+    const rootNodes = Array.from(document.getElementById('loadoutContent').children);
+    
+    rootNodes.forEach(node => {
+        if (node.classList.contains('loadout-group')) {
+            const groupData = flatData[node.dataset.id];
+            if (groupData) {
+                groupData.children = [];
+                const contentNodes = Array.from(node.querySelector('.group-content').children);
+                contentNodes.forEach(cNode => {
+                    if (cNode.classList.contains('loadout-item')) {
+                        groupData.children.push(flatData[cNode.dataset.id]);
+                    }
+                });
+                newLoadouts.push(groupData);
+            }
+        } else if (node.classList.contains('loadout-item')) {
+            const ldData = flatData[node.dataset.id];
+            if (ldData) newLoadouts.push(ldData);
+        }
+    });
+    
+    loadouts = newLoadouts;
+    saveLoadouts();
 }
 
 document.getElementById('addLoadoutBtn').addEventListener('click', () => {
@@ -1087,7 +1266,10 @@ document.getElementById('addLoadoutBtn').addEventListener('click', () => {
     let newName = baseName;
     let count = 1;
     
-    while(loadouts.some(l => l.name === newName)) {
+    const checkNameExists = (arr) => arr.some(item =>
+        item.name === newName || (item.children && checkNameExists(item.children)));
+
+    while (checkNameExists(loadouts)) {
         newName = `${baseName}(${count})`;
         count++;
     }
@@ -1100,6 +1282,29 @@ document.getElementById('addLoadoutBtn').addEventListener('click', () => {
     
     loadouts.unshift(newLd);
     selectedLoadoutId = newLd.id;
+    saveLoadouts();
+    renderLoadouts();
+});
+
+document.getElementById('addGroupBtn').addEventListener('click', () => {
+    let baseName = "새 그룹";
+    let newName = baseName;
+    let count = 1;
+    const checkNameExists = (arr) => arr.some(item =>
+        item.name === newName || (item.children && checkNameExists(item.children)));
+    while (checkNameExists(loadouts)) {
+        newName = `${baseName}(${count})`;
+        count++;
+    }
+
+    const newGroup = {
+        id: Date.now().toString(),
+        type: 'group',
+        name: newName,
+        isCollapsed: false,
+        children: []
+    };
+    loadouts.unshift(newGroup); 
     saveLoadouts();
     renderLoadouts();
 });
@@ -1145,14 +1350,34 @@ function showConfirmModal(message, onConfirm) {
 
 window.addEventListener('keydown', (e) => {
     if (e.key === 'Delete' && selectedLoadoutId && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
-        const target = loadouts.find(l => l.id === selectedLoadoutId);
-        showConfirmModal(`'${target.name}' 로드아웃을 삭제하시겠습니까?`, () => {
-            loadouts = loadouts.filter(l => l.id !== selectedLoadoutId);
-            selectedLoadoutId = null;
-            saveLoadouts();
-            renderLoadouts();
-            if(tooltip) tooltip.style.display = 'none';
-        });
+        const findTarget = (arr) => {
+            for (let item of arr) {
+                if (item.id === selectedLoadoutId) return item;
+                if (item.children) {
+                    const found = findTarget(item.children);
+                    if (found) return found;
+                }
+            }
+            return null;
+        };
+        
+        const target = findTarget(loadouts);
+        
+        if (target) {
+            showConfirmModal(`'${target.name}' 로드아웃을 삭제하시겠습니까?`, () => {
+                const removeRecursively = (arr) => {
+                    const idx = arr.findIndex(item => item.id === selectedLoadoutId);
+                    if (idx !== -1) arr.splice(idx, 1);
+                    else arr.forEach(item => { if(item.children) removeRecursively(item.children); });
+                };
+                removeRecursively(loadouts);
+                
+                selectedLoadoutId = null;
+                saveLoadouts();
+                renderLoadouts();
+                if(tooltip) tooltip.style.display = 'none';
+            });
+        }
     }
 });
 
