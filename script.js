@@ -822,8 +822,20 @@ function renderItems(items) {
         
         card.addEventListener('click', () => {
             if (selectedLoadoutId) {
-                const target = loadouts.find(l => l.id === selectedLoadoutId);
-                if (target && target.items.length < 3) {
+                const findTarget = (arr) => {
+                    for (let l of arr) {
+                        if (l.id === selectedLoadoutId) return l;
+                        if (l.children) {
+                            const found = findTarget(l.children);
+                            if (found) return found;
+                        }
+                    }
+                    return null;
+                };
+
+                const target = findTarget(loadouts);
+                
+                if (target && target.type !== 'group' && target.items.length < 3) {
                     target.items.push(item.guid);
                     saveLoadouts();
                     renderLoadouts();
